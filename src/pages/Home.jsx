@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Hero } from './../sections'
 
 const Home = () => {
   return (
     <>
-      <h1 className='text-center'>Home</h1>
-      <Link to='/style'>PNG</Link>
+      <Hero />
     </>
   )
 }
