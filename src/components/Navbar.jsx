@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav className=''>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex h-16 justify-end'>
-            <div className='flex flex-row justify-center items-center text-white '>
+            <div className='flex flex-row justify-center items-center text-white'>
               {isOpen && (
                 <div
                   className='translate-y-[75%] md:translate-y-[75%] lg:translate-y-0 flex flex-col lg:flex-row
@@ -25,31 +25,31 @@ const Navbar = () => {
                 >
                   <a
                     href='#'
-                    className='hover:bg-[#007ad6] hover:rounded-xl hover:px-3 hover:px-2 block px-3 rounded-md text-base font-medium'
+                    className='text-[25px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-3 block rounded-md text-base font-medium'
                   >
                     DOMOV
                   </a>
                   <a
                     href='#'
-                    className='hover:bg-[#007ad6] hover:rounded-xl hover:px-3 hover:px-2 block px-3 rounded-md text-base font-medium'
+                    className='text-[25px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] block p-3 rounded-md text-base font-medium'
                   >
                     O NÁS
                   </a>
                   <a
                     href='#'
-                    className='hover:bg-[#007ad6] hover:rounded-xl hover:px-3 hover:px-2block px-3 rounded-md text-base font-medium'
+                    className='text-[25px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-3 block rounded-md text-base font-medium'
                   >
                     SLUŽBY
                   </a>
                   <a
                     href='#'
-                    className='hover:bg-[#007ad6] hover:rounded-xl hover:px-3 hover:px-2 block px-3 rounded-md text-base font-medium'
+                    className='text-[25px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-3 block  rounded-md text-base font-medium'
                   >
                     BLOG
                   </a>
                   <a
                     href='#'
-                    className='hover:bg-[#007ad6] hover:rounded-xl hover:px-3 hover:px-2block px-3 rounded-md text-base font-medium'
+                    className='text-[25px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-3 block  rounded-md text-base font-medium'
                   >
                     KONTAKT
                   </a>
