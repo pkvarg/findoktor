@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
@@ -39,12 +39,16 @@ const Navbar = () => {
                   >
                     DOMOV
                   </a>
-                  <a
-                    href='#'
+                  <Link
+                    to='about'
+                    spy={true}
+                    smooth={true}
+                    offset={5}
+                    duration={500}
                     className='text-[30px] sm:text-[30px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] block p-3 rounded-md text-base font-medium'
                   >
                     O NÁS
-                  </a>
+                  </Link>
                   <a
                     href='#'
                     className='text-[30px] sm:text-[30px] lg:text-[28px]  font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-3 block rounded-md text-base font-medium'

@@ -1,11 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Navbar } from '../components'
 
 const Hero = () => {
+  const navigate = useNavigate()
+  const home = () => {
+    navigate('/')
+  }
   return (
     <div className='flex flex-row'>
       <div className='hero-bg-left w-0 h-0 lg:w-[33%] lg:h-[100vh] relative'>
-        <div className='flex items-center ml-[10%] gap-2 mt-2'>
+        <div
+          className='flex items-center ml-[10%] gap-2 mt-2 cursor-pointer'
+          onClick={() => home()}
+        >
           <img
             className='w-[15%]'
             src='/src/assets/fd-red-logo.webp'
