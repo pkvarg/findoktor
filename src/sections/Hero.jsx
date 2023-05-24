@@ -14,11 +14,7 @@ const Hero = () => {
           className='flex items-center ml-[10%] gap-2 mt-2 cursor-pointer'
           onClick={() => home()}
         >
-          <img
-            className='w-[15%]'
-            src='/src/assets/fd-red-logo.webp'
-            alt='red-logo'
-          />
+          <img className='w-[15%]' src='fd-red-logo.webp' alt='red-logo' />
           <h1 className='text-[#385ebc] text-[35px] font-light uppercase'>
             Finančný
           </h1>
@@ -30,13 +26,13 @@ const Hero = () => {
           <p className='text-[#385ebc] text-[25px]'>člen skupiny:</p>
           <img
             className='w-[50%]'
-            src='/src/assets/fn-sf-logo.svg'
+            src='fn-sf-logo.svg'
             alt='sophistic-pro-finance'
           />
         </div>
         <img
           className='absolute bottom-0 h-[81%] w-[90%] aspect-w-6 aspect-h-9 z-1'
-          src='/src/assets/Michal.png'
+          src='Michal.png'
           alt='Michal-Dovala-Financny-doktor'
         />
       </div>
@@ -46,7 +42,7 @@ const Hero = () => {
         <div className='absolute right-[7.5%] top-[17.5%]'>
           <img
             className='w-0 lg:w-[85%]'
-            src='/src/assets/hero-squares.webp'
+            src='hero-squares.webp'
             alt='fd-squares'
           />
         </div>
@@ -57,7 +53,7 @@ const Hero = () => {
           <div className='block lg:hidden flex justify-center my-8'>
             <img
               className='w-[15%] rounded-xl'
-              src='/src/assets/fd-red-logo.webp'
+              src='fd-red-logo.webp'
               alt='red-logo'
             />
           </div>

@@ -32,7 +32,7 @@ const StickyNav = () => {
               >
                 <img
                   className='w-[15%]'
-                  src='/src/assets/fd-red-logo.webp'
+                  src='fd-red-logo.webp'
                   alt='red-logo'
                 />
                 <h1 className='text-[#385ebc] text-[35px] font-light uppercase'>
@@ -46,7 +46,7 @@ const StickyNav = () => {
                 <p className='text-[#385ebc] text-[25px]'>člen skupiny:</p>
                 <img
                   className='w-[50%]'
-                  src='/src/assets/fn-sf-logo.svg'
+                  src='fn-sf-logo.svg'
                   alt='sophistic-pro-finance'
                 />
               </div>

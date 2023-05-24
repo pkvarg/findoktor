@@ -9,7 +9,7 @@ const About = () => {
         <div className='block lg:hidden bg-[#ffffff]'>
           <img
             className='w-[100%] py-8 px-2 '
-            src='/src/assets/fn-sf-logo.svg'
+            src='fn-sf-logo.svg'
             alt='sophistic-pro-finance'
           />
         </div>
@@ -23,7 +23,7 @@ const About = () => {
           <div className='absolute left-[7.5%] top-[15.5%]'>
             <img
               className='w-0 lg:w-[55%]'
-              src='/src/assets/hero-squares.webp'
+              src='hero-squares.webp'
               alt='fd-squares'
             />
           </div>

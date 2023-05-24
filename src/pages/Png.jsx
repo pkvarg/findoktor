@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Png = () => {
-  return <img src='/src/assets/FDhome.png' />
+  return <img src='FDhome.png' />
 }
 
 export default Png
