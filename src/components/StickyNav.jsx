@@ -21,7 +21,7 @@ const StickyNav = () => {
   }, [])
 
   return (
-    <div>
+    <div className='hidden lg:block'>
       {isSticky && (
         <div className='bg-[#ffffff]'>
           <div className='relative flex items-center justify-between mx-[2%]'>

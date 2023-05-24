@@ -51,7 +51,16 @@ const Hero = () => {
           />
         </div>
         <div className='mt-[70%] lg:mt-[35%] text-[#007ad6] mx-[12.5%]'>
-          <h2 className='text-[28.5px]'>Vitajte, ste v dobrých rukách.</h2>
+          <h2 className='text-[28.5px] text-center lg:text-left leading-[35px]'>
+            Vitajte, ste v dobrých rukách.
+          </h2>
+          <div className='block lg:hidden flex justify-center my-8'>
+            <img
+              className='w-[15%] rounded-xl'
+              src='/src/assets/fd-red-logo.webp'
+              alt='red-logo'
+            />
+          </div>
           <div className='text-[#ffffff] text-[34px] lg:text-[42px] font-normal lg:text-justify leading-[42.50px] tracking-wide mt-[2%] pb-40 lg:pb-0'>
             <h1>
               Spravte prvý krok k zlepšeniu Vášho finančného zdravia a dohodnite

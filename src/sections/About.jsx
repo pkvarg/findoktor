@@ -6,8 +6,18 @@ const About = () => {
     <>
       <StickyNav />
       <div className='bg-[#013bb0] relative pb-[130px]' id='about'>
-        <div className='pt-[5%]'>
-          <h1 className='uppercase text-[#007ad6] text-[30px] text-center'>
+        <div className='block lg:hidden bg-[#ffffff]'>
+          <img
+            className='w-[100%] py-8 px-2 '
+            src='/src/assets/fn-sf-logo.svg'
+            alt='sophistic-pro-finance'
+          />
+        </div>
+        <h1 className='block lg:hidden text-[#ffffff] text-[50px] text-center pt-8'>
+          O nás
+        </h1>
+        <div className='pt-[0%] lg:pt-[5%]'>
+          <h1 className='hidden lg:block uppercase text-[#007ad6] text-[30px] text-center'>
             Sme tu pre Vás
           </h1>
           <div className='absolute left-[7.5%] top-[15.5%]'>
@@ -17,7 +27,7 @@ const About = () => {
               alt='fd-squares'
             />
           </div>
-          <div className='text-[#ffffff] text-[30px] mt-[20%] mx-[17%] text-justify'>
+          <div className='text-[#ffffff] text-[25px] lg:text-[30px] mt-[15%] lg:mt-[10%]  mx-[5%] lg:mx-[17%] lg:text-justify'>
             <p className=''>
               <span className='font-bold'>V Sophistic Pro finance</span> sme,
               vďaka zázemiu a dlhoročným skúsenostiam v oblasti poskytovania
