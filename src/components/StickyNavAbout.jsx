@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const StickyNav = () => {
+const StickyNavAbout = () => {
   const [isSticky, setIsSticky] = useState(false)
   console.log(window.pageYOffset)
 
@@ -60,7 +60,7 @@ const StickyNav = () => {
               </a>
               <a
                 href='#'
-                className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] bg-[#007ad6] rounded-[30px] text-[#ffffff] block p-3 rounded-md text-base font-medium'
+                className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] bg-[#007ad6] rounded-[30px] text-[#ffffff] block p-3 text-base font-medium'
               >
                 O NÁS
               </a>
@@ -90,4 +90,4 @@ const StickyNav = () => {
   )
 }
 
-export default StickyNav
+export default StickyNavAbout

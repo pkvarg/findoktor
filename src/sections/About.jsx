@@ -20,9 +20,9 @@ const About = () => {
           <h1 className='hidden lg:block uppercase text-[#007ad6] text-[30px] text-center'>
             Sme tu pre Vás
           </h1>
-          <div className='absolute left-[7.5%] top-[15.5%]'>
+          <div className='absolute left-[7.5%] top-[5.5%]'>
             <img
-              className='w-0 lg:w-[55%]'
+              className='w-0 lg:w-[65%]'
               src='hero-squares.webp'
               alt='fd-squares'
             />
@@ -49,7 +49,48 @@ const About = () => {
               Filozofiu a hlavnú myšlienku spoločnosti umocňuje a jednoznačne
               dopĺňa jej................
             </p>
-            <button className='text-[25px] font-normal absolute right-[16%] bg-[#007ad7] rounded-[55px] px-12 py-4 mt-8 lg:mt-8 hover:border hover-border-white hover:border-[2px]'>
+            <div className='flex justify-center lg:justify-end '>
+              <button className='text-[25px] text-[#ffffff] font-normal bg-[#007ad7] rounded-[55px] px-12 py-4 mt-8 lg:mt-[9%] hover:border hover-border-white hover:border-[2px] '>
+                Bezplatné stretnutie
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='mt-[15%] relative'>
+          <h1 className='uppercase text-[#007ad6] text-[30px] text-center'>
+            Čo o nás hovoria naši klienti
+          </h1>
+          <div className='absolute left-[7.5%] top-20'>
+            <img
+              className='w-0 lg:w-[65%]'
+              src='hero-squares.webp'
+              alt='fd-squares'
+            />
+          </div>
+          {/* review box */}
+          <div className='text-[#ffffff] text-[25px] lg:text-[30px] mt-[15%] lg:mt-[10%]  mx-[5%] lg:mx-[17%] flex flex-col justify-end'>
+            <div className='flex flex-row justify-end'>
+              <p className='translate-y-[60%] lg:translate-y-[80%] text-[#007ad6] mr-4'>
+                Lenka R.
+              </p>
+              <img
+                className='w-[50%] lg:w-[20%]'
+                src='/review01.png'
+                alt='review'
+              />
+            </div>
+            <div className='mt-8 text-[38px] text-end'>
+              <h1>
+                "Odporúčam každému, kto sa zaujíma o svoje financie a svoju
+                budúcnosť.
+              </h1>
+              <h1>
+                Veľmi dobre mi poradili ohľadne 2. piliera, investovania do
+                podielových fondov
+              </h1>
+              <h1>a pravideľne sa mi starajú o moje portfólio."</h1>
+            </div>
+            <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] py-4  mt-16 lg:mt-10 hover:border hover-border-white hover:border-[2px] lg:ml-[75%]'>
               Bezplatné stretnutie
             </button>
           </div>

@@ -1,4 +1,4 @@
 import Navbar from './Navbar'
-import StickyNav from './StickyNav'
+import StickyNav from './StickyNavAbout'
 
 export { Navbar, StickyNav }
