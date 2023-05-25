@@ -1,10 +1,10 @@
 import React from 'react'
-import { StickyNav } from '../components'
+import { StickyNavAbout } from '../components'
 
 const About = () => {
   return (
     <>
-      <StickyNav />
+      <StickyNavAbout />
       <div className='bg-[#013bb0] relative pb-[130px]' id='about'>
         <div className='block lg:hidden bg-[#ffffff]'>
           <img

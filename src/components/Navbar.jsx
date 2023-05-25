@@ -45,24 +45,36 @@ const Navbar = () => {
                   >
                     O NÁS
                   </Link>
-                  <a
-                    href='#'
+                  <Link
+                    to='services'
+                    spy={true}
+                    smooth={true}
+                    offset={5}
+                    duration={500}
                     className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px]  py-2 lg:py-3 p-3 block rounded-md text-base font-medium'
                   >
                     SLUŽBY
-                  </a>
-                  <a
-                    href='#'
+                  </Link>
+                  <Link
+                    to='blog'
+                    spy={true}
+                    smooth={true}
+                    offset={5}
+                    duration={500}
                     className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
                   >
                     BLOG
-                  </a>
-                  <a
-                    href='#'
+                  </Link>
+                  <Link
+                    to='contact'
+                    spy={true}
+                    smooth={true}
+                    offset={5}
+                    duration={500}
                     className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
                   >
                     KONTAKT
-                  </a>
+                  </Link>
                 </div>
               )}
 

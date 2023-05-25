@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 
-const StickyNavAbout = () => {
+const StickyNavServices = () => {
   const [isSticky, setIsSticky] = useState(false)
   console.log(window.pageYOffset)
 
@@ -62,13 +62,14 @@ const StickyNavAbout = () => {
               >
                 DOMOV
               </Link>
+
               <Link
                 to='about'
                 spy={true}
                 smooth={true}
-                offset={5}
+                offset={-130}
                 duration={500}
-                className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] bg-[#007ad6] rounded-[30px] text-[#ffffff] block p-3 text-base font-medium'
+                className='text-[30px] sm:text-[30px] lg:text-[24px]  font-[350] hover:bg-[#007ad6] hover:rounded-[30px] hover:text-[#ffffff] p-3 block rounded-md text-base font-medium'
               >
                 O NÁS
               </Link>
@@ -76,12 +77,13 @@ const StickyNavAbout = () => {
                 to='services'
                 spy={true}
                 smooth={true}
-                offset={-250}
+                offset={5}
                 duration={500}
-                className='text-[30px] sm:text-[30px] lg:text-[24px]  font-[350] hover:bg-[#007ad6] hover:rounded-[30px] hover:text-[#ffffff] p-3 block rounded-md text-base font-medium'
+                className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] bg-[#007ad6] rounded-[30px] text-[#ffffff] block p-3 text-base font-medium'
               >
                 SLUŽBY
               </Link>
+
               <Link
                 to='blog'
                 spy={true}
@@ -110,4 +112,4 @@ const StickyNavAbout = () => {
   )
 }
 
-export default StickyNavAbout
+export default StickyNavServices
