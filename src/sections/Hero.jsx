@@ -39,14 +39,14 @@ const Hero = () => {
       <div className='hero-bg-right w-[100vw] lg:w-[67%] relative'>
         <Navbar />
 
-        <div className='absolute right-[7.5%] top-[17.5%]'>
+        <div className='absolute right-[7.5%] top-[10.5%]'>
           <img
-            className='w-0 lg:w-[85%]'
+            className='w-0 lg:w-[75%]'
             src='hero-squares.webp'
             alt='fd-squares'
           />
         </div>
-        <div className='mt-[70%] lg:mt-[35%] text-[#007ad6] mx-[12.5%]'>
+        <div className='mt-[70%] lg:mt-[25%] text-[#007ad6] mx-[12.5%]'>
           <h2 className='text-[28.5px] text-center lg:text-left leading-[35px]'>
             Vitajte, ste v dobrých rukách.
           </h2>
@@ -57,12 +57,15 @@ const Hero = () => {
               alt='red-logo'
             />
           </div>
-          <div className='text-[#ffffff] text-[34px] lg:text-[42px] font-normal lg:text-justify leading-[42.50px] tracking-wide mt-[2%] pb-40 lg:pb-0'>
-            <h1>
-              Spravte prvý krok k zlepšeniu Vášho finančného zdravia a dohodnite
-              si stretnutie s Vašim osobným finančným doktorom.
+          <div className='text-[#ffffff] text-[34px] lg:text-[42px] font-normal leading-[42.50px] tracking-wide mt-[2%] pb-40 lg:pb-0'>
+            <h1 className='text-center lg:text-left'>
+              Urobte prvý krok k zlepšeniu Vášho finančného zdravia.
             </h1>
-            <button className='text-[25px] font-normal absolute right-[11.5%] bg-[#007ad7] rounded-[55px] px-12 py-4 mt-8 lg:mt-4 hover:border hover-border-white hover:border-[2px]'>
+            <span className='hidden lg:block '>
+              Dohodnite si stretnutie s Vašim osobným finančným doktorom.
+            </span>
+
+            <button className='text-[25px] font-normal absolute right-[11.5%] bg-[#007ad7] rounded-[55px] px-12 py-4 mt-8 lg:mt-6 hover:border hover-border-white hover:border-[2px]'>
               Bezplatné stretnutie
             </button>
           </div>

@@ -60,7 +60,7 @@ const StickyNav = () => {
               </a>
               <a
                 href='#'
-                className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] hover:text-[#ffffff] block p-3 rounded-md text-base font-medium'
+                className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] bg-[#007ad6] rounded-[30px] text-[#ffffff] block p-3 rounded-md text-base font-medium'
               >
                 O NÁS
               </a>
