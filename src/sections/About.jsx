@@ -68,7 +68,7 @@ const About = () => {
             />
           </div>
           {/* review box */}
-          <div className='text-[#ffffff] text-[25px] lg:text-[30px] mt-[15%] lg:mt-[10%]  mx-[5%] lg:mx-[17%] flex flex-col justify-end'>
+          <div className='text-[#ffffff] text-[25px] lg:text-[30px] mt-[15%] lg:mt-[10%]  mx-[5%] lg:mx-[13%] flex flex-col justify-end'>
             <div className='flex flex-row justify-end'>
               <p className='translate-y-[60%] lg:translate-y-[80%] text-[#007ad6] mr-4'>
                 Lenka R.
@@ -79,7 +79,7 @@ const About = () => {
                 alt='review'
               />
             </div>
-            <div className='mt-8 text-[38px] text-end'>
+            <div className='mt-8 text-[30px] text-end'>
               <h1>
                 "Odporúčam každému, kto sa zaujíma o svoje financie a svoju
                 budúcnosť.

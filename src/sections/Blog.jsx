@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StickyNavBlog } from '../components'
+import { addDoc, collection } from 'firebase/firestore'
+import { db } from '../../firebaseConfig'
 
 const Blog = () => {
+  const [postList, setPostList] = useState([])
+  const postsCollectionRef = collection(db, 'posts')
+
   return (
     <>
       <StickyNavBlog />
