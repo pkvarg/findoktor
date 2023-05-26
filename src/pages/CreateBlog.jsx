@@ -11,20 +11,20 @@ const CreateBlog = () => {
   const [title, setTitle] = useState('')
   const [intro, setIntro] = useState('')
   const [text, setText] = useState('')
-  const [isAuth, setIsAuth] = useState(true)
+  const [isAuth, setIsAuth] = useState(false)
   const [image, setImage] = useState(null)
   const [urlLink, setUrlLink] = useState('')
 
-  // useEffect(() => {
-  //   const loggedIn = localStorage.getItem(xauth)
-  //   if (loggedIn) {
-  //     setIsAuth(loggedIn)
-  //   } else if (!loggedIn) {
-  //     setIsAuth(false)
-  //   } else {
-  //     setIsAuth(false)
-  //   }
-  // }, [])
+  useEffect(() => {
+    const loggedIn = localStorage.getItem(xauth)
+    if (loggedIn) {
+      setIsAuth(loggedIn)
+    } else if (!loggedIn) {
+      setIsAuth(false)
+    } else {
+      setIsAuth(false)
+    }
+  }, [])
 
   const postsCollectionRef = collection(db, 'posts')
 
@@ -67,17 +67,17 @@ const CreateBlog = () => {
     }
   }
 
-  return (
-    isAuth && (
-      <>
+  return isAuth ? (
+    <>
+      <div className='bg-[#013bb0] text-white pb-8'>
         <h1
-          className='text-green text-[25px] ml-6 mt-2 cursor-pointer'
+          className='text-[25px] cursor-pointer p-4'
           onClick={() => navigate('/')}
         >
-          Refresh Your Spirit of Faith.
+          Home.
         </h1>
         <div className='text-white mt-[2%]'>
-          <h1 className='text-center text-[35px]'>Create a post</h1>
+          <h1 className='text-center text-[35px]'>Create New Blog Post</h1>
 
           <div className='flex flex-col mt-4 gap-4 text-[25px] mx-[30%]'>
             <div>
@@ -122,7 +122,7 @@ const CreateBlog = () => {
               />
             </div>
             <button
-              className='bg-[#000000] p-4 mt-2 w-[85%] ml-auto'
+              className='bg-[#007ad7] p-4 mt-2 w-[85%] ml-auto rounded-[30px] hover:border'
               onClick={createPost}
             >
               {' '}
@@ -130,8 +130,12 @@ const CreateBlog = () => {
             </button>
           </div>
         </div>
-      </>
-    )
+      </div>
+    </>
+  ) : (
+    <h1 className='text-[#ffffff] text-[50px] text-center bg-[#e42938] mt-[25%]'>
+      Unauthorised Access
+    </h1>
   )
 }
 

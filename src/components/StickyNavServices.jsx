@@ -3,7 +3,6 @@ import { Link } from 'react-scroll'
 
 const StickyNavServices = () => {
   const [isSticky, setIsSticky] = useState(false)
-  console.log(window.pageYOffset)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,10 +25,7 @@ const StickyNavServices = () => {
         <div className='bg-[#ffffff]'>
           <div className='relative flex items-center justify-between mx-[2%]'>
             <div>
-              <div
-                className='flex items-center  gap-2 mt-2 cursor-pointer'
-                onClick={() => home()}
-              >
+              <div className='flex items-center  gap-2 mt-2 cursor-pointer'>
                 <img
                   className='w-[15%]'
                   src='fd-red-logo.webp'

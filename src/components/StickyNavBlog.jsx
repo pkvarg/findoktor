@@ -2,23 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 
 const StickyNavBlog = () => {
-  const [isSticky, setIsSticky] = useState(false)
-  console.log(window.pageYOffset)
+  const [isSticky, setIsSticky] = useState(true)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        setIsSticky(true)
-      } else {
-        setIsSticky(false)
-      }
-    }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.pageYOffset > 0) {
+  //       setIsSticky(true)
+  //     } else {
+  //       setIsSticky(false)
+  //     }
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  //   window.addEventListener('scroll', handleScroll)
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
 
   return (
     <div className='hidden lg:block'>
@@ -26,13 +25,10 @@ const StickyNavBlog = () => {
         <div className='bg-[#ffffff]'>
           <div className='relative flex items-center justify-between mx-[2%]'>
             <div>
-              <div
-                className='flex items-center  gap-2 mt-2 cursor-pointer'
-                onClick={() => home()}
-              >
+              <div className='flex items-center  gap-2 mt-2 cursor-pointer'>
                 <img
                   className='w-[15%]'
-                  src='fd-red-logo.webp'
+                  src='/fd-red-logo.webp'
                   alt='red-logo'
                 />
                 <h1 className='text-[#385ebc] text-[35px] font-light uppercase'>
@@ -46,7 +42,7 @@ const StickyNavBlog = () => {
                 <p className='text-[#385ebc] text-[25px]'>člen skupiny:</p>
                 <img
                   className='w-[50%]'
-                  src='fn-sf-logo.svg'
+                  src='/fn-sf-logo.svg'
                   alt='sophistic-pro-finance'
                 />
               </div>

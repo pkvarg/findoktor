@@ -114,15 +114,17 @@ const EditBlog = () => {
 
   return (
     isAuth && (
-      <div className='text-white'>
+      <div className='bg-[#013bb0] text-white pb-8'>
         <h1
-          className='text-green text-[25px] ml-6 mt-2 cursor-pointer'
+          className='text-[25px] cursor-pointer p-4'
           onClick={() => navigate('/')}
         >
           Home.
         </h1>
 
         <div className='flex flex-col mt-4 gap-4 text-[25px] mx-[30%]'>
+          <h1 className='text-center text-[35px]'>Edit Single Blog Post</h1>
+
           {editedPost.map(
             (post) =>
               post.id === params.id && (
@@ -154,7 +156,7 @@ const EditBlog = () => {
                     <textarea
                       className='text-black h-[150px] w-[85%]'
                       placeholder='Intro...'
-                      defaultValue={postIntro}
+                      defaultValue={intro}
                       onChange={(e) => {
                         setIntro(e.target.value)
                       }}
@@ -166,14 +168,14 @@ const EditBlog = () => {
                     <textarea
                       className='text-black w-[85%]'
                       placeholder='Post...'
-                      defaultValue={postText}
+                      defaultValue={text}
                       onChange={(e) => {
                         setText(e.target.value)
                       }}
                     />
                   </div>
                   <button
-                    className='bg-green p-4 mt-2 w-[85%] ml-auto'
+                    className='bg-[#007ad7] p-4 mt-2 w-[85%] ml-auto rounded-[30px] hover:border'
                     onClick={() => editPost(post.id)}
                   >
                     {' '}

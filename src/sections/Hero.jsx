@@ -4,9 +4,7 @@ import { Navbar } from '../components'
 
 const Hero = () => {
   const navigate = useNavigate()
-  const home = () => {
-    navigate('/')
-  }
+
   return (
     <div className='flex flex-row' id='home'>
       <div className='hero-bg-left w-0 h-0 lg:w-[33%] lg:h-[100vh] relative'>
