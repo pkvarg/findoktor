@@ -9,14 +9,18 @@ const SinglePostIntro = ({ post }) => {
 
   return (
     <>
-      <div className='text-[#ffffff] flex mx-[10%] gap-8 relative'>
-        <img className='w-[15%] absolute' src={post.url} alt='blog01' />
-        <div className='flex flex-col gap-4 my-4 ml-[18%] w-[90%]'>
+      <div className='text-[#ffffff] flex flex-col lg:flex-row mx-[10%] gap-8 relative'>
+        <img
+          className='mt-[50px] lg:mt-0 lg:w-[15%] lg:absolute'
+          src={post.url}
+          alt='blog01'
+        />
+        <div className='flex flex-col gap-4 my-4 lg:ml-[18%] lg:w-[90%]'>
           <h1 className='text-[27.5px]'>{post.title}</h1>
           <p className='text-[22.5px] text-justify'>{post.intro}</p>
         </div>
         <button
-          className='bg-[#0179d6] text-[22px] w-[25%] h-[10%] mt-[130px] mb-[15px] rounded-[30px] hover:border hover-border-white hover:border-[2px]'
+          className='bg-[#0179d6] text-[22px] py-4 lg:w-[25%] lg:h-[10%] lg:mt-[130px] mb-[15px] rounded-[30px] hover:border hover-border-white hover:border-[2px]'
           onClick={() => goToCurrentPost(post.id)}
         >
           Čítaj celý článok

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { collection } from 'firebase/firestore'
 import { db, xauth } from './../../firebaseConfig'
-import { SinglePost, PageNavbar } from '../components'
+import { SinglePost, PageNavbar, PageNavbarMob } from '../components'
 import { useNavigate } from 'react-router-dom'
 
 const BlogPage = () => {
@@ -35,23 +35,15 @@ const BlogPage = () => {
   return (
     <>
       <PageNavbar />
-      <div className='bg-[#013baf] mt-[-5%] lg:mt-0 py-[5%]'>
+      <PageNavbarMob />
+      <div className='bg-[#013baf] lg:mt-0 pt-4 lg:pt-8 lg:pb-[5%]'>
         <h1
           className='uppercase text-[#007ad6] text-[30px] text-center cursor-pointer'
           onClick={() => navigate('/blog')}
         >
           {!params.id ? 'Blog' : 'Blog - všetky články'}
         </h1>
-        <div className='bg-[#ffffff] h-[2px] mx-[6%] mt-8'></div>
-
-        {/* {isAuth && (
-          <h1
-            className='text-[22.5px] text-[#ffffff] w-[190px] mt-4 ml-auto mr-[6.5%] cursor-pointer border px-2 rounded-xl hover:text-[#007ad7] hover:bg-[#ffffff]'
-            onClick={() => navigate('/create-blog')}
-          >
-            Create New Blog
-          </h1>
-        )} */}
+        <div className='hidden lg:block bg-[#ffffff] h-[2px] mx-[6%] mt-8 hidden lg:block'></div>
       </div>
 
       {!params.id ? (

@@ -121,27 +121,27 @@ const EditBlog = () => {
           Home.
         </h1>
 
-        <div className='flex flex-col mt-4 gap-4 text-[25px] mx-[30%]'>
+        <div className='flex flex-col mt-4 gap-4 text-[25px] mx-[3%] lg:mx-[30%]'>
           <h1 className='text-center text-[35px]'>Edit Single Blog Post</h1>
 
           {editedPost.map(
             (post) =>
               post.id === params.id && (
                 <div key={post.id} className='flex flex-col gap-2'>
-                  {/* <img src={imageFileUrl} className='w-[150px]' /> */}
-                  <img
-                    src={image ? imageUrl : imageFileUrl}
-                    alt='the image file'
-                    className='w-[150px]'
-                  />
+                  <div className='flex flex-col lg:flex-row lg:justify-center lg:items-center lg:ml-[15%] gap-4 lg:gap-0'>
+                    <img
+                      src={image ? imageUrl : imageFileUrl}
+                      alt='the image file'
+                      className='w-[90%] lg:w-[150px]'
+                    />
 
-                  {/* <label>Image : </label> */}
-                  <input type='file' onChange={handleImageChange} />
+                    <input type='file' onChange={handleImageChange} />
+                  </div>
 
-                  <div className='flex justify-between'>
+                  <div className='flex flex-col lg:flex-row justify-between'>
                     <label>Title : </label>
                     <textarea
-                      className='text-black w-[85%]'
+                      className='text-black lg:w-[85%]'
                       placeholder='Title...'
                       value={title}
                       onChange={(e) => {
@@ -150,10 +150,10 @@ const EditBlog = () => {
                     />
                   </div>
 
-                  <div className='flex justify-between'>
+                  <div className='flex  flex-col lg:flex-row  justify-between'>
                     <label>Intro : </label>
                     <textarea
-                      className='text-black h-[150px] w-[85%]'
+                      className='text-black h-[150px] lg:w-[85%]'
                       placeholder='Intro...'
                       defaultValue={intro}
                       onChange={(e) => {
@@ -162,10 +162,10 @@ const EditBlog = () => {
                     />
                   </div>
 
-                  <div className='flex justify-between h-[250px]'>
+                  <div className='flex flex-col lg:flex-row lg:justify-between'>
                     <label className=''>Post : </label>
                     <textarea
-                      className='text-black w-[85%]'
+                      className='text-black lg:w-[85%] h-[250px]'
                       placeholder='Post...'
                       defaultValue={text}
                       onChange={(e) => {

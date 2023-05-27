@@ -22,31 +22,39 @@ const SinglePost = ({ post, isAuth }) => {
 
   return (
     <div className='bg-[#013baf] text-white relative' key={post.id}>
-      <div className='pb-10 mx-[10%]'>
-        <div className='flex items-center'>
-          <img src={post.url} className='w-[13%] absolute right-[10%]' />
-          <div className='w-[80%]'>
-            <h1 className='text-[40px]'>{post.title}</h1>
-            <p className='text-[22.5px] text-justify'>{post.intro}</p>
+      <div className='pb-10 lg:mx-[10%]'>
+        <div className='flex flex-col lg:flex-row items-center'>
+          <img
+            src={post.url}
+            className='w-[90%] lg:w-[15%] lg:absolute lg:right-[10%] mt-4 lg:mt-0'
+          />
+          <div className='w-[85%] lg:w-[80%]'>
+            <h1 className='text-[25px] lg:text-[40px] mt-4 lg:mt-0'>
+              {post.title}
+            </h1>
+            <p className='text-[22.5px] text-justify mt-4 lg:mt-0'>
+              {post.intro}
+            </p>
           </div>
         </div>
-        <p className='text-[25px] text-justify mt-[6%] mb-8 whitespace-pre-wrap'>
+        <p className='text-[25px] text-justify mt-[6%] mb-8 whitespace-pre-wrap w-[85%] lg:w-[100%] ml-auto mr-auto lg:ml-0 lg:mr-0'>
           {post.text}
         </p>
-
-        <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] p-4 mt-4 hover:border hover-border-white hover:border-[2px]'>
-          Bezplatné stretnutie
-        </button>
+        <div className='flex justify-center'>
+          <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] p-4 mt-4 hover:border hover-border-white hover:border-[2px]'>
+            Bezplatné stretnutie
+          </button>
+        </div>
 
         {/* <LikeButton id={post.id} /> */}
-        <div className='bg-[#ffffff] h-[2px] mx-[-6%] my-[4%]'></div>
+        <div className='hidden lg:block bg-[#ffffff] h-[2px] mx-[2%] lg:mx-[-6%] my-[20%] lg:my-[4%]'></div>
       </div>
 
-      <div>
+      <>
         {isAuth && (
           <>
             <button
-              className='absolute top-3 right-[7%]'
+              className='absolute top-6 lg:top-3 right-[7%] bg-[#013baf]'
               onClick={() => navigate('/create-blog')}
             >
               <svg
@@ -62,7 +70,7 @@ const SinglePost = ({ post, isAuth }) => {
               </svg>
             </button>
             <button
-              className='absolute top-12 right-[7%]'
+              className='absolute top-[67.5px] lg:top-12 right-[7%] bg-[#013baf]'
               onClick={() => editPost(post.id)}
             >
               <svg
@@ -81,7 +89,7 @@ const SinglePost = ({ post, isAuth }) => {
               </svg>
             </button>
             <button
-              className='absolute top-20 right-[7%]'
+              className='absolute top-[110px] lg:top-20 right-[7%] bg-[#013baf]'
               onClick={() => deletePost(post.id)}
             >
               <svg
@@ -97,7 +105,7 @@ const SinglePost = ({ post, isAuth }) => {
             </button>
           </>
         )}
-      </div>
+      </>
     </div>
   )
 }

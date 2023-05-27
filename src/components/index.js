@@ -4,6 +4,7 @@ import StickyNavServices from './StickyNavServices'
 import StickyNavBlog from './StickyNavBlog'
 import SinglePost from './SinglePost'
 import PageNavbar from './PageNavbar'
+import PageNavbarMob from './PageNavbarMob'
 
 export {
   Navbar,
@@ -12,4 +13,5 @@ export {
   StickyNavBlog,
   SinglePost,
   PageNavbar,
+  PageNavbarMob,
 }
