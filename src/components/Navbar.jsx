@@ -31,7 +31,7 @@ const Navbar = () => {
                 <div className='bg-[#013bb0] translate-y-[90%] md:translate-y-[75%] lg:translate-y-0 flex flex-col lg:flex-row translate-x-[30%] md:translate-x-[50%] lg:translate-x-0 justify-center items-end'>
                   <a
                     href='/'
-                    className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-2 lg:py-3 px-3 block rounded-md text-base font-medium'
+                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-2 lg:py-3 px-3 block rounded-md text-base font-medium'
                   >
                     DOMOV
                   </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] block  py-2 lg:py-3 p-3 rounded-md text-base font-medium'
+                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] block  py-2 lg:py-3 p-3 rounded-md text-base font-medium'
                   >
                     O NÁS
                   </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px]  py-2 lg:py-3 p-3 block rounded-md text-base font-medium'
+                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px]  py-2 lg:py-3 p-3 block rounded-md text-base font-medium'
                   >
                     SLUŽBY
                   </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
+                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
                   >
                     BLOG
                   </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='!text-[38px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
+                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
                   >
                     KONTAKT
                   </Link>

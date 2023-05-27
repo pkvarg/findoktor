@@ -8,6 +8,7 @@ import { toast } from 'react-hot-toast'
 const SinglePost = ({ post, isAuth }) => {
   const navigate = useNavigate()
   const deletePost = useCallback(async (id) => {
+    alert('Delete post - Are you sure?')
     const postDoc = doc(db, 'posts', id)
     await deleteDoc(postDoc)
     localStorage.removeItem('postList')
@@ -22,21 +23,23 @@ const SinglePost = ({ post, isAuth }) => {
   return (
     <div className='bg-[#013baf] text-white relative' key={post.id}>
       <div className='pb-10 mx-[10%]'>
-        <div className='flex flex-col lg:flex-row items-center justify-center gap-4'>
-          <div>
+        <div className='flex items-center'>
+          <img src={post.url} className='w-[13%] absolute right-[10%]' />
+          <div className='w-[80%]'>
             <h1 className='text-[40px]'>{post.title}</h1>
             <p className='text-[22.5px] text-justify'>{post.intro}</p>
           </div>
-          <img src={post.url} className='w-[20%] ' />
         </div>
-
-        <p className='text-[25px] text-justify mt-8 mb-8 whitespace-pre-wrap'>
+        <p className='text-[25px] text-justify mt-[6%] mb-8 whitespace-pre-wrap'>
           {post.text}
         </p>
+
         <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] p-4 mt-4 hover:border hover-border-white hover:border-[2px]'>
           Bezplatné stretnutie
         </button>
+
         {/* <LikeButton id={post.id} /> */}
+        <div className='bg-[#ffffff] h-[2px] mx-[-6%] my-[4%]'></div>
       </div>
 
       <div>
@@ -44,6 +47,22 @@ const SinglePost = ({ post, isAuth }) => {
           <>
             <button
               className='absolute top-3 right-[7%]'
+              onClick={() => navigate('/create-blog')}
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='20'
+                height='20'
+                fill='currentColor'
+                class='bi bi-plus-square'
+                viewBox='0 0 16 16'
+              >
+                <path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z' />
+                <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z' />
+              </svg>
+            </button>
+            <button
+              className='absolute top-12 right-[7%]'
               onClick={() => editPost(post.id)}
             >
               <svg
@@ -62,7 +81,7 @@ const SinglePost = ({ post, isAuth }) => {
               </svg>
             </button>
             <button
-              className='absolute top-14 right-[7%]'
+              className='absolute top-20 right-[7%]'
               onClick={() => deletePost(post.id)}
             >
               <svg

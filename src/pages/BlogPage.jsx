@@ -42,7 +42,16 @@ const BlogPage = () => {
         >
           {!params.id ? 'Blog' : 'Blog - všetky články'}
         </h1>
-        <div className='bg-[#ffffff] h-[2px] mx-[6%] mt-12'></div>
+        <div className='bg-[#ffffff] h-[2px] mx-[6%] mt-8'></div>
+
+        {/* {isAuth && (
+          <h1
+            className='text-[22.5px] text-[#ffffff] w-[190px] mt-4 ml-auto mr-[6.5%] cursor-pointer border px-2 rounded-xl hover:text-[#007ad7] hover:bg-[#ffffff]'
+            onClick={() => navigate('/create-blog')}
+          >
+            Create New Blog
+          </h1>
+        )} */}
       </div>
 
       {!params.id ? (

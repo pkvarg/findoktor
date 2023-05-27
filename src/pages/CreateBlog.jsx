@@ -69,7 +69,7 @@ const CreateBlog = () => {
 
   return isAuth ? (
     <>
-      <div className='bg-[#013bb0] text-white pb-8'>
+      <div className='bg-[#013bb0] text-white pb-[8%]'>
         <h1
           className='text-[25px] cursor-pointer p-4'
           onClick={() => navigate('/')}
