@@ -30,7 +30,9 @@ const SinglePost = ({ post, isAuth }) => {
           <img src={post.url} className='w-[20%] ' />
         </div>
 
-        <p className='text-[25px] text-justify mt-8 mb-8'>{post.text}</p>
+        <p className='text-[25px] text-justify mt-8 mb-8 whitespace-pre-wrap'>
+          {post.text}
+        </p>
         <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] p-4 mt-4 hover:border hover-border-white hover:border-[2px]'>
           Bezplatné stretnutie
         </button>

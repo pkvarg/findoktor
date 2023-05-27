@@ -8,9 +8,6 @@ const PageNavbar = () => {
     navigate('/')
   }
 
-  const goTo = (where) => {
-    navigate(where)
-  }
   return (
     <div className='hidden lg:block'>
       <div className='bg-[#ffffff]'>
@@ -38,12 +35,12 @@ const PageNavbar = () => {
             </div>
           </div>
           <div className='flex text-[#0179d6]'>
-            <p
-              onClick={() => goTo('/')}
+            <Link
+              to='/'
               className='text-[30px] sm:text-[30px] lg:text-[24px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] hover:text-[#ffffff]  p-3 block rounded-md text-base font-medium'
             >
               DOMOV
-            </p>
+            </Link>
 
             <Link
               to='/#about'
@@ -54,10 +51,6 @@ const PageNavbar = () => {
 
             <Link
               to='/#services'
-              spy={true}
-              smooth={true}
-              offset={5}
-              duration={500}
               className='text-[30px] sm:text-[30px] lg:text-[24px]  font-[350] hover:bg-[#007ad6] hover:rounded-[30px] hover:text-[#ffffff] p-3 block  rounded-md text-base font-medium'
             >
               SLUŽBY
@@ -67,10 +60,6 @@ const PageNavbar = () => {
             </p>
             <Link
               to='/#contact'
-              spy={true}
-              smooth={true}
-              offset={5}
-              duration={500}
               className='text-[30px] sm:text-[30px] lg:text-[24px]  font-[350] hover:bg-[#007ad6] hover:rounded-[30px] hover:text-[#ffffff] p-3 block  rounded-md text-base font-medium'
             >
               KONTAKT

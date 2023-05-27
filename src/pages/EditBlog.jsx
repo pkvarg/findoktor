@@ -9,10 +9,11 @@ import { toast } from 'react-hot-toast'
 import { useParams } from 'react-router-dom'
 
 const EditBlog = () => {
-  const [postList, setPostList] = useState([])
+  const navigate = useNavigate()
   const params = useParams()
+  const [postList, setPostList] = useState([])
 
-  const [isAuth, setIsAuth] = useState(true)
+  const [isAuth, setIsAuth] = useState(false)
   const [title, setTitle] = useState('')
   const [intro, setIntro] = useState('')
   const [text, setText] = useState('')
@@ -22,18 +23,16 @@ const EditBlog = () => {
   const [editedPost, setEditedPost] = useState([])
   const imageUrl = image ? URL.createObjectURL(image) : null
 
-  const navigate = useNavigate()
-
-  // useEffect(() => {
-  //   const loggedIn = localStorage.getItem(xauth)
-  //   if (loggedIn) {
-  //     setIsAuth(loggedIn)
-  //   } else if (!loggedIn) {
-  //     setIsAuth(false)
-  //   } else {
-  //     setIsAuth(false)
-  //   }
-  // }, [])
+  useEffect(() => {
+    const loggedIn = localStorage.getItem(xauth)
+    if (loggedIn) {
+      setIsAuth(loggedIn)
+    } else if (!loggedIn) {
+      setIsAuth(false)
+    } else {
+      setIsAuth(false)
+    }
+  }, [])
 
   useEffect(() => {
     const storagePosts = localStorage.getItem('postList')

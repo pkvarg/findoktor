@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom'
 
 const SinglePostIntro = ({ post }) => {
   const navigate = useNavigate()
+  const goToCurrentPost = (postId) => {
+    navigate(`/blog/${postId}`)
+  }
 
   return (
     <>
@@ -14,7 +17,7 @@ const SinglePostIntro = ({ post }) => {
         </div>
         <button
           className='bg-[#0179d6] text-[22px] w-[45%] mt-[130px] mb-[15px] rounded-[30px] hover:border hover-border-white hover:border-[2px]'
-          onClick={() => navigate(`/blog/${post.id}`)}
+          onClick={() => goToCurrentPost(post.id)}
         >
           Čítaj celý článok
         </button>
