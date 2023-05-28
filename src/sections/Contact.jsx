@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-hot-toast'
 // import Message from '../components/Message'
 
 const Contact = () => {
@@ -7,6 +8,7 @@ const Contact = () => {
   const [messageSuccess, setMessageSuccess] = useState(null)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   const [mailMessage, setMailMessage] = useState('')
   const [checkBox, setCheckBox] = useState(false)
 
@@ -24,7 +26,7 @@ const Contact = () => {
     e.preventDefault()
 
     if (passwordGroupOne !== x || passwordGroupTwo !== y) {
-      setMessage('Message failed! Try again later, please.')
+      toast.error('Message failed! Try again later, please.')
       setName('')
       setEmail('')
       setMailMessage('')
@@ -42,16 +44,17 @@ const Contact = () => {
         .then(
           (result) => {
             console.log(result.text)
-            setMessageSuccess('Message successfully sent!')
+            toast.success('Message successfully sent!')
             console.log('message sent')
           },
           (error) => {
-            setMessage('Error! Try again later, please.')
+            toast.error('Error! Try again later, please.')
             console.log(error.text)
           }
         )
       setName('')
       setEmail('')
+      setPhone('')
       setMailMessage('')
       const element = document.getElementById('contact')
       element.scrollIntoView({ behavior: 'smooth' })
@@ -59,7 +62,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='bg-[#013bb0] relative' id='contact'>
+    <div className='bg-[#013bb0] relative pb-8' id='contact'>
       <h1 className='text-center text-[35px] text-[#007ad6] text-[30px]'>
         KONTAKT
       </h1>
@@ -70,96 +73,108 @@ const Contact = () => {
           alt='fd-squares'
         />
       </div>
-      <div className='flex flex-col lg:flex-row mt-[10%] ml-[22.5%] text-[#007ad6] gap-4'>
-        {/* <div>
-          <h1 className='text-[30px] uppercase'>Napíšte nám</h1>
-          <div className='lg:w-[33%] w-[85%] lg:pt-0 pt-[150px]'>
-          {messageSuccess && (
+      <div className='flex flex-col lg:flex-row mt-[15%] ml-[22.5%] text-[#007ad6] gap-4'>
+        <div>
+          {/* <h1 className='text-[30px] uppercase'>Napíšte nám</h1> */}
+          <div className=' lg:pt-0 pt-[150px]'>
+            {/* {messageSuccess && (
             <Message variant='success'>{messageSuccess}</Message>
           )}
-          {message && <Message variant='danger'>{message}</Message>}
-          <div>
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className='flex flex-col gap-[2.5px] lg:text-[35px] text-[55px]'
-            >
-              <label className='form-label'>
-                Your message <sup>*</sup>
-              </label>
-              <textarea
-                className='form-control rounded-xl'
-                rows='5'
-                name='message'
-                value={mailMessage}
-                onChange={(e) => setMailMessage(e.target.value)}
-                required='required'
-              ></textarea>
-              <label className='form-label'>
-                Name <sup>*</sup>
-              </label>
-              <input
-                className='form-control rounded-xl'
-                type='text'
-                name='user_name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required='required'
-              />
-
-              <label className='form-label'>
-                Email <sup>*</sup>
-              </label>
-              <input
-                className='form-control rounded-xl'
-                type='email'
-                name='user_email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required='required'
-              />
-
-              <div className='flex flex-row items-center form-check my-3'>
-                <input
-                  id='flexCheckDefault'
-                  type='checkbox'
-                  defaultChecked={false}
-                  value={checkBox}
-                  onChange={handleCheckBox}
-                  required='required'
-                  className='rounded-xl'
-                />
-                <label
-                  className='form-check-label lg:text-[30px] text-[40px] ml-[15px]'
-                  htmlFor='flexCheckDefault'
-                >
-                  I agree to process my data
-                </label>
-              </div>
-              <input
-                className='form-control hidden'
-                type='text'
-                defaultValue={passwordGroupOne}
-                onChange={(e) => setPasswordGroupOne(e.target.value)}
-              />
-              <input
-                className='form-control hidden'
-                type='text'
-                defaultValue={passwordGroupTwo}
-                onChange={(e) => setPasswordGroupTwo(e.target.value)}
-              />
-              <button
-                className='bg-btn-blue mt-3 rounded-xl hover:bg-skin-color hover:border hover:border-dark-red hover:text-dark-red'
-                type='submit'
-                value='Send'
+          {message && <Message variant='danger'>{message}</Message>} */}
+            <div className='text-[#000000]'>
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className='flex flex-col gap-[2.5px] text-[25px]'
               >
-                Send
-              </button>
-            </form>
+                <label className='form-label text-[#ffffff]'>
+                  Vaša správa<sup>*</sup>
+                </label>
+                <textarea
+                  className='form-control rounded-xl pl-2'
+                  rows='5'
+                  name='message'
+                  value={mailMessage}
+                  onChange={(e) => setMailMessage(e.target.value)}
+                  required='required'
+                ></textarea>
+                <label className='form-label my-1  text-[#ffffff]'>
+                  Meno <sup>*</sup>
+                </label>
+                <input
+                  className='form-control rounded-xl pl-2'
+                  type='text'
+                  name='user_name'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required='required'
+                />
+
+                <label className='form-label my-1  text-[#ffffff]'>
+                  {' '}
+                  Telefón
+                </label>
+                <input
+                  className='form-control rounded-xl pl-2'
+                  type='text'
+                  name='user_phone'
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+
+                <label className='form-label my-1  text-[#ffffff]'>
+                  Email <sup>*</sup>
+                </label>
+                <input
+                  className='form-control rounded-xl pl-2'
+                  type='email'
+                  name='user_email'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required='required'
+                />
+
+                <div className='flex flex-row items-center form-check my-3'>
+                  <input
+                    id='flexCheckDefault'
+                    type='checkbox'
+                    defaultChecked={false}
+                    value={checkBox}
+                    onChange={handleCheckBox}
+                    required='required'
+                    className='rounded-xl w-[20px] h-[20px]'
+                  />
+                  <label
+                    className='form-check-label lg:text-[30px] text-[40px] text-[#ffffff] ml-1'
+                    htmlFor='flexCheckDefault'
+                  >
+                    Súhlasím so spracovaním údajov
+                  </label>
+                </div>
+                <input
+                  className='form-control hidden'
+                  type='text'
+                  defaultValue={passwordGroupOne}
+                  onChange={(e) => setPasswordGroupOne(e.target.value)}
+                />
+                <input
+                  className='form-control hidden'
+                  type='text'
+                  defaultValue={passwordGroupTwo}
+                  onChange={(e) => setPasswordGroupTwo(e.target.value)}
+                />
+                <button
+                  className='bg-[#0378d5] text-[#ffffff] py-2 mt-3 rounded-[30px] hover:border'
+                  type='submit'
+                  value='Send'
+                >
+                  Odoslať
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-        </div> */}
-        <img className='w-[30%]' src='/map.png' alt='map' />
+        {/* <img className='w-[30%]' src='/map.png' alt='map' /> */}
       </div>
     </div>
   )
