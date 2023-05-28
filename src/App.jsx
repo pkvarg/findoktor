@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home, BlogPage, CreateBlog, EditBlog, Login, Png } from './pages'
+import { Home, BlogPage, CreateBlog, EditBlog, Login } from './pages'
 import { Toaster } from 'react-hot-toast'
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
         <Route path='/edit-blog' element={<EditBlog />} />
         <Route path='/edit-blog/:id' element={<EditBlog />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/style' element={<Png />} />
       </Routes>
       <Toaster />
     </BrowserRouter>

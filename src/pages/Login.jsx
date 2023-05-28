@@ -26,7 +26,7 @@ const Login = () => {
     signInWithPopup(auth, provider).then((result) => {
       if (
         result.user.email === import.meta.env.VITE_AUTH_EMAIL_2 ||
-        import.meta.env.VITE_AUTH_EMAIL_1
+        result.user.email === import.meta.env.VITE_AUTH_EMAIL_1
       ) {
         localStorage.setItem(xauth, true)
         setIsAuth(true)

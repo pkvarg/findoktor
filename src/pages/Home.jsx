@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Hero, About, Services, Blog } from './../sections'
+import { Hero, About, Services, Blog, Contact } from './../sections'
 
 const Home = () => {
   useEffect(() => {
@@ -18,6 +18,7 @@ const Home = () => {
       <About />
       <Services />
       <Blog />
+      <Contact />
     </>
   )
 }
