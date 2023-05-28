@@ -61,7 +61,7 @@ const Login = () => {
   return (
     <>
       <div className='bg-[#013bb0] text-white h-[100vh]'>
-        <div className='flex gap-4 items-start p-8'>
+        <div className='flex gap-4 flex-col lg:flex-row items-start p-8'>
           <h1
             className='text-[25px] cursor-pointer hover:border px-2 rounded-xl'
             onClick={() => navigate('/')}
@@ -101,7 +101,7 @@ const Login = () => {
         </div>
         <button
           onClick={signInWithGoogle}
-          className='bg-[#158765] m-8 p-2 rounded-xl text-[25px] hover:border'
+          className='bg-[#158765] ml-8 p-2 rounded-xl text-[25px] hover:border'
         >
           Log in with Google
         </button>

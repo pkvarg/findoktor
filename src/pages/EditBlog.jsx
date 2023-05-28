@@ -70,11 +70,10 @@ const EditBlog = () => {
                 text,
                 url,
                 imageName,
-                author: 'Peto',
-                // author: {
-                //   name: auth.currentUser.displayName,
-                //   id: auth.currentUser.uid,
-                // },
+                author: {
+                  name: auth.currentUser.displayName,
+                  id: auth.currentUser.uid,
+                },
               })
             })
             .catch((error) => {
@@ -95,11 +94,10 @@ const EditBlog = () => {
           title,
           intro,
           text,
-          author: 'Peto',
-          // author: {
-          //   name: auth.currentUser.displayName,
-          //   id: auth.currentUser.uid,
-          // },
+          author: {
+            name: auth.currentUser.displayName,
+            id: auth.currentUser.uid,
+          },
         })
         //alert('Post updated no Img')
         toast.success('Post Updated')
@@ -173,13 +171,15 @@ const EditBlog = () => {
                       }}
                     />
                   </div>
-                  <button
-                    className='bg-[#007ad7] p-4 mt-2 w-[85%] ml-auto rounded-[30px] hover:border'
-                    onClick={() => editPost(post.id)}
-                  >
-                    {' '}
-                    Edit Post
-                  </button>
+                  <div className='flex justify-center'>
+                    <button
+                      className='bg-[#007ad7] p-4 mt-2 w-[85%] lg:ml-auto rounded-[30px] hover:border'
+                      onClick={() => editPost(post.id)}
+                    >
+                      {' '}
+                      Edit Post
+                    </button>
+                  </div>
                 </div>
               )
           )}

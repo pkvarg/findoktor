@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='lg:mt-4'>
+      <nav className=''>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#ffffff] lg:bg-[#013baf] relative'>
           <div className='flex h-16 justify-end'>
             <div className='flex mt-[-5%] lg:hidden items-center ml-[10%] gap-2 mt-2 z-1 absolute top-6 -left-8'>
@@ -28,10 +28,10 @@ const Navbar = () => {
 
             <div className='flex flex-row justify-center items-center text-white z-50'>
               {isOpen && (
-                <div className='bg-[#013bb0] translate-y-[90%] md:translate-y-[75%] lg:translate-y-0 flex flex-col lg:flex-row translate-x-[30%] md:translate-x-[50%] lg:translate-x-0 justify-center items-end'>
+                <div className='bg-[#013bb0] translate-y-[65%] md:translate-y-[75%] lg:translate-y-0 flex flex-col lg:flex-row translate-x-[40%] md:translate-x-[50%] lg:translate-x-0 justify-center items-end'>
                   <a
                     href='/'
-                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-2 lg:py-3 px-3 block rounded-md text-base font-medium'
+                    className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-2 lg:py-3 px-3 block rounded-md text-base font-medium'
                   >
                     DOMOV
                   </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] block  py-2 lg:py-3 p-3 rounded-md text-base font-medium'
+                    className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px] block  py-2 lg:py-3 p-3 rounded-md text-base font-medium'
                   >
                     O NÁS
                   </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px]  py-2 lg:py-3 p-3 block rounded-md text-base font-medium'
+                    className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px]  py-2 lg:py-3 p-3 block rounded-md text-base font-medium'
                   >
                     SLUŽBY
                   </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
+                    className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
                   >
                     BLOG
                   </Link>
@@ -71,10 +71,16 @@ const Navbar = () => {
                     smooth={true}
                     offset={5}
                     duration={500}
-                    className='text-[36px] lg:text-[28px] font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
+                    className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
                   >
                     KONTAKT
                   </Link>
+                  <a
+                    href='/login'
+                    className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px] py-2 lg:py-3 p-3 block  rounded-md text-base font-medium'
+                  >
+                    LOGIN
+                  </a>
                 </div>
               )}
 

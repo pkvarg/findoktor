@@ -41,11 +41,10 @@ const CreateBlog = () => {
               text,
               url,
               image: image.name,
-              author: 'Peto',
-              // author: {
-              //   name: auth.currentUser.displayName,
-              //   id: auth.currentUser.uid,
-              // },
+              author: {
+                name: auth.currentUser.displayName,
+                id: auth.currentUser.uid,
+              },
             })
           })
           .catch((error) => {
@@ -68,27 +67,27 @@ const CreateBlog = () => {
   }
 
   return isAuth ? (
-    <div className='bg-[#013bb0] text-white pb-[8%]'>
+    <div className='bg-[#013bb0] text-white pb-[8%] w-[100vw]'>
       <h1
         className='text-[25px] cursor-pointer p-4'
         onClick={() => navigate('/')}
       >
         Home.
       </h1>
-      <div className='text-white mt-[2%]'>
+      <div className='text-white mt-8 lg:mt-[2%]'>
         <h1 className='text-center text-[35px]'>Create New Blog Post</h1>
 
-        <div className='flex flex-col mt-4 gap-4 text-[25px] mx-[5%] lg:mx-[30%]'>
+        <div className='flex flex-col mt-8 lg:mt-4 gap-8 lg:gap-4 text-[25px] mx-[5%] lg:mx-[30%]'>
           <div>
             <label className='hidden lg:block'>Image : </label>
             <input type='file' onChange={handleImageChange} />
           </div>
 
-          <div>
+          {/* <div>
             <img src={urlLink} />
-          </div>
+          </div> */}
 
-          <div className='flex justify-between'>
+          <div className='flex justify-between mt-8 lg:mt-0'>
             <label className='hidden lg:block'>Title : </label>
             <textarea
               className='text-black w-[95%] lg:w-[85%]'
@@ -121,7 +120,7 @@ const CreateBlog = () => {
             />
           </div>
           <button
-            className='bg-[#007ad7] p-4 mt-2 lg:w-[85%] lg:ml-auto rounded-[30px] hover:border'
+            className='bg-[#007ad7] p-4 mt-6 lg:mt-2 lg:w-[85%] lg:ml-auto rounded-[30px] hover:border'
             onClick={createPost}
           >
             {' '}

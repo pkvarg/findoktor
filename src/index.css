@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
+}
+
+.navbar-text {
+  font-size: 24px;
 }
 
 .hero-bg-left {
