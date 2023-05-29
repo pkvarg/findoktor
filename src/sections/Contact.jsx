@@ -44,11 +44,11 @@ const Contact = () => {
         .then(
           (result) => {
             console.log(result.text)
-            toast.success('Message successfully sent!')
+            toast.success('Správa úspešne odoslaná!')
             console.log('message sent')
           },
           (error) => {
-            toast.error('Error! Try again later, please.')
+            toast.error('Chyba! Kontaktujte nás telefonicky, prosím.')
             console.log(error.text)
           }
         )
@@ -97,7 +97,7 @@ const Contact = () => {
 
                 <label className='form-label my-1  text-[#ffffff]'>
                   {' '}
-                  Telefón
+                  Telefón <sup>*</sup>
                 </label>
                 <input
                   className='form-control rounded-xl pl-2'
@@ -105,6 +105,7 @@ const Contact = () => {
                   name='user_phone'
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                  required
                 />
 
                 <label className='form-label my-1  text-[#ffffff]'>
