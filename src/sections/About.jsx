@@ -1,11 +1,11 @@
 import React from 'react'
-import { StickyNavAbout } from '../components'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const About = () => {
   return (
     <>
-      <StickyNavAbout />
-      <div className='bg-[#013bb0] relative pb-[130px]' id='about'>
+      <div className='bg-[#013bb0] relative pb-[130px] two' id='about'>
         <div className='block lg:hidden bg-[#ffffff]'>
           <img
             className='w-[100%] py-8 px-2 '

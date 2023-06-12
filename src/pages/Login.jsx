@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { auth, provider, xauth, db } from './../../firebaseConfig'
 import { signInWithPopup } from 'firebase/auth'
 import { signOut } from 'firebase/auth'
-
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
+import { useStateContext } from '../context/StateContext'
+
 import {
   getDocs,
   collection,
@@ -15,7 +16,8 @@ import {
 
 const Login = () => {
   const navigate = useNavigate()
-  const [isAuth, setIsAuth] = useState()
+  const { isAuth, setIsAuth } = useStateContext()
+  // const [isAuth, setIsAuth] = useState()
   const [agreed, setAgreed] = useState(0)
   const [declined, setDeclined] = useState(0)
   const [botsCount, setBotsCount] = useState(0)
@@ -28,8 +30,7 @@ const Login = () => {
         result.user.email === import.meta.env.VITE_AUTH_EMAIL_2 ||
         result.user.email === import.meta.env.VITE_AUTH_EMAIL_1
       ) {
-        localStorage.setItem(xauth, true)
-        setIsAuth(true)
+        setIsAuth(xauth)
         toast.success('Logged in.')
       } else {
         navigate('/')
@@ -40,24 +41,14 @@ const Login = () => {
 
   const signUserOut = () => {
     signOut(auth).then(() => {
-      localStorage.clear()
-      setIsAuth(false)
+      //localStorage.clear()
+      setIsAuth('non')
       toast.success('Logged out.')
       //navigate('/')
     })
   }
 
-  useEffect(() => {
-    const loggedIn = localStorage.getItem(xauth)
-    if (loggedIn) {
-      setIsAuth(loggedIn)
-    } else if (!loggedIn) {
-      setIsAuth(false)
-    } else {
-      setIsAuth(false)
-    }
-  }, [])
-
+  console.log(isAuth)
   return (
     <>
       <div className='bg-[#013bb0] text-white h-[100vh]'>
@@ -68,8 +59,14 @@ const Login = () => {
           >
             Home.
           </h1>
-          {isAuth && (
+          {isAuth === xauth && (
             <>
+              <h1
+                className='text-[25px] cursor-pointer hover:border px-2 rounded-xl'
+                onClick={() => navigate('/blog')}
+              >
+                All Blogs.
+              </h1>
               <h1
                 className='text-[25px] cursor-pointer hover:border px-2 rounded-xl'
                 onClick={() => navigate('/create-blog')}

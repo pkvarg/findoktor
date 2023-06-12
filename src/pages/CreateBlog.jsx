@@ -5,28 +5,20 @@ import { db, auth, xauth } from './../../firebaseConfig'
 import { storage } from './../../firebaseConfig'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { toast } from 'react-hot-toast'
+import { useStateContext } from '../context/StateContext'
 
 const CreateBlog = () => {
   const navigate = useNavigate()
   const [title, setTitle] = useState('')
   const [intro, setIntro] = useState('')
   const [text, setText] = useState('')
-  const [isAuth, setIsAuth] = useState(false)
+  const { isAuth } = useStateContext()
   const [image, setImage] = useState(null)
   const [urlLink, setUrlLink] = useState('')
 
-  useEffect(() => {
-    const loggedIn = localStorage.getItem(xauth)
-    if (loggedIn) {
-      setIsAuth(loggedIn)
-    } else if (!loggedIn) {
-      setIsAuth(false)
-    } else {
-      setIsAuth(false)
-    }
-  }, [])
-
   const postsCollectionRef = collection(db, 'posts')
+
+  console.log('creBl', isAuth)
 
   const createPost = () => {
     // image to firebase storage
@@ -51,7 +43,7 @@ const CreateBlog = () => {
             toast.error(error.message, 'error getting image url')
           })
         //setImage(null)
-        localStorage.removeItem('postList')
+        //localStorage.removeItem('postList')
         toast.success('Post created.')
         navigate('/')
       })
@@ -66,7 +58,7 @@ const CreateBlog = () => {
     }
   }
 
-  return isAuth ? (
+  return isAuth === xauth ? (
     <div className='bg-[#013bb0] text-white pb-[8%] w-[100vw]'>
       <h1
         className='text-[25px] cursor-pointer p-4'

@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 #root {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  background-color: #013baf;
 }
 
 .navbar-text {
@@ -21,3 +22,18 @@ body {
 .hero-bg-right {
   background-color: #013bb0;
 }
+
+.container {
+  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll; */
+  /* max-width: 100vw !important; */
+  height: 100vh;
+}
+
+section {
+  /* height: 100vh; */
+  scroll-snap-align: start;
+}
+
+/* separate content to more sections
+and add height to subs like one two... */

@@ -1,17 +1,19 @@
 import React, { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { deleteDoc, doc } from 'firebase/firestore'
-import { db } from './../../firebaseConfig'
+import { db, xauth } from './../../firebaseConfig'
 import { toast } from 'react-hot-toast'
+import { useStateContext } from '../context/StateContext'
 // import LikeButton from './../components/LikeButton'
 
-const SinglePost = ({ post, isAuth }) => {
+const SinglePost = ({ post }) => {
   const navigate = useNavigate()
+  const { isAuth } = useStateContext()
   const deletePost = useCallback(async (id) => {
     alert('Delete post - Are you sure?')
     const postDoc = doc(db, 'posts', id)
     await deleteDoc(postDoc)
-    localStorage.removeItem('postList')
+    //localStorage.removeItem('postList')
     toast.success('Post deleted')
     navigate('/')
   }, [])
@@ -21,7 +23,7 @@ const SinglePost = ({ post, isAuth }) => {
   }
 
   return (
-    <div className='bg-[#013baf] text-white relative' key={post.id}>
+    <div className='text-white relative' key={post.id}>
       <div className='pb-10 lg:mx-[10%]'>
         <div className='flex flex-col lg:flex-row items-center'>
           <img
@@ -51,7 +53,7 @@ const SinglePost = ({ post, isAuth }) => {
       </div>
 
       <>
-        {isAuth && (
+        {isAuth === xauth && (
           <>
             <button
               className='absolute top-6 lg:top-3 right-[7%] bg-[#013baf]'

@@ -5,15 +5,16 @@ import { db, auth, xauth } from './../../firebaseConfig'
 import { storage } from './../../firebaseConfig'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { toast } from 'react-hot-toast'
+import { useStateContext } from '../context/StateContext'
 
 import { useParams } from 'react-router-dom'
 
 const EditBlog = () => {
   const navigate = useNavigate()
   const params = useParams()
+  const { allBlogs, isAuth } = useStateContext()
   const [postList, setPostList] = useState([])
 
-  const [isAuth, setIsAuth] = useState(false)
   const [title, setTitle] = useState('')
   const [intro, setIntro] = useState('')
   const [text, setText] = useState('')
@@ -24,27 +25,19 @@ const EditBlog = () => {
   const imageUrl = image ? URL.createObjectURL(image) : null
 
   useEffect(() => {
-    const loggedIn = localStorage.getItem(xauth)
-    if (loggedIn) {
-      setIsAuth(loggedIn)
-    } else if (!loggedIn) {
-      setIsAuth(false)
-    } else {
-      setIsAuth(false)
-    }
-  }, [])
+    // const storagePosts = localStorage.getItem('postList')
+    //   ? JSON.parse(localStorage.getItem('postList'))
+    //   : []
 
-  useEffect(() => {
-    const storagePosts = localStorage.getItem('postList')
-      ? JSON.parse(localStorage.getItem('postList'))
-      : []
-    const currentPost = storagePosts.filter((post) => post.id === params.id)
+    const currentPost = allBlogs?.filter((post) => post.id === params.id)
     setEditedPost(currentPost)
     setTitle(currentPost[0].title)
     setIntro(currentPost[0].intro)
     setText(currentPost[0].text)
     setImageFileUrl(currentPost[0].url)
     setImageName(currentPost[0].image)
+
+    console.log('eblog', currentPost)
   }, [])
 
   const handleImageChange = (e) => {
@@ -110,7 +103,7 @@ const EditBlog = () => {
   }
 
   return (
-    isAuth && (
+    isAuth === xauth && (
       <div className='bg-[#013bb0] text-white pb-8'>
         <h1
           className='text-[25px] cursor-pointer p-4'
