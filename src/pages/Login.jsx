@@ -17,7 +17,6 @@ import {
 const Login = () => {
   const navigate = useNavigate()
   const { isAuth, setIsAuth } = useStateContext()
-  // const [isAuth, setIsAuth] = useState()
   const [agreed, setAgreed] = useState(0)
   const [declined, setDeclined] = useState(0)
   const [botsCount, setBotsCount] = useState(0)
@@ -41,14 +40,12 @@ const Login = () => {
 
   const signUserOut = () => {
     signOut(auth).then(() => {
-      //localStorage.clear()
       setIsAuth('non')
       toast.success('Logged out.')
       //navigate('/')
     })
   }
 
-  console.log(isAuth)
   return (
     <>
       <div className='bg-[#013bb0] text-white h-[100vh]'>

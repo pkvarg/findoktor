@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { collection } from 'firebase/firestore'
-import { db, xauth } from './../../firebaseConfig'
 import { SinglePost, PageNavbar, PageNavbarMob } from '../components'
 import { useNavigate } from 'react-router-dom'
 import SinglePostIntro from '../components/SinglePostIntro'
-import { toast } from 'react-hot-toast'
 import { useStateContext } from '../context/StateContext'
 
 const BlogPage = () => {
@@ -14,19 +11,7 @@ const BlogPage = () => {
   const id = params.id
   const { allBlogs } = useStateContext()
 
-  const [isAuth, setIsAuth] = useState()
   const [currentPost, setCurrentPost] = useState([])
-
-  useEffect(() => {
-    const loggedIn = localStorage.getItem(xauth)
-    if (loggedIn) {
-      setIsAuth(loggedIn)
-    } else if (!loggedIn) {
-      setIsAuth(false)
-    } else {
-      setIsAuth(false)
-    }
-  }, [])
 
   useEffect(() => {
     if (id) {
@@ -34,9 +19,6 @@ const BlogPage = () => {
       setCurrentPost(postById)
     }
   }, [id])
-
-  console.log('allBlogs', allBlogs)
-  console.log('current', currentPost)
 
   return (
     <>
@@ -54,10 +36,10 @@ const BlogPage = () => {
 
       {!id ? (
         allBlogs?.map((post) => {
-          return <SinglePostIntro key={post.id} post={post} isAuth={isAuth} />
+          return <SinglePostIntro key={post.id} post={post} />
         })
       ) : (
-        <SinglePost post={currentPost} isAuth={isAuth} />
+        <SinglePost post={currentPost} />
       )}
     </>
   )

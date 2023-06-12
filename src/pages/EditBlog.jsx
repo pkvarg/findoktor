@@ -25,10 +25,6 @@ const EditBlog = () => {
   const imageUrl = image ? URL.createObjectURL(image) : null
 
   useEffect(() => {
-    // const storagePosts = localStorage.getItem('postList')
-    //   ? JSON.parse(localStorage.getItem('postList'))
-    //   : []
-
     const currentPost = allBlogs?.filter((post) => post.id === params.id)
     setEditedPost(currentPost)
     setTitle(currentPost[0].title)
@@ -75,7 +71,6 @@ const EditBlog = () => {
           //setImage(null)
           //alert('Post updated w Img')
           toast.success('Post with Image Updated')
-          localStorage.removeItem('postList')
           navigate('/')
         })
         .catch((error) => {
@@ -94,7 +89,6 @@ const EditBlog = () => {
         })
         //alert('Post updated no Img')
         toast.success('Post Updated')
-        localStorage.removeItem('postList')
         navigate('/')
       } catch (error) {
         toast.error(error)

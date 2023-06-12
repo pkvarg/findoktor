@@ -18,8 +18,6 @@ const CreateBlog = () => {
 
   const postsCollectionRef = collection(db, 'posts')
 
-  console.log('creBl', isAuth)
-
   const createPost = () => {
     // image to firebase storage
     const imageRef = ref(storage, image.name)
@@ -43,7 +41,6 @@ const CreateBlog = () => {
             toast.error(error.message, 'error getting image url')
           })
         //setImage(null)
-        //localStorage.removeItem('postList')
         toast.success('Post created.')
         navigate('/')
       })

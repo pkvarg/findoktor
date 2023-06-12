@@ -13,7 +13,7 @@ const SinglePost = ({ post }) => {
     alert('Delete post - Are you sure?')
     const postDoc = doc(db, 'posts', id)
     await deleteDoc(postDoc)
-    //localStorage.removeItem('postList')
+
     toast.success('Post deleted')
     navigate('/')
   }, [])

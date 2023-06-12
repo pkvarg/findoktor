@@ -10,8 +10,6 @@ const Blog = () => {
   const id = params.id
   const { allBlogs } = useStateContext()
 
-  console.log('HeroallBlogs', allBlogs)
-
   return (
     <>
       <div className='bg-[#013bb0] pb-8 four' id='blog'>
