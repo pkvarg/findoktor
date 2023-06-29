@@ -9,16 +9,16 @@ const Hero = () => {
   return (
     <>
       <div className='flex flex-row one' id='home'>
-        <div className='hero-bg-left w-0 h-0 lg:w-[33%] lg:h-[100vh] relative'>
+        <div className='hero-bg-left hidden lg:block h-[100vh] relative'>
           <div
-            className='flex items-center ml-[10%] gap-2 mt-2 cursor-pointer'
+            className='flex items-center gap-2 mt-2 cursor-pointer'
             onClick={() => home()}
           >
             <img className='w-[15%]' src='fd-red-logo.webp' alt='red-logo' />
-            <h1 className='text-[#385ebc] text-[35px] font-light uppercase'>
+            <h1 className='text-[#385ebc] text-[1.75em] font-light uppercase'>
               Finančný
             </h1>
-            <h1 className='text-[#be324b] text-[35px] font-light uppercase'>
+            <h1 className='text-[#be324b] text-[1.75em] font-light uppercase'>
               Doktor
             </h1>
           </div>
@@ -31,12 +31,12 @@ const Hero = () => {
             />
           </div>
           <img
-            className='absolute bottom-0 h-auto w-[80%] aspect-w-6 aspect-h-9 z-1'
+            className='absolute bottom-0 h-auto w-[90%] aspect-w-6 aspect-h-9 z-1'
             src='Michal.png'
             alt='Michal-Dovala-Financny-doktor'
           />
         </div>
-        <div className='hero-bg-right w-[100vw] lg:w-[67%] relative'>
+        <div className='hero-bg-right relative'>
           <Navbar />
 
           <div className='absolute right-[7.5%] top-[10.5%]'>
@@ -67,7 +67,10 @@ const Hero = () => {
             </div>
           </div>
           <div className='flex justify-center'>
-            <button className='text-[25px] text-[#ffffff] font-normal bg-[#007ad7] rounded-[55px] px-12 mb-16 py-4 lg:py-4  mt-4 lg:mt-6 hover:border hover-border-white hover:border-[2px]  lg:ml-[42%] '>
+            <button
+              onClick={() => navigate('/meeting')}
+              className='text-[25px] text-[#ffffff] font-normal bg-[#007ad7] rounded-[55px] px-12 mb-16 py-4 lg:py-4  mt-4 lg:mt-6 hover:border hover-border-white hover:border-[2px] lg:ml-[42%] '
+            >
               Bezplatné stretnutie
             </button>
           </div>

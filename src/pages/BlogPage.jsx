@@ -24,7 +24,7 @@ const BlogPage = () => {
     <>
       <PageNavbar />
       <PageNavbarMob />
-      <div className='lg:mt-0 pt-4 lg:pt-8 lg:pb-[5%]'>
+      <div className='lg:mt-0 pt-4 lg:pt-8'>
         <h1
           className='uppercase text-[#007ad6] text-[30px] text-center cursor-pointer'
           onClick={() => navigate('/blog')}

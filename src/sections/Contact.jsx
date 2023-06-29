@@ -26,7 +26,7 @@ const Contact = () => {
     e.preventDefault()
 
     if (passwordGroupOne !== x || passwordGroupTwo !== y) {
-      toast.error('Message failed! Try again later, please.')
+      toast.error('Vyskytla sa chyba! Skúste neskôr, prosím.')
       setName('')
       setEmail('')
       setMailMessage('')

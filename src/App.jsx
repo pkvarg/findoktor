@@ -1,5 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home, BlogPage, CreateBlog, EditBlog, Login } from './pages'
+import {
+  Home,
+  BlogPage,
+  CreateBlog,
+  EditBlog,
+  Login,
+  ServicesPage,
+  Ebook,
+  Meeting,
+} from './pages'
 import { Footer } from './components'
 import { Toaster } from 'react-hot-toast'
 import { StateContext } from './context/StateContext'
@@ -16,6 +25,9 @@ function App() {
           <Route path='/edit-blog' element={<EditBlog />} />
           <Route path='/edit-blog/:id' element={<EditBlog />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/services' element={<ServicesPage />} />
+          <Route path='/ebook' element={<Ebook />} />
+          <Route path='/meeting' element={<Meeting />} />
         </Routes>
         <Footer />
         <Toaster />

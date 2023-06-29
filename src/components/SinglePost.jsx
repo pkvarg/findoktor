@@ -49,7 +49,7 @@ const SinglePost = ({ post }) => {
         </div>
 
         {/* <LikeButton id={post.id} /> */}
-        <div className='hidden lg:block bg-[#ffffff] h-[2px] mx-[2%] lg:mx-[-6%] my-[20%] lg:my-[4%]'></div>
+        {/* <div className='hidden lg:block bg-[#ffffff] h-[2px] mx-[2%] lg:mx-[-6%] my-[20%] lg:my-[4%]'></div> */}
       </div>
 
       <>
