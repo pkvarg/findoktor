@@ -36,7 +36,7 @@ const Hero = () => {
             alt='Michal-Dovala-Financny-doktor'
           />
         </div>
-        <div className='hero-bg-right relative'>
+        <div className='hero-bg-right relative ml-auto'>
           <Navbar />
 
           <div className='absolute right-[7.5%] top-[10.5%]'>
@@ -46,7 +46,7 @@ const Hero = () => {
               alt='fd-squares'
             />
           </div>
-          <div className='mt-[70%] lg:mt-[30%] text-[#007ad6] mx-[12.5%]'>
+          <div className='mt-[70%] lg:mt-[30%] text-[#007ad6] ml-[5%] mr-[12.5%]'>
             <h2 className='text-[28.5px] text-center lg:text-left leading-[35px]'>
               Vitajte, ste v dobrých rukách.
             </h2>

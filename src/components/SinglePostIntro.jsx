@@ -9,7 +9,7 @@ const SinglePostIntro = ({ post }) => {
 
   return (
     <>
-      <div className='text-[#ffffff] flex flex-col lg:flex-row mx-[8%] mt-[65px] gap-10 relative'>
+      <div className='text-[#ffffff] flex flex-col lg:flex-row mx-[8%] mt-[4.5%] gap-10 relative'>
         <img
           className='mt-[50px] lg:mt-0 lg:w-[17%] lg:absolute'
           src={post.url}
@@ -26,7 +26,7 @@ const SinglePostIntro = ({ post }) => {
           Čítaj celý článok
         </button>
       </div>
-      <div className='bg-[#ffffff] h-[1px] mx-[6%] mt-[40px]'></div>
+      <div className='bg-[#ffffff] h-[1px] mx-[6%] mt-[5%]'></div>
     </>
   )
 }
