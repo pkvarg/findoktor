@@ -23,6 +23,19 @@ const Calculator = () => {
   const [showPart16, setShowPart16] = useState(false)
 
   console.log(city, street, houseNumber)
+  const handleNext1 = () => {
+    setShowPart1(false)
+    setShowPart2(true)
+  }
+
+  const handleBack = () => {
+    setShowPart1(true)
+    setShowPart2(false)
+  }
+  const handleNext2 = () => {
+    setShowPart2(false)
+    setShowPart3(true)
+  }
 
   return (
     <div className='text-black bg-white text-[30px] pb-8 '>
@@ -85,7 +98,7 @@ const Calculator = () => {
               Späť
             </button>
             <button
-              onClick={() => setShowPart1(false)}
+              onClick={() => handleNext1()}
               className='border border-[#0076ba] px-14 py-2 rounded-[35px]'
             >
               Ďalej
@@ -136,6 +149,57 @@ const Calculator = () => {
               </p>
               <p className='font-bold text-right mr-3 -mt-6'>izbový</p>
             </div>
+          </div>
+          <div className='mt-4 flex flex-row justify-center gap-10'>
+            <div className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[200px] h-[150px]'>
+              <div className='flex flex-row mt-2'>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
+              </div>
+              <div className='flex flex-row mt-2'>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
+              </div>
+              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[35%] mr-2'>
+                4
+              </p>
+              <p className='font-bold text-right mr-3 -mt-6'>izbový</p>
+            </div>
+            <div className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[200px] h-[150px]'>
+              <div className='flex flex-row mt-2'>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
+              </div>
+              <div className='flex flex-row mt-2'>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
+              </div>
+              <div className='flex flex-row mt-2'>
+                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+                <p className='ml-[7.5px] -mt-[8%] text-[35px] text-[#0076ba]'>
+                  +
+                </p>
+              </div>
+
+              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[60%] mr-2'>
+                5+
+              </p>
+              <p className='font-bold text-right mr-3 -mt-6'>izbový</p>
+            </div>
+          </div>
+          <div className='flex flex-row justify-between mx-[35%] mt-16'>
+            <button
+              onClick={() => handleBack()}
+              className='border border-[#0076ba] px-14 py-2 rounded-[35px]'
+            >
+              Späť
+            </button>
+            <button
+              onClick={() => handleNext2()}
+              className='border border-[#0076ba] px-14 py-2 rounded-[35px]'
+            >
+              Ďalej
+            </button>
           </div>
         </>
       )}
