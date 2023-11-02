@@ -39,5 +39,9 @@ section {
   color: #0076ba;
 }
 
+.clicked {
+  border: 4px solid #03065f;
+}
+
 /* separate content to more sections
 and add height to subs like one two... */
