@@ -8,6 +8,7 @@ import {
   ServicesPage,
   Ebook,
   Meeting,
+  Calculator,
 } from './pages'
 import { Footer } from './components'
 import { Toaster } from 'react-hot-toast'
@@ -28,6 +29,7 @@ function App() {
           <Route path='/services' element={<ServicesPage />} />
           <Route path='/ebook' element={<Ebook />} />
           <Route path='/meeting' element={<Meeting />} />
+          <Route path='/calculator' element={<Calculator />} />
         </Routes>
         <Footer />
         <Toaster />

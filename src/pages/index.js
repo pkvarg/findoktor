@@ -6,6 +6,7 @@ import Login from './Login'
 import ServicesPage from './ServicesPage'
 import Ebook from './Ebook'
 import Meeting from './Meeting'
+import Calculator from './Calculator'
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   ServicesPage,
   Ebook,
   Meeting,
+  Calculator,
 }

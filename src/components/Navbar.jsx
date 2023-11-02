@@ -30,10 +30,10 @@ const Navbar = () => {
               {isOpen && (
                 <div className='bg-[#013bb0] translate-y-[65%] md:translate-y-[75%] lg:translate-y-0 flex flex-col lg:flex-row translate-x-[40%] md:translate-x-[50%] lg:translate-x-0 justify-center items-end'>
                   <a
-                    href='/'
+                    href='/calculator'
                     className='navbar-text font-[350] hover:bg-[#007ad6] hover:rounded-[30px] p-2 lg:py-3 px-3 block rounded-md text-base font-medium'
                   >
-                    DOMOV
+                    KALKULAČKA
                   </a>
                   <Link
                     to='about'

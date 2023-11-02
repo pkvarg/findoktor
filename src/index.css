@@ -35,5 +35,9 @@ section {
   scroll-snap-align: start;
 }
 
+.calc-blue {
+  color: #0076ba;
+}
+
 /* separate content to more sections
 and add height to subs like one two... */
