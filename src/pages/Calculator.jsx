@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CalcNavbar from '../components/calculator/CalcNavbar'
 import Component00 from '../components/calculator/component00'
 import Component01 from '../components/calculator/component01'
 import Component02 from '../components/calculator/Component02'
@@ -401,6 +402,7 @@ const Calculator = () => {
 
   return (
     <div className='text-black bg-white text-[30px]'>
+      <CalcNavbar />
       <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} />
 
       {renderComponent(currentComponent)}

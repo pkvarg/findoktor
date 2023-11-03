@@ -3,7 +3,7 @@ import React from 'react'
 const Component00 = ({ handleFlatOrHouse }) => {
   return (
     <>
-      <p className='text-[#0076ba] text-center text-[25px] pt-8'>
+      <p className='text-[#0076ba] text-center text-[25px] pt-16'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
       <h1 className='text-center font-bold pt-4 pb-8'>
@@ -44,11 +44,11 @@ const Component00 = ({ handleFlatOrHouse }) => {
         </div>
       </div>
       <img
-        className='ml-[33%] w-[14%] mt-[7%]'
+        className='ml-[37%] w-[14%] mt-[7%]'
         src='/compZeroIcons.webp'
         alt='icons'
       />
-      <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[35px] w-[40%] h-[100px] ml-[30%] mt-[5%]'>
+      <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[35px] w-[27%] h-[100px] ml-[37%] mt-[5%]'>
         <p className='text-[35px] text-[#0076ba] font-bold  text-center h-[50%] leading-[40px] mt-2'>
           Dohodnite si fyzickú <br /> obhliadku hneď
         </p>

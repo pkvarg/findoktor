@@ -11,7 +11,7 @@ const Component01 = ({
   setHouseNumber,
 }) => {
   return (
-    <>
+    <div className=''>
       <p className='text-[#0076ba] text-center text-[25px] pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -66,7 +66,7 @@ const Component01 = ({
           Ďalej
         </button>
       </div>
-    </>
+    </div>
   )
 }
 
