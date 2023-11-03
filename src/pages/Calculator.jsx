@@ -31,6 +31,10 @@ const Calculator = () => {
   const [hasGarage, setHasGarage] = useState('')
   const [builtYear, setBuiltYear] = useState(0)
   const [buildingConditions, setBuildingConditions] = useState('')
+  const [smartHomeItems, setSmartHomeItems] = useState('')
+  const [monthlyCosts, setMonthlyCosts] = useState(0)
+  const [urbanQuality, setUrbanQuality] = useState('')
+  const [email, setEmail] = useState('')
 
   console.log(
     city,
@@ -45,7 +49,11 @@ const Calculator = () => {
     hasBalcony,
     hasGarage,
     builtYear,
-    buildingConditions
+    buildingConditions,
+    smartHomeItems,
+    monthlyCosts,
+    urbanQuality,
+    email
   )
 
   const [currentlyClicked, setCurrentlyClicked] = useState(null)
@@ -61,6 +69,12 @@ const Calculator = () => {
     currentBuildingConditionStatusClicked,
     setCurrentBuildingConditionStatusClicked,
   ] = useState(null)
+
+  const [currentSmartHomeItemsClicked, setCurrentSmartHomeItemsClicked] =
+    useState(null)
+
+  const [currentUrbanQualityClicked, setCurrentUrbanQualityClicked] =
+    useState(null)
 
   const [currentComponent, setCurrentComponent] = useState(1)
 
@@ -170,14 +184,52 @@ const Calculator = () => {
           />
         )
 
-        case 11:
-          return (
-            <Component11
-              onBack={handleBack}
-              onNext={handleNext}
-              handleBuildingCondition={handleBuildingCondition}
-            />
-          )
+      case 11:
+        return (
+          <Component11
+            onBack={handleBack}
+            onNext={handleNext}
+            handleBuildingCondition={handleBuildingCondition}
+          />
+        )
+
+      case 12:
+        return (
+          <Component12
+            onBack={handleBack}
+            onNext={handleNext}
+            handleSmartHomeItems={handleSmartHomeItems}
+          />
+        )
+
+      case 13:
+        return (
+          <Component13
+            onBack={handleBack}
+            onNext={handleNext}
+            monthlyCosts={monthlyCosts}
+            setMonthlyCosts={setMonthlyCosts}
+          />
+        )
+
+      case 14:
+        return (
+          <Component14
+            onBack={handleBack}
+            onNext={handleNext}
+            handleUrbanQuality={handleUrbanQuality}
+          />
+        )
+
+      case 15:
+        return (
+          <Component15
+            onBack={handleBack}
+            onNext={handleNext}
+            email={email}
+            setEmail={setEmail}
+          />
+        )
 
       default:
         return null
@@ -255,6 +307,30 @@ const Calculator = () => {
     setBuildingConditions(condition)
     setCurrentBuildingConditionStatusClicked(condition)
     const element = document.getElementById(condition)
+    element.classList.add('clicked')
+  }
+
+  const handleSmartHomeItems = (item) => {
+    console.log(item)
+    if (currentSmartHomeItemsClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentSmartHomeItemsClicked)
+      toRemoveFrom.classList.remove('clicked')
+    }
+    setSmartHomeItems(item)
+    setCurrentSmartHomeItemsClicked(item)
+    const element = document.getElementById(item)
+    element.classList.add('clicked')
+  }
+
+  const handleUrbanQuality = (quality) => {
+    console.log(quality)
+    if (currentUrbanQualityClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentUrbanQualityClicked)
+      toRemoveFrom.classList.remove('clicked')
+    }
+    setUrbanQuality(quality)
+    setCurrentUrbanQualityClicked(quality)
+    const element = document.getElementById(quality)
     element.classList.add('clicked')
   }
 

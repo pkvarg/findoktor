@@ -104,7 +104,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[10.5%] 2xl:gap-[8.5%] py-16'>
+      <div className='flex flex-row justify-center gap-[10.5%] lg:gap-[11%] 2xl:gap-[8.5%] py-16'>
         <button
           onClick={() => onBack()}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'

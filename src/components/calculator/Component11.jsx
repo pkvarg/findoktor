@@ -81,7 +81,7 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] py-16'>
+      <div className='flex flex-row justify-center gap-[17%] lg:gap-[20%] 2xl:gap-[13%] py-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
