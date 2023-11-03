@@ -1,6 +1,13 @@
 import React from 'react'
 
-const Component15 = ({ onBack, onNext, email, setEmail }) => {
+const Component15 = ({
+  onBack,
+  onNext,
+  email,
+  setEmail,
+  checkBox,
+  setCheckBox,
+}) => {
   return (
     <div className='relative'>
       <p className='text-[#0076ba] text-center text-[25px] pt-8'>
@@ -33,17 +40,26 @@ const Component15 = ({ onBack, onNext, email, setEmail }) => {
             onChange={(e) => setEmail(e.target.value)}
             className='text-[38px] font-bold absolute top-[33%] text-right w-[93%] h-[50%] outline-none'
           />
-          <p className='text-[#0076ba] text-[22.5px] mt-[15%]'>
-            Súhlasím s{' '}
-            <a
-              className='underline font-semibold'
-              href='/rules'
-              target='_blank'
-            >
-              podmienkami
-            </a>
-          </p>
-          <input type='checkbox' id='vehicle1' name='vehicle1' />
+          <div className='flex flex-row justify-start'>
+            <input
+              className='mt-[15.6%] h-[22.5px] w-[22.5px] mr-4'
+              type='checkbox'
+              defaultChecked={false}
+              value={checkBox}
+              onChange={() => setCheckBox((prev) => !prev)}
+              required='required'
+            />
+            <p className='text-[#0076ba] text-[22.5px] mt-[15%]'>
+              Súhlasím s{' '}
+              <a
+                className='underline font-semibold'
+                href='/rules'
+                target='_blank'
+              >
+                podmienkami
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 

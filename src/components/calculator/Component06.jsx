@@ -23,7 +23,7 @@ const Component06 = ({
             type='text'
             value={currentFloorNumber}
             onChange={(e) => setCurrentFloorNumber(e.target.value)}
-            className='text-[68px] font-bold absolute top-[32%] text-right w-[95%] h-[50%] outline-none'
+            className='text-[68px] font-bold absolute top-[29%] text-right w-[95%] h-[50%] outline-none'
           />
         </div>
       </div>

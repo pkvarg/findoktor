@@ -2,6 +2,7 @@ import React from 'react'
 
 const Component01 = ({
   onNext,
+  onBack,
   city,
   setCity,
   street,
@@ -52,12 +53,12 @@ const Component01 = ({
         />
       </div>
       <div className='flex flex-row justify-between mx-[250px] py-16'>
-        {/* <button
-          onClick={() => handleBack()}
+        <button
+          onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
         >
           Späť
-        </button> */}
+        </button>
         <button
           className='ml-auto border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
           onClick={onNext}

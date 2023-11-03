@@ -18,6 +18,7 @@ import Component15 from '../components/calculator/Component15'
 import Component16 from '../components/calculator/component16'
 
 const Calculator = () => {
+  const [flatOrHouse, setFlatOrHouse] = useState('')
   const [city, setCity] = useState('')
   const [street, setStreet] = useState('')
   const [houseNumber, setHouseNumber] = useState('')
@@ -35,6 +36,26 @@ const Calculator = () => {
   const [monthlyCosts, setMonthlyCosts] = useState(0)
   const [urbanQuality, setUrbanQuality] = useState('')
   const [email, setEmail] = useState('')
+  const [checkBox, setCheckBox] = useState(false)
+  const [
+    minPriceWithoutRealEstateAssistance,
+    setMinPriceWithoutRealEstateAssistance,
+  ] = useState(0)
+
+  const [
+    maxPriceWithoutRealEstateAssistance,
+    setMaxPriceWithoutRealEstateAssistance,
+  ] = useState(0)
+
+  const [
+    minPriceWithRealEstateAssistance,
+    setMinPriceWithRealEstateAssistance,
+  ] = useState(0)
+
+  const [
+    maxPriceWithRealEstateAssistance,
+    setMaxPriceWithRealEstateAssistance,
+  ] = useState(0)
 
   console.log(
     city,
@@ -53,7 +74,12 @@ const Calculator = () => {
     smartHomeItems,
     monthlyCosts,
     urbanQuality,
-    email
+    email,
+    checkBox,
+    minPriceWithoutRealEstateAssistance,
+    maxPriceWithoutRealEstateAssistance,
+    minPriceWithRealEstateAssistance,
+    maxPriceWithRealEstateAssistance
   )
 
   const [currentlyClicked, setCurrentlyClicked] = useState(null)
@@ -76,6 +102,9 @@ const Calculator = () => {
   const [currentUrbanQualityClicked, setCurrentUrbanQualityClicked] =
     useState(null)
 
+  const [currentFlatOrHouseClicked, setCurrentFlatOrHouseClicked] =
+    useState(null)
+
   const [currentComponent, setCurrentComponent] = useState(1)
 
   const handleNext = () => {
@@ -92,9 +121,17 @@ const Calculator = () => {
 
   const renderComponent = (componentNumber) => {
     switch (componentNumber) {
+      // case 0:
+      //   return (
+      //     <Component00
+      //       onNext={handleNext}
+      //       handleFlatOrHouse={handleFlatOrHouse}
+      //     />
+      //   )
       case 1:
         return (
           <Component01
+            onBack={handleBack}
             onNext={handleNext}
             city={city}
             setCity={setCity}
@@ -228,6 +265,22 @@ const Calculator = () => {
             onNext={handleNext}
             email={email}
             setEmail={setEmail}
+            checkBox={checkBox}
+            setCheckBox={setCheckBox}
+          />
+        )
+      case 16:
+        return (
+          <Component16
+            onBack={handleBack}
+            minPriceWithoutRealEstateAssistance={
+              minPriceWithoutRealEstateAssistance
+            }
+            maxPriceWithoutRealEstateAssistance={
+              maxPriceWithoutRealEstateAssistance
+            }
+            minPriceWithRealEstateAssistance={minPriceWithRealEstateAssistance}
+            maxPriceWithRealEstateAssistance={maxPriceWithRealEstateAssistance}
           />
         )
 
@@ -334,8 +387,22 @@ const Calculator = () => {
     element.classList.add('clicked')
   }
 
+  const handleFlatOrHouse = (building) => {
+    console.log(building)
+    if (currentFlatOrHouseClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentFlatOrHouseClicked)
+      toRemoveFrom.classList.remove('clicked')
+    }
+    setFlatOrHouse(building)
+    setCurrentFlatOrHouseClicked(building)
+    const element = document.getElementById(building)
+    element.classList.add('clicked')
+  }
+
   return (
     <div className='text-black bg-white text-[30px]'>
+      <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} />
+
       {renderComponent(currentComponent)}
     </div>
   )
