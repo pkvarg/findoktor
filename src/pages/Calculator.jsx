@@ -1,4 +1,21 @@
 import React, { useState } from 'react'
+import Component00 from '../components/calculator/component00'
+import Component01 from '../components/calculator/component01'
+import Component02 from '../components/calculator/Component02'
+import Component03 from '../components/calculator/Component03'
+import Component04 from '../components/calculator/Component04'
+import Component05 from '../components/calculator/Component05'
+import Component06 from '../components/calculator/Component06'
+import Component07 from '../components/calculator/Component07'
+import Component08 from '../components/calculator/component08'
+import Component09 from '../components/calculator/component09'
+import Component10 from '../components/calculator/Component10'
+import Component11 from '../components/calculator/Component11'
+import Component12 from '../components/calculator/Component12'
+import Component13 from '../components/calculator/Component13'
+import Component14 from '../components/calculator/Component14'
+import Component15 from '../components/calculator/Component15'
+import Component16 from '../components/calculator/component16'
 
 const Calculator = () => {
   const [city, setCity] = useState('')
@@ -10,16 +27,16 @@ const Calculator = () => {
 
   const [squareMeters, setSquareMeters] = useState(0)
 
-  const [allFloorsCount, setAllFloorsCount] = useState(0)
-
-  const [currentFloorNumber, setCurrentFloorNumber] = useState(0)
-
   const [hasElevator, setHasElevator] = useState('')
 
   const [hasBalcony, setHasBalcony] = useState('')
   const [hasGarage, setHasGarage] = useState('')
 
   const [builtYear, setBuiltYear] = useState(0)
+
+  const [allFloorsCount, setAllFloorsCount] = useState(0)
+
+  const [currentFloorNumber, setCurrentFloorNumber] = useState(0)
 
   console.log(
     city,
@@ -29,28 +46,12 @@ const Calculator = () => {
     houseCondition,
     squareMeters,
     allFloorsCount,
+    currentFloorNumber,
     hasElevator,
     hasBalcony,
     hasGarage,
     builtYear
   )
-
-  const [showPart1, setShowPart1] = useState(true)
-  const [showPart2, setShowPart2] = useState(false)
-  const [showPart3, setShowPart3] = useState(false)
-  const [showPart4, setShowPart4] = useState(false)
-  const [showPart5, setShowPart5] = useState(false)
-  const [showPart6, setShowPart6] = useState(false)
-  const [showPart7, setShowPart7] = useState(false)
-  const [showPart8, setShowPart8] = useState(false)
-  const [showPart9, setShowPart9] = useState(false)
-  const [showPart10, setShowPart10] = useState(false)
-  const [showPart11, setShowPart11] = useState(false)
-  const [showPart12, setShowPart12] = useState(false)
-  const [showPart13, setShowPart13] = useState(false)
-  const [showPart14, setShowPart14] = useState(false)
-  const [showPart15, setShowPart15] = useState(false)
-  const [showPart16, setShowPart16] = useState(false)
 
   const [currentlyClicked, setCurrentlyClicked] = useState(null)
   const [currentConditionClicked, setCurrentConditionClicked] = useState(null)
@@ -61,118 +62,117 @@ const Calculator = () => {
   const [currentGarageStatusClicked, setCurrentGarageStatusClicked] =
     useState(null)
 
-  const handleNext1 = () => {
-    setShowPart1(false)
-    setShowPart2(true)
+  const [currentComponent, setCurrentComponent] = useState(1)
+
+  const handleNext = () => {
+    if (currentComponent < 16) {
+      setCurrentComponent(currentComponent + 1)
+    }
   }
 
-  const handleBack2 = () => {
-    setShowPart1(true)
-    setShowPart2(false)
-  }
-  const handleNext2 = () => {
-    setShowPart2(false)
-    setShowPart3(true)
+  const handleBack = () => {
+    if (currentComponent > 1) {
+      setCurrentComponent(currentComponent - 1)
+    }
   }
 
-  const handleBack3 = () => {
-    setShowPart3(false)
-    setShowPart2(true)
-  }
+  const renderComponent = (componentNumber) => {
+    switch (componentNumber) {
+      case 1:
+        return (
+          <Component01
+            onNext={handleNext}
+            city={city}
+            setCity={setCity}
+            street={street}
+            setStreet={setStreet}
+            houseNumber={houseNumber}
+            setHouseNumber={setHouseNumber}
+          />
+        )
+      case 2:
+        return (
+          <Component02
+            onBack={handleBack}
+            onNext={handleNext}
+            handleCountRoomClick={handleCountRoomClick}
+          />
+        )
+      case 3:
+        return (
+          <Component03
+            onBack={handleBack}
+            onNext={handleNext}
+            handleHouseCondition={handleHouseCondition}
+          />
+        )
+      case 4:
+        return (
+          <Component04
+            onBack={handleBack}
+            onNext={handleNext}
+            squareMeters={squareMeters}
+            setSquareMeters={setSquareMeters}
+          />
+        )
+      case 5:
+        return (
+          <Component05
+            onBack={handleBack}
+            onNext={handleNext}
+            allFloorsCount={allFloorsCount}
+            setAllFloorsCount={setAllFloorsCount}
+          />
+        )
+      case 6:
+        return (
+          <Component06
+            onBack={handleBack}
+            onNext={handleNext}
+            currentFloorNumber={currentFloorNumber}
+            setCurrentFloorNumber={setCurrentFloorNumber}
+          />
+        )
+      case 7:
+        return (
+          <Component07
+            onBack={handleBack}
+            onNext={handleNext}
+            handleHasElevator={handleHasElevator}
+          />
+        )
 
-  const handleNext3 = () => {
-    setShowPart3(false)
-    setShowPart4(true)
-  }
+      case 8:
+        return (
+          <Component08
+            onBack={handleBack}
+            onNext={handleNext}
+            handleHasBalcony={handleHasBalcony}
+          />
+        )
 
-  const handleBack4 = () => {
-    setShowPart4(false)
-    setShowPart3(true)
-  }
+      case 9:
+        return (
+          <Component09
+            onBack={handleBack}
+            onNext={handleNext}
+            handleHasGarage={handleHasGarage}
+          />
+        )
 
-  const handleNext4 = () => {
-    setShowPart4(false)
-    setShowPart5(true)
-  }
+      case 10:
+        return (
+          <Component10
+            onBack={handleBack}
+            onNext={handleNext}
+            builtYear={builtYear}
+            setBuiltYear={setBuiltYear}
+          />
+        )
 
-  const handleBack5 = () => {
-    setShowPart4(false)
-    setShowPart3(true)
-  }
-
-  const handleNext5 = () => {
-    setShowPart4(false)
-    setShowPart5(true)
-  }
-
-  const handleBack6 = () => {
-    setShowPart5(false)
-    setShowPart4(true)
-  }
-
-  const handleNext6 = () => {
-    setShowPart5(false)
-    setShowPart6(true)
-  }
-
-  const handleBack7 = () => {
-    setShowPart5(false)
-    setShowPart4(true)
-  }
-
-  const handleNext7 = () => {
-    setShowPart5(false)
-    setShowPart6(true)
-  }
-
-  const handleBack8 = () => {
-    setShowPart6(false)
-    setShowPart5(true)
-  }
-
-  const handleNext8 = () => {
-    setShowPart6(false)
-    setShowPart7(true)
-  }
-
-  const handleBack9 = () => {
-    setShowPart7(false)
-    setShowPart6(true)
-  }
-
-  const handleNext9 = () => {
-    setShowPart7(false)
-    setShowPart8(true)
-  }
-
-  const handleBack10 = () => {
-    setShowPart8(false)
-    setShowPart7(true)
-  }
-
-  const handleNext10 = () => {
-    setShowPart8(false)
-    setShowPart9(true)
-  }
-
-  const handleBack11 = () => {
-    setShowPart9(false)
-    setShowPart8(true)
-  }
-
-  const handleNext11 = () => {
-    setShowPart9(false)
-    setShowPart10(true)
-  }
-
-  const handleBack12 = () => {
-    setShowPart10(false)
-    setShowPart9(true)
-  }
-
-  const handleNext12 = () => {
-    setShowPart10(false)
-    setShowPart11(true)
+      default:
+        return null
+    }
   }
 
   const handleCountRoomClick = (count) => {
@@ -236,693 +236,8 @@ const Calculator = () => {
   }
 
   return (
-    <div className='text-black bg-white text-[30px] pb-8 '>
-      {showPart1 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold py-4'>
-            Kde sa nachádza Vaša nehnuteľnosť?
-          </h1>
-          <div className='border border-[#0076ba] rounded-xl mx-[250px] my-8 h-[90px] flex flex-col'>
-            <label
-              htmlFor='text'
-              className='text-[#0076ba] text-[18px] relative'
-            >
-              <span className='absolute -top-[0px] left-[10px] '>Mesto</span>
-            </label>
-            <input
-              type='text'
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              className='mt-[30px] w-[97%] text-right outline-none'
-            />
-          </div>
-          <div className='border border-[#0076ba] rounded-xl mx-[250px] my-8 h-[90px] flex flex-col'>
-            <label
-              htmlFor='text'
-              className='text-[#0076ba] text-[18px] relative'
-            >
-              <span className='absolute -top-[0px] left-[10px] '>Ulica</span>
-            </label>
-            <input
-              type='text'
-              value={street}
-              onChange={(e) => setStreet(e.target.value)}
-              className='mt-[30px] w-[97%] text-right outline-none'
-            />
-          </div>
-
-          <div className='border border-[#0076ba] rounded-xl mx-[250px] my-8 h-[90px] flex flex-col'>
-            <label
-              htmlFor='text'
-              className='text-[#0076ba] text-[18px] relative'
-            >
-              <span className='absolute -top-[0px] left-[10px] '>Číslo</span>
-            </label>
-            <input
-              type='text'
-              value={houseNumber}
-              onChange={(e) => setHouseNumber(e.target.value)}
-              className='mt-[30px] w-[97%] text-right outline-none'
-            />
-          </div>
-          <div className='flex flex-row justify-between mx-[250px] mt-16'>
-            {/* <button
-              onClick={() => handleBack()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button> */}
-            <button
-              onClick={() => handleNext1()}
-              className='ml-auto border border-[#0076ba] px-14 py-2 rounded-[35px] hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart2 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Zvoľte počet izieb
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div
-              id='0'
-              onClick={() => handleCountRoomClick(0)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px] flex flex-col gap-[90px]'
-            >
-              <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] '></div>
-              <p className='font-bold text-right mr-3'>Garzónka</p>
-            </div>
-            <div
-              id='1'
-              onClick={() => handleCountRoomClick(1)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
-            >
-              <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-4 mr-2'>
-                1
-              </p>
-              <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
-            </div>
-          </div>
-          <div className='mt-4 flex flex-row justify-center gap-10'>
-            <div
-              id='2'
-              onClick={() => handleCountRoomClick(2)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
-            >
-              <div className='flex flex-col gap-[4px] mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[45px] bg-[#0076ba]'></div>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-              </div>
-              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[26%] mr-2'>
-                2
-              </p>
-              <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
-            </div>
-            <div
-              id='3'
-              onClick={() => handleCountRoomClick(3)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
-            >
-              <div className='flex flex-row mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
-              </div>
-
-              <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] mt-[5px] ml-[15px] bg-[#0076ba]'></div>
-
-              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[26%] mr-2'>
-                3
-              </p>
-              <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
-            </div>
-          </div>
-          <div className='mt-4 flex flex-row justify-center gap-10'>
-            <div
-              id='4'
-              onClick={() => handleCountRoomClick(4)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
-            >
-              <div className='flex flex-row mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
-              </div>
-              <div className='flex flex-row mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
-              </div>
-              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[28%] mr-2'>
-                4
-              </p>
-              <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
-            </div>
-            <div
-              id='5'
-              onClick={() => handleCountRoomClick(5)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
-            >
-              <div className='flex flex-row mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
-              </div>
-              <div className='flex flex-row mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
-              </div>
-              <div className='flex flex-row mt-2'>
-                <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-                <p className='ml-[7.5px] -mt-[8%] text-[35px] text-[#0076ba]'>
-                  +
-                </p>
-              </div>
-
-              <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[48.5%] mr-2'>
-                5+
-              </p>
-              <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center gap-[10.5%] 2xl:gap-[8.5%] mt-16'>
-            <button
-              onClick={() => handleBack2()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext2()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart3 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            V akom stave je nehnuteľnosť?
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div
-              id='1'
-              onClick={() => handleHouseCondition(1)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
-            >
-              <div>
-                <img
-                  className='w-[100%] mt-[10%]'
-                  src='/cnd01.webp'
-                  alt='home01'
-                />
-                <div className='bg-[#000000] h-[2px]'></div>
-                <p className='font-bold text-[35px] text-right mt-4 mr-3  '>
-                  Novostavba
-                </p>
-                <p className='text-right mr-2 text-[#0076ba] text-[18px]'>
-                  Byt bol postavený iba nedávno
-                </p>
-              </div>
-            </div>
-            <div
-              id='2'
-              onClick={() => handleHouseCondition(2)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[70%] mt-[8.5%] ml-[5%]'
-                  src='/cnd02.webp'
-                  alt='home02'
-                />
-                <div className='bg-[#000000] h-[3px]'></div>
-                <p className='text-[35px] font-bold text-right mr-3 mt-4'>
-                  Vynikajúci
-                </p>
-                <p className='mt-0 mr-2 text-[#0076ba] text-[16px]'>
-                  Byt je kompletne zrekonštruovaný
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='mt-4 flex flex-row justify-center gap-10'>
-            <div
-              id='3'
-              onClick={() => handleHouseCondition(3)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[100%] mt-[8.5%]'
-                  src='/cnd03.webp'
-                  alt='home03'
-                />
-                <div className='bg-[#000000] h-[3px]'></div>
-                <p className='text-[35px] font-bold text-right mr-3 mt-4'>
-                  Dobrý
-                </p>
-                <p className='mt-0 mr-2 text-[#0076ba] text-[18px] text-right'>
-                  Niečo už potrebuje
-                </p>
-                <p className='mt-0 mr-2 text-[#0076ba] text-[18px] text-right'>
-                  modernizovať
-                </p>
-              </div>
-            </div>
-            <div
-              id='4'
-              onClick={() => handleHouseCondition(4)}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[80%] mt-[7%] ml-[7%]'
-                  src='/cnd04.webp'
-                  alt='home04'
-                />
-                <div className='bg-[#000000] h-[3px] mt-2'></div>
-                <p className='text-[35px] font-bold text-right mr-3 mt-4'>
-                  Pôvodný
-                </p>
-                <p className='mt-0 mr-2 text-[#0076ba] text-[18px] text-right'>
-                  Byt potrebuje celkovú
-                </p>
-                <p className='mt-0 mr-2 text-[#0076ba] text-[18px] text-right'>
-                  rekonštrukciu
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] mt-16'>
-            <button
-              onClick={() => handleBack3()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext3()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart4 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Akú obytnú plochu má byt?
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div className='border-2 border-[#0076ba] px-2 my-16 rounded-[35px] w-[50%] h-[125px] flex flex-col gap-[90px] relative'>
-              <label htmlFor='text' className='text-[#0076ba] text-[22px] ml-4'>
-                <span>Úžitková plocha</span>
-              </label>
-              <input
-                type='text'
-                value={squareMeters}
-                onChange={(e) => setSquareMeters(e.target.value)}
-                className='text-[68px] font-bold absolute top-[29%] text-right w-[88%] h-[50%] outline-none'
-              />
-
-              <p className='text-[#0076ba] font-bold text-[35px] absolute top-[41%] right-8'>
-                m<span className='text-[15px] absolute top-2'>2</span>
-              </p>
-            </div>
-          </div>
-          <div className='flex flex-row justify-between mx-[25%] mt-16'>
-            <button
-              onClick={() => handleBack5()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext5()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-
-      {showPart5 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Koľko poschodí má budova v ktorej sa nachádza byt?
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div className='border-2 border-[#0076ba] px-2 my-16 rounded-[35px] w-[50%] h-[125px] flex flex-col gap-[90px] relative'>
-              <label htmlFor='text' className='text-[#0076ba] text-[22px] ml-4'>
-                <span>Počet poschodí v budove</span>
-              </label>
-              <input
-                type='text'
-                value={allFloorsCount}
-                onChange={(e) => setAllFloorsCount(e.target.value)}
-                className='text-[68px] font-bold absolute top-[29%] text-right w-[95%] h-[50%] outline-none'
-              />
-            </div>
-          </div>
-          <div className='flex flex-row justify-between mx-[25%] mt-16'>
-            <button
-              onClick={() => handleBack7()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext7()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-
-      {showPart6 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Na ktorom poschodí sa nachádza byt?
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div className='border-2 border-[#0076ba] px-2 my-16 rounded-[35px] w-[50%] h-[125px] flex flex-col gap-[90px] relative'>
-              <label htmlFor='text' className='text-[#0076ba] text-[22px] ml-4'>
-                <span>Číslo poschodia bytu</span>
-              </label>
-              <input
-                type='text'
-                value={currentFloorNumber}
-                onChange={(e) => setCurrentFloorNumber(e.target.value)}
-                className='text-[68px] font-bold absolute top-[32%] text-right w-[95%] h-[50%] outline-none'
-              />
-            </div>
-          </div>
-          <div className='flex flex-row justify-between mx-[25%] mt-16'>
-            <button
-              onClick={() => handleBack8()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext8()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart7 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Nachádza sa v bytovom dome výťah?{' '}
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div
-              id='elevatorTrue'
-              onClick={() => handleHasElevator('elevatorTrue')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
-            >
-              <div>
-                <img
-                  className='w-[50%] mt-[10%] ml-[25%]'
-                  src='/elevator1.webp'
-                  alt='elevator'
-                />
-
-                <p className='font-bold text-[35px] text-right mt-8 mr-3  '>
-                  áno
-                </p>
-              </div>
-            </div>
-            <div
-              id='elevatorFalse'
-              onClick={() => handleHasElevator('elevatorFalse')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[60%] mt-[10%] ml-[19%]'
-                  src='/elevator2.webp'
-                  alt='stairs'
-                />
-
-                <p className='text-[35px] font-bold text-right mr-3 mt-6'>
-                  nie
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] mt-16'>
-            <button
-              onClick={() => handleBack9()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext9()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart8 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Čo ďalšie je súčasťou bytu?{' '}
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div
-              id='balcony'
-              onClick={() => handleHasBalcony('balcony')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
-            >
-              <div>
-                <img
-                  className='w-[70%] mt-[10%] ml-[15%]'
-                  src='/balcony1.webp'
-                  alt='balcony1'
-                />
-
-                <p className='font-bold text-[35px] text-right mt-1 mr-3  '>
-                  balkón
-                </p>
-              </div>
-            </div>
-            <div
-              id='loggia'
-              onClick={() => handleHasBalcony('loggia')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[67%] mt-[12%] ml-[19%]'
-                  src='/balcony2.webp'
-                  alt='balcony2'
-                />
-
-                <p className='text-[35px] font-bold text-right mr-3 mt-1'>
-                  loggia
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center gap-10 mt-4'>
-            <div
-              id='terasa'
-              onClick={() => handleHasBalcony('terasa')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
-            >
-              <div>
-                <img
-                  className='w-[72.5%] mt-[10%] ml-[12%]'
-                  src='/balcony3.webp'
-                  alt='balcony3'
-                />
-
-                <p className='font-bold text-[35px] text-right mt-0 mr-3  '>
-                  terasa
-                </p>
-              </div>
-            </div>
-            <div
-              id='pivnica'
-              onClick={() => handleHasBalcony('pivnica')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[70%] mt-[10%] ml-[15%]'
-                  src='/balcony4.webp'
-                  alt='balcony3'
-                />
-
-                <p className='text-[35px] font-bold text-right mr-3 mt-2'>
-                  pivnica
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] mt-16'>
-            <button
-              onClick={() => handleBack10()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext10()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart9 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Je v cene bytu aj miesto pre automobil?
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div
-              id='garage'
-              onClick={() => handleHasGarage('garage')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
-            >
-              <div>
-                <img
-                  className='w-[80%] mt-[22%] ml-[12%]'
-                  src='/garage1.webp'
-                  alt='garage'
-                />
-
-                <p className='font-bold text-[35px] text-right mt-6 mr-3  '>
-                  garáž
-                </p>
-              </div>
-            </div>
-            <div
-              id='parking'
-              onClick={() => handleHasGarage('parking')}
-              className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
-            >
-              <div>
-                <img
-                  className='w-[37%] mt-[22%] ml-[34%]'
-                  src='/garage2.webp'
-                  alt='parking'
-                />
-
-                <p className='text-[35px] font-bold text-right mr-3 mt-2'>
-                  státie
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center mt-4'>
-            <div
-              id='noParking'
-              onClick={() => handleHasGarage('noParking')}
-              className='border-2 border-[#0076ba] px-8 py-6 rounded-[15px] mt-8'
-            >
-              <p className='text-center text-[#0076ba] text-[45px] font-bold'>
-                Bez vlastného parkovania
-              </p>
-            </div>
-          </div>
-          <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] mt-16'>
-            <button
-              onClick={() => handleBack11()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext11()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
-      {showPart10 && (
-        <>
-          <p className='text-[#0076ba] text-center text-[25px] pt-8'>
-            OCENENIE NEHNUTEĽNOSTI ONLINE
-          </p>
-          <h1 className='text-center font-bold pt-4 pb-8'>
-            Kedy bol byt postavený?
-          </h1>
-          <div className='flex flex-row justify-center gap-10'>
-            <div className='border-2 border-[#0076ba] px-2 my-16 rounded-[35px] w-[50%] h-[125px] flex flex-col gap-[90px] relative'>
-              <label htmlFor='text' className='text-[#0076ba] text-[22px] ml-4'>
-                <span>Rok</span>
-              </label>
-              <input
-                type='text'
-                value={builtYear}
-                onChange={(e) => setBuiltYear(e.target.value)}
-                className='text-[68px] font-bold absolute top-[29%] text-right w-[93%] h-[50%] outline-none'
-              />
-            </div>
-          </div>
-
-          <div className='flex flex-row justify-center gap-[25%] 2xl:gap-[31%] mt-16'>
-            <button
-              onClick={() => handleBack12()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Späť
-            </button>
-            <button
-              onClick={() => handleNext12()}
-              className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
-            >
-              Ďalej
-            </button>
-          </div>
-        </>
-      )}
+    <div className='text-black bg-white text-[30px]'>
+      {renderComponent(currentComponent)}
     </div>
   )
 }

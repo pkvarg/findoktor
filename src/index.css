@@ -43,5 +43,13 @@ section {
   border: 4px solid #03065f;
 }
 
+button {
+  cursor: pointer;
+}
+
+/* button:hover {
+  border: 5px solid #03065f;
+} */
+
 /* separate content to more sections
 and add height to subs like one two... */
