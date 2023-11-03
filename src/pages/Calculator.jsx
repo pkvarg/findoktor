@@ -21,22 +21,16 @@ const Calculator = () => {
   const [city, setCity] = useState('')
   const [street, setStreet] = useState('')
   const [houseNumber, setHouseNumber] = useState('')
-
   const [countRooms, setCountRooms] = useState(0)
   const [houseCondition, setHouseCondition] = useState(0)
-
   const [squareMeters, setSquareMeters] = useState(0)
-
+  const [allFloorsCount, setAllFloorsCount] = useState(0)
+  const [currentFloorNumber, setCurrentFloorNumber] = useState(0)
   const [hasElevator, setHasElevator] = useState('')
-
   const [hasBalcony, setHasBalcony] = useState('')
   const [hasGarage, setHasGarage] = useState('')
-
   const [builtYear, setBuiltYear] = useState(0)
-
-  const [allFloorsCount, setAllFloorsCount] = useState(0)
-
-  const [currentFloorNumber, setCurrentFloorNumber] = useState(0)
+  const [buildingConditions, setBuildingConditions] = useState('')
 
   console.log(
     city,
@@ -50,7 +44,8 @@ const Calculator = () => {
     hasElevator,
     hasBalcony,
     hasGarage,
-    builtYear
+    builtYear,
+    buildingConditions
   )
 
   const [currentlyClicked, setCurrentlyClicked] = useState(null)
@@ -61,6 +56,11 @@ const Calculator = () => {
     useState(null)
   const [currentGarageStatusClicked, setCurrentGarageStatusClicked] =
     useState(null)
+
+  const [
+    currentBuildingConditionStatusClicked,
+    setCurrentBuildingConditionStatusClicked,
+  ] = useState(null)
 
   const [currentComponent, setCurrentComponent] = useState(1)
 
@@ -170,6 +170,15 @@ const Calculator = () => {
           />
         )
 
+        case 11:
+          return (
+            <Component11
+              onBack={handleBack}
+              onNext={handleNext}
+              handleBuildingCondition={handleBuildingCondition}
+            />
+          )
+
       default:
         return null
     }
@@ -232,6 +241,20 @@ const Calculator = () => {
     setHasGarage(garage)
     setCurrentGarageStatusClicked(garage)
     const element = document.getElementById(garage)
+    element.classList.add('clicked')
+  }
+
+  const handleBuildingCondition = (condition) => {
+    console.log(condition)
+    if (currentBuildingConditionStatusClicked !== null) {
+      const toRemoveFrom = document.getElementById(
+        currentBuildingConditionStatusClicked
+      )
+      toRemoveFrom.classList.remove('clicked')
+    }
+    setBuildingConditions(condition)
+    setCurrentBuildingConditionStatusClicked(condition)
+    const element = document.getElementById(condition)
     element.classList.add('clicked')
   }
 
