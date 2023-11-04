@@ -12,10 +12,10 @@ const Component01 = ({
 }) => {
   return (
     <div className='flex flex-col mx-[2%] lg:mx-[25%] 2xl:mx-[30%]'>
-      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
+      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold py-16 lg:py-4'>
+      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>
       <div className='border border-[#0076ba] rounded-xl mt-8 h-[90px] flex flex-col'>
@@ -40,7 +40,7 @@ const Component01 = ({
           className='mt-[30px] w-[97%] text-right outline-none'
         />
       </div>
-      <div className='border border-[#0076ba] rounded-xl my-8 h-[90px] flex flex-col'>
+      <div className='border border-[#0076ba] rounded-xl  h-[90px] flex flex-col'>
         <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
           <span className='absolute -top-[0px] left-[10px] '>Číslo</span>
         </label>

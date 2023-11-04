@@ -14,13 +14,13 @@ const CalcNavbar = () => {
           MICHAL <br /> DOVALA
         </p>
       </div>
-      <div className='flex flex-col mt-[2%] lg:mt-[2%]'>
+      <div className='flex flex-col mt-[4%] lg:mt-[2%]'>
         <img
-          className='w-[30%] lg:w-[40%] ml-[30%]'
+          className='w-[50%] lg:w-[40%] ml-[30%]'
           src='/maklerLogo.webp'
           alt='logo'
         />
-        <p className='text-[20px] lg:text-[25px] leading-[20px] lg:leading-[35px] font-bold'>
+        <p className='text-[20px] lg:text-[25px] leading-[20px] lg:leading-[35px] font-bold mt-2 lg:mt-0'>
           MODERNÝ
         </p>
         <p className='text-[18px] lg:text-[20px] ml-[15%] lg:ml-[20%]'>

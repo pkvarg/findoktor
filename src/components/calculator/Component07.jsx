@@ -3,10 +3,10 @@ import React from 'react'
 const Component07 = ({ onBack, onNext, handleHasElevator }) => {
   return (
     <div className='flex flex-col mx-1 lg:mx-[29%] 2xl:mx-[35%]'>
-      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
+      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold py-8'>
+      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
         Nachádza sa v bytovom dome výťah?{' '}
       </h1>
       <div className='flex flex-row justify-center gap-2 lg:gap-10 mt-4'>
