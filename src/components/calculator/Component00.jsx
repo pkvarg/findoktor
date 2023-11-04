@@ -13,11 +13,11 @@ const Component00 = ({ handleFlatOrHouse }) => {
         <div
           id='flat'
           onClick={() => handleFlatOrHouse('flat')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[245px] lg:h-[285px] flex flex-col gap-[90px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[200px] lg:h-[285px] flex flex-col gap-[90px]'
         >
           <div>
             <img
-              className='w-[60%] mt-[30%] ml-[23%]'
+              className='w-[60%] mt-[16%] ml-[23%]'
               src='/flat1.webp'
               alt='flat'
             />
@@ -29,11 +29,11 @@ const Component00 = ({ handleFlatOrHouse }) => {
         <div
           id='house'
           onClick={() => handleFlatOrHouse('house')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[245px] lg:h-[285px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[200px] lg:h-[285px]'
         >
           <div>
             <img
-              className='w-[60%] mt-[30%] ml-[22.5%]'
+              className='w-[60%] mt-[15%] ml-[22.5%]'
               src='/flat2.webp'
               alt='house'
             />

@@ -18,7 +18,7 @@ const Component01 = ({
       <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>
-      <div className='border border-[#0076ba] rounded-xl mt-8 h-[90px] flex flex-col'>
+      <div className='border border-[#0076ba] rounded-xl mt-4 h-[80px] lg:h-[90px] flex flex-col'>
         <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
           <span className='absolute -top-[0px] left-[10px] '>Mesto</span>
         </label>
@@ -29,7 +29,7 @@ const Component01 = ({
           className='mt-[30px] w-[97%] text-right outline-none'
         />
       </div>
-      <div className='border border-[#0076ba] rounded-xl my-8 h-[90px] flex flex-col'>
+      <div className='border border-[#0076ba] rounded-xl mt-4 h-[80px] lg:h-[90px] flex flex-col'>
         <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
           <span className='absolute -top-[0px] left-[10px] '>Ulica</span>
         </label>
@@ -40,7 +40,7 @@ const Component01 = ({
           className='mt-[30px] w-[97%] text-right outline-none'
         />
       </div>
-      <div className='border border-[#0076ba] rounded-xl  h-[90px] flex flex-col'>
+      <div className='border border-[#0076ba] rounded-xl h-[80px] lg:h-[90px] flex flex-col mt-4'>
         <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
           <span className='absolute -top-[0px] left-[10px] '>Číslo</span>
         </label>
@@ -52,7 +52,7 @@ const Component01 = ({
         />
       </div>
 
-      <div className='flex flex-row justify-between py-16'>
+      <div className='flex flex-row justify-between pt-[40%] lg:pt-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
