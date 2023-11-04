@@ -52,7 +52,7 @@ const Component01 = ({
         />
       </div>
 
-      <div className='flex flex-row justify-between pt-[40%] lg:pt-16'>
+      <div className='flex flex-row justify-between pt-[30%] lg:pt-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'

@@ -9,7 +9,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
       <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
         Zistite hneď teraz hodnotu Vašej nehnuteľnosti
       </h1>
-      <div className='flex flex-row justify-center gap-2 lg:gap-10 pt-4'>
+      <div className='flex flex-row justify-center gap-2 lg:gap-10 pt-2'>
         <div
           id='flat'
           onClick={() => handleFlatOrHouse('flat')}
@@ -51,7 +51,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
         />
         <p className='text-[25px] lg:text-[35px]'>Online</p>
       </div>
-      <div className='flex flex-row justify-start items-center gap-4 mt-2'>
+      <div className='flex flex-row justify-start items-center gap-4'>
         <img
           className='ml-[10%] lg:ml-[37%] w-[12%] lg:w-[4%]'
           src='/serv2.webp'
@@ -59,7 +59,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
         />
         <p className='text-[25px] lg:text-[35px]'>Rýchlo</p>
       </div>
-      <div className='flex flex-row justify-start items-center gap-4 mt-2'>
+      <div className='flex flex-row justify-start items-center gap-4'>
         <img
           className='ml-[10%] lg:ml-[37%] w-[12%] lg:w-[4%]'
           src='/serv3.webp'
@@ -68,7 +68,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
         <p className='text-[25px] lg:text-[35px]'>Zadarmo</p>
       </div>
       <div className='flex justify-center'>
-        <div className='border-2 border-[#0076ba] px-[19%] lg:px-[5%] pb-16 rounded-[25px] h-[90px] lg:h-[110px] mt-8 lg:mt-[5%]'>
+        <div className='border-2 border-[#0076ba] px-[19%] lg:px-[5%] pb-16 rounded-[25px] h-[90px] lg:h-[110px] mt-4 lg:mt-[5%]'>
           <p className='text-[22.5px] lg:text-[35px] text-[#0076ba] font-bold text-center lg:h-[50%] leading-[30px] lg:leading-[40px] mt-1.5 lg:mt-3'>
             Dohodnite si fyzickú <br /> obhliadku hneď
           </p>
