@@ -2,14 +2,14 @@ import React from 'react'
 
 const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
   return (
-    <>
-      <p className='text-[#0076ba] text-center text-[25px] pt-8'>
+    <div className='flex flex-col mx-1 lg:mx-[30%] 2xl:mx-[34%]'>
+      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold pt-4 pb-8'>
+      <h1 className='text-center font-bold py-8'>
         Čo ďalšie je súčasťou bytu?{' '}
       </h1>
-      <div className='flex flex-row justify-center gap-10'>
+      <div className='flex flex-row justify-center gap-4 lg:gap-10 mt-4'>
         <div
           id='balcony'
           onClick={() => handleHasBalcony('balcony')}
@@ -17,12 +17,12 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
         >
           <div>
             <img
-              className='w-[70%] mt-[10%] ml-[15%]'
+              className='w-[60%] mt-[32%] lg:mt-[14%] ml-[20%]'
               src='/balcony1.webp'
               alt='balcony1'
             />
 
-            <p className='font-bold text-[35px] text-right mt-1 mr-3  '>
+            <p className='font-bold text-[35px] text-right  mt-6 lg:mt-1 mr-3  '>
               balkón
             </p>
           </div>
@@ -34,16 +34,18 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
         >
           <div>
             <img
-              className='w-[67%] mt-[12%] ml-[19%]'
+              className='w-[58%] mt-[33%] lg:mt-[15%] ml-[24%]'
               src='/balcony2.webp'
               alt='balcony2'
             />
 
-            <p className='text-[35px] font-bold text-right mr-3 mt-1'>loggia</p>
+            <p className='text-[35px] font-bold text-right mr-3 mt-7 lg:mt-3'>
+              loggia
+            </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-10 mt-4'>
+      <div className='flex flex-row justify-center gap-4 lg:gap-10 mt-4'>
         <div
           id='terasa'
           onClick={() => handleHasBalcony('terasa')}
@@ -51,12 +53,12 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
         >
           <div>
             <img
-              className='w-[72.5%] mt-[10%] ml-[12%]'
+              className='w-[62%] lg:w-[57%] mt-[33%] lg:mt-[14%] ml-[18%] lg:ml-[22%]'
               src='/balcony3.webp'
               alt='balcony3'
             />
 
-            <p className='font-bold text-[35px] text-right mt-0 mr-3  '>
+            <p className='font-bold text-[35px] text-right mt-8 lg:mt-6 mr-3'>
               terasa
             </p>
           </div>
@@ -68,18 +70,18 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
         >
           <div>
             <img
-              className='w-[70%] mt-[10%] ml-[15%]'
+              className='w-[62%] lg:w-[55%] mt-[36%] lg:mt-[14%] ml-[20%] lg:ml-[24%]'
               src='/balcony4.webp'
               alt='balcony3'
             />
 
-            <p className='text-[35px] font-bold text-right mr-3 mt-2'>
+            <p className='text-[35px] font-bold text-right mr-3 mt-8 lg:mt-6'>
               pivnica
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] py-16'>
+      <div className='flex flex-row justify-between py-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
@@ -93,7 +95,7 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
           Ďalej
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

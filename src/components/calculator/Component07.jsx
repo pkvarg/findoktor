@@ -2,14 +2,14 @@ import React from 'react'
 
 const Component07 = ({ onBack, onNext, handleHasElevator }) => {
   return (
-    <>
-      <p className='text-[#0076ba] text-center text-[25px] pt-8'>
+    <div className='flex flex-col mx-1 lg:mx-[29%] 2xl:mx-[35%]'>
+      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold pt-4 pb-8'>
+      <h1 className='text-center font-bold py-8'>
         Nachádza sa v bytovom dome výťah?{' '}
       </h1>
-      <div className='flex flex-row justify-center gap-10'>
+      <div className='flex flex-row justify-center gap-2 lg:gap-10 mt-4'>
         <div
           id='elevatorTrue'
           onClick={() => handleHasElevator('elevatorTrue')}
@@ -17,7 +17,7 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
         >
           <div>
             <img
-              className='w-[50%] mt-[10%] ml-[25%]'
+              className='w-[50%] mt-[30%] lg:mt-[10%] ml-[25%]'
               src='/elevator1.webp'
               alt='elevator'
             />
@@ -32,7 +32,7 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
         >
           <div>
             <img
-              className='w-[60%] mt-[10%] ml-[19%]'
+              className='w-[60%] mt-[30%] lg:mt-[10%] ml-[19%]'
               src='/elevator2.webp'
               alt='stairs'
             />
@@ -41,7 +41,7 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[17%] 2xl:gap-[13%] py-16'>
+      <div className='flex flex-row justify-between py-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
@@ -55,7 +55,7 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
           Ďalej
         </button>
       </div>
-    </>
+    </div>
   )
 }
 
