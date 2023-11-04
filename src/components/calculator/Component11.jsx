@@ -2,14 +2,12 @@ import React from 'react'
 
 const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
   return (
-    <>
-      <p className='text-[#0076ba] text-center text-[25px] pt-8'>
+    <div className='flex flex-col mx-1 lg:mx-[30%] 2xl:mx-[34%]'>
+      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold pt-4 pb-8'>
-        Aký je stav bytového domu?
-      </h1>
-      <div className='flex flex-row justify-center gap-10'>
+      <h1 className='text-center font-bold py-8'>Aký je stav bytového domu?</h1>
+      <div className='flex flex-row justify-center gap-4 lg:gap-10 mt-4'>
         <div
           id='isolated'
           onClick={() => handleBuildingCondition('isolated')}
@@ -17,12 +15,12 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
         >
           <div>
             <img
-              className='w-[60%] mt-[10%] ml-[15%]'
+              className='w-[60%] mt-[20%] lg:mt-[10%] ml-[22%] lg:ml-[15%]'
               src='/bcond1.webp'
               alt='isolation'
             />
 
-            <p className='font-bold text-[35px] text-right mt-8 mr-3  '>
+            <p className='font-bold text-[35px] text-right mt-12 lg:mt-8 mr-3  '>
               zateplený
             </p>
           </div>
@@ -34,18 +32,18 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
         >
           <div>
             <img
-              className='w-[53%] mt-[10%] ml-[15%]'
+              className='w-[63%] lg:w-[53%] mt-[14%] lg:mt-[10%] ml-[20%] lg:ml-[15%]'
               src='/bcond2.webp'
               alt='newElevator'
             />
 
-            <p className='text-[35px] font-bold text-right mr-3 mt-6'>
+            <p className='text-[35px] font-bold text-right mr-3 mt-10 lg:mt-6 leading-[35px]'>
               nový výťah
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-10 mt-4'>
+      <div className='flex flex-row justify-center gap-4 lg:gap-10 mt-4'>
         <div
           id='newWindows'
           onClick={() => handleBuildingCondition('newWindows')}
@@ -53,12 +51,12 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
         >
           <div>
             <img
-              className='w-[50%] mt-[15%] ml-[12%]'
+              className='w-[50%] mt-[20%] lg:mt-[15%] ml-[12%]'
               src='/bcond3.webp'
               alt='newWindows'
             />
 
-            <p className='font-bold text-[35px] text-right mt-12 mr-3  '>
+            <p className='font-bold text-[35px] text-right mt-16 lg:mt-12 mr-3 leading-[35px]'>
               nové okná
             </p>
           </div>
@@ -70,18 +68,18 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
         >
           <div>
             <img
-              className='w-[55%] mt-[10%] ml-[15%]'
+              className='w-[55%] mt-[18%] lg:mt-[10%] ml-[15%]'
               src='/bcond4.webp'
               alt='newInstallations'
             />
 
-            <p className='text-[35px] font-bold text-right mr-3 mt-10'>
+            <p className='text-[35px] font-bold text-right mr-3 mt-14 lg:mt-2 2xl:mt-10 leading-[35px]'>
               nové stupačky
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[17%] lg:gap-[20%] 2xl:gap-[13%] py-16'>
+      <div className='flex flex-row justify-between py-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
@@ -95,7 +93,7 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
           Ďalej
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

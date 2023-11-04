@@ -2,20 +2,20 @@ import React from 'react'
 
 const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
   return (
-    <>
-      <p className='text-[#0076ba] text-center text-[25px] pt-8'>
+    <div className='flex flex-col mx-1'>
+      <p className='text-[#0076ba] text-center text-[25px] py-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold pt-4 pb-8'>
+      <h1 className='text-center font-bold py-8'>
         Aká je občianska vybavenosť v danej lokalite?
       </h1>
-      <div className='flex flex-row justify-center'>
+      <div className='flex flex-row justify-center mt-4'>
         <div
           id='excellent'
           onClick={() => handleUrbanQuality('excellent')}
-          className='border-2 border-[#0076ba] px-2 rounded-[35px] w-[50%] h-[225px] flex flex-col'
+          className='border-2 border-[#0076ba] px-2 rounded-[35px] w-[98%] lg:w-[50%]  h-[300px] lg:h-[225px] flex flex-col'
         >
-          <p className='leading-[30px] text-[25px] font-semibold text-justify mx-2 mt-2'>
+          <p className='leading-[30px] text-[25px] font-semibold text-justify mx-2 mt-4 lg:mt-2'>
             Lokalita patrí k najlepším v meste. Nachádza sa v samotnom centre
             mesta – Staré Mesto, Koliba, nový Downtown. Lokalitu preferuje
             bonitnejšia časť populácie.
@@ -30,9 +30,9 @@ const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
         <div
           id='average'
           onClick={() => handleUrbanQuality('average')}
-          className='border-2 border-[#0076ba] px-2 rounded-[35px] w-[50%] h-[225px] flex flex-col'
+          className='border-2 border-[#0076ba] px-2 rounded-[35px] w-[98%] lg:w-[50%] h-[330px] lg:h-[225px] flex flex-col'
         >
-          <p className='leading-[30px] text-[25px] font-semibold text-justify mx-2 mt-2'>
+          <p className='leading-[30px] text-[25px] font-semibold text-justify mx-2 mt-6 lg:mt-2'>
             Lokalita sa nachádza ďalej od centra mesta. Charakterizuje ju dobrá
             občianska vybavenosť (školy, škôlky, kaviarne, reštaurácie, MHD).
             Lokalitu preferuje stredná vrstva populácie.
@@ -48,9 +48,9 @@ const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
         <div
           id='poor'
           onClick={() => handleUrbanQuality('poor')}
-          className='border-2 border-[#0076ba] px-2 rounded-[35px] w-[50%] h-[225px] flex flex-col'
+          className='border-2 border-[#0076ba] px-2 rounded-[35px] w-[98%] lg:w-[50%] h-[320px] lg:h-[225px] flex flex-col'
         >
-          <p className='leading-[30px] text-[25px] font-semibold text-justify mx-2 mt-2'>
+          <p className='leading-[30px] text-[25px] font-semibold text-justify mx-2 mt-4 lg:mt-2'>
             Lokalita patrí k najmenej rozvinutým v meste. Nachádza sa na okraji
             mesta, alebo v blízkosti industriálnej zóny. Preferuje ju primárne
             menej solventná časť populácie.
@@ -62,7 +62,7 @@ const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
         </div>
       </div>
 
-      <div className='flex flex-row justify-center gap-[25%] lg:gap-[23%] 2xl:gap-[31%] py-16'>
+      <div className='flex flex-row justify-center gap-[8%] lg:gap-[23%] 2xl:gap-[31%] py-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
@@ -76,7 +76,7 @@ const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
           Ďalej
         </button>
       </div>
-    </>
+    </div>
   )
 }
 
