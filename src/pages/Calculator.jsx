@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CalcNavbar from '../components/calculator/CalcNavbar'
 import Component00 from '../components/calculator/component00'
 import Component01 from '../components/calculator/component01'
@@ -264,6 +264,7 @@ const Calculator = () => {
           <Component15
             onBack={handleBack}
             onNext={handleNext}
+            isValid={isValid}
             email={email}
             setEmail={setEmail}
             checkBox={checkBox}
@@ -400,6 +401,22 @@ const Calculator = () => {
     element.classList.add('clicked')
     setTimeout(handleNext, 1000)
   }
+
+  const validateEmail = (email) => {
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const [isValid, setIsValid] = useState(false)
+
+  useEffect(() => {
+    if (email !== '') {
+      setIsValid(validateEmail(email))
+    }
+  }, [email])
+
+  console.log('isThisValid', isValid)
 
   return (
     <div className='text-black bg-white text-[30px]'>

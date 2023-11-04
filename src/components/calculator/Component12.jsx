@@ -2,7 +2,7 @@ import React from 'react'
 
 const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
   return (
-    <div className='flex flex-col mx-1 lg:mx-[32%] 2xl:mx-[34%]'>
+    <div className='flex flex-col mx-1 lg:mx-[30%] 2xl:mx-[34%]'>
       <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -49,7 +49,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
         <div
           id='security'
           onClick={() => handleSmartHomeItems('security')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[285px] flex flex-col gap-[90px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[285px]'
         >
           <div>
             <img
@@ -58,7 +58,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
               alt='security'
             />
 
-            <p className='font-bold text-[24px] lg:text-[35px] text-right mt-16 lg:mt-6 mr-3  leading-[40px]'>
+            <p className='font-bold text-[24px] lg:text-[35px] text-right mt-16 lg:mt-6 mr-3 leading-[40px]'>
               bezpečnostný systém
             </p>
           </div>
@@ -66,7 +66,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
         <div
           id='aircon'
           onClick={() => handleSmartHomeItems('aircon')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px]  h-[285px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[285px]'
         >
           <div>
             <img
@@ -75,7 +75,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
               alt='aircon'
             />
 
-            <p className='text-[24px] lg:text-[35px] font-bold text-right mr-3 mt-[45%] lg:mt-5 leading-[30px]'>
+            <p className='text-[24px] lg:text-[35px] font-bold text-right mr-3 mt-[45%] lg:mt-8 leading-[30px]'>
               klimatizácia/ stropné chladenie
             </p>
           </div>
