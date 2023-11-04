@@ -2,12 +2,12 @@ import React from 'react'
 
 const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
   return (
-    <div className='flex flex-col mx-1 lg:mx-[32%] 2xl:mx-[37%]'>
+    <div className='flex flex-col mx-1 lg:mx-[33%] 2xl:mx-[37%]'>
       <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
       <h1 className='text-center font-bold py-16 '>Zvoľte počet izieb</h1>
-      <div className='flex flex-row justify-center gap-10 mt-4'>
+      <div className='flex flex-row justify-center gap-2 lg:gap-10 mt-4'>
         <div
           id='0'
           onClick={() => handleCountRoomClick(0)}
@@ -28,7 +28,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
         </div>
       </div>
-      <div className='mt-4 flex flex-row justify-center gap-10'>
+      <div className='mt-4 flex flex-row justify-center gap-2 lg:gap-10'>
         <div
           id='2'
           onClick={() => handleCountRoomClick(2)}
@@ -41,7 +41,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[26%] mr-2'>
             2
           </p>
-          <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
+          <p className='font-bold text-right mr-3 -mt-3 lg:-mt-1'>izbový</p>
         </div>
         <div
           id='3'
@@ -58,14 +58,14 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[26%] mr-2'>
             3
           </p>
-          <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
+          <p className='font-bold text-right mr-3  -mt-3 lg:-mt-1'>izbový</p>
         </div>
       </div>
-      <div className='mt-4 flex flex-row justify-center gap-10'>
+      <div className='mt-4 flex flex-row justify-center gap-2 lg:gap-10'>
         <div
           id='4'
           onClick={() => handleCountRoomClick(4)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[200px]'
         >
           <div className='flex flex-row mt-2'>
             <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
@@ -78,30 +78,32 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[28%] mr-2'>
             4
           </p>
-          <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
+          <p className='font-bold text-right mr-3  mt-0 lg:mt-3'>izbový</p>
         </div>
         <div
           id='5'
           onClick={() => handleCountRoomClick(5)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[180px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[230px] h-[200px]'
         >
           <div className='flex flex-row mt-2'>
-            <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-            <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
+            <div className='border-4 border-[#0076ba] h-[22.5px] lg:h-[25px] w-[22.5px] lg:w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+            <div className='border-4 border-[#0076ba] h-[22.5px] lg:h-[25px] w-[22.5px] lg:w-[25px]  rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
           </div>
           <div className='flex flex-row mt-2'>
-            <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-            <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
+            <div className='border-4 border-[#0076ba] h-[22.5px] lg:h-[25px] w-[22.5px] lg:w-[25px]  rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+            <div className='border-4 border-[#0076ba] h-[22.5px] lg:h-[25px] w-[22.5px] lg:w-[25px] rounded-[60px] ml-[5px] bg-[#0076ba]'></div>
           </div>
           <div className='flex flex-row mt-2'>
-            <div className='border-4 border-[#0076ba] h-[25px] w-[25px] rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
-            <p className='ml-[7.5px] -mt-[8%] text-[35px] text-[#0076ba]'>+</p>
+            <div className='border-4 border-[#0076ba] h-[22.5px] lg:h-[25px] w-[22.5px] lg:w-[25px]  rounded-[60px] ml-[15px] bg-[#0076ba]'></div>
+            <p className='ml-[7.5px] -mt-[8%] text-[32.5px] lg:text-[35px] text-[#0076ba]'>
+              +
+            </p>
           </div>
 
-          <p className='text-[#0076ba] text-[75px] font-bold text-right -mt-[48.5%] mr-2'>
+          <p className='text-[#0076ba] text-[62.5px] lg:text-[75px] font-bold text-right -mt-[48.5%] mr-2'>
             5+
           </p>
-          <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
+          <p className='font-bold text-right mr-3 mt-3 '>izbový</p>
         </div>
       </div>
       <div className='flex flex-row justify-between py-16'>
