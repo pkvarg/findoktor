@@ -9,36 +9,36 @@ const Component16 = ({
 }) => {
   return (
     <div className='relative flex flex-col mx-1'>
-      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
+      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[40px] text-center font-bold py-8 leading-[50px]'>
+      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
         Odhadovaná cena Vašej <br /> nehnuteľnosti je:
       </h1>
 
-      <div className='flex flex-col items-center gap-10 pb-[20%]'>
-        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[35px] w-[98%] lg:w-[50%] h-[125px] flex flex-col gap-[90px] relative'>
+      <div className='flex flex-col items-center gap-4 lg:gap-10 pb-[20%]'>
+        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[25px] lg:rounded-[35px] w-[98%] lg:w-[50%] h-[90px] lg:h-[125px] flex flex-col gap-[90px] relative'>
           <p className='text-[42px] text-[#0076ba] font-bold absolute top-[33%] text-right w-[93%] h-[50%]'>
             {minPriceWithoutRealEstateAssistance} -{' '}
             {maxPriceWithoutRealEstateAssistance}€
           </p>
 
-          <p className='text-[#ff010f] text-[22.5px] mt-[35%] lg:mt-[18%] 2xl:mt-[15%] ml-[2%]'>
+          <p className='text-[#ff010f] text-[22.5px] mt-[25%] lg:mt-[18%] 2xl:mt-[15%] ml-[2%]'>
             *cena bez služieb Realitnej kancelárie
           </p>
         </div>
-        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[35px] w-[98%] lg:w-[50%] h-[125px] flex flex-col gap-[90px] relative'>
+        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[25px] lg:rounded-[35px] w-[98%] lg:w-[50%] h-[90px] lg:h-[125px] flex flex-col gap-[90px] relative'>
           <p className='text-[42px] text-[#0076ba] font-bold absolute top-[33%] text-right w-[93%] h-[50%]'>
             {minPriceWithRealEstateAssistance} -{' '}
             {maxPriceWithRealEstateAssistance}€
           </p>
 
-          <p className='text-[#ff010f] text-[22.5px] mt-[35%] lg:mt-[18%] 2xl:mt-[15%] ml-[2%]'>
+          <p className='text-[#ff010f] text-[22.5px] mt-[25%] lg:mt-[18%] 2xl:mt-[15%] ml-[2%]'>
             *cena po odrátaní služieb Realitnej kancelárie
           </p>
         </div>
-        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[35px] w-[98%] lg:w-[50%] h-[125px]'>
-          <p className='text-[35px] text-[#0076ba] font-bold  text-center h-[50%] leading-[40px] mt-6'>
+        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[25px] lg:rounded-[35px] w-[98%] lg:w-[50%] h-[100px] lg:h-[125px]'>
+          <p className='text-[35px] text-[#0076ba] font-bold  text-center h-[50%] leading-[40px] mt-3 lg:mt-6'>
             Dohodnite si fyzickú <br /> obhliadku teraz
           </p>
           <button

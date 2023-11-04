@@ -13,7 +13,7 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
         <div
           id='elevatorTrue'
           onClick={() => handleHasElevator('elevatorTrue')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[220px] lg:h-[285px] flex flex-col gap-[90px]'
         >
           <div>
             <img
@@ -22,13 +22,15 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
               alt='elevator'
             />
 
-            <p className='font-bold text-[35px] text-right mt-8 mr-3  '>áno</p>
+            <p className='font-bold text-[35px] text-right mt-0 lg:mt-8 mr-3'>
+              áno
+            </p>
           </div>
         </div>
         <div
           id='elevatorFalse'
           onClick={() => handleHasElevator('elevatorFalse')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[220px] lg:h-[285px]'
         >
           <div>
             <img
@@ -37,11 +39,13 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
               alt='stairs'
             />
 
-            <p className='text-[35px] font-bold text-right mr-3 mt-6'>nie</p>
+            <p className='text-[35px] font-bold text-right mr-3 -mt-1 lg:mt-6'>
+              nie
+            </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-between py-16'>
+      <div className='flex flex-row justify-between pt-[57%] lg:pt-16'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
