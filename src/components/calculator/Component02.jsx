@@ -2,12 +2,12 @@ import React from 'react'
 
 const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
   return (
-    <>
-      <p className='text-[#0076ba] text-center text-[25px] pt-8'>
+    <div className='flex flex-col mx-1 lg:mx-[32%] 2xl:mx-[37%]'>
+      <p className='text-[#0076ba] text-center text-[25px] pt-16 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-center font-bold pt-4 pb-8'>Zvoľte počet izieb</h1>
-      <div className='flex flex-row justify-center gap-10'>
+      <h1 className='text-center font-bold py-16 '>Zvoľte počet izieb</h1>
+      <div className='flex flex-row justify-center gap-10 mt-4'>
         <div
           id='0'
           onClick={() => handleCountRoomClick(0)}
@@ -104,7 +104,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           <p className='font-bold text-right mr-3 -mt-1'>izbový</p>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[10.5%] lg:gap-[11%] 2xl:gap-[8.5%] py-16'>
+      <div className='flex flex-row justify-between py-16'>
         <button
           onClick={() => onBack()}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
@@ -118,7 +118,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           Ďalej
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

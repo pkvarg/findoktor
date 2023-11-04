@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <StateContext>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Calculator />} />
           <Route path='/blog' element={<BlogPage />} />
           <Route path='/blog/:id' element={<BlogPage />} />
           <Route path='/create-blog' element={<CreateBlog />} />

@@ -106,7 +106,7 @@ const Calculator = () => {
   const [currentFlatOrHouseClicked, setCurrentFlatOrHouseClicked] =
     useState(null)
 
-  const [currentComponent, setCurrentComponent] = useState(1)
+  const [currentComponent, setCurrentComponent] = useState(0)
 
   const handleNext = () => {
     if (currentComponent < 16) {
@@ -115,20 +115,20 @@ const Calculator = () => {
   }
 
   const handleBack = () => {
-    if (currentComponent > 1) {
+    if (currentComponent > 0) {
       setCurrentComponent(currentComponent - 1)
     }
   }
 
   const renderComponent = (componentNumber) => {
     switch (componentNumber) {
-      // case 0:
-      //   return (
-      //     <Component00
-      //       onNext={handleNext}
-      //       handleFlatOrHouse={handleFlatOrHouse}
-      //     />
-      //   )
+      case 0:
+        return (
+          <Component00
+            onNext={handleNext}
+            handleFlatOrHouse={handleFlatOrHouse}
+          />
+        )
       case 1:
         return (
           <Component01
@@ -398,12 +398,13 @@ const Calculator = () => {
     setCurrentFlatOrHouseClicked(building)
     const element = document.getElementById(building)
     element.classList.add('clicked')
+    setTimeout(handleNext, 1000)
   }
 
   return (
     <div className='text-black bg-white text-[30px]'>
       <CalcNavbar />
-      <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} />
+      {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
 
       {renderComponent(currentComponent)}
     </div>
