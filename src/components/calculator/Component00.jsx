@@ -2,10 +2,10 @@ import React from 'react'
 
 const Component00 = ({ handleFlatOrHouse }) => {
   return (
-    <div className='flex flex-col justify-center mx-4 lg:mx-0'>
-      {/* <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
+    <div className='flex flex-col justify-center mx-4 lg:mx-0 mt-[20%] lg:mt-0'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[25px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
-      </p> */}
+      </p>
       <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-4 leading-[35px]'>
         <span className='text-red-600'>Zvoľte</span> typ Vašej nehnuteľnosti
       </h1>

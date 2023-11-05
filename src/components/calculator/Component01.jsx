@@ -11,7 +11,10 @@ const Component01 = ({
   setHouseNumber,
 }) => {
   return (
-    <div className='flex flex-col relative w-[98%] lg:w-[120%] mx-1 lg:mx-0'>
+    <div className='flex flex-col relative w-[98%] lg:w-[120%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[25px] pt-12 lg:pt-8'>
+        OCENENIE NEHNUTEĽNOSTI ONLINE
+      </p>
       <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[35px]'>
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>

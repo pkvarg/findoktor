@@ -29,9 +29,9 @@ const CalcNavbar = () => {
           </p>
         </div>
       </div>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[25px] pt-12 lg:pt-8'>
+      {/* <p className='text-[#0076ba] text-center text-[10px] lg:text-[25px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
-      </p>
+      </p> */}
     </>
   )
 }

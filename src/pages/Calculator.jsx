@@ -422,7 +422,7 @@ const Calculator = () => {
   return (
     <div className='text-black bg-white text-[30px]'>
       {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
-      <div className='flex flex-col items-center relative'>
+      <div className='flex flex-col items-center relative '>
         <CalcNavbar />
         <form>{renderComponent(currentComponent)}</form>
         <Footer />

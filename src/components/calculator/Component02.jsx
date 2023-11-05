@@ -2,7 +2,10 @@ import React from 'react'
 
 const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mt-[20%] lg:mt-0'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[25px] pt-12 lg:pt-8'>
+        OCENENIE NEHNUTEĽNOSTI ONLINE
+      </p>
       <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-0 lg:py-2 leading-[35px]'>
         Zvoľte počet izieb
       </h1>
@@ -105,7 +108,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
 
           <div className='flex flex-row mt-1'>
             <div className='border-2 lg:border-4 border-[#0076ba] h-[15px] lg:h-[25px] w-[15px] lg:w-[25px] rounded-[30px] ml-1 lg:ml-[10px] bg-[#0076ba]'></div>
-            <p className='ml-[3px] lg:ml-[6px] -mt-[20%] lg:-mt-4 text-[30px] lg:text-[37.5px] text-[#0076ba]'>
+            <p className='ml-[3px] lg:ml-[6px] -mt-[19%] lg:-mt-4 text-[30px] lg:text-[37.5px] text-[#0076ba]'>
               +
             </p>
           </div>
