@@ -10,7 +10,6 @@ import {
   Meeting,
   Calculator,
 } from './pages'
-import { Footer } from './components'
 import { Toaster } from 'react-hot-toast'
 import { StateContext } from './context/StateContext'
 
@@ -31,7 +30,7 @@ function App() {
           <Route path='/meeting' element={<Meeting />} />
           <Route path='/calculator' element={<Calculator />} />
         </Routes>
-        <Footer />
+
         <Toaster />
       </StateContext>
     </BrowserRouter>

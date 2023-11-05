@@ -8,7 +8,6 @@
 
 body {
   overflow-x: hidden !important;
-  background-color: #013baf;
 }
 
 .navbar-text {
@@ -40,7 +39,7 @@ section {
 }
 
 .clicked {
-  border: 4px solid #03065f;
+  border: 8px solid #dc2627;
 }
 
 button {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CalcNavbar from '../components/calculator/CalcNavbar'
 import Component00 from '../components/calculator/component00'
-import Component01 from '../components/calculator/component01'
+import Component01 from '../components/calculator/Component01'
 import Component02 from '../components/calculator/Component02'
 import Component03 from '../components/calculator/Component03'
 import Component04 from '../components/calculator/Component04'
@@ -17,6 +17,7 @@ import Component13 from '../components/calculator/Component13'
 import Component14 from '../components/calculator/Component14'
 import Component15 from '../components/calculator/Component15'
 import Component16 from '../components/calculator/component16'
+import Footer from '../components/Footer'
 
 const Calculator = () => {
   const [flatOrHouse, setFlatOrHouse] = useState('')
@@ -420,10 +421,12 @@ const Calculator = () => {
 
   return (
     <div className='text-black bg-white text-[30px]'>
-      <CalcNavbar />
       {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
-
-      {renderComponent(currentComponent)}
+      <div className='flex flex-col items-center relative'>
+        <CalcNavbar />
+        <form>{renderComponent(currentComponent)}</form>
+        <Footer />
+      </div>
     </div>
   )
 }

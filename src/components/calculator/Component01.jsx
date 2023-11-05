@@ -11,48 +11,53 @@ const Component01 = ({
   setHouseNumber,
 }) => {
   return (
-    <div className='flex flex-col mx-[2%] lg:mx-[25%] 2xl:mx-[30%]'>
-      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
-        OCENENIE NEHNUTEĽNOSTI ONLINE
-      </p>
-      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
+    <div className='flex flex-col relative w-[98%] lg:w-[120%] mx-1 lg:mx-0'>
+      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[35px]'>
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>
-      <div className='border border-[#0076ba] rounded-xl mt-4 h-[80px] lg:h-[90px] flex flex-col'>
-        <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
-          <span className='absolute -top-[0px] left-[10px] '>Mesto</span>
+      <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[95px] flex flex-col'>
+        <label
+          htmlFor='text'
+          className='text-[#0076ba] text-[15px] lg:text-[18px] relative'
+        >
+          <span className='absolute -top-[0px] left-[10px]'>Mesto</span>
         </label>
         <input
           type='text'
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          className='mt-[30px] w-[97%] text-right outline-none'
+          className='text-[15px] lg:text-[35px] mt-[18px] lg:mt-[30px] w-[97%] font-bold text-right outline-none'
         />
       </div>
-      <div className='border border-[#0076ba] rounded-xl mt-4 h-[80px] lg:h-[90px] flex flex-col'>
-        <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
+      <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[95px] flex flex-col'>
+        <label
+          htmlFor='text'
+          className='text-[#0076ba] text-[15px] lg:text-[18px] relative'
+        >
           <span className='absolute -top-[0px] left-[10px] '>Ulica</span>
         </label>
         <input
           type='text'
           value={street}
           onChange={(e) => setStreet(e.target.value)}
-          className='mt-[30px] w-[97%] text-right outline-none'
+          className='text-[15px] lg:text-[35px] mt-[18px] lg:mt-[30px] w-[97%] font-bold text-right outline-none'
         />
       </div>
-      <div className='border border-[#0076ba] rounded-xl h-[80px] lg:h-[90px] flex flex-col mt-4'>
-        <label htmlFor='text' className='text-[#0076ba] text-[18px] relative'>
+      <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[95px] flex flex-col'>
+        <label
+          htmlFor='text'
+          className='text-[#0076ba] text-[15px] lg:text-[18px] relative'
+        >
           <span className='absolute -top-[0px] left-[10px] '>Číslo</span>
         </label>
         <input
           type='text'
           value={houseNumber}
-          onChange={(e) => setHouseNumber(e.target.value)}
-          className='mt-[30px] w-[97%] text-right outline-none'
+          className='text-[15px] lg:text-[35px] mt-[18px] lg:mt-[30px] w-[97%] font-bold text-right outline-none'
         />
       </div>
 
-      <div className='flex flex-row justify-between pt-[30%] lg:pt-16'>
+      <div className='flex flex-row justify-between w-[100%] mt-[16%]'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
