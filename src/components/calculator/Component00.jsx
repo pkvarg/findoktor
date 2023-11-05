@@ -70,7 +70,10 @@ const Component00 = ({ handleFlatOrHouse }) => {
       <div className='flex justify-center'>
         <div className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[25px] mt-12 lg:mt-12 w-[100%] hover:border-red-600 hover:border-4'>
           <p className='text-[20px] lg:text-[27.5px] text-[#0076ba] font-extrabold text-center leading-[20px] lg:leading-[29.5px] py-2'>
-            Dohodnite si fyzickú <br /> obhliadku hneď
+            {/* Dohodnite si fyzickú <br /> obhliadku hneď */}
+            <a href='tel:+421944517560'>
+              Dohodnite si fyzickú <br /> obhliadku hneď
+            </a>
           </p>
         </div>
       </div>

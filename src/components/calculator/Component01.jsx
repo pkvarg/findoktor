@@ -57,15 +57,15 @@ const Component01 = ({
         />
       </div>
 
-      <div className='flex flex-row justify-between w-[100%] mt-[16%]'>
+      <div className='flex flex-row justify-between w-[100%] mt-[20%] lg:mt-[16%] mb-8 lg:mb-0'>
         <button
           onClick={onBack}
-          className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
+          className='border border-[#0076ba] text-[15px] lg:text-[25px] h-10 lg:h-16 px-10 lg:px-14 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Späť
         </button>
         <button
-          className='ml-auto border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
+          className='border border-[#0076ba] text-[15px] lg:text-[25px] h-10 lg:h-16 px-10 lg:px-14 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
           onClick={onNext}
         >
           Ďalej
