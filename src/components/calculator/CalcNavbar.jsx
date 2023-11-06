@@ -3,7 +3,7 @@ import React from 'react'
 const CalcNavbar = () => {
   return (
     <>
-      <div className='flex flex-row justify-center items-center gap-[110%] lg:gap-[135%]'>
+      <div className='flex flex-row justify-center items-center gap-[100%] lg:gap-[135%]'>
         <div className='flex flex-row items-center gap-2 lg:gap-1'>
           <div className='flex flex-col gap-[4px] lg:gap-[4px]'>
             <div className='h-[5px] lg:h-[5px] bg-[#0076ba]  w-[30px] lg:w-[25px]'></div>

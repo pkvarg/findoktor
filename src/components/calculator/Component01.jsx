@@ -29,7 +29,7 @@ const Component01 = ({
           type='text'
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 font-bold text-right outline-none'
+          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
@@ -43,7 +43,7 @@ const Component01 = ({
           type='text'
           value={street}
           onChange={(e) => setStreet(e.target.value)}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 font-bold text-right outline-none'
+          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
@@ -56,8 +56,7 @@ const Component01 = ({
         <input
           type='text'
           value={houseNumber}
-          onChange={(e) => setHouseNumber(e.target.value)}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 font-bold text-right outline-none'
+          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>
 

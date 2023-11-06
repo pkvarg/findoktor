@@ -124,16 +124,16 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           </p>
         </div>
       </div>
-      <div className='flex flex-row justify-between py-8 '>
+      <div className='flex flex-row justify-between py-8 lg:py-2 xl:py-4'>
         <button
           onClick={() => onBack()}
-          className='border border-[#0076ba] text-[15px] lg:text-[17.5px] h-10 lg:h-10 px-10 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border border-[#0076ba] text-[15px] lg:text-[17.5px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Späť
         </button>
         <button
           onClick={onNext}
-          className='border border-[#0076ba] text-[15px] lg:text-[17.5px] h-10 lg:h-10 px-10 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border border-[#0076ba] text-[15px] lg:text-[17.5px] h-10 lg:h-10 px-8 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej
         </button>
