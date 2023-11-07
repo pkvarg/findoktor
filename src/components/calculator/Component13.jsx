@@ -7,7 +7,7 @@ const Component13 = ({ onBack, onNext, monthlyCosts, setMonthlyCosts }) => {
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
       <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
-        Aké sú celkové mesačné náklady na byt?
+        Aké sú celkové mesačné <br /> náklady na byt?
       </h1>
       <div className='flex flex-row justify-center mt-0'>
         <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[55px] w-[100%] flex flex-col relative'>
@@ -21,9 +21,9 @@ const Component13 = ({ onBack, onNext, monthlyCosts, setMonthlyCosts }) => {
             type='text'
             value={monthlyCosts}
             onChange={(e) => setMonthlyCosts(e.target.value)}
-            className='text-[22.5px] lg:text-[25px] absolute top-[26%] lg:top-[24%] w-[15%] right-[20%]  mr-2 lg:mr-0 text-right font-bold outline-none'
+            className='text-[22.5px] lg:text-[25px] absolute top-[26%] lg:top-[24%] w-[15%] right-[20%]  mr-3 lg:mr-3 text-right font-bold outline-none'
           />
-          <p className='text-[#0076ba] font-bold text-[17.5px] absolute top-[41%] right-3'>
+          <p className='text-[#0076ba] font-bold text-[12.5px] absolute top-[50%] right-3'>
             €/mes.
           </p>
           {/* <p className='text-[#0076ba] font-bold text-[17.5px] absolute top-[41%] right-5'>
