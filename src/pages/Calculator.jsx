@@ -16,8 +16,9 @@ import Component12 from '../components/calculator/Component12'
 import Component13 from '../components/calculator/Component13'
 import Component14 from '../components/calculator/Component14'
 import Component15 from '../components/calculator/Component15'
-import Component16 from '../components/calculator/component16'
+import Component16 from '../components/calculator/Component16'
 import Footer from '../components/Footer'
+import { result } from '../getResults'
 
 const Calculator = () => {
   const [flatOrHouse, setFlatOrHouse] = useState('')
@@ -297,7 +298,6 @@ const Calculator = () => {
       const toRemoveFrom = document.getElementById(currentlyClicked)
       toRemoveFrom.classList.remove('clicked')
     }
-    console.log(count)
     setCountRooms(count)
     setCurrentlyClicked(count)
     const element = document.getElementById(count)
@@ -305,7 +305,6 @@ const Calculator = () => {
   }
 
   const handleHouseCondition = (num) => {
-    console.log(num)
     if (currentConditionClicked !== null) {
       const toRemoveFrom = document.getElementById(currentConditionClicked)
       toRemoveFrom.classList.remove('clicked')
@@ -317,7 +316,6 @@ const Calculator = () => {
   }
 
   const handleHasElevator = (elevator) => {
-    console.log(elevator)
     if (currentElevatorStatusClicked !== null) {
       const toRemoveFrom = document.getElementById(currentElevatorStatusClicked)
       toRemoveFrom.classList.remove('clicked')
@@ -341,7 +339,6 @@ const Calculator = () => {
   }
 
   const handleHasGarage = (garage) => {
-    console.log(garage)
     if (currentGarageStatusClicked !== null) {
       const toRemoveFrom = document.getElementById(currentGarageStatusClicked)
       toRemoveFrom.classList.remove('clicked')
@@ -353,7 +350,6 @@ const Calculator = () => {
   }
 
   const handleBuildingCondition = (condition) => {
-    console.log(condition)
     if (currentBuildingConditionStatusClicked !== null) {
       const toRemoveFrom = document.getElementById(
         currentBuildingConditionStatusClicked
@@ -367,7 +363,6 @@ const Calculator = () => {
   }
 
   const handleSmartHomeItems = (item) => {
-    console.log(item)
     if (currentSmartHomeItemsClicked !== null) {
       const toRemoveFrom = document.getElementById(currentSmartHomeItemsClicked)
       toRemoveFrom.classList.remove('clicked')
@@ -419,12 +414,61 @@ const Calculator = () => {
 
   console.log('isThisValid', isValid)
 
+  const handleSubmitForm = (e) => {
+    e.preventDefault()
+    if (email !== '') {
+      setIsValid(validateEmail(email))
+      console.log(
+        'submitted',
+        city,
+        street,
+        houseNumber,
+        countRooms,
+        houseCondition,
+        squareMeters,
+        allFloorsCount,
+        currentFloorNumber,
+        hasElevator,
+        hasBalcony,
+        hasGarage,
+        builtYear,
+        buildingConditions,
+        smartHomeItems,
+        monthlyCosts,
+        urbanQuality,
+        email
+      )
+      handleNext()
+      result(
+        city,
+        street,
+        houseNumber,
+        countRooms,
+        houseCondition,
+        squareMeters,
+        allFloorsCount,
+        currentFloorNumber,
+        hasElevator,
+        hasBalcony,
+        hasGarage,
+        builtYear,
+        buildingConditions,
+        smartHomeItems,
+        monthlyCosts,
+        urbanQuality,
+        email
+      )
+    }
+  }
+
   return (
     <div className='text-black bg-white text-[30px]'>
       {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
       <div className='flex flex-col items-center relative '>
         <CalcNavbar />
-        <form>{renderComponent(currentComponent)}</form>
+        <form onSubmit={handleSubmitForm}>
+          {renderComponent(currentComponent)}
+        </form>
         <Footer />
       </div>
     </div>

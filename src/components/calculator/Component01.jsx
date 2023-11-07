@@ -56,6 +56,7 @@ const Component01 = ({
         <input
           type='text'
           value={houseNumber}
+          onChange={(e) => setHouseNumber(e.target.value)}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>

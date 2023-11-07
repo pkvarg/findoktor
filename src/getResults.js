@@ -18,6 +18,7 @@ export const result = (
   email
 ) => {
   console.log(
+    'getting results..',
     city,
     street,
     houseNumber,
@@ -36,4 +37,23 @@ export const result = (
     urbanQuality,
     email
   )
+  // console.log(
+  //   city,
+  //   street,
+  //   houseNumber,
+  //   countRooms,
+  //   houseCondition,
+  //   squareMeters,
+  //   allFloorsCount,
+  //   currentFloorNumber,
+  //   hasElevator,
+  //   hasBalcony,
+  //   hasGarage,
+  //   builtYear,
+  //   buildingConditions,
+  //   smartHomeItems,
+  //   monthlyCosts,
+  //   urbanQuality,
+  //   email
+  // )
 }

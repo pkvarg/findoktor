@@ -79,7 +79,7 @@ const Component03 = ({ onBack, onNext, handleHouseCondition }) => {
         >
           <div>
             <img
-              className='w-[80%] mt-[6%] lg:mt-[7%] ml-[7%]'
+              className='w-[75%] mt-[6%] lg:mt-[7%] ml-[7%]'
               src='/cnd04.webp'
               alt='home04'
             />

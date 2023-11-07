@@ -25,6 +25,7 @@ const Component06 = ({
           <input
             type='text'
             value={currentFloorNumber}
+            onChange={(e) => setCurrentFloorNumber(e.target.value)}
             className='text-[22.5px] lg:text-[25px] absolute top-[24%] lg:top-[24%] w-[15%] right-4  text-right font-bold outline-none'
           />
         </div>
