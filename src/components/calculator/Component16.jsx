@@ -8,47 +8,50 @@ const Component16 = ({
   maxPriceWithRealEstateAssistance,
 }) => {
   return (
-    <div className='relative flex flex-col mx-1'>
-      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
+    <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-[2%]'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
+      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[20px]'>
         Odhadovaná cena Vašej <br /> nehnuteľnosti je:
       </h1>
 
-      <div className='flex flex-col items-center gap-4 lg:gap-10 pb-[20%]'>
-        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[25px] lg:rounded-[35px] w-[98%] lg:w-[50%] h-[90px] lg:h-[125px] flex flex-col gap-[90px] relative'>
-          <p className='text-[42px] text-[#0076ba] font-bold absolute top-[33%] text-right w-[93%] h-[50%]'>
+      <div className='flex flex-col justify-center mt-2'>
+        <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[325px] flex flex-col relative'>
+          <p className='text-[20px] text-[#0076ba] font-bold absolute top-[33%] right-4 text-right'>
             {minPriceWithoutRealEstateAssistance} -{' '}
             {maxPriceWithoutRealEstateAssistance}€
           </p>
 
-          <p className='text-[#ff010f] text-[22.5px] mt-[25%] lg:mt-[18%] 2xl:mt-[15%] ml-[2%]'>
+          <p className='text-[#ff010f] text-[12.5px] absolute top-14 left-2'>
             *cena bez služieb Realitnej kancelárie
           </p>
         </div>
-        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[25px] lg:rounded-[35px] w-[98%] lg:w-[50%] h-[90px] lg:h-[125px] flex flex-col gap-[90px] relative'>
-          <p className='text-[42px] text-[#0076ba] font-bold absolute top-[33%] text-right w-[93%] h-[50%]'>
+        <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative mt-8'>
+          <p className='text-[20px] text-[#0076ba] font-bold absolute top-[33%] right-4 text-right'>
             {minPriceWithRealEstateAssistance} -{' '}
             {maxPriceWithRealEstateAssistance}€
           </p>
 
-          <p className='text-[#ff010f] text-[22.5px] mt-[25%] lg:mt-[18%] 2xl:mt-[15%] ml-[2%]'>
+          <p className='text-[#ff010f] text-[12.5px] absolute -bottom-6 left-2'>
             *cena po odrátaní služieb Realitnej kancelárie
           </p>
         </div>
-        <div className='border-2 border-[#0076ba] px-2 mb-16 rounded-[25px] lg:rounded-[35px] w-[98%] lg:w-[50%] h-[100px] lg:h-[125px]'>
-          <p className='text-[35px] text-[#0076ba] font-bold  text-center h-[50%] leading-[40px] mt-3 lg:mt-6'>
-            Dohodnite si fyzickú <br /> obhliadku teraz
+        <div className='border border-[#0076ba] rounded-[15px] h-[50px] lg:h-[55px] w-[100%] flex flex-col relative mt-12  hover:border-red-600 hover:border-4'>
+          <p className='text-[15px] leading-[15px] text-[#0076ba] font-bold text-center mt-3'>
+            <a href='tel:+421944517560'>
+              Dohodnite si fyzickú <br /> obhliadku teraz
+            </a>
           </p>
-          <button
-            onClick={onBack}
-            className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2 mt-[20%]'
-          >
-            Späť
-          </button>
         </div>
       </div>
+
+      <button
+        onClick={onBack}
+        className='border border-[#0076ba] uppercase text-[15px] px-1 py-2 rounded-[35px] font-bold  hover:border-[#03065f] hover:border-2 w-[40%] mt-16 lg:mt-8'
+      >
+        Späť
+      </button>
     </div>
   )
 }

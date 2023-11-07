@@ -11,48 +11,48 @@ const Component15 = ({
 }) => {
   console.log(checkBox)
   return (
-    <div className='relative flex flex-col mx-1'>
-      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
+    <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-[10%]'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
+      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
         Vaša nehnuteľnosť bola <br /> nacenená
       </h1>
       <img
-        className='flex absolute top-[19%] lg:top-[22%] lg:left-[27.5%]'
+        className='flex w-[17.5%] absolute top-[19%] lg:top-[22%] lg:left-[0%]'
         src='/firework.webp'
         alt='firework'
       />
       <img
-        className='flex absolute top-[19%] lg:top-[22%] right-0 lg:right-[27.5%]'
+        className='flex w-[17.5%] absolute top-[19%] lg:top-[22%] right-0 lg:right-[0%]'
         src='/firework.webp'
         alt='firework'
       />
-      <div className='flex flex-row justify-center gap-10 mt-16 lg:mt-0'>
-        <div className='border-2 border-[#0076ba] px-2 mt-[10.5%] mb-16 rounded-[25px] lg:rounded-[35px] w-[99%] lg:w-[50%] h-[100px] lg:h-[125px] flex flex-col gap-[90px] relative'>
-          <label
-            htmlFor='text'
-            className='text-[#0076ba] text-[15px] lg:text-[22px] ml-4 -mt-10'
-          >
-            <span>Ak chcete pokračovať ďalej, zadajte Váš mail:</span>
-          </label>
+      <div className='flex flex-col justify-center mt-10'>
+        <label
+          htmlFor='text'
+          className='text-[#0076ba] text-[12.5px] lg:text-[12.5px] ml-1 relative'
+        >
+          <span>Ak chcete pokračovať ďalej, zadajte Váš mail:</span>
+        </label>
+        <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative'>
           <input
             type='text'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='text-[25px] lg:text-[38px] font-bold absolute top-[33%] text-right w-[93%] lg:w-[93%] h-[50%] outline-none'
+            className='text-[17.5px] font-bold absolute top-[32%] text-right w-[93%] lg:w-[96%] h-[50%] outline-none'
             required='required'
           />
-          <div className='flex flex-row justify-start items-center mt-[30%] lg:mt-[16%]'>
+          <div className='flex flex-row justify-start items-center mt-[30%] lg:mt-[30%]'>
             <input
-              className='h-[22.5px] w-[22.5px] mr-4'
+              className='h-[15px] w-[15px] mr-2'
               type='checkbox'
               defaultChecked={false}
               value={checkBox}
               onChange={() => setCheckBox((prev) => !prev)}
               required='required'
             />
-            <p className='text-[#0076ba] text-[22.5px]'>
+            <p className='text-[#0076ba] text-[15px]'>
               Súhlasím s{' '}
               <a
                 className='underline font-semibold'
@@ -66,17 +66,17 @@ const Component15 = ({
         </div>
       </div>
 
-      <div className='flex flex-row justify-center gap-[8%] lg:gap-[24%] 2xl:gap-[31%]  mt-[20%] lg:mt-[10%] pt-[25%] lg:pt-16'>
+      <div className='flex flex-row justify-between pt-[70%] lg:pt-[70%] gap-1'>
         <button
           onClick={onBack}
-          className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
+          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Späť
         </button>
         <button
           disabled={checkBox === false || !isValid}
           onClick={onNext}
-          className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
+          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej
         </button>

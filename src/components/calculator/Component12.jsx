@@ -2,18 +2,19 @@ import React from 'react'
 
 const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
   return (
-    <div className='flex flex-col mx-1 lg:mx-[30%] 2xl:mx-[34%]'>
-      <p className='text-[#0076ba] text-center text-[18px] lg:text-[25px] pt-8 lg:pt-16'>
+    <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-[10%]'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[25px] lg:text-[25px] text-center font-bold py-4 lg:py-8 leading-[35px]'>
-        Má byt prvky inteligentnej domácnosti?
+      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
+        Má byt prvky inteligentnej <br /> domácnosti?
       </h1>
-      <div className='flex flex-row justify-center gap-2 lg:gap-10 mt-4'>
+      <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
+        {' '}
         <div
           id='termostat'
           onClick={() => handleSmartHomeItems('termostat')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[200px] lg:h-[285px] flex flex-col gap-[90px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
             <img
@@ -22,15 +23,15 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
               alt='termostat'
             />
 
-            <p className='font-bold text-[26px] lg:text-[35px] text-right mt-4 lg:mt-4 mr-3 leading-[26px] lg:leading-[40px]'>
-              smart termostat
+            <p className='font-bold text-[12.5px] leading-[12.5px] absolute bottom-2 right-3 text-right'>
+              smart <br /> termostat
             </p>
           </div>
         </div>
         <div
           id='internet'
           onClick={() => handleSmartHomeItems('internet')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[200px] lg:h-[285px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
             <img
@@ -39,17 +40,17 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
               alt='internet'
             />
 
-            <p className='text-[26px] lg:text-[35px] font-bold text-right mr-3 mt-4 lg:mt-4 leading-[26px] lg:leading-[40px]'>
-              internetové pripojenie
+            <p className='font-bold text-[12.5px] leading-[12.5px] absolute bottom-2 right-3 text-right'>
+              internetové <br /> pripojenie
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-2 lg:gap-10 mt-4'>
+      <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         <div
           id='security'
           onClick={() => handleSmartHomeItems('security')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[200px] lg:h-[285px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
             <img
@@ -58,7 +59,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
               alt='security'
             />
 
-            <p className='font-bold text-[24px] lg:text-[35px] text-right mt-6 lg:mt-6 mr-3 leading-[26px] lg:leading-[40px]'>
+            <p className='font-bold text-[12.5px] leading-[12.5px] absolute bottom-2 right-3 text-right'>
               bezpečnostný systém
             </p>
           </div>
@@ -66,7 +67,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
         <div
           id='aircon'
           onClick={() => handleSmartHomeItems('aircon')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[180px] lg:w-[280px] h-[200px] lg:h-[285px]'
+          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
             <img
@@ -75,22 +76,22 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
               alt='aircon'
             />
 
-            <p className='text-[24px] lg:text-[35px] font-bold text-right mr-3 mt-2 lg:mt-8 leading-[26px] lg:leading-[30px]'>
+            <p className='font-bold text-[12px] leading-[14px] absolute bottom-2 right-2 text-right'>
               klimatizácia/ stropné chladenie
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-between pt-14 lg:pt-16'>
+      <div className='flex flex-row justify-between pt-[35%] lg:pt-[35%] gap-1'>
         <button
           onClick={onBack}
-          className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Späť
         </button>
         <button
           onClick={onNext}
-          className='border border-[#0076ba] px-14 py-2 rounded-[35px]  hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej
         </button>
