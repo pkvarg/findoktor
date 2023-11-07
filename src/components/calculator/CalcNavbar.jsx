@@ -3,21 +3,21 @@ import React from 'react'
 const CalcNavbar = () => {
   return (
     <>
-      <div className='flex flex-row justify-center items-center gap-[100%] lg:gap-[135%]'>
-        <div className='flex flex-row items-center gap-2 lg:gap-1'>
+      <div className='flex flex-row justify-center items-center gap-[100%] lg:gap-[135%] mt-2'>
+        <div className='flex flex-row items-center gap-2 lg:gap-2'>
           <div className='flex flex-col gap-[4px] lg:gap-[4px]'>
             <div className='h-[5px] lg:h-[5px] bg-[#0076ba]  w-[30px] lg:w-[25px]'></div>
             <div className='h-[5px] lg:h-[5px] bg-[#0076ba] w-[30px] lg:w-[25px]'></div>
             <div className='h-[5px] lg:h-[5px] bg-[#0076ba] w-[30px] lg:w-[25px]'></div>
           </div>
 
-          <p className='text-[17.5px] lg:text-[17.5px] leading-[17.5px] lg:leading-[17.5px] font-extrabold'>
+          <p className='text-[15px] lg:text-[15px] leading-[14px] lg:leading-[14px] font-extrabold -mt-[2%]'>
             MICHAL <br /> DOVALA
           </p>
         </div>
-        <div className='flex flex-col mt-[8%] lg:mt-[8%]'>
+        <div className='flex flex-col'>
           <img
-            className='w-[40%] lg:w-[40%] ml-[30%]'
+            className='w-[30%] lg:w-[30%] ml-[30%]'
             src='/maklerLogo.webp'
             alt='logo'
           />

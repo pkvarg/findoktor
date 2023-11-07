@@ -6,7 +6,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[17.5px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
+      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
         <span className='text-red-600'>Zvoľte</span> typ Vašej nehnuteľnosti
       </h1>
       <div className='flex flex-row justify-center gap-6 lg:gap-4 pt-4'>
@@ -68,7 +68,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
         <p className='text-[25px] lg:text-[35px]'>Zadarmo</p>
       </div> */}
       <div className='flex justify-center'>
-        <div className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[25px] mt-12 lg:mt-4 w-[100%] hover:border-red-600 hover:border-4'>
+        <div className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[20px] mt-12 lg:mt-12 w-[100%] hover:border-red-600 hover:border-4'>
           <p className='text-[20px] lg:text-[27.5px] text-[#0076ba] font-extrabold text-center leading-[20px] lg:leading-[29.5px] py-2'>
             {/* Dohodnite si fyzickú <br /> obhliadku hneď */}
             <a href='tel:+421944517560'>
