@@ -1,24 +1,45 @@
-import React, { useEffect, useState } from 'react'
-import CalcNavbar from '../components/calculator/CalcNavbar'
-import Component00 from '../components/calculator/component00'
-import Component01 from '../components/calculator/Component01'
-import Component02 from '../components/calculator/Component02'
-import Component03 from '../components/calculator/Component03'
-import Component04 from '../components/calculator/Component04'
-import Component05 from '../components/calculator/Component05'
-import Component06 from '../components/calculator/Component06'
-import Component07 from '../components/calculator/Component07'
-import Component08 from '../components/calculator/component08'
-import Component09 from '../components/calculator/component09'
-import Component10 from '../components/calculator/Component10'
-import Component11 from '../components/calculator/Component11'
-import Component12 from '../components/calculator/Component12'
-import Component13 from '../components/calculator/Component13'
-import Component14 from '../components/calculator/Component14'
-import Component15 from '../components/calculator/Component15'
-import Component16 from '../components/calculator/Component16'
-import Footer from '../components/Footer'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
+// import CalcNavbar from '../components/calculator/CalcNavbar'
+// import Component00 from '../components/calculator/component00'
+// import Component01 from '../components/calculator/Component01'
+// import Component02 from '../components/calculator/Component02'
+// import Component03 from '../components/calculator/Component03'
+// import Component04 from '../components/calculator/Component04'
+// import Component05 from '../components/calculator/Component05'
+// import Component06 from '../components/calculator/Component06'
+// import Component07 from '../components/calculator/Component07'
+// import Component08 from '../components/calculator/component08'
+// import Component09 from '../components/calculator/component09'
+// import Component10 from '../components/calculator/Component10'
+// import Component11 from '../components/calculator/Component11'
+// import Component12 from '../components/calculator/Component12'
+// import Component13 from '../components/calculator/Component13'
+// import Component14 from '../components/calculator/Component14'
+// import Component15 from '../components/calculator/Component15'
+// import Component16 from '../components/calculator/Component16'
+// import Footer from '../components/Footer'
 import { result } from '../getResults'
+import { SpinnerFullPage } from '../components'
+
+const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'))
+const Component00 = lazy(() => import('../components/calculator/component00'))
+const Component01 = lazy(() => import('../components/calculator/Component01'))
+const Component02 = lazy(() => import('../components/calculator/Component02'))
+const Component03 = lazy(() => import('../components/calculator/Component03'))
+const Component04 = lazy(() => import('../components/calculator/Component04'))
+const Component05 = lazy(() => import('../components/calculator/Component05'))
+const Component06 = lazy(() => import('../components/calculator/Component06'))
+const Component07 = lazy(() => import('../components/calculator/Component07'))
+const Component08 = lazy(() => import('../components/calculator/component08'))
+const Component09 = lazy(() => import('../components/calculator/component09'))
+const Component10 = lazy(() => import('../components/calculator/Component10'))
+const Component11 = lazy(() => import('../components/calculator/Component11'))
+const Component12 = lazy(() => import('../components/calculator/Component12'))
+const Component13 = lazy(() => import('../components/calculator/Component13'))
+const Component14 = lazy(() => import('../components/calculator/Component14'))
+const Component15 = lazy(() => import('../components/calculator/Component15'))
+const Component16 = lazy(() => import('../components/calculator/Component16'))
+const Footer = lazy(() => import('../components/Footer'))
 
 const Calculator = () => {
   const [flatOrHouse, setFlatOrHouse] = useState('')
@@ -462,16 +483,20 @@ const Calculator = () => {
   }
 
   return (
-    <div className='text-black bg-white text-[30px]'>
-      {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
-      <div className='flex flex-col items-center relative '>
-        <CalcNavbar />
-        <form onSubmit={handleSubmitForm}>
-          {renderComponent(currentComponent)}
-        </form>
-        <Footer />
-      </div>
-    </div>
+    <>
+      <Suspense fallback={<SpinnerFullPage />}>
+        <div className='text-black bg-white text-[30px]'>
+          {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
+          <div className='flex flex-col items-center relative '>
+            <CalcNavbar />
+            <form onSubmit={handleSubmitForm}>
+              {renderComponent(currentComponent)}
+            </form>
+            <Footer />
+          </div>
+        </div>
+      </Suspense>
+    </>
   )
 }
 

@@ -1,0 +1,7267 @@
+[
+  {
+    "ulica": "Alžbetínska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Anenská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Banícka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Banskobystrická ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bartókova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bartoňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Baštová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Beblavého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Belopotockého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Benediktiho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bernolákova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Beskydská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bezručova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Biela ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Björnsonova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Blumentálska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bohúňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bottova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bôrik",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bradlianska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Brnianska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Broskyňová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Břeclavská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Búdková ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Buková ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Bukureštská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Cintorínska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Cukrová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Čajkovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Čapkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Čelakovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Čerešňová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Červeňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Čmeľovec",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Čulenova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dankovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dobrovičova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dobrovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dobšinského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dohnalova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dolná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Donovalova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dostojevského rad",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Drevená ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Drotárska cesta",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dubová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dunajská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Dvořákovo nábrežie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Fajnorovo nábrežie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Fándlyho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Farská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Fazuľová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ferienčíkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Fialkové údolie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Flöglova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Francisciho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Františkánska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Gajova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Galandova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Gaštanová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Godrova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Gondova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Gorazdova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Gorkého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Grösslingová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Gunduličova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Havlíčkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Havrania ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Haydnova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Heydukova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hlavatého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hlboká cesta",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Holekova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hollého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Holubyho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hradné údolie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hrebendova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hriňovská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hroboňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hummelova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Hýrošova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Chalupkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Chorvátska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Inovecká ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Janáčkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jančova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jánošíková ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jánska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jaseňová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Javorinská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Javorová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jedlíkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jelenia ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jesenského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jozefa Kronera",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jozefská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Jurovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Justičná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "K lomu",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "K Železnej studienke",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kapitulská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kapucínska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Karpatská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Klariská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Klemensova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Klobučnícka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kolárska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Konventná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Korabinského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Koreničova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kostolná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kozia ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Krakovská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kráľovské údolie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Krátka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Krčméryho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Krivá ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Križkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Krmanova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Krupkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kubániho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kúpeľná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kuzmányho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kýčerského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Kysucká ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ľadová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Landererova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Langsfeldova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Laučekova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Laurinská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lazaretská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lehockého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lermontovova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lesná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Leškova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lichardova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lipová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lodná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lomonosovova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lovinského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lubinská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lužická ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Lýcejná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Majakovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Májkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Malá ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Malinová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Malý trh",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mariánska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Marótyho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Martinengova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Matúšova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Medená ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Medzierka",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mickiewiczova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Michalská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mikulášska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mišíkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Moskovská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mostová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mošovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Moyzesova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mozartova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mudroňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Murgašova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Múzejná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Myjavská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Mýtna ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na Baránku",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na Brezinách",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na Hrebienku",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na Kalvárii",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na kopci",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na Slavíne",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na stráni",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na Štyridsiatku",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Na vŕšku",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Nábrežie arm. gen. Ludvíka Svobodu",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Nad lomom",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Nedbalova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Nekrasovova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Novosvetská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Obchodná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Okánikova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Olejkárska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ostravská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Palackého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Palárikova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Palisády",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Panenská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Panská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Partizánska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Paulínyho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pažického ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pilárikova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pod Bôrikom",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pod Kalváriou",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pod vinicami",
+    "cast": "BA I"
+  },
+  
+  {
+    "ulica": "Podhorského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Podjavorinskej ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Podjazd",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Podtatranského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Poľná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Poľská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Porubského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Poštová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Povraznícka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pražská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Prepoštská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Prešernova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pri Habánskom mlyne",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pri hradnej studni",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pri Suchom mlyne",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Pribinova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Prvosienková ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Puškinova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Radlinského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Radničná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Radvanská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Rajská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Rázusovo nábrežie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Révová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Riečna ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Rigeleho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Riznerova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Rubinsteinova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Rybárska brána",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Sasinkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Sedlárska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Senická ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Schillerova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Schody pri starej vodárni",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Siedma ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Skalná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Sklenárska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Sládkovičova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Slávičie údolie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Slepá ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Slovanská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Smetanova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Soferove schody",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Socháňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Sokolská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Somolického ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Spojná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Srnčia ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Stará Vinárska",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Staromestská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Staroturský chodník",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Starý most",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Strakova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Strážnická ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Strelecká ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Strmá cesta",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Súbežná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Suché mýto",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Svetlá ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Svoradova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Šafranová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Šancová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Šípková ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Škarniclova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Školská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Škovránčia ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Šoltésovej ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Špitálska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Štefánikova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Štefanovičova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Štetinova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Štúrova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Šulekova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tabaková ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tablicová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tajovského ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tallerova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tichá ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Timravina ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tobrucká ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tolstého ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Topoľová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Továrenská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Treskoňova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Tvarožkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Údolná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica 29. augusta",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica Andreja Plávku",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica Boženy Němcovej",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica Fraňa Kráľa",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica francúzskych partizánov",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica Imricha Karvaša",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica Mateja Bela",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ulica Prokopa Veľkého",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Úprkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Urbánkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Uršulínska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Úzka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "V záhradách",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vajanského nábrežie",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Valašská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vansovej ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vazovova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Ventúrska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Veterná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vetvová ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vlčkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vodný vrch",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vrátňanská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vrchná ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Vysoká ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Wilsonova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Za sokolovňou",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Záhorácka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Záhrebská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Zámocká ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Zámocké schody",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Zámočnícka ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Západný rad",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Zelená ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Zochova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Zrínskeho ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Žabotova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Železničiarska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Žiarska ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Židovská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Žilinská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Živnostenská ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Žižkova ulica",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Most SNP",
+    "cast": "BA I"
+  },
+  {
+    "ulica": "Amurská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Baltská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bejdl",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bieloruská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Biskupická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bodrocká ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Borágová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Borekova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Devätinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Dneperská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Družobná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Dudvážska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gajc",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Geologická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hájovňa",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hlbinná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hornádska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hronská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hviezdna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hviezdoslavova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hydinárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ipeľská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jegenešská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jókaiho ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jonatánová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ketelec",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Komárovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Korytnická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kovová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krajinská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kvetinárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Latorická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Lieskovec",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Lieskovská cesta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Linzbothova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Lopárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Lotyšská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Madáchova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Máchova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Monardová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mramorová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nákovná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nákupná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nezvalova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Oblúková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Odeská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Orechová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Orenburská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ovčiarska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Parcelná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Parenicová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pasienková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Perličková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Petöfiho ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Podzáhradná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Popradská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Požiarnická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pri hrádzi",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pri trati",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Priekopnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prípojná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pšeničná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sĺňavská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slovnaftská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Staromlynská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šamorínska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šikmá ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Štátne lesy",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Učiteľská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica 8. mája",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica Janka Kráľa",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica padlých hrdinov",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica svornosti",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vetvárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vinohradnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vrakunská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Výtvarná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Závodná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Žiacka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Dvojkrížna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Estónska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kazanská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Podunajská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Uzbecká ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Albrechtova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Alejová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Alešova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ambrušova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Astronomická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Astrová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Azalková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Azovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Babuškova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bachova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bajkalská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bajzova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bancíkovej ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Banšelova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bazová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bažantia ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Beckovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bencúrova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bielkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bočná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Borodáčova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Brestová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Budovateľská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bulharská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bystrého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Cablkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Cyrilova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Czambelova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čaklovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čalovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čečinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čipkárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čmelíkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ďatelinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Dohnányho ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Doležalova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Domkárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Domové role",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Drieňová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Družicová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Edisonova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Exnárova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Farebná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Fibichova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gagarinova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Galaktická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gallova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Galvaniho ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gašparíkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gemerská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Goláňova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gregorovej ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gruzínska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Gusevova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Haburská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hamuliakova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hanácka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hasičská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Herlianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hontianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Horárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Horníkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hrachová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hraničná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hríbová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Chlumeckého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ivanská cesta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jabloňová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jadrová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jakabova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jarabinková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jarná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jasná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jastrabia ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jašíkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jégého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jelačičova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jesenná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kamenárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kapušianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Karadžičova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kašmírska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kaštieľska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Keplerova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kladnianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kláštorská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Klincová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kľukatá ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Koceľova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kohútova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Komárňanská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Komárnická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Konopná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kopáč",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kopanice",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kopernikova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kostlivého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kovorobotnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kozmonautická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krajinská cesta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krajná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kramériova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krasinského ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krásna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krížna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krompašská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kulíškova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kultúrna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kupeckého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kvačalova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kvetná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ľaliová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ľanová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Levická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Lidická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Liptovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Listová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Líščie nivy",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Lúčna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Luhačovická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Malé pálenisko",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Martákovej ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Martinčekova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Martinská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Medzilaborecká ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mesačná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Meteorová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Metodova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mierová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Micherova zátoka",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mikovíniho ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Miletičova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mliekárenská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mlynské luhy",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mlynské nivy",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mojmírova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mokráň záhon",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Moldavská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Motýlia ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mraziarenská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Muškátová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Na križovatkách",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Na lánoch",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Na paši",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Na piesku",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Na úvrati",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Na výslní",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nábrežie Milana Rastislava Štefánika",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Narcisová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nerudova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nevädzová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nezábudková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Niťová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nitrianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nížinná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové pálenisko",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady I.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady II.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady III.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady IV.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady V.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady VI.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nové záhrady VII.",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Novohradská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Obežná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Obilná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Okružná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ondavská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ondrejovova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Oravská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Orechový rad",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Oriešková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ostredková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Osvetová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Palkovičova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Papraďová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Páričkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Park Andreja Hlinku",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Parková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Párna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pavlovičova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pavlovova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pažítková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pestovateľská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Peterská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Petzvalova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Piesočná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pivonková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Plátenícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Plynárenská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pod gaštanmi",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Podlučinského ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Polárna ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Poľovnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Poludníková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prašná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prešovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pri Čiernom lese",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pri strelnici",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pri zvonici",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Priekopy",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Priemyselná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prievozská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prístavná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prúdová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Radarová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rádiová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Raketová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rákosová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rapošov park",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rastislavova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Repná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Revolučná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Revúcka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rezedová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ribayova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rosná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rovná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rovníková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rozmarínová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rumančeková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ružičková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ružinovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ružomberská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ružová dolina",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sabinovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sartorisova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Seberíniho ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sečovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sedmokrásková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Senná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sinokvetná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Skladištná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sklenárova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sladová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slivková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slovinská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slovnaftárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slowackého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Smolnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Solivarská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Spišská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Spoločenská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Sputniková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stachanovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stálicová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Staničná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stará černicová",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stará Ivanská cesta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stará Prievozská",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Staré záhrady",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stodolova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stredná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Strojnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stropkovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Struková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Studená ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Súhvezdná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Súkennícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Súľovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Súmračná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Súťažná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Svätoplukova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Svidnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Syslia ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šagátova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šalviová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šándorova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šarišská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šťastná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Štedrá ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Štefunkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Štiavnická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Štyndlova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šumavská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Táborská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Technická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tekovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Telocvičná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Terchovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Teslova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tokajícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tomášikova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Trebišovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Trenčianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Trnavská cesta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tŕňová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tučkova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Turčianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tvrdého ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Uhorková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica Andreja Mráza",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica Dr. Vladimíra Clementisa",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica Ivana Horvátha",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica Maximiliána Hella",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica planét",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica sv. Vincenta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ulica Viliama Figuša-Bystrého",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Uránová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Valchárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vápenná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Varínska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vavrínová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Včelárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Velehradská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vietnamská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Viktorínova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vlčie hrdlo",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Votrubova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vrábeľská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vrakunská cesta",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vrútocká ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vyšná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Wattova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Za tehelňou",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Záhradnícka ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Zálužická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Západná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Zborovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Zelinárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Zimná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Zlaté piesky",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Zvolenská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Železná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Žellova ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Most Apollo",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prístavný most",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Košická ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Cesta na Senec",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Amarelková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Anízová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Arménska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bazalková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bebravská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Blatúchová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bodliaková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bodvianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Borovicová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Brezová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Bučinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čakanková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čiernovodská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čiližská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Čučoriedková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Domašská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Egrešová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hlohová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hnilecká ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Horcová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hradská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Hrušovská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ihličnatá ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Imelová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Irisová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jazmínová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jedľová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Jesienková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kalinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kaméliová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kosodrevinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Kríková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Krokusová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Leknová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Levanduľová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Magnóliová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Majerská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Majoránová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Maková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Malodunajská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Margarétová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Marhuľová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Modricová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Mostná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Nechtíková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Orgovánová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Orchideová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Osiková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ostružinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Palinová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Píniová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Platanová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Pod agátmi",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Podbeľová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Podpriehradná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Poľnohospodárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Prasličková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Priehradná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rajčianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rajecká ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rascová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ráztočná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Rebarborová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Repíková ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Ríbezľová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Skorocelová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slatinská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Slnečnicová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Stavbárska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šípová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Šíravská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Toplianska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Toryská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Tymianová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vážska ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Vŕbová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Železničná ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Žihľavová ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Žitavská ulica",
+    "cast": "BA II"
+  },
+  {
+    "ulica": "Alibernetová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ambrova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Americká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bardejovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bárdošova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bartoškova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Belehradská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Belianska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bellova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Blatnická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bobuľová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Boskovičova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Brečtanová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Brezovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Briežky",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Brusnicová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Budyšínska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Burgundská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Cádrova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Cesta mládeže",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Cesta na Kamzík",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Cintulova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Čajakova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Černicová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Česká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Čremchová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Desiata ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Deviata ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Druhá ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Družstevná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ďumbierska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ďurgalova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Dvanásta ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Elektrárenská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Filiálne nádražie",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Frankovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Furmintská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Gavlovičova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Guothova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Halašova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hálkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hattalova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hlavná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hlučínska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Horné Židiny",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Horská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Horského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hrabový chodník",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hrdličkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hroznová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Husova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Chemická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Chrasťová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Iršajská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jahodová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jakubíkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jalovcová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Janoškova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jarošova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jaskový rad",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jazdecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jedenásta ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jelšová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jeséniova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jiskrova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Júlová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Junácka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Júnová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jurská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kalinčiakova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kamzík - Les",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kamzík - Vrch",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Klatovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Klenová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kĺzavá ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kominárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kováčska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Koziarka",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Krahulčia ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kraskova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Križovatka Jozefa Čabelku",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kukučínova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kukuričná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kurucova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kutuzovova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kyjevská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Laborecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ladzianskeho ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Lamanského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Laskomerského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Leánska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Legerského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Legionárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Letecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Letná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Likavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Limbová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Lipovinová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Lombardiniho ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Lopenícka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Lopúchová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ľubľanská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ľubochnianska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Magnetová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Magurská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Makovického ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Malagová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Mandľovníková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Matičná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Matúškova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Merlotová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Mestská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Modranská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Moravská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Muštová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na Grunte",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na Pažiti",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na Revíne",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na rozhliadke",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na Slanci",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na Spojke",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na varte",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na Zlatej nohe",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Neronetová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nobelova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nová Bellova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nová Rožňavská",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nová tržnica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Novinárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Odborárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Olbrachtova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Olivová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Opavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ormisova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Osadná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Otonelská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ovručská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ôsma ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pálavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pavlovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pekná vyhliadka",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pezinská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Piata ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Piešťanská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pionierska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pluhová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Plzenská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod Klepáčom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod Krásnou Hôrkou",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod Strážami",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod Vachmajstrom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Podkolibská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Podniková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pohronská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Považská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri Bielom kríži",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri dvore",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri Dynamitke",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri starej prachárni",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri starom mýte",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Priečna ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Príkopova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Prvá ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pyrenejská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Račianska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Račianske mýto",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rešetkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Riazanská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rizlingová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Robotnícka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Royova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rozvodná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rožňavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rubínová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sadová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Savignonská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Semianova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Semilonská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Schody na Klenovú",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sibírska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sienkiewiczova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Skalická cesta",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sliačska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sliezska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Slnečná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Smikova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Smrečianska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Snežienková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sovia ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sreznevského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stará Klenová",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stará Vajnorská",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Staré ihrisko",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Strážna ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Strážny Dom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stromová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sudová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Suchá ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Svätovavrinecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Svätovojtešská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šiesta ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Škultétyho ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Športová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Štvrtá ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šuňavcova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tehelná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Teplická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tetmayerova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Thurzova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tramínová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tretia ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Trinásta ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Trnavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Trnavské mýto",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Trojdomy",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tupého ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Turbínová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tylova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Uhrova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ukrajinská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica československých parašutistov",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica Jozefa Cígera-Hronského",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica Ladislava Dérera",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica odbojárov",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica Viktora Tegelhoffa",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Úradnícká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ursínyho ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vajnorská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vančurova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Varšavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vavrinecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Veľký Varan",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Veltlínska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vidlicová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vihorlatská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Viniferová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vínna ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Višňová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vlárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vosková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vresová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vtáčnik",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vyhnianska cesta",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Za Kasárňou",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Za Stanicou",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Záborského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Záruby",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Zátišie",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Závodníkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Židiny",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Albánska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Alstrova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Barónka",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bojnická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Bukovinská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Cígeľská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Cyprichova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Čachtická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Černockého ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Červená ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Demänovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Detvianska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Dopravná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Drozdová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Fongová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Gelnická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hagarova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hečkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hlinícka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Horná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hrušková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hubeného ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hybešova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Chladná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ihrisková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jakubská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jurkovičova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kadnárova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kafendova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kamilková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kaplinská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Knižkova cesta",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Koľajná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kubačova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Lisovňa",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Modrý chodník",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Mrázová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Mudrochova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na medzi",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na pasekách",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nad kúriou",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Novohorská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nový záhon",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Oblačná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Olšová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ondrejská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Oráčska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Park Jozefa Miloslava Hurbana",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pastierska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pekná cesta",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Piesková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Plickova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Podbrezovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Podkarpatská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Popolná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Potočná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri kolíske",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri Šajbách",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri vinohradoch",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pribylinská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Remeselnícka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rostovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rudnícka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rulandská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rumunská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rustaveliho ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sadmelijská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Sklabinská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stará Stupavská",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Staviteľská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stolárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stratená ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Strelkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Stupavská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šúrska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tbiliská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Trávna ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica Augustína Murína",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Úžiny",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Víťazná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vrbenského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Vtáčiková cesta",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Výhonská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Východná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Východné",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Závadská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Zlatá ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Zvončeková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Žabí majer",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Žarnovická ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Žitná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Žulová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na pántoch",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Púchovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Baničova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Buzalkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Čierny chodník",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Dorastenecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Hospodárska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Jačmenná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Koncová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Koniarkova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kratiny",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Kúkoľová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na doline",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Na jarku",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nad jazierkom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Nad Válkom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Osloboditeľská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Park Ferdiša Jurigu",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Park pod lipami",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod krížom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod lipami",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod Válkom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pračanská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri mlyne",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri pasienku",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri pastierni",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri starom letisku",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri Struhe",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pri šanci",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Príjazdná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Regrútska ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Roľnícka ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Rybničná ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Skuteckého ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šachorová ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šaldova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šinkovské",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Široká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šutráková ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Šuty",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tibenského ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tomanova ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Tuhovská ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Uhliská",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica Alviano",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Ulica Kataríny Brúderovej",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Veľké Štepnice",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Za farou",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Za humnami",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Za mlynom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Záturecká ulica",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Zbrody",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Pod Vtáčnikom",
+    "cast": "BA III"
+  },
+  {
+    "ulica": "Avarská ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Brigádnická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Delená cesta (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Devínska cesta",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dolnokorunská ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Gronárska ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hadia cesta (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hradná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hutnícka ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kameňolom (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Korunská ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kozičova ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kremeľská ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lomnická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Medová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Mládežnícka ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Muránska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nad Gronárom (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod kobylou (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod skalou (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Podkorunská ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rímska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rytierska ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Slovanské nábrežie (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Slovienska ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Spätná cesta (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Stepná cesta (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Svíbová ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Štítova ulica (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Štrbská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Úvozná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Viničná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Za bránou (Bratislava)",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bleduľová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Brežná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bridlicová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bršlenová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bystrická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Delená ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Devínske Jazero",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Eisnerova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hradištná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Charkovská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ílová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Istrijská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Janšákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Jasencová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kalištná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kosatcová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kremencová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ľubovníková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Magnezitová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Mečíková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Mlynská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Grbe",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na hriadkach",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na kaštieli",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Mýte",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na skale",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na vyhliadke",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Novoveská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Opletalova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Oplotené koľajište",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pieskovcová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod Glavicou",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod Lipovým",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Podhorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Poniklecová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Prímoravská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Samova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Slovinec",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Spádová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tehelňa",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tehliarska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Textilanka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Uhrovecká ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica 1. mája",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Ivana Bukovčana",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jána Jonáša",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jána Poničana",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jána Smreka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Milana Marečka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Milana Pišúta",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Pavla Horova",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Štefana Králika",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Tomislava P. Kolakoviča",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Zdenky Schelingovej",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vápencová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vápenka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Záhradná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zavadilova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Záveterná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Želiarska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Agátová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bagarova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Batkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bazovského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Beňovského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bezekova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bilíkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bošániho ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Brižitská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bujnákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bullova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Cabanova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Červeňákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Čiernohorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Damborského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dražická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Drobného ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dúbravčická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Fedákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Galbavého ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Gallayova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hanulova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Harmincova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Homolova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Húščavova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Chrobákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Jadranská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "K Horánskej studni",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kajerka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Klimkovičova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Koprivnická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kudlákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Landauova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lipského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lysákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Moyšova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na vrátkach",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nejedlého ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nemčíkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Novodvorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Oskorušová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ostružinový chodník",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ožvoldíkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pántikova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pekníkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Plachého ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod brehmi",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Polianky",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Popovova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Považanova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pri Hrubej lúke",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pri kríži",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pri štadióne",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Repašského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Saratovská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Sekurisova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Sokolíkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Strmé sady",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Strmý bok",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Štepná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Švantnerova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Talichova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tavaríkova osada",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tranovského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Trhová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tulipánová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jána Valašťana Dolinského",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Janka Alexyho",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jura Hronca",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Karola Adlera",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica kpt. Rašu",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Kristy Bendovej",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Ľuda Zúbka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Martina Granca",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Mikuláša Schneidra-Trnavského",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Violy Valachovej",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ušiakova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vendelínska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Záhradkárska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Žatevná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Adámiho ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Baníkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bedľová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Belániková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Beniakova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Blyskáčová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Borská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Botanická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Brodská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Cesta na Červený most",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Cikkerova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Čárskeho ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Čavojského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dlhé diely I.",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dlhé diely II.",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dlhé diely III.",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Donnerova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Dúbravská cesta",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Fadruszova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Gabčíkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hájnická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hlaváčiková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hlivová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hodálova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hudecova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ilkovičova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Iskerníková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Jamnického ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Janotova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Karloveská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Karloveské rameno",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kempelenova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kolískova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Komonicová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Konvalinková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kresánkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kuklovská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lackova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Levárska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Líščie údolie",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Litovská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lykovcová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Majerníkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Matejkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Mlynská dolina",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Mlyny",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Mokrohájska cesta",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Molecova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Most Lanfranconi",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Kampárke",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Riviére",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Sitine",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nábělkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nábrežie Ľubomíra Kadnára",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nad Dunajom",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nad lúčkami",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nad ostrovom",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nad Sihoťou",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Novackého ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Orlia ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pernecká ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod lesom",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod Rovnicami",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pribišova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Púpavová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pustá ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rýdziková ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Segnerova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Sekulská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Silvánska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Sološnická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Staré grunty",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Stoklasová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Stuhová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Suchohradská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Sumbalova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Svrčia ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Šaštínska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Špieszova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tilgnerova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tománkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Albína Brunovského",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Ferdiša Kostku",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Hany Meličkovej",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jána Stanislava",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Ladislava Sáru",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Ľudovíta Fullu",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Vincenta Hložníka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Veternicová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vretenová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vyhliadka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zohorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bakošova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Borinská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Cesta na Klanec",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Furmanská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Havelkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Heyrovského ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hodonínska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kunerádska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lamačská cesta",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lediny",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na barine",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod násypom",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pod Zečákom",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Podháj",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Podlesná ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Povoznícka ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pridánky",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rácova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rajtákova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rozálska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Segnáre",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Skerličova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Stanekova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Studenohorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Valentína Matrku",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vrančovičova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vysoká hora",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vysokohorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Záhrady",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zelenohorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zhorínska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zlatohorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "1. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "10. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "2. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "3. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "4. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "5. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "6. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "7. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "8. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "9. ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Barancová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Bratislavská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Brumovická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Čerencová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Donská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Gajarská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Gbelská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Hargašova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Jána Raka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kapsohradská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kollárova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kučovanická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Kútska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lančárska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Leopoldov majer",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Lozornianska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Málová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Holom vrchu",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Krčoch",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Na Vlkovkách",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Nevská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ostriežová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Plánky",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Plavecká ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Podkerepušky",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pri Vápenickom potoku",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Prídavkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Pútnická ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Rošického ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Sekýľska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Strminová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Strmý vŕšok",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Štefana Rosívala",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tatranská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Tešedíkova ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Trstínska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Antona Floreka",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica č. 1",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica československých tankistov",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Jozefa Vachovského",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Ota Holúska",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Pavla Blaha",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica plk. Prvoniča",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica svätého Pia X.",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Štefana Majera",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Ulica Štefana Rosívala",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Vrbárska ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Záhorská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Záhumenská ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zákutie",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Zárubová ulica",
+    "cast": "BA IV"
+  },
+  {
+    "ulica": "Cezmínová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dlhá ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hraničiarska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Iberková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ibišteková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "K pasienkom",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Konopiská",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Krušpánová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Na hrádzi",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Novosadná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ovsená ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Petržalská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Rakytníková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ražná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Rebríčková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Schengenská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Skýcovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Sochorova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Turistická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Záhumenná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zobová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bažantnicová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bylinková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Diamantová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Figová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Fikusová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Chotárna ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jantárová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jazerná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Koreňová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kožušnícka ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kôstková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Mandľová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Morušová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Oleandrová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Opálová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Osijecká ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ovocná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Palmová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pílová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Plitvická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri tehelni",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri žrebčíne",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Rastlinná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Repková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Semenárska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Slavónska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Smaragdová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Trnková ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Františka Schmuckera",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Ivana Blazeviča",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Jozefa Mikisitsa",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Ladislava Batthyányho",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Pave Vukoviča",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Petara Pasicha",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Urbárska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zafírová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zamatová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zeleninová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ambroseho ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Andrusovova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Antolská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Azúrová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Belinského ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Beňadická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Betliarska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Béžová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Blagoevova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bohrova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bosákova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bradáčova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Brančská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bratská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Budatínska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bulíkova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bzovícka ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Colnica Berg",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Černyševského ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dargovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dolnozemská cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dropia ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dubnická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dudova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Einsteinova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Farského ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Fedinova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Fialová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Fiľakovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Furdekova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Gercenova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Gessayova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Gettingova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Gogoľova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Goralská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Haanova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hálova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Handlovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Harmanecká ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Holíčska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hrobákova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hrobárska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hýlia ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Iľjušinova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Janíkov dvor",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Janíkovské role",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jankolova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jantárová cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jaroslavova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jasovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jiráskova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Jungmannova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kapicova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kapitulský dvor",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kaukazská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Klokočova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kočánkova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kolmá ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kopčianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Krásnohorská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Krasovského ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kremnická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Krupinská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kubínska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kutlíkova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Labutia ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Lachova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Lenardova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Levočská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Lietavská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ľubietovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ľubovnianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Lužná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Macharova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Májová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Mamateyova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Markova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Mlynarovičova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Nábrežná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Novobanská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Očovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Orechová cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Osuského ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pajštúnska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pankúchova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Panónska cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pečnianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pifflova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Planckova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pobrežná ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Polereckého ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri seči",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri Starom háji",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Prokofievova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Prokopova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Romanova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Röntgenova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Rovniankova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Rusovská cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Sad Janka Kráľa",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Sitnianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Smolenická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Sosnová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Starhradská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Starohájska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Strečnianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Šášovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ševčenkova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Šintavská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Šustekova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Švabinského ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Tematínska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Topoľčianska",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Tupolevova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Turnianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Tyršovo nábrežie",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Údernícka ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Alžbety Gwerkovej",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Františka Oswalda",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica gen. mjr. Antona Petráka",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Ladislava Šefca",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Mariána Kochanského",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Marie Curie Sklodowskej",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Medveďovej",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Ondreja Štefanka",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Urpínska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Vavilovova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Viedenská cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Vígľašská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Vilová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Vranovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Vyšehradská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Wolkrova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zadunajská cesta",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Záporožská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Znievska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zväzácka ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Žehrianska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Žltá ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Antická ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Attidova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Auréliova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Balkánska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Bronzová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Colnícka ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Dolichénska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Domiciánova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Druidská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Firmova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Fláviovská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Gerulatská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hadriánova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hájenka",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Hájová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ilýrska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Irkutská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kananefatská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Keltská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Kovácsova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Laténska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Lesnícka ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Longobardská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Lónyaiova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Maďarská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Mínešská ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri Dunaji",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri gaštanovej aleji",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Pri vodnej veži",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Septimiova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Starorímska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Svébska ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Švajčiareň",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Tibériova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Trajánova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Ágosta Sötéra",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Jána Dekana",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Ľudmily Kraskovskej",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica pohraničníkov",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Radoslava Hošeka",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Ulica Severovcov",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Valentiniánova ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Vývojová ulica",
+    "cast": "BA V"
+  },
+  {
+    "ulica": "Zdravotnícka ulica",
+    "cast": "BA V"
+  }
+]

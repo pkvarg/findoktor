@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Hero, About, Services, Blog, Contact } from './../sections'
+import { Hero, About, Blog, Contact } from './../sections'
 
 const Home = () => {
   useEffect(() => {
@@ -21,9 +21,7 @@ const Home = () => {
       <section>
         <About />
       </section>
-      <section>
-        <Services />
-      </section>
+      <section>{/* <Services /> */}</section>
       <section>
         <Blog />
       </section>

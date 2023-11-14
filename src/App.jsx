@@ -1,3 +1,5 @@
+import { lazy, Suspense } from 'react'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {
   Home,
@@ -8,8 +10,10 @@ import {
   ServicesPage,
   Ebook,
   Meeting,
-  Calculator,
+  //Calculator,
 } from './pages'
+import { SpinnerFullPage } from './components'
+const Calculator = lazy(() => import('./pages/Calculator'))
 import { Toaster } from 'react-hot-toast'
 import { StateContext } from './context/StateContext'
 
@@ -17,20 +21,11 @@ function App() {
   return (
     <BrowserRouter>
       <StateContext>
-        <Routes>
-          <Route path='/' element={<Calculator />} />
-          <Route path='/blog' element={<BlogPage />} />
-          <Route path='/blog/:id' element={<BlogPage />} />
-          <Route path='/create-blog' element={<CreateBlog />} />
-          <Route path='/edit-blog' element={<EditBlog />} />
-          <Route path='/edit-blog/:id' element={<EditBlog />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/services' element={<ServicesPage />} />
-          <Route path='/ebook' element={<Ebook />} />
-          <Route path='/meeting' element={<Meeting />} />
-          <Route path='/calculator' element={<Calculator />} />
-        </Routes>
-
+        <Suspense fallback={<SpinnerFullPage />}>
+          <Routes>
+            <Route path='/' element={<Calculator />} />
+          </Routes>
+        </Suspense>
         <Toaster />
       </StateContext>
     </BrowserRouter>

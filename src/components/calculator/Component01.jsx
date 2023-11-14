@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import streetsData from './../../../uliceCast.json'
 
 const Component01 = ({
   onNext,
@@ -27,8 +28,8 @@ const Component01 = ({
         </label>
         <input
           type='text'
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
+          defaultValue='Bratislava'
+          // onChange={(e) => setCity(e.target.value)}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>
@@ -39,12 +40,25 @@ const Component01 = ({
         >
           <span className='absolute -top-[0px] left-[10px]'>Ulica</span>
         </label>
-        <input
+        <select
+          onChange={(e) => setStreet(e.target.value)}
+          value={street}
+          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
+        >
+          <option value=''>Zvoľte ulicu</option>
+
+          {streetsData.map((ulica) => (
+            <option key={ulica.ulica} value={ulica.ulica}>
+              {ulica.ulica}
+            </option>
+          ))}
+        </select>
+        {/* <input
           type='text'
           value={street}
           onChange={(e) => setStreet(e.target.value)}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
-        />
+        /> */}
       </div>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
         <label
@@ -60,6 +74,19 @@ const Component01 = ({
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>
+
+      {/* <div>
+        <label>Zvoľte ulicu:</label>
+        <select onChange={handleStreetChange} value={selectedStreet}>
+          <option value=''>Zvoľte ulicu</option>
+        
+          {streetsData.map((ulica) => (
+            <option key={ulica.ulica} value={ulica.ulica}>
+              {ulica.ulica}
+            </option>
+          ))}
+        </select>
+      </div> */}
 
       <div className='flex flex-row justify-between w-[100%] mt-[20%] lg:mt-[8%] mb-8 lg:mb-0'>
         <button

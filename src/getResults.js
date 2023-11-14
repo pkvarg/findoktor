@@ -1,3 +1,6 @@
+import streetInfo from './../uliceCast.json'
+import districtInfo from './../castCena.json'
+
 export const result = (
   city,
   street,
@@ -17,6 +20,21 @@ export const result = (
   urbanQuality,
   email
 ) => {
+  const bratislava = 252524
+  const getDistrict = (street) => {
+    const { cast } = streetInfo.find((strt) => strt.ulica === street)
+    console.log(cast)
+    return cast
+  }
+
+  const getDistrictPrice = (district) => {
+    // kedy district = spolu?
+    const { cena } = districtInfo.find((dsrct) => dsrct.okres === district)
+    console.log(cena)
+    return cena
+  }
+
+  getDistrict('Bottova ulica')
   console.log(
     'getting results..',
     city,
@@ -57,3 +75,13 @@ export const result = (
   //   email
   // )
 }
+
+const getDistrict = (street) => {
+  const { cast } = streetInfo.find((strt) => strt.ulica === street)
+  console.log(cast)
+  const { cena } = districtInfo.find((dsrct) => dsrct.okres === cast)
+  console.log(cena)
+  return cast
+}
+
+getDistrict('Muškátová ulica')
