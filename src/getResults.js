@@ -2,6 +2,7 @@ import streetInfo from './../uliceCast.json'
 import districtInfo from './../castCena.json'
 import roomInfo from './../izbyCena.json'
 import floorsCount from './../pocetPosch.json'
+import floorNumber from './../cisloPosch.json'
 
 export const result = (
   city,
@@ -87,7 +88,37 @@ export const result = (
     console.log('floorCountPrice', floorCountPrice)
   }
 
-  const getConditionPrice = getDistrict('Bottova ulica')
+  //helper
+  const assignCurrentFloor = (currentFloorNumber) => {
+    if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
+    if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
+    if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
+    if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
+  }
+
+  const getCurrentFloorPrice = (currentFloorNumber) => {
+    const currentFloorAssigned = assignCurrentFloor(currentFloorNumber)
+    const findFloorAssign = floorNumber.find(
+      (flr) => flr.cisloPosch == currentFloorAssigned
+    )
+    const valueOfFindFloorAssign = findFloorAssign.hodnota
+    const valueOfCurrentFloorPrice = Math.ceil(
+      holdValue * valueOfFindFloorAssign
+    )
+    console.log('currentfloorPrice', valueOfCurrentFloorPrice)
+  }
+
+  const getHasElevatorPrice = (hasElevator) => {
+    let hasElevatorPrice
+    if (hasElevator === 'elevatorTrue') {
+      hasElevatorPrice = holdValue
+    }
+    if (hasElevator === 'elevatorFalse') {
+      hasElevatorPrice = holdValue - 10000
+    }
+    console.log('hasElevatorPrice', hasElevatorPrice)
+  }
+
   console.log(
     'getting results..',
     city,
@@ -150,6 +181,14 @@ const assignFloors = (allFloorsCount) => {
   if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
 }
 
+//helper
+const assignCurrentFloor = (currentFloorNumber) => {
+  if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
+  if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
+  if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
+  if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
+}
+
 const getDistrict = (street) => {
   const { cast } = streetInfo.find((strt) => strt.ulica === street)
   console.log('cast', cast)
@@ -171,6 +210,23 @@ const getDistrict = (street) => {
   const floorCountPrice = Math.ceil(holdValue * hodnota)
   console.log('floorCountPrice', floorCountPrice)
 
+  const currentFloorAssigned = assignCurrentFloor(2)
+  const findFloorAssign = floorNumber.find(
+    (flr) => flr.cisloPosch == currentFloorAssigned
+  )
+  const valueOfFindFloorAssign = findFloorAssign.hodnota
+  const valueOfCurrentFloorPrice = Math.ceil(holdValue * valueOfFindFloorAssign)
+  console.log('currentfloorPrice', valueOfCurrentFloorPrice)
+  // here defined
+  let hasElevator = 'elevatorFalse'
+  let hasElevatorPrice
+  if (hasElevator === 'elevatorTrue') {
+    hasElevatorPrice = holdValue
+  }
+  if (hasElevator === 'elevatorFalse') {
+    hasElevatorPrice = holdValue - 10000
+  }
+  console.log('hasElevatorPrice', hasElevatorPrice)
   //return cast
 }
 
