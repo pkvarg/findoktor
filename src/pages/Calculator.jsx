@@ -433,8 +433,6 @@ const Calculator = () => {
     }
   }, [email])
 
-  console.log('isThisValid', isValid)
-
   const handleSubmitForm = (e) => {
     e.preventDefault()
     if (email !== '') {

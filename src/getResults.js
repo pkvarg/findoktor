@@ -1,5 +1,7 @@
 import streetInfo from './../uliceCast.json'
 import districtInfo from './../castCena.json'
+import roomInfo from './../izbyCena.json'
+import floorsCount from './../pocetPosch.json'
 
 export const result = (
   city,
@@ -21,6 +23,10 @@ export const result = (
   email
 ) => {
   const bratislava = 252524
+  const priemCenaIzbySpolu = 3860
+  const priemCenaBaSpolu = 4073
+  let holdValue
+
   const getDistrict = (street) => {
     const { cast } = streetInfo.find((strt) => strt.ulica === street)
     console.log(cast)
@@ -34,7 +40,54 @@ export const result = (
     return cena
   }
 
-  getDistrict('Bottova ulica')
+  // condition coeficient
+  const getHouseConditionCoeficient = (houseCondition) => {
+    if (houseCondition === '1') return 1
+    if (houseCondition === '2') return 0.8
+    if (houseCondition === '3') return 0.65
+    if (houseCondition === '4') return 0.5
+  }
+
+  // two steps
+  const getRoomAndConditionPrice = (countRooms) => {
+    // kedy district = spolu?
+    const izbaCena = roomInfo.find((room) => room.izby === countRooms)
+    const resIzba = izbaCena.cena
+    // assign holdValue
+    holdValue = resIzba
+    const conditionPrice = Math.ceil(
+      resIzba * getHouseConditionCoeficient(houseCondition)
+    )
+    console.log('izba', resIzba, 'stav', conditionPrice)
+
+    return conditionPrice
+  }
+
+  getSquareMetersPrice = (squareMeters) => {
+    const squareMetersPrice =
+      (squareMeters * priemCenaIzbySpolu) / 2 +
+      (squareMeters * priemCenaBaSpolu) / 2
+    console.log(squareMetersPrice)
+    return squareMetersPrice
+  }
+  //helper
+  const assignFloors = (allFloorsCount) => {
+    if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
+    if (allFloorsCount > 4 && allFloorsCount <= 12) return 12
+    if (allFloorsCount > 12 && allFloorsCount <= 19) return 19
+    if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
+  }
+
+  const getFloorCountPrice = () => {
+    const floorsCounted = assignFloors(allFloorsCount)
+    const { hodnota } = floorsCount.find(
+      (flrCnt) => flrCnt.pocetPosch == floorsCounted
+    )
+    const floorCountPrice = Math.ceil(holdValue * hodnota)
+    console.log('floorCountPrice', floorCountPrice)
+  }
+
+  const getConditionPrice = getDistrict('Bottova ulica')
   console.log(
     'getting results..',
     city,
@@ -76,12 +129,49 @@ export const result = (
   // )
 }
 
+// TEST TEST TEST TEST TEST
+
+const priemCenaIzbySpolu = 3860
+const priemCenaBaSpolu = 4073
+let holdValue
+
+// condition coeficient
+const getHouseConditionCoeficient = (houseCondition) => {
+  if (houseCondition === '1') return Number(1)
+  if (houseCondition === '2') return Number(0.8)
+  if (houseCondition === '3') return Number(0.65)
+  if (houseCondition === '4') return Number(0.5)
+}
+//assign Floors
+const assignFloors = (allFloorsCount) => {
+  if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
+  if (allFloorsCount > 4 && allFloorsCount <= 12) return 12
+  if (allFloorsCount > 12 && allFloorsCount <= 19) return 19
+  if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
+}
+
 const getDistrict = (street) => {
   const { cast } = streetInfo.find((strt) => strt.ulica === street)
-  console.log(cast)
+  console.log('cast', cast)
   const { cena } = districtInfo.find((dsrct) => dsrct.okres === cast)
-  console.log(cena)
-  return cast
+  console.log('cast', cena)
+  const izbaCena = roomInfo.find((room) => room.izby === '1')
+  const resIzba = izbaCena.cena
+  holdValue = resIzba
+  const conditionPrice = Math.ceil(resIzba * getHouseConditionCoeficient('4'))
+  console.log('izba', resIzba, 'stav', conditionPrice)
+  const squareMetersPrice =
+    (36 * priemCenaIzbySpolu) / 2 + (36 * priemCenaBaSpolu) / 2
+  console.log('sqmPrice', squareMetersPrice)
+
+  const floorsCounted = assignFloors(5)
+  const { hodnota } = floorsCount.find(
+    (flrCnt) => flrCnt.pocetPosch == floorsCounted
+  )
+  const floorCountPrice = Math.ceil(holdValue * hodnota)
+  console.log('floorCountPrice', floorCountPrice)
+
+  //return cast
 }
 
 getDistrict('Muškátová ulica')
