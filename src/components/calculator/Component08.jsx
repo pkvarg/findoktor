@@ -1,6 +1,13 @@
 import React from 'react'
 
-const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
+const Component08 = ({
+  onBack,
+  onNext,
+  setHasBalcony,
+  setHasLoggia,
+  setHasTerasa,
+  setHasBasement,
+}) => {
   return (
     <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -12,7 +19,7 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
           id='balcony'
-          onClick={() => handleHasBalcony('balcony')}
+          onClick={() => setHasBalcony((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -29,7 +36,7 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
         </div>
         <div
           id='loggia'
-          onClick={() => handleHasBalcony('loggia')}
+          onClick={() => setHasLoggia((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -48,7 +55,7 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
           id='terasa'
-          onClick={() => handleHasBalcony('terasa')}
+          onClick={() => setHasTerasa((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -64,8 +71,8 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
           </div>
         </div>
         <div
-          id='pivnica'
-          onClick={() => handleHasBalcony('pivnica')}
+          id='basement'
+          onClick={() => setHasBasement((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -100,4 +107,4 @@ const Compnent08 = ({ onBack, onNext, handleHasBalcony }) => {
   )
 }
 
-export default Compnent08
+export default Component08

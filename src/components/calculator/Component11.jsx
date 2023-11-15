@@ -1,6 +1,13 @@
 import React from 'react'
 
-const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
+const Component11 = ({
+  onBack,
+  onNext,
+  setHasIsolation,
+  setHasNewElevator,
+  setHasNewWindows,
+  setHasNewInstallations,
+}) => {
   return (
     <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -11,8 +18,8 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         <div
-          id='isolated'
-          onClick={() => handleBuildingCondition('isolated')}
+          id='isolation'
+          onClick={() => setHasIsolation((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -29,7 +36,7 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
         </div>
         <div
           id='newElevator'
-          onClick={() => handleBuildingCondition('newElevator')}
+          onClick={() => setHasNewElevator((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -48,7 +55,7 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         <div
           id='newWindows'
-          onClick={() => handleBuildingCondition('newWindows')}
+          onClick={() => setHasNewWindows((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -65,7 +72,7 @@ const Component11 = ({ onBack, onNext, handleBuildingCondition }) => {
         </div>
         <div
           id='newInstallations'
-          onClick={() => handleBuildingCondition('newInstallations')}
+          onClick={() => setHasNewInstallations((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>

@@ -52,10 +52,18 @@ const Calculator = () => {
   const [allFloorsCount, setAllFloorsCount] = useState(0)
   const [currentFloorNumber, setCurrentFloorNumber] = useState(0)
   const [hasElevator, setHasElevator] = useState('')
-  const [hasBalcony, setHasBalcony] = useState('')
-  const [hasGarage, setHasGarage] = useState('')
+  const [hasBalcony, setHasBalcony] = useState(false)
+  const [hasLoggia, setHasLoggia] = useState(false)
+  const [hasTerasa, setHasTerasa] = useState(false)
+  const [hasBasement, setHasBasement] = useState(false)
+  const [hasGarage, setHasGarage] = useState(false)
+  const [hasParking, setHasParking] = useState(false)
+  const [hasNoParking, setHasNoParking] = useState(false)
   const [builtYear, setBuiltYear] = useState(0)
-  const [buildingConditions, setBuildingConditions] = useState('')
+  const [hasIsolation, setHasIsolation] = useState(false)
+  const [hasNewElevator, setHasNewElevator] = useState(false)
+  const [hasNewWindows, setHasNewWindows] = useState(false)
+  const [hasNewInstallations, setHasNewInstallations] = useState(false)
   const [smartHomeItems, setSmartHomeItems] = useState('')
   const [monthlyCosts, setMonthlyCosts] = useState(0)
   const [urbanQuality, setUrbanQuality] = useState('')
@@ -93,8 +101,15 @@ const Calculator = () => {
     hasElevator,
     hasBalcony,
     hasGarage,
+    hasParking,
+    hasLoggia,
+    hasTerasa,
+    hasBasement,
     builtYear,
-    buildingConditions,
+    hasIsolation,
+    hasNewElevator,
+    hasNewWindows,
+    hasNewInstallations,
     smartHomeItems,
     monthlyCosts,
     urbanQuality,
@@ -110,15 +125,6 @@ const Calculator = () => {
   const [currentConditionClicked, setCurrentConditionClicked] = useState(null)
   const [currentElevatorStatusClicked, setCurrentElevatorStatusClicked] =
     useState(null)
-  const [currentBalconyStatusClicked, setCurrentBalconyStatusClicked] =
-    useState(null)
-  const [currentGarageStatusClicked, setCurrentGarageStatusClicked] =
-    useState(null)
-
-  const [
-    currentBuildingConditionStatusClicked,
-    setCurrentBuildingConditionStatusClicked,
-  ] = useState(null)
 
   const [currentSmartHomeItemsClicked, setCurrentSmartHomeItemsClicked] =
     useState(null)
@@ -222,7 +228,10 @@ const Calculator = () => {
           <Component08
             onBack={handleBack}
             onNext={handleNext}
-            handleHasBalcony={handleHasBalcony}
+            setHasBalcony={setHasBalcony}
+            setHasLoggia={setHasLoggia}
+            setHasTerasa={setHasTerasa}
+            setHasBasement={setHasBasement}
           />
         )
 
@@ -231,7 +240,9 @@ const Calculator = () => {
           <Component09
             onBack={handleBack}
             onNext={handleNext}
-            handleHasGarage={handleHasGarage}
+            setHasGarage={setHasGarage}
+            setHasParking={setHasParking}
+            setHasNoParking={setHasNoParking}
           />
         )
 
@@ -250,7 +261,10 @@ const Calculator = () => {
           <Component11
             onBack={handleBack}
             onNext={handleNext}
-            handleBuildingCondition={handleBuildingCondition}
+            setHasIsolation={setHasIsolation}
+            setHasNewElevator={setHasNewElevator}
+            setHasNewWindows={setHasNewWindows}
+            setHasNewInstallations={setHasNewInstallations}
           />
         )
 
@@ -347,42 +361,6 @@ const Calculator = () => {
     element.classList.add('clicked')
   }
 
-  const handleHasBalcony = (balcony) => {
-    console.log(balcony)
-    if (currentBalconyStatusClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentBalconyStatusClicked)
-      toRemoveFrom.classList.remove('clicked')
-    }
-    setHasBalcony(balcony)
-    setCurrentBalconyStatusClicked(balcony)
-    const element = document.getElementById(balcony)
-    element.classList.add('clicked')
-  }
-
-  const handleHasGarage = (garage) => {
-    if (currentGarageStatusClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentGarageStatusClicked)
-      toRemoveFrom.classList.remove('clicked')
-    }
-    setHasGarage(garage)
-    setCurrentGarageStatusClicked(garage)
-    const element = document.getElementById(garage)
-    element.classList.add('clicked')
-  }
-
-  const handleBuildingCondition = (condition) => {
-    if (currentBuildingConditionStatusClicked !== null) {
-      const toRemoveFrom = document.getElementById(
-        currentBuildingConditionStatusClicked
-      )
-      toRemoveFrom.classList.remove('clicked')
-    }
-    setBuildingConditions(condition)
-    setCurrentBuildingConditionStatusClicked(condition)
-    const element = document.getElementById(condition)
-    element.classList.add('clicked')
-  }
-
   const handleSmartHomeItems = (item) => {
     if (currentSmartHomeItemsClicked !== null) {
       const toRemoveFrom = document.getElementById(currentSmartHomeItemsClicked)
@@ -432,6 +410,80 @@ const Calculator = () => {
       setIsValid(validateEmail(email))
     }
   }, [email])
+
+  const selectBalcony = (balcony) => {
+    const el = document.getElementById(balcony)
+    if (el !== null) {
+      el.classList.remove('clicked')
+      el.classList.add('clicked')
+    }
+  }
+
+  const unselectBalcony = (balcony) => {
+    const el = document.getElementById(balcony)
+    if (el !== null) {
+      el.classList.remove('clicked')
+    }
+  }
+
+  const balcony = document.getElementById('balcony')
+  const loggia = document.getElementById('loggia')
+  const terasa = document.getElementById('terasa')
+  const basement = document.getElementById('basement')
+
+  useEffect(() => {
+    if (balcony !== null && hasBalcony) balcony.classList.add('clicked')
+    if (balcony !== null && !hasBalcony) balcony.classList.remove('clicked')
+    if (loggia !== null && hasLoggia) loggia.classList.add('clicked')
+    if (loggia !== null && !hasLoggia) loggia.classList.remove('clicked')
+    if (terasa !== null && hasTerasa) terasa.classList.add('clicked')
+    if (terasa !== null && !hasTerasa) terasa.classList.remove('clicked')
+    if (basement !== null && hasBasement) basement.classList.add('clicked')
+    if (basement !== null && !hasBasement) basement.classList.remove('clicked')
+  }, [hasBalcony, hasLoggia, hasTerasa, hasBasement])
+
+  const garage = document.getElementById('garage')
+  const parking = document.getElementById('parking')
+  const noParking = document.getElementById('noParking')
+
+  useEffect(() => {
+    if (garage !== null && hasGarage) garage.classList.add('clicked')
+    if (garage !== null && !hasGarage) garage.classList.remove('clicked')
+    if (parking !== null && hasParking) parking.classList.add('clicked')
+    if (parking !== null && !hasParking) parking.classList.remove('clicked')
+    if (noParking !== null && hasNoParking) {
+      setHasParking(false)
+      setHasGarage(false)
+      garage.classList.remove('clicked')
+      parking.classList.remove('clicked')
+      noParking.classList.add('clicked')
+    }
+    if (noParking !== null && !hasNoParking)
+      noParking.classList.remove('clicked')
+  }, [hasGarage, hasParking, hasNoParking])
+
+  const isolation = document.getElementById('isolation')
+  const newElevator = document.getElementById('newElevator')
+  const newWindows = document.getElementById('newWindows')
+  const newInstallations = document.getElementById('newInstallations')
+
+  useEffect(() => {
+    if (isolation !== null && hasIsolation) isolation.classList.add('clicked')
+    if (isolation !== null && !hasIsolation)
+      isolation.classList.remove('clicked')
+    if (newElevator !== null && hasNewElevator)
+      newElevator.classList.add('clicked')
+    if (newElevator !== null && !hasNewElevator)
+      newElevator.classList.remove('clicked')
+    if (newWindows !== null && hasNewWindows)
+      newWindows.classList.add('clicked')
+    if (newWindows !== null && !hasNewWindows)
+      newWindows.classList.remove('clicked')
+    if (newInstallations !== null && hasNewInstallations)
+      newInstallations.classList.add('clicked')
+    if (newInstallations !== null && !hasNewInstallations)
+      newInstallations.classList.remove('clicked')
+  }, [hasIsolation, hasNewElevator, hasNewWindows, hasNewInstallations])
 
   const handleSubmitForm = (e) => {
     e.preventDefault()

@@ -1,6 +1,12 @@
 import React from 'react'
 
-const Component09 = ({ onBack, onNext, handleHasGarage }) => {
+const Component09 = ({
+  onBack,
+  onNext,
+  setHasGarage,
+  setHasParking,
+  setHasNoParking,
+}) => {
   return (
     <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -12,7 +18,7 @@ const Component09 = ({ onBack, onNext, handleHasGarage }) => {
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
           id='garage'
-          onClick={() => handleHasGarage('garage')}
+          onClick={() => setHasGarage((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -29,7 +35,7 @@ const Component09 = ({ onBack, onNext, handleHasGarage }) => {
         </div>
         <div
           id='parking'
-          onClick={() => handleHasGarage('parking')}
+          onClick={() => setHasParking((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -49,7 +55,7 @@ const Component09 = ({ onBack, onNext, handleHasGarage }) => {
         <div
           className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[12.5px] mt-6 lg:mt-6 w-[100%] h-[55px]'
           id='noParking'
-          onClick={() => handleHasGarage('noParking')}
+          onClick={() => setHasNoParking((prev) => !prev)}
         >
           <p className='text-[20px] text-[#0076ba] font-extrabold text-center leading-[20px] pt-[6%]'>
             Bez vlastného parkovania

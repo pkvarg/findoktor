@@ -4,6 +4,9 @@ import roomInfo from './../izbyCena.json'
 import floorsCount from './../pocetPosch.json'
 import floorNumber from './../cisloPosch.json'
 
+// TODO all comps select something if must
+// comp 10 limit years !!!
+
 export const result = (
   city,
   street,
@@ -15,9 +18,16 @@ export const result = (
   currentFloorNumber,
   hasElevator,
   hasBalcony,
+  hasLoggia,
+  hasTerasa,
+  hasBasement,
   hasGarage,
+  hasParking,
   builtYear,
-  buildingConditions,
+  hasIsolation,
+  hasNewElevator,
+  hasNewWindows,
+  hasNewInstallations,
   smartHomeItems,
   monthlyCosts,
   urbanQuality,
@@ -119,6 +129,44 @@ export const result = (
     console.log('hasElevatorPrice', hasElevatorPrice)
   }
 
+  const getBalconyStuff = (hasBalcony, hasLoggia, hasTerasa, hasBasement) => {
+    let balcony = Math.ceil(0.8 * holdValue)
+    let loggia = Math.ceil(0.8 * holdValue)
+    let terasa = Math.ceil(0.8 * holdValue)
+    let basement = Math.ceil(0.8 * holdValue)
+    if (hasBalcony) balcony = holdValue
+    if (hasLoggia) loggia = holdValue
+    if (hasTerasa) terasa = holdValue
+    if (hasBasement) basement = holdValue
+    console.log('balcony', balcony, loggia, terasa, basement)
+    return { balcony, loggia, terasa, basement }
+  }
+
+  const getParking = (hasGarage, hasParking) => {
+    let garage = Math.ceil(0.8 * holdValue)
+    let parking = Math.ceil(0.8 * holdValue)
+    if (hasGarage) garage = holdValue
+    if (hasParking) parking = holdValue
+    console.log('parking', garage, parking)
+    return { garage, parking }
+  }
+
+  //helper
+  const assignYearValue = (builtYear) => {
+    if (builtYear >= 2018 && builtYear <= 2023) return 1
+    if (builtYear >= 2010 && builtYear <= 2017) return 0.9
+    if (builtYear >= 2000 && builtYear <= 2009) return 0.85
+    if (builtYear >= 1989 && builtYear <= 1999) return 0.75
+    if (builtYear >= 1950 && builtYear <= 1989) return 0.5
+    if (builtYear < 1950) return 1
+  }
+
+  const getBuiltYearPrice = (builtYear) => {
+    const builtYearPrice = Math.ceil(assignYearValue(builtYear) * holdValue)
+    console.log('builtYearPrice', builtYearPrice)
+    return builtYearPrice
+  }
+
   console.log(
     'getting results..',
     city,
@@ -150,9 +198,16 @@ export const result = (
   //   currentFloorNumber,
   //   hasElevator,
   //   hasBalcony,
+  // hasLoggia,
+  //  hasTerasa,
+  //  hasBasement,
   //   hasGarage,
+  // hasParking,
   //   builtYear,
-  //   buildingConditions,
+  // hasIsolation,
+  // hasNewElevator,
+  // hasNewWindows,
+  // hasNewInstallations,
   //   smartHomeItems,
   //   monthlyCosts,
   //   urbanQuality,
@@ -226,7 +281,44 @@ const getDistrict = (street) => {
   if (hasElevator === 'elevatorFalse') {
     hasElevatorPrice = holdValue - 10000
   }
+
   console.log('hasElevatorPrice', hasElevatorPrice)
+  let hasBalcony = false
+  let hasLoggia = true
+  let hasTerasa = true
+  let hasBasement = true
+  let balcony = Math.ceil(0.8 * holdValue)
+  let loggia = Math.ceil(0.8 * holdValue)
+  let terasa = Math.ceil(0.8 * holdValue)
+  let basement = Math.ceil(0.8 * holdValue)
+  if (hasBalcony) balcony = holdValue
+  if (hasLoggia) loggia = holdValue
+  if (hasTerasa) terasa = holdValue
+  if (hasBasement) basement = holdValue
+  console.log('balcony', balcony, loggia, terasa, basement)
+
+  let hasGarage = false
+  let hasParking = true
+  let garage = Math.ceil(0.8 * holdValue)
+  let parking = Math.ceil(0.8 * holdValue)
+  if (hasGarage) garage = holdValue
+  if (hasParking) parking = holdValue
+  console.log('parking', garage, parking)
+
+  // helper
+  const assignYearValue = (builtYear) => {
+    if (builtYear >= 2018 && builtYear <= 2023) return 1
+    if (builtYear >= 2010 && builtYear <= 2017) return 0.9
+    if (builtYear >= 2000 && builtYear <= 2009) return 0.85
+    if (builtYear >= 1989 && builtYear <= 1999) return 0.75
+    if (builtYear >= 1950 && builtYear <= 1989) return 0.5
+    if (builtYear < 1950) return 1
+  }
+
+  const builtYearPrice = Math.ceil(assignYearValue(1950) * holdValue)
+
+  console.log('builtYearPrice', builtYearPrice)
+
   //return cast
 }
 
