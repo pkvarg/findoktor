@@ -64,7 +64,10 @@ const Calculator = () => {
   const [hasNewElevator, setHasNewElevator] = useState(false)
   const [hasNewWindows, setHasNewWindows] = useState(false)
   const [hasNewInstallations, setHasNewInstallations] = useState(false)
-  const [smartHomeItems, setSmartHomeItems] = useState('')
+  const [hasThermostat, setHasThermostat] = useState(false)
+  const [hasInternet, setHasInternet] = useState(false)
+  const [hasAlarm, setHasAlarm] = useState(false)
+  const [hasAirCon, setHasAircon] = useState(false)
   const [monthlyCosts, setMonthlyCosts] = useState(0)
   const [urbanQuality, setUrbanQuality] = useState('')
   const [email, setEmail] = useState('')
@@ -110,7 +113,10 @@ const Calculator = () => {
     hasNewElevator,
     hasNewWindows,
     hasNewInstallations,
-    smartHomeItems,
+    hasThermostat,
+    hasInternet,
+    hasAlarm,
+    hasAirCon,
     monthlyCosts,
     urbanQuality,
     email,
@@ -273,7 +279,10 @@ const Calculator = () => {
           <Component12
             onBack={handleBack}
             onNext={handleNext}
-            handleSmartHomeItems={handleSmartHomeItems}
+            setHasThermostat={setHasThermostat}
+            setHasInternet={setHasInternet}
+            setHasAlarm={setHasAlarm}
+            setHasAircon={setHasAircon}
           />
         )
 
@@ -358,17 +367,6 @@ const Calculator = () => {
     setHasElevator(elevator)
     setCurrentElevatorStatusClicked(elevator)
     const element = document.getElementById(elevator)
-    element.classList.add('clicked')
-  }
-
-  const handleSmartHomeItems = (item) => {
-    if (currentSmartHomeItemsClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentSmartHomeItemsClicked)
-      toRemoveFrom.classList.remove('clicked')
-    }
-    setSmartHomeItems(item)
-    setCurrentSmartHomeItemsClicked(item)
-    const element = document.getElementById(item)
     element.classList.add('clicked')
   }
 
@@ -484,6 +482,24 @@ const Calculator = () => {
     if (newInstallations !== null && !hasNewInstallations)
       newInstallations.classList.remove('clicked')
   }, [hasIsolation, hasNewElevator, hasNewWindows, hasNewInstallations])
+
+  const thermostat = document.getElementById('thermostat')
+  const internet = document.getElementById('internet')
+  const alarm = document.getElementById('alarm')
+  const aircon = document.getElementById('aircon')
+
+  useEffect(() => {
+    if (thermostat !== null && hasThermostat)
+      thermostat.classList.add('clicked')
+    if (thermostat !== null && !hasThermostat)
+      thermostat.classList.remove('clicked')
+    if (internet !== null && hasInternet) internet.classList.add('clicked')
+    if (internet !== null && !hasInternet) internet.classList.remove('clicked')
+    if (alarm !== null && hasAlarm) alarm.classList.add('clicked')
+    if (alarm !== null && !hasAlarm) alarm.classList.remove('clicked')
+    if (aircon !== null && hasAirCon) aircon.classList.add('clicked')
+    if (aircon !== null && !hasAirCon) aircon.classList.remove('clicked')
+  }, [hasThermostat, hasInternet, hasAlarm, hasAirCon])
 
   const handleSubmitForm = (e) => {
     e.preventDefault()

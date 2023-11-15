@@ -1,6 +1,13 @@
 import React from 'react'
 
-const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
+const Component12 = ({
+  onBack,
+  onNext,
+  setHasThermostat,
+  setHasInternet,
+  setHasAlarm,
+  setHasAircon,
+}) => {
   return (
     <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -12,8 +19,8 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         {' '}
         <div
-          id='termostat'
-          onClick={() => handleSmartHomeItems('termostat')}
+          id='thermostat'
+          onClick={() => setHasThermostat((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -30,7 +37,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
         </div>
         <div
           id='internet'
-          onClick={() => handleSmartHomeItems('internet')}
+          onClick={() => setHasInternet((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -48,8 +55,8 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
       </div>
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         <div
-          id='security'
-          onClick={() => handleSmartHomeItems('security')}
+          id='alarm'
+          onClick={() => setHasAlarm((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -66,7 +73,7 @@ const Component12 = ({ onBack, onNext, handleSmartHomeItems }) => {
         </div>
         <div
           id='aircon'
-          onClick={() => handleSmartHomeItems('aircon')}
+          onClick={() => setHasAircon((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>

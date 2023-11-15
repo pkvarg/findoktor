@@ -3,6 +3,8 @@ import districtInfo from './../castCena.json'
 import roomInfo from './../izbyCena.json'
 import floorsCount from './../pocetPosch.json'
 import floorNumber from './../cisloPosch.json'
+import houseCondition from './../houseCondition.json'
+import smartHome from './../smartHome.json'
 
 // TODO all comps select something if must
 // comp 10 limit years !!!
@@ -28,7 +30,10 @@ export const result = (
   hasNewElevator,
   hasNewWindows,
   hasNewInstallations,
-  smartHomeItems,
+  hasThermostat,
+  hasInternet,
+  hasAlarm,
+  hasAirCon,
   monthlyCosts,
   urbanQuality,
   email
@@ -167,26 +172,112 @@ export const result = (
     return builtYearPrice
   }
 
-  console.log(
-    'getting results..',
-    city,
-    street,
-    houseNumber,
-    countRooms,
-    houseCondition,
-    squareMeters,
-    allFloorsCount,
-    currentFloorNumber,
-    hasElevator,
-    hasBalcony,
-    hasGarage,
-    builtYear,
-    buildingConditions,
-    smartHomeItems,
-    monthlyCosts,
-    urbanQuality,
-    email
-  )
+  const getHouseNewCondition = (
+    hasIsolation,
+    hasNewElevator,
+    hasNewWindows,
+    hasNewInstallations
+  ) => {
+    let isolation
+    let elevator
+    let windows
+    let installations
+    if (hasIsolation) isolation = 'hasIsolation'
+    if (!hasIsolation) isolation = 'noIsolation'
+    if (hasNewElevator) elevator = 'hasNewElevator'
+    if (!hasNewElevator) elevator = 'noNewElevator'
+    if (hasNewWindows) windows = 'hasNewWindows'
+    if (!hasNewWindows) windows = 'noNewWindows'
+    if (hasNewInstallations) installations = 'hasNewInstallations'
+    if (!hasNewInstallations) installations = 'noNewInstallations'
+
+    const getCondition = (aspect) =>
+      houseCondition.find((cnd) => cnd.condition == aspect)
+
+    const isolationResult = Math.ceil(
+      getCondition(isolation).condValue * holdValue
+    )
+    const elevatorResult = Math.ceil(
+      getCondition(elevator).condValue * holdValue
+    )
+    const windowsResult = Math.ceil(getCondition(windows).condValue * holdValue)
+    const installationsResult = Math.ceil(
+      getCondition(installations).condValue * holdValue
+    )
+
+    const condResult = {
+      isolationResult,
+      elevatorResult,
+      windowsResult,
+      installationsResult,
+    }
+
+    console.log(condResult)
+    return condResult
+  }
+
+  const getSmartHomeCondition = (
+    hasThermostat,
+    hasInternet,
+    hasAlarm,
+    hasAirCon
+  ) => {
+    let thermostat
+    let internet
+    let alarm
+    let aircon
+    if (hasThermostat) thermostat = 'hasThermostat'
+    if (!hasThermostat) thermostat = 'noThermostat'
+    if (hasInternet) internet = 'hasInternet'
+    if (!hasInternet) internet = 'noInternet'
+    if (hasAlarm) alarm = 'hasAlarm'
+    if (!hasAlarm) alarm = 'noAlarm'
+    if (hasAirCon) aircon = 'hasAirCon'
+    if (!hasAirCon) aircon = 'noAirCon'
+
+    const getCondition = (aspect) =>
+      smartHome.find((cnd) => cnd.smartHome == aspect)
+
+    const thermostatResult = Math.ceil(
+      getCondition(thermostat).smartValue * holdValue
+    )
+    const internetResult = Math.ceil(
+      getCondition(internet).smartValue * holdValue
+    )
+    const alarmResult = Math.ceil(getCondition(alarm).smartValue * holdValue)
+    const airconResult = Math.ceil(getCondition(aircon).smartValue * holdValue)
+
+    const condResult = {
+      thermostatResult,
+      internetResult,
+      alarmResult,
+      airconResult,
+    }
+
+    console.log(condResult)
+    return condResult
+  }
+
+  // console.log(
+  //   'getting results..',
+  //   city,
+  //   street,
+  //   houseNumber,
+  //   countRooms,
+  //   houseCondition,
+  //   squareMeters,
+  //   allFloorsCount,
+  //   currentFloorNumber,
+  //   hasElevator,
+  //   hasBalcony,
+  //   hasGarage,
+  //   builtYear,
+  //   buildingConditions,
+  //   smartHomeItems,
+  //   monthlyCosts,
+  //   urbanQuality,
+  //   email
+  // )
   // console.log(
   //   city,
   //   street,
@@ -208,7 +299,10 @@ export const result = (
   // hasNewElevator,
   // hasNewWindows,
   // hasNewInstallations,
-  //   smartHomeItems,
+  //   hasThermostat,
+  // hasInternet,
+  // hasAlarm,
+  // hasAirCon,
   //   monthlyCosts,
   //   urbanQuality,
   //   email
@@ -318,6 +412,84 @@ const getDistrict = (street) => {
   const builtYearPrice = Math.ceil(assignYearValue(1950) * holdValue)
 
   console.log('builtYearPrice', builtYearPrice)
+
+  let hasIsolation = true
+  let hasNewElevator = true
+  let hasNewWindows = true
+  let hasNewInstallations = true
+
+  let isolation
+  let elevator
+  let windows
+  let installations
+  if (hasIsolation) isolation = 'hasIsolation'
+  if (!hasIsolation) isolation = 'noIsolation'
+  if (hasNewElevator) elevator = 'hasNewElevator'
+  if (!hasNewElevator) elevator = 'noNewElevator'
+  if (hasNewWindows) windows = 'hasNewWindows'
+  if (!hasNewWindows) windows = 'noNewWindows'
+  if (hasNewInstallations) installations = 'hasNewInstallations'
+  if (!hasNewInstallations) installations = 'noNewInstallations'
+
+  const getCondition = (aspect) =>
+    houseCondition.find((cnd) => cnd.condition == aspect)
+
+  const isolationResult = Math.ceil(
+    getCondition(isolation).condValue * holdValue
+  )
+  const elevatorResult = Math.ceil(getCondition(elevator).condValue * holdValue)
+  const windowsResult = Math.ceil(getCondition(windows).condValue * holdValue)
+  const installationsResult = Math.ceil(
+    getCondition(installations).condValue * holdValue
+  )
+
+  const condResult = {
+    isolationResult,
+    elevatorResult,
+    windowsResult,
+    installationsResult,
+  }
+  console.log(condResult)
+
+  let hasThermostat = false
+  let hasInternet = true
+  let hasAlarm = false
+  let hasAirCon = false
+  let thermostat
+  let internet
+  let alarm
+  let aircon
+  if (hasThermostat) thermostat = 'hasThermostat'
+  if (!hasThermostat) thermostat = 'noThermostat'
+  if (hasInternet) internet = 'hasInternet'
+  if (!hasInternet) internet = 'noInternet'
+  if (hasAlarm) alarm = 'hasAlarm'
+  if (!hasAlarm) alarm = 'noAlarm'
+  if (hasAirCon) aircon = 'hasAirCon'
+  if (!hasAirCon) aircon = 'noAirCon'
+
+  const getSmartCondition = (aspect) =>
+    smartHome.find((cnd) => cnd.smartHome === aspect)
+
+  const thermostatResult = Math.ceil(
+    getSmartCondition(thermostat).smartValue * holdValue
+  )
+  const internetResult = Math.ceil(
+    getSmartCondition(internet).smartValue * holdValue
+  )
+  const alarmResult = Math.ceil(getSmartCondition(alarm).smartValue * holdValue)
+  const airconResult = Math.ceil(
+    getSmartCondition(aircon).smartValue * holdValue
+  )
+
+  const smartResult = {
+    thermostatResult,
+    internetResult,
+    alarmResult,
+    airconResult,
+  }
+
+  console.log(smartResult)
 
   //return cast
 }
