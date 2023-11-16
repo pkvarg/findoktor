@@ -28,7 +28,7 @@
     "condValue": 0.85
   },
   {
-    "condition": "noNewInstalltions",
+    "condition": "noNewInstallations",
     "condValue": 0.85
   }
 ]
