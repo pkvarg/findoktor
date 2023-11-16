@@ -764,8 +764,8 @@ const Calculator = () => {
           </div>
           <div className='flex flex-row justify-center gap-10 mt-4'>
             <div
-              id='terasa'
-              onClick={() => handleHasBalcony('terasa')}
+              id='terrace'
+              onClick={() => handleHasBalcony('terrace')}
               className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[280px] h-[285px] flex flex-col gap-[90px]'
             >
               <div>
@@ -776,7 +776,7 @@ const Calculator = () => {
                 />
 
                 <p className='font-bold text-[35px] text-right mt-0 mr-3  '>
-                  terasa
+                  terrace
                 </p>
               </div>
             </div>

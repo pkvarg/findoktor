@@ -54,7 +54,7 @@ const Calculator = () => {
   const [hasElevator, setHasElevator] = useState('')
   const [hasBalcony, setHasBalcony] = useState(false)
   const [hasLoggia, setHasLoggia] = useState(false)
-  const [hasTerasa, setHasTerasa] = useState(false)
+  const [hasTerrace, setHasTerrace] = useState(false)
   const [hasBasement, setHasBasement] = useState(false)
   const [hasGarage, setHasGarage] = useState(false)
   const [hasParking, setHasParking] = useState(false)
@@ -106,7 +106,7 @@ const Calculator = () => {
     hasGarage,
     hasParking,
     hasLoggia,
-    hasTerasa,
+    hasTerrace,
     hasBasement,
     builtYear,
     hasIsolation,
@@ -236,7 +236,7 @@ const Calculator = () => {
             onNext={handleNext}
             setHasBalcony={setHasBalcony}
             setHasLoggia={setHasLoggia}
-            setHasTerasa={setHasTerasa}
+            setHasTerrace={setHasTerrace}
             setHasBasement={setHasBasement}
           />
         )
@@ -426,7 +426,7 @@ const Calculator = () => {
 
   const balcony = document.getElementById('balcony')
   const loggia = document.getElementById('loggia')
-  const terasa = document.getElementById('terasa')
+  const terrace = document.getElementById('terrace')
   const basement = document.getElementById('basement')
 
   useEffect(() => {
@@ -434,11 +434,11 @@ const Calculator = () => {
     if (balcony !== null && !hasBalcony) balcony.classList.remove('clicked')
     if (loggia !== null && hasLoggia) loggia.classList.add('clicked')
     if (loggia !== null && !hasLoggia) loggia.classList.remove('clicked')
-    if (terasa !== null && hasTerasa) terasa.classList.add('clicked')
-    if (terasa !== null && !hasTerasa) terasa.classList.remove('clicked')
+    if (terrace !== null && hasTerrace) terrace.classList.add('clicked')
+    if (terrace !== null && !hasTerrace) terrace.classList.remove('clicked')
     if (basement !== null && hasBasement) basement.classList.add('clicked')
     if (basement !== null && !hasBasement) basement.classList.remove('clicked')
-  }, [hasBalcony, hasLoggia, hasTerasa, hasBasement])
+  }, [hasBalcony, hasLoggia, hasTerrace, hasBasement])
 
   const garage = document.getElementById('garage')
   const parking = document.getElementById('parking')

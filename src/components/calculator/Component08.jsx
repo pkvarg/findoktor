@@ -5,7 +5,7 @@ const Component08 = ({
   onNext,
   setHasBalcony,
   setHasLoggia,
-  setHasTerasa,
+  setHasTerrace,
   setHasBasement,
 }) => {
   return (
@@ -54,8 +54,8 @@ const Component08 = ({
       </div>
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
-          id='terasa'
-          onClick={() => setHasTerasa((prev) => !prev)}
+          id='terrace'
+          onClick={() => setHasTerrace((prev) => !prev)}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -66,7 +66,7 @@ const Component08 = ({
             />
 
             <p className='font-bold text-[20px] absolute bottom-0 right-3'>
-              terasa
+              terrace
             </p>
           </div>
         </div>

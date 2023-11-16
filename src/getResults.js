@@ -1,9 +1,9 @@
 import streetAndDistrict from './../Json/streetAndDistrict.json'
 import districtAndPrice from './../Json/districtAndPrice.json'
 import roomsAndPrice from './../Json/roomsAndPrice.json'
-import floorsCount from './../pocetPosch.json'
-import floorNumber from './../cisloPosch.json'
-import buildingCondition from './../houseCondition.json'
+import floorCountAndValue from './../Json/floorCountAndValue.json'
+import floorNumberAndValue from './../Json/floorNumberAndValue.json'
+import buildingCondition from './../Json/buildingCondition.json'
 import smartHome from './../smartHome.json'
 
 // TODO all comps select something if must
@@ -21,7 +21,7 @@ export const result = (
   hasElevator,
   hasBalcony,
   hasLoggia,
-  hasTerasa,
+  hasTerrace,
   hasBasement,
   hasGarage,
   hasParking,
@@ -39,8 +39,8 @@ export const result = (
   email
 ) => {
   const bratislava = 252524
-  const priemCenaIzbySpolu = 3860
-  const priemCenaBaSpolu = 4073
+  const averageTotalSquareMeterPrice = 3860
+  const averageTotalBratislavaSquareMeterPrice = 4073
   let holdValue
   const result = []
   result.push(bratislava)
@@ -93,100 +93,122 @@ export const result = (
 
   getConditionPrice(houseCondition)
 
-  getSquareMetersPrice = (squareMeters) => {
+  const getSquareMetersPrice = (squareMeters) => {
     const squareMetersPrice =
-      (squareMeters * priemCenaIzbySpolu) / 2 +
-      (squareMeters * priemCenaBaSpolu) / 2
-    console.log(squareMetersPrice)
-    return squareMetersPrice
-  }
-  //helper
-  const assignFloors = (allFloorsCount) => {
-    if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
-    if (allFloorsCount > 4 && allFloorsCount <= 12) return 12
-    if (allFloorsCount > 12 && allFloorsCount <= 19) return 19
-    if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
+      (squareMeters * averageTotalSquareMeterPrice) / 2 +
+      (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2
+    console.log('squareMeterPrice', squareMetersPrice)
+    result.push(squareMetersPrice)
+    console.log('resArray', result)
   }
 
-  const getFloorCountPrice = () => {
+  getSquareMetersPrice(squareMeters)
+
+  const getFloorCountPrice = (allFloorsCount) => {
+    const assignFloors = (allFloorsCount) => {
+      if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
+      if (allFloorsCount > 4 && allFloorsCount <= 12) return 12
+      if (allFloorsCount > 12 && allFloorsCount <= 19) return 19
+      if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
+    }
     const floorsCounted = assignFloors(allFloorsCount)
-    const { hodnota } = floorsCount.find(
-      (flrCnt) => flrCnt.pocetPosch == floorsCounted
+    const { floorCountValue } = floorCountAndValue.find(
+      (flrCnt) => flrCnt.floorCount == floorsCounted
     )
-    const floorCountPrice = Math.ceil(holdValue * hodnota)
+    const floorCountPrice = Math.ceil(holdValue * floorCountValue)
     console.log('floorCountPrice', floorCountPrice)
+    result.push(floorCountPrice)
+    console.log('resArray', result)
   }
 
-  //helper
-  const assignCurrentFloor = (currentFloorNumber) => {
-    if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
-    if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
-    if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
-    if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
-  }
+  getFloorCountPrice(allFloorsCount)
 
   const getCurrentFloorPrice = (currentFloorNumber) => {
+    const assignCurrentFloor = (currentFloorNumber) => {
+      if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
+      if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
+      if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
+      if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
+    }
     const currentFloorAssigned = assignCurrentFloor(currentFloorNumber)
-    const findFloorAssign = floorNumber.find(
-      (flr) => flr.cisloPosch == currentFloorAssigned
+    const { floorNumberValue } = floorNumberAndValue.find(
+      (flr) => flr.floorNumber == currentFloorAssigned
     )
-    const valueOfFindFloorAssign = findFloorAssign.hodnota
-    const valueOfCurrentFloorPrice = Math.ceil(
-      holdValue * valueOfFindFloorAssign
-    )
-    console.log('currentfloorPrice', valueOfCurrentFloorPrice)
+    //const valueOfFindFloorAssign = floorNumberValue
+    const currentFloorPrice = Math.ceil(holdValue * floorNumberValue)
+    console.log('currentfloorPrice', currentFloorPrice)
+    result.push(currentFloorPrice)
+    console.log('resArray', result)
   }
 
-  const getHasElevatorPrice = (hasElevator) => {
+  getCurrentFloorPrice(currentFloorNumber)
+
+  const getElevatorPrice = (hasElevator) => {
     let hasElevatorPrice
-    if (hasElevator === 'elevatorTrue') {
+    if (hasElevator === 'hasElevator') {
       hasElevatorPrice = holdValue
     }
-    if (hasElevator === 'elevatorFalse') {
+    if (hasElevator === 'noElevator') {
       hasElevatorPrice = holdValue - 10000
     }
     console.log('hasElevatorPrice', hasElevatorPrice)
+    result.push(hasElevatorPrice)
+    console.log('resArray', result)
   }
 
-  const getBalconyStuff = (hasBalcony, hasLoggia, hasTerasa, hasBasement) => {
+  getElevatorPrice(hasElevator)
+
+  const getBalconyPrice = (hasBalcony, hasLoggia, hasTerrace, hasBasement) => {
     let balcony = Math.ceil(0.8 * holdValue)
     let loggia = Math.ceil(0.8 * holdValue)
-    let terasa = Math.ceil(0.8 * holdValue)
+    let terrace = Math.ceil(0.8 * holdValue)
     let basement = Math.ceil(0.8 * holdValue)
     if (hasBalcony) balcony = holdValue
     if (hasLoggia) loggia = holdValue
-    if (hasTerasa) terasa = holdValue
+    if (hasTerrace) terrace = holdValue
     if (hasBasement) basement = holdValue
-    console.log('balcony', balcony, loggia, terasa, basement)
-    return { balcony, loggia, terasa, basement }
+    console.log('balcony', balcony, loggia, terrace, basement)
+    result.push(balcony)
+    result.push(loggia)
+    result.push(terrace)
+    result.push(basement)
+    console.log('resArray', result)
   }
 
-  const getParking = (hasGarage, hasParking) => {
+  getBalconyPrice(hasBalcony, hasLoggia, hasTerrace, hasBasement)
+
+  const getParkingPrice = (hasGarage, hasParking) => {
     let garage = Math.ceil(0.8 * holdValue)
     let parking = Math.ceil(0.8 * holdValue)
     if (hasGarage) garage = holdValue
     if (hasParking) parking = holdValue
     console.log('parking', garage, parking)
-    return { garage, parking }
+    result.push(garage)
+    result.push(parking)
+    console.log('resArray', result)
   }
 
-  //helper
-  const assignYearValue = (builtYear) => {
-    if (builtYear >= 2018 && builtYear <= 2023) return 1
-    if (builtYear >= 2010 && builtYear <= 2017) return 0.9
-    if (builtYear >= 2000 && builtYear <= 2009) return 0.85
-    if (builtYear >= 1989 && builtYear <= 1999) return 0.75
-    if (builtYear >= 1950 && builtYear <= 1989) return 0.5
-    if (builtYear < 1950) return 1
-  }
+  getParkingPrice(hasGarage, hasParking)
 
   const getBuiltYearPrice = (builtYear) => {
+    const assignYearValue = (builtYear) => {
+      if (builtYear >= 2018 && builtYear <= 2023) return 1
+      if (builtYear >= 2010 && builtYear <= 2017) return 0.9
+      if (builtYear >= 2000 && builtYear <= 2009) return 0.85
+      if (builtYear >= 1989 && builtYear <= 1999) return 0.75
+      if (builtYear >= 1950 && builtYear <= 1988) return 0.5
+      if (builtYear < 1950) return 1
+    }
+
     const builtYearPrice = Math.ceil(assignYearValue(builtYear) * holdValue)
     console.log('builtYearPrice', builtYearPrice)
-    return builtYearPrice
+    result.push(builtYearPrice)
+    console.log('resArray', result)
   }
 
-  const getHouseNewCondition = (
+  getBuiltYearPrice(builtYear)
+
+  const getBuildingConditionPrice = (
     hasIsolation,
     hasNewElevator,
     hasNewWindows,
@@ -218,17 +240,26 @@ export const result = (
     const installationsResult = Math.ceil(
       getCondition(installations).condValue * holdValue
     )
-
-    const condResult = {
+    console.log(
+      'buildingCondResults',
       isolationResult,
       elevatorResult,
       windowsResult,
-      installationsResult,
-    }
-
-    console.log(condResult)
-    return condResult
+      installationsResult
+    )
+    result.push(isolationResult)
+    result.push(elevatorResult)
+    result.push(windowsResult)
+    result.push(installationsResult)
+    console.log('resArray', result)
   }
+
+  getBuildingConditionPrice(
+    hasIsolation,
+    hasNewElevator,
+    hasNewWindows,
+    hasNewInstallations
+  )
 
   const getSmartHomeCondition = (
     hasThermostat,
@@ -315,7 +346,7 @@ export const result = (
   //   hasElevator,
   //   hasBalcony,
   // hasLoggia,
-  //  hasTerasa,
+  //  hasTerrace,
   //  hasBasement,
   //   hasGarage,
   // hasParking,
@@ -336,27 +367,11 @@ export const result = (
 
 // TEST TEST TEST TEST TEST
 const bratislava = 252524
-const priemCenaIzbySpolu = 3860
-const priemCenaBaSpolu = 4073
+const averageTotalSquareMeterPrice = 3860
+const averageTotalBratislavaSquareMeterPrice = 4073
 let holdValue
 const testResult = []
 testResult.push(bratislava)
-
-//assign Floors
-const assignFloors = (allFloorsCount) => {
-  if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
-  if (allFloorsCount > 4 && allFloorsCount <= 12) return 12
-  if (allFloorsCount > 12 && allFloorsCount <= 19) return 19
-  if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
-}
-
-//helper
-const assignCurrentFloor = (currentFloorNumber) => {
-  if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
-  if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
-  if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
-  if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
-}
 
 const getDistrict = (street) => {
   const { district } = streetAndDistrict.find((strt) => strt.street === street)
@@ -396,70 +411,105 @@ const getDistrict = (street) => {
   testResult.push(conditionPrice)
   console.log(testResult)
 
+  let squareMeters = 36
+
   const squareMetersPrice =
-    (36 * priemCenaIzbySpolu) / 2 + (36 * priemCenaBaSpolu) / 2
-  console.log('sqmPrice', squareMetersPrice)
+    (squareMeters * averageTotalSquareMeterPrice) / 2 +
+    (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2
+  console.log('squareMeterPrice', squareMetersPrice)
+  testResult.push(squareMetersPrice)
+  console.log('resArray', testResult)
 
-  const floorsCounted = assignFloors(5)
-  const { hodnota } = floorsCount.find(
-    (flrCnt) => flrCnt.pocetPosch == floorsCounted
+  let allFloorsCount = 5
+
+  const assignFloors = (allFloorsCount) => {
+    if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
+    if (allFloorsCount > 4 && allFloorsCount <= 12) return 12
+    if (allFloorsCount > 12 && allFloorsCount <= 19) return 19
+    if (allFloorsCount > 19 && allFloorsCount <= 100) return 20
+  }
+  const floorsCounted = assignFloors(allFloorsCount)
+  const { floorCountValue } = floorCountAndValue.find(
+    (flrCnt) => flrCnt.floorCount == floorsCounted
   )
-  const floorCountPrice = Math.ceil(holdValue * hodnota)
+  const floorCountPrice = Math.ceil(holdValue * floorCountValue)
   console.log('floorCountPrice', floorCountPrice)
+  testResult.push(floorCountPrice)
+  console.log('resArray', testResult)
 
-  const currentFloorAssigned = assignCurrentFloor(2)
-  const findFloorAssign = floorNumber.find(
-    (flr) => flr.cisloPosch == currentFloorAssigned
+  let currentFloorNumber = 2
+
+  const assignCurrentFloor = (currentFloorNumber) => {
+    if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
+    if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
+    if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
+    if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
+  }
+  const currentFloorAssigned = assignCurrentFloor(currentFloorNumber)
+  const { floorNumberValue } = floorNumberAndValue.find(
+    (flr) => flr.floorNumber == currentFloorAssigned
   )
-  const valueOfFindFloorAssign = findFloorAssign.hodnota
-  const valueOfCurrentFloorPrice = Math.ceil(holdValue * valueOfFindFloorAssign)
-  console.log('currentfloorPrice', valueOfCurrentFloorPrice)
+  //const valueOfFindFloorAssign = floorNumberValue
+  const currentFloorPrice = Math.ceil(holdValue * floorNumberValue)
+  console.log('currentfloorPrice', currentFloorPrice)
+  testResult.push(currentFloorPrice)
+  console.log('resArray', testResult)
   // here defined
-  let hasElevator = 'elevatorFalse'
+  let hasElevator = 'hasElevator'
   let hasElevatorPrice
-  if (hasElevator === 'elevatorTrue') {
+  if (hasElevator === 'hasElevator') {
     hasElevatorPrice = holdValue
   }
-  if (hasElevator === 'elevatorFalse') {
+  if (hasElevator === 'noElevator') {
     hasElevatorPrice = holdValue - 10000
   }
-
   console.log('hasElevatorPrice', hasElevatorPrice)
+  testResult.push(hasElevatorPrice)
+  console.log('resArray', testResult)
   let hasBalcony = false
-  let hasLoggia = true
-  let hasTerasa = true
-  let hasBasement = true
+  let hasLoggia = false
+  let hasTerrace = false
+  let hasBasement = false
   let balcony = Math.ceil(0.8 * holdValue)
   let loggia = Math.ceil(0.8 * holdValue)
-  let terasa = Math.ceil(0.8 * holdValue)
+  let terrace = Math.ceil(0.8 * holdValue)
   let basement = Math.ceil(0.8 * holdValue)
   if (hasBalcony) balcony = holdValue
   if (hasLoggia) loggia = holdValue
-  if (hasTerasa) terasa = holdValue
+  if (hasTerrace) terrace = holdValue
   if (hasBasement) basement = holdValue
-  console.log('balcony', balcony, loggia, terasa, basement)
+  testResult.push(balcony)
+  testResult.push(loggia)
+  testResult.push(terrace)
+  testResult.push(basement)
+  console.log('resArray', testResult)
 
   let hasGarage = false
-  let hasParking = true
+  let hasParking = false
   let garage = Math.ceil(0.8 * holdValue)
   let parking = Math.ceil(0.8 * holdValue)
   if (hasGarage) garage = holdValue
   if (hasParking) parking = holdValue
   console.log('parking', garage, parking)
+  testResult.push(garage)
+  testResult.push(parking)
+  console.log('resArray', testResult)
 
-  // helper
   const assignYearValue = (builtYear) => {
     if (builtYear >= 2018 && builtYear <= 2023) return 1
     if (builtYear >= 2010 && builtYear <= 2017) return 0.9
     if (builtYear >= 2000 && builtYear <= 2009) return 0.85
     if (builtYear >= 1989 && builtYear <= 1999) return 0.75
-    if (builtYear >= 1950 && builtYear <= 1989) return 0.5
+    if (builtYear >= 1950 && builtYear <= 1988) return 0.5
     if (builtYear < 1950) return 1
   }
 
-  const builtYearPrice = Math.ceil(assignYearValue(1950) * holdValue)
+  let builtYear = 1988
 
+  const builtYearPrice = Math.ceil(assignYearValue(builtYear) * holdValue)
   console.log('builtYearPrice', builtYearPrice)
+  testResult.push(builtYearPrice)
+  console.log('resArray', testResult)
 
   let hasIsolation = true
   let hasNewElevator = true
@@ -491,13 +541,18 @@ const getDistrict = (street) => {
     getCondition(installations).condValue * holdValue
   )
 
-  const condResult = {
+  console.log(
+    'buildingCondResults',
     isolationResult,
     elevatorResult,
     windowsResult,
-    installationsResult,
-  }
-  console.log(condResult)
+    installationsResult
+  )
+  testResult.push(isolationResult)
+  testResult.push(elevatorResult)
+  testResult.push(windowsResult)
+  testResult.push(installationsResult)
+  console.log('resArray', testResult)
 
   let hasThermostat = false
   let hasInternet = true

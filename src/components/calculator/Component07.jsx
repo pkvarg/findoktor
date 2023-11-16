@@ -11,8 +11,8 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
-          id='elevatorTrue'
-          onClick={() => handleHasElevator('elevatorTrue')}
+          id='hasElevator'
+          onClick={() => handleHasElevator('hasElevator')}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>
@@ -28,8 +28,8 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
           </div>
         </div>
         <div
-          id='elevatorFalse'
-          onClick={() => handleHasElevator('elevatorFalse')}
+          id='noElevator'
+          onClick={() => handleHasElevator('noElevator')}
           className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
         >
           <div>

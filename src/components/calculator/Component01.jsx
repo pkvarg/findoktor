@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import streetsData from './../../../uliceCast.json'
+import streetAndDistrict from './../../../Json/streetAndDistrict.json'
 
 const Component01 = ({
   onNext,
@@ -47,9 +47,9 @@ const Component01 = ({
         >
           <option value=''>Zvoľte ulicu</option>
 
-          {streetsData.map((ulica) => (
-            <option key={ulica.ulica} value={ulica.ulica}>
-              {ulica.ulica}
+          {streetAndDistrict.map((street) => (
+            <option key={street.street} value={street.street}>
+              {street.street}
             </option>
           ))}
         </select>
