@@ -1,23 +1,4 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
-// import CalcNavbar from '../components/calculator/CalcNavbar'
-// import Component00 from '../components/calculator/component00'
-// import Component01 from '../components/calculator/Component01'
-// import Component02 from '../components/calculator/Component02'
-// import Component03 from '../components/calculator/Component03'
-// import Component04 from '../components/calculator/Component04'
-// import Component05 from '../components/calculator/Component05'
-// import Component06 from '../components/calculator/Component06'
-// import Component07 from '../components/calculator/Component07'
-// import Component08 from '../components/calculator/component08'
-// import Component09 from '../components/calculator/component09'
-// import Component10 from '../components/calculator/Component10'
-// import Component11 from '../components/calculator/Component11'
-// import Component12 from '../components/calculator/Component12'
-// import Component13 from '../components/calculator/Component13'
-// import Component14 from '../components/calculator/Component14'
-// import Component15 from '../components/calculator/Component15'
-// import Component16 from '../components/calculator/Component16'
-// import Footer from '../components/Footer'
 import { result } from '../getResults'
 import { SpinnerFullPage } from '../components'
 
@@ -93,6 +74,7 @@ const Calculator = () => {
   ] = useState(0)
 
   console.log(
+    flatOrHouse,
     city,
     street,
     houseNumber,
@@ -120,11 +102,7 @@ const Calculator = () => {
     monthlyCosts,
     urbanQuality,
     email,
-    checkBox,
-    minPriceWithoutRealEstateAssistance,
-    maxPriceWithoutRealEstateAssistance,
-    minPriceWithRealEstateAssistance,
-    maxPriceWithRealEstateAssistance
+    checkBox
   )
 
   const [currentlyClicked, setCurrentlyClicked] = useState(null)
@@ -371,7 +349,6 @@ const Calculator = () => {
   }
 
   const handleUrbanQuality = (quality) => {
-    console.log(quality)
     if (currentUrbanQualityClicked !== null) {
       const toRemoveFrom = document.getElementById(currentUrbanQualityClicked)
       toRemoveFrom.classList.remove('clicked')
@@ -383,7 +360,6 @@ const Calculator = () => {
   }
 
   const handleFlatOrHouse = (building) => {
-    console.log(building)
     if (currentFlatOrHouseClicked !== null) {
       const toRemoveFrom = document.getElementById(currentFlatOrHouseClicked)
       toRemoveFrom.classList.remove('clicked')
@@ -408,21 +384,6 @@ const Calculator = () => {
       setIsValid(validateEmail(email))
     }
   }, [email])
-
-  const selectBalcony = (balcony) => {
-    const el = document.getElementById(balcony)
-    if (el !== null) {
-      el.classList.remove('clicked')
-      el.classList.add('clicked')
-    }
-  }
-
-  const unselectBalcony = (balcony) => {
-    const el = document.getElementById(balcony)
-    if (el !== null) {
-      el.classList.remove('clicked')
-    }
-  }
 
   const balcony = document.getElementById('balcony')
   const loggia = document.getElementById('loggia')
@@ -505,28 +466,8 @@ const Calculator = () => {
     e.preventDefault()
     if (email !== '') {
       setIsValid(validateEmail(email))
-      console.log(
-        'submitted',
-        city,
-        street,
-        houseNumber,
-        countRooms,
-        houseCondition,
-        squareMeters,
-        allFloorsCount,
-        currentFloorNumber,
-        hasElevator,
-        hasBalcony,
-        hasGarage,
-        builtYear,
-        buildingConditions,
-        smartHomeItems,
-        monthlyCosts,
-        urbanQuality,
-        email
-      )
       handleNext()
-      result(
+      const calculated = result(
         city,
         street,
         houseNumber,
@@ -537,14 +478,27 @@ const Calculator = () => {
         currentFloorNumber,
         hasElevator,
         hasBalcony,
+        hasLoggia,
+        hasTerrace,
+        hasBasement,
         hasGarage,
+        hasParking,
         builtYear,
-        buildingConditions,
-        smartHomeItems,
-        monthlyCosts,
-        urbanQuality,
-        email
+        hasIsolation,
+        hasNewElevator,
+        hasNewWindows,
+        hasNewInstallations,
+        hasThermostat,
+        hasInternet,
+        hasAlarm,
+        hasAirCon,
+        urbanQuality
       )
+      console.log('RESULTS', calculated)
+      setMinPriceWithoutRealEstateAssistance(calculated.noProvisionLow)
+      setMaxPriceWithoutRealEstateAssistance(calculated.noProvisionHigh)
+      setMinPriceWithRealEstateAssistance(calculated.averageLow)
+      setMaxPriceWithRealEstateAssistance(calculated.averageHigh)
     }
   }
 

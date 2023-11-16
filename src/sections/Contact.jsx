@@ -64,9 +64,7 @@ const Contact = () => {
   return (
     <>
       <div className='bg-[#013bb0] relative pb-8 five' id='contact'>
-        <h1 className='text-center text-[35px] text-[#007ad6] text-[30px]'>
-          KONTAKT
-        </h1>
+        <h1 className='text-center  text-[#007ad6] text-[30px]'>KONTAKT</h1>
         <div className='absolute left-[7.5%] top-20'>
           <img
             className='w-0 lg:w-[65%]'

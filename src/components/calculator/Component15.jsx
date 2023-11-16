@@ -49,7 +49,7 @@ const Component15 = ({
               defaultChecked={false}
               value={checkBox}
               onChange={() => setCheckBox((prev) => !prev)}
-              required='required'
+              required
             />
             <p className='text-[#0076ba] text-[15px]'>
               Súhlasím s{' '}

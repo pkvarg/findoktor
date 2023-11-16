@@ -21,7 +21,7 @@ const Component10 = ({ onBack, onNext, builtYear, setBuiltYear }) => {
             type='text'
             value={builtYear}
             onChange={(e) => setBuiltYear(e.target.value)}
-            className='text-[22.5px] lg:text-[25px] absolute top-[24%] lg:top-[24%] w-[15%] right-4  text-right font-bold outline-none'
+            className='text-[22.5px] lg:text-[25px] absolute top-[24%] lg:top-[24%] w-[35%] right-4  text-right font-bold outline-none'
           />
         </div>
       </div>
