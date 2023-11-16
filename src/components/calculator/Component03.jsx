@@ -1,6 +1,20 @@
 import React from 'react'
+import { toast } from 'react-hot-toast'
 
-const Component03 = ({ onBack, onNext, handleHouseCondition }) => {
+const Component03 = ({
+  onBack,
+  onNext,
+  handleHouseCondition,
+  currentConditionClicked,
+}) => {
+  const onNextGuard = () => {
+    console.log(currentConditionClicked)
+    if (currentConditionClicked === null) {
+      toast.error('Zvoľte stav nehnuteľnosti')
+    } else {
+      onNext()
+    }
+  }
   return (
     <div className='flex flex-col'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -104,7 +118,7 @@ const Component03 = ({ onBack, onNext, handleHouseCondition }) => {
           Späť
         </button>
         <button
-          onClick={onNext}
+          onClick={() => onNextGuard()}
           className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej

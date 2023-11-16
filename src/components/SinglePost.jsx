@@ -43,7 +43,7 @@ const SinglePost = ({ post }) => {
           {post.text}
         </p>
         <div className='flex justify-center'>
-          <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] p-4 mt-4 hover:border hover-border-white hover:border-[2px]'>
+          <button className='text-[25px] font-normal bg-[#007ad7] rounded-[55px] p-4 mt-4  hover-border-white hover:border-[2px]'>
             Bezplatné stretnutie
           </button>
         </div>

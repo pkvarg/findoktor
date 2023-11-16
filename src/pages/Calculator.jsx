@@ -105,7 +105,8 @@ const Calculator = () => {
     checkBox
   )
 
-  const [currentlyClicked, setCurrentlyClicked] = useState(null)
+  const [currentlyClickedRoomCount, setCurrentlyClickedRoomCount] =
+    useState(null)
   const [currentConditionClicked, setCurrentConditionClicked] = useState(null)
   const [currentElevatorStatusClicked, setCurrentElevatorStatusClicked] =
     useState(null)
@@ -160,6 +161,7 @@ const Calculator = () => {
           <Component02
             onBack={handleBack}
             onNext={handleNext}
+            currentlyClickedRoomCount={currentlyClickedRoomCount}
             handleCountRoomClick={handleCountRoomClick}
           />
         )
@@ -169,6 +171,7 @@ const Calculator = () => {
             onBack={handleBack}
             onNext={handleNext}
             handleHouseCondition={handleHouseCondition}
+            currentConditionClicked={currentConditionClicked}
           />
         )
       case 4:
@@ -316,12 +319,12 @@ const Calculator = () => {
   }
 
   const handleCountRoomClick = (count) => {
-    if (currentlyClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentlyClicked)
+    if (currentlyClickedRoomCount !== null) {
+      const toRemoveFrom = document.getElementById(currentlyClickedRoomCount)
       toRemoveFrom.classList.remove('clicked')
     }
     setCountRooms(count)
-    setCurrentlyClicked(count)
+    setCurrentlyClickedRoomCount(count)
     const element = document.getElementById(count)
     element.classList.add('clicked')
   }

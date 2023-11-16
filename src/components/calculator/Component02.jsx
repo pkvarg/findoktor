@@ -1,6 +1,19 @@
 import React from 'react'
+import { toast } from 'react-hot-toast'
 
-const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
+const Component02 = ({
+  onBack,
+  onNext,
+  currentlyClickedRoomCount,
+  handleCountRoomClick,
+}) => {
+  const onNextGuard = () => {
+    if (currentlyClickedRoomCount === null) {
+      toast.error('Zvoľte počet izieb')
+    } else {
+      onNext()
+    }
+  }
   return (
     <div className='flex flex-col mt-[20%] lg:mt-0 lg:w-[90%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -132,7 +145,7 @@ const Component02 = ({ onBack, onNext, handleCountRoomClick }) => {
           Späť
         </button>
         <button
-          onClick={onNext}
+          onClick={() => onNextGuard()}
           className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej

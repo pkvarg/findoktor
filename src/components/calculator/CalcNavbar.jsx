@@ -11,7 +11,10 @@ const CalcNavbar = () => {
             <div className='h-[5px] lg:h-[5px] bg-[#0076ba] w-[30px] lg:w-[25px]'></div>
           </div>
 
-          <p className='text-[15px] lg:text-[15px] leading-[14px] lg:leading-[14px] font-extrabold -mt-[2%]'>
+          <p
+            onClick={() => window.location.reload()}
+            className='text-[15px] lg:text-[15px] leading-[14px] lg:leading-[14px] font-extrabold -mt-[2%] hover:cursor-pointer'
+          >
             MICHAL <br /> DOVALA
           </p>
         </div>
