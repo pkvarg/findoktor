@@ -1,9 +1,9 @@
-import streetInfo from './../uliceCast.json'
-import districtInfo from './../castCena.json'
-import roomInfo from './../izbyCena.json'
+import streetAndDistrict from './../Json/streetAndDistrict.json'
+import districtAndPrice from './../Json/districtAndPrice.json'
+import roomsAndPrice from './../Json/roomsAndPrice.json'
 import floorsCount from './../pocetPosch.json'
 import floorNumber from './../cisloPosch.json'
-import houseCondition from './../houseCondition.json'
+import buildingCondition from './../houseCondition.json'
 import smartHome from './../smartHome.json'
 
 // TODO all comps select something if must
@@ -42,42 +42,56 @@ export const result = (
   const priemCenaIzbySpolu = 3860
   const priemCenaBaSpolu = 4073
   let holdValue
+  const result = []
+  result.push(bratislava)
 
-  const getDistrict = (street) => {
-    const { cast } = streetInfo.find((strt) => strt.ulica === street)
-    console.log(cast)
-    return cast
-  }
-
-  const getDistrictPrice = (district) => {
+  const getDistrictPrice = (street) => {
     // kedy district = spolu?
-    const { cena } = districtInfo.find((dsrct) => dsrct.okres === district)
-    console.log(cena)
-    return cena
-  }
-
-  // condition coeficient
-  const getHouseConditionCoeficient = (houseCondition) => {
-    if (houseCondition === '1') return 1
-    if (houseCondition === '2') return 0.8
-    if (houseCondition === '3') return 0.65
-    if (houseCondition === '4') return 0.5
-  }
-
-  // two steps
-  const getRoomAndConditionPrice = (countRooms) => {
-    // kedy district = spolu?
-    const izbaCena = roomInfo.find((room) => room.izby === countRooms)
-    const resIzba = izbaCena.cena
-    // assign holdValue
-    holdValue = resIzba
-    const conditionPrice = Math.ceil(
-      resIzba * getHouseConditionCoeficient(houseCondition)
+    const getDistrict = (street) => {
+      const { district } = streetAndDistrict.find(
+        (strt) => strt.street === street
+      )
+      console.log('district', district)
+    }
+    const { districtPrice } = districtAndPrice.find(
+      (dsrct) => dsrct.district === district
     )
-    console.log('izba', resIzba, 'stav', conditionPrice)
-
-    return conditionPrice
+    console.log('districtPrice', districtPrice)
+    result.push(districtPrice)
+    console.log('resArray', result)
   }
+
+  getDistrictPrice(street)
+
+  const getRoomPrice = (countRooms) => {
+    const { roomsPrice } = roomsAndPrice.find(
+      (rooms) => rooms.rooms == countRooms
+    )
+    console.log('roomsPrice', roomsAndPrice)
+    result.push(roomsPrice)
+    console.log(result)
+    // assign holdValue to current roomsPrice
+    holdValue = roomsPrice
+  }
+
+  getRoomPrice(countRooms)
+
+  const getConditionPrice = (houseCondition) => {
+    const getConditionCoeficient = (houseCondition) => {
+      if (houseCondition === '1') return 1
+      if (houseCondition === '2') return 0.8
+      if (houseCondition === '3') return 0.65
+      if (houseCondition === '4') return 0.5
+    }
+    const conditionPrice = Math.ceil(
+      // hold is current roomsPrice
+      holdValue * getConditionCoeficient(houseCondition)
+    )
+    console.log('conditionPrice', conditionPrice)
+    result.push(conditionPrice)
+  }
+
+  getConditionPrice(houseCondition)
 
   getSquareMetersPrice = (squareMeters) => {
     const squareMetersPrice =
@@ -192,7 +206,7 @@ export const result = (
     if (!hasNewInstallations) installations = 'noNewInstallations'
 
     const getCondition = (aspect) =>
-      houseCondition.find((cnd) => cnd.condition == aspect)
+      buildingCondition.find((cnd) => cnd.condition == aspect)
 
     const isolationResult = Math.ceil(
       getCondition(isolation).condValue * holdValue
@@ -258,6 +272,17 @@ export const result = (
     return condResult
   }
 
+  const getUrbanQualityPrice = (urbanQuality) => {
+    const getUrbanQualityCoeficient = (urbanQuality) => {
+      if (urbanQuality === 'excellent') return 1
+      if (urbanQuality === 'average') return 0.9
+      if (urbanQuality === 'poor') return 0.75
+    }
+    const urbanQualityPrice =
+      getUrbanQualityCoeficient(urbanQuality) * holdValue
+    console.log(urbanQualityPrice)
+  }
+
   // console.log(
   //   'getting results..',
   //   city,
@@ -310,18 +335,13 @@ export const result = (
 }
 
 // TEST TEST TEST TEST TEST
-
+const bratislava = 252524
 const priemCenaIzbySpolu = 3860
 const priemCenaBaSpolu = 4073
 let holdValue
+const testResult = []
+testResult.push(bratislava)
 
-// condition coeficient
-const getHouseConditionCoeficient = (houseCondition) => {
-  if (houseCondition === '1') return Number(1)
-  if (houseCondition === '2') return Number(0.8)
-  if (houseCondition === '3') return Number(0.65)
-  if (houseCondition === '4') return Number(0.5)
-}
 //assign Floors
 const assignFloors = (allFloorsCount) => {
   if (allFloorsCount > 0 && allFloorsCount <= 4) return 4
@@ -339,15 +359,43 @@ const assignCurrentFloor = (currentFloorNumber) => {
 }
 
 const getDistrict = (street) => {
-  const { cast } = streetInfo.find((strt) => strt.ulica === street)
-  console.log('cast', cast)
-  const { cena } = districtInfo.find((dsrct) => dsrct.okres === cast)
-  console.log('cast', cena)
-  const izbaCena = roomInfo.find((room) => room.izby === '1')
-  const resIzba = izbaCena.cena
-  holdValue = resIzba
-  const conditionPrice = Math.ceil(resIzba * getHouseConditionCoeficient('4'))
-  console.log('izba', resIzba, 'stav', conditionPrice)
+  const { district } = streetAndDistrict.find((strt) => strt.street === street)
+  console.log('district', district)
+
+  const { districtPrice } = districtAndPrice.find(
+    (dsrct) => dsrct.district === district
+  )
+  console.log('districtPrice', districtPrice)
+  testResult.push(districtPrice)
+  console.log('resArray', testResult)
+
+  let countRooms = 1
+
+  const { roomsPrice } = roomsAndPrice.find(
+    (rooms) => rooms.rooms == countRooms
+  )
+  console.log('roomsPrice', roomsPrice)
+  testResult.push(roomsPrice)
+  console.log(testResult)
+  // assign holdValue to current roomsPrice
+  holdValue = roomsPrice
+
+  const getConditionCoeficient = (houseCondition) => {
+    if (houseCondition === '1') return 1
+    if (houseCondition === '2') return 0.8
+    if (houseCondition === '3') return 0.65
+    if (houseCondition === '4') return 0.5
+  }
+
+  let houseCondition = '4'
+  const conditionPrice = Math.ceil(
+    // hold is current roomsPrice
+    holdValue * getConditionCoeficient(houseCondition)
+  )
+  console.log('conditionPrice', conditionPrice)
+  testResult.push(conditionPrice)
+  console.log(testResult)
+
   const squareMetersPrice =
     (36 * priemCenaIzbySpolu) / 2 + (36 * priemCenaBaSpolu) / 2
   console.log('sqmPrice', squareMetersPrice)
@@ -432,7 +480,7 @@ const getDistrict = (street) => {
   if (!hasNewInstallations) installations = 'noNewInstallations'
 
   const getCondition = (aspect) =>
-    houseCondition.find((cnd) => cnd.condition == aspect)
+    buildingCondition.find((cnd) => cnd.condition == aspect)
 
   const isolationResult = Math.ceil(
     getCondition(isolation).condValue * holdValue
@@ -490,6 +538,16 @@ const getDistrict = (street) => {
   }
 
   console.log(smartResult)
+
+  let urbanQuality = 'excellent'
+
+  const getUrbanQualityCoeficient = (urbanQuality) => {
+    if (urbanQuality === 'excellent') return 1
+    if (urbanQuality === 'average') return 0.9
+    if (urbanQuality === 'poor') return 0.75
+  }
+  const urbanQualityPrice = getUrbanQualityCoeficient(urbanQuality) * holdValue
+  console.log('urbanQualityPrice', urbanQualityPrice)
 
   //return cast
 }
