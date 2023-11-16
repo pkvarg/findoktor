@@ -4,7 +4,7 @@ import roomsAndPrice from './../Json/roomsAndPrice.json'
 import floorCountAndValue from './../Json/floorCountAndValue.json'
 import floorNumberAndValue from './../Json/floorNumberAndValue.json'
 import buildingCondition from './../Json/buildingCondition.json'
-import smartHome from './../smartHome.json'
+import smartHome from './../Json/smartHome.json'
 
 // TODO all comps select something if must
 // comp 10 limit years !!!
@@ -261,7 +261,7 @@ export const result = (
     hasNewInstallations
   )
 
-  const getSmartHomeCondition = (
+  const getSmartHomePrice = (
     hasThermostat,
     hasInternet,
     hasAlarm,
@@ -292,16 +292,21 @@ export const result = (
     const alarmResult = Math.ceil(getCondition(alarm).smartValue * holdValue)
     const airconResult = Math.ceil(getCondition(aircon).smartValue * holdValue)
 
-    const condResult = {
+    console.log(
+      'smartResults',
       thermostatResult,
       internetResult,
       alarmResult,
-      airconResult,
-    }
-
-    console.log(condResult)
-    return condResult
+      airconResult
+    )
+    result.push(thermostatResult)
+    result.push(internetResult)
+    result.push(alarmResult)
+    result.push(airconResult)
+    console.log('resArray', result)
   }
+
+  getSmartHomePrice(hasThermostat, hasInternet, hasAlarm, hasAirCon)
 
   const getUrbanQualityPrice = (urbanQuality) => {
     const getUrbanQualityCoeficient = (urbanQuality) => {
@@ -311,9 +316,38 @@ export const result = (
     }
     const urbanQualityPrice =
       getUrbanQualityCoeficient(urbanQuality) * holdValue
-    console.log(urbanQualityPrice)
+    console.log('urbanQualityPrice', urbanQualityPrice)
+    result.push(urbanQualityPrice)
+    console.log('resArray', result)
   }
 
+  getUrbanQualityPrice(urbanQuality)
+
+  // AVERAGE from result array
+  const calculateAverage = (array) => {
+    // Check if the array is not empty
+    if (array.length === 0) {
+      return 0 // or return undefined, depending on how you want to handle an empty array
+    }
+    // Calculate the sum of all values in the array
+    const sum = array.reduce((acc, value) => acc + value, 0)
+    // Calculate the average
+    const average = sum / array.length
+    return average
+  }
+  const averageOfAll = calculateAverage(result)
+  // Add or subtract 5% to the original value
+  let averageHigh = Math.ceil(averageOfAll * 1.05)
+  let averageLow = Math.ceil(averageOfAll * 0.95)
+
+  console.log(
+    'average',
+    averageOfAll,
+    'averageLow',
+    averageLow,
+    'averageHigh',
+    averageHigh
+  )
   // console.log(
   //   'getting results..',
   //   city,
@@ -585,14 +619,18 @@ const getDistrict = (street) => {
     getSmartCondition(aircon).smartValue * holdValue
   )
 
-  const smartResult = {
+  console.log(
+    'smartResults',
     thermostatResult,
     internetResult,
     alarmResult,
-    airconResult,
-  }
-
-  console.log(smartResult)
+    airconResult
+  )
+  testResult.push(thermostatResult)
+  testResult.push(internetResult)
+  testResult.push(alarmResult)
+  testResult.push(airconResult)
+  console.log('resArray', testResult)
 
   let urbanQuality = 'excellent'
 
@@ -603,6 +641,35 @@ const getDistrict = (street) => {
   }
   const urbanQualityPrice = getUrbanQualityCoeficient(urbanQuality) * holdValue
   console.log('urbanQualityPrice', urbanQualityPrice)
+  testResult.push(urbanQualityPrice)
+  console.log('resArray', testResult)
+
+  // AVERAGE from result array
+  const calculateAverage = (array) => {
+    // Check if the array is not empty
+    if (array.length === 0) {
+      return 0 // or return undefined, depending on how you want to handle an empty array
+    }
+    // Calculate the sum of all values in the array
+    const sum = array.reduce((acc, value) => acc + value, 0)
+    // Calculate the average
+    const average = sum / array.length
+    return average
+  }
+  const averageOfAll = calculateAverage(testResult)
+
+  // Add or subtract 5% to the original value
+  let averageHigh = Math.ceil(averageOfAll * 1.05)
+  let averageLow = Math.ceil(averageOfAll * 0.95)
+
+  console.log(
+    'average',
+    averageOfAll,
+    'averageLow',
+    averageLow,
+    'averageHigh',
+    averageHigh
+  )
 
   //return cast
 }
