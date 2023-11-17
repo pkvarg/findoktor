@@ -2,7 +2,7 @@ import React from 'react'
 
 const Component00 = ({ handleFlatOrHouse }) => {
   return (
-    <div className='flex flex-col justify-center mx-4 lg:mx-0 mt-[20%] lg:mt-0'>
+    <div className='flex flex-col justify-center mx-4 lg:mx-0 -mt-[17.5%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -68,8 +68,8 @@ const Component00 = ({ handleFlatOrHouse }) => {
         <p className='text-[25px] lg:text-[35px]'>Zadarmo</p>
       </div> */}
       <div className='flex justify-center'>
-        <div className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[20px] mt-12 lg:mt-12 w-[100%] hover:border-red-600 hover:border-4'>
-          <p className='text-[20px] lg:text-[27.5px] text-[#0076ba] font-extrabold text-center leading-[20px] lg:leading-[29.5px] py-2'>
+        <div className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[20px] mt-12 lg:mt-12 hover:border-red-600 hover:border-4'>
+          <p className='text-[20px] lg:text-[27.5px] text-[#0076ba] font-extrabold text-center leading-[20px] lg:leading-[29.5px] py-2 px-8 lg:px-12'>
             {/* Dohodnite si fyzickú <br /> obhliadku hneď */}
             <a href='tel:+421944517560'>
               Dohodnite si fyzickú <br /> obhliadku hneď

@@ -525,13 +525,17 @@ const Calculator = () => {
   return (
     <>
       <Suspense fallback={<SpinnerFullPage />}>
-        <div className='text-black bg-white text-[30px]'>
-          {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
-          <div className='flex flex-col items-center relative '>
+        {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
+        <div className='grid grid-rows-3 relative text-black bg-white text-[30px] h-screen'>
+          <div className='h-[min-content]'>
             <CalcNavbar />
+          </div>
+          <div className='flex-1 h-[100%]'>
             <form onSubmit={handleSubmitForm}>
               {renderComponent(currentComponent)}
             </form>
+          </div>
+          <div className='h-[min-content]'>
             <Footer />
           </div>
         </div>

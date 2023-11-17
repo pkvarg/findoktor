@@ -24,7 +24,7 @@ const Component01 = ({
   }
 
   return (
-    <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-[10%]'>
+    <div className='flex flex-col relative mx-4 md:mx-[20%] lg:mx-[35%] -mt-[12.5%] lg:-mt-[7.5%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -65,12 +65,6 @@ const Component01 = ({
             </option>
           ))}
         </select>
-        {/* <input
-          type='text'
-          value={street}
-          onChange={(e) => setStreet(e.target.value)}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
-        /> */}
       </div>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
         <label
@@ -87,20 +81,7 @@ const Component01 = ({
         />
       </div>
 
-      {/* <div>
-        <label>Zvoľte ulicu:</label>
-        <select onChange={handleStreetChange} value={selectedStreet}>
-          <option value=''>Zvoľte ulicu</option>
-        
-          {streetsData.map((ulica) => (
-            <option key={ulica.ulica} value={ulica.ulica}>
-              {ulica.ulica}
-            </option>
-          ))}
-        </select>
-      </div> */}
-
-      <div className='flex flex-row justify-between w-[100%] mt-[20%] lg:mt-[8%] mb-8 lg:mb-0'>
+      <div className='flex flex-row justify-between w-[100%] mb-8 lg:mb-0 mt-[15%]'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-10 lg:px-10 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'

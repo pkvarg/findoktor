@@ -15,7 +15,7 @@ const Component02 = ({
     }
   }
   return (
-    <div className='flex flex-col mt-[20%] lg:mt-0 lg:w-[90%]'>
+    <div className='-mt-[20%] lg:-mt-[12%] w-[100%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -137,7 +137,7 @@ const Component02 = ({
           </p>
         </div>
       </div>
-      <div className='flex flex-row justify-between pt-16'>
+      <div className='flex flex-row justify-center gap-[4%] pt-8'>
         <button
           onClick={() => onBack()}
           className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
