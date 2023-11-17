@@ -19,7 +19,7 @@ const Component16 = ({
       <div className='flex flex-col justify-center mt-2'>
         <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[325px] flex flex-col relative'>
           <p className='text-[20px] text-[#0076ba] font-bold absolute top-[33%] right-4 text-right'>
-            {minPriceWithoutRealEstateAssistance} -{' '}
+            {minPriceWithoutRealEstateAssistance}€ -{' '}
             {maxPriceWithoutRealEstateAssistance}€
           </p>
 
@@ -29,7 +29,7 @@ const Component16 = ({
         </div>
         <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative mt-8'>
           <p className='text-[20px] text-[#0076ba] font-bold absolute top-[33%] right-4 text-right'>
-            {minPriceWithRealEstateAssistance} -{' '}
+            {minPriceWithRealEstateAssistance}€ -{' '}
             {maxPriceWithRealEstateAssistance}€
           </p>
 

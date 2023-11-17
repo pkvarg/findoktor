@@ -1,6 +1,14 @@
 import React from 'react'
+import { toast } from 'react-hot-toast'
 
-const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
+const Component14 = ({ onBack, onNext, urbanQuality, handleUrbanQuality }) => {
+  const onNextGuard = () => {
+    if (urbanQuality === '') {
+      toast.error('Vyberte možnosť')
+    } else {
+      onNext()
+    }
+  }
   return (
     <div className='flex flex-col relative mx-1'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -68,7 +76,7 @@ const Component14 = ({ onBack, onNext, handleUrbanQuality }) => {
           Späť
         </button>
         <button
-          onClick={onNext}
+          onClick={() => onNextGuard()}
           className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej

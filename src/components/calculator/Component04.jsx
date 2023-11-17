@@ -1,6 +1,14 @@
 import React from 'react'
+import { toast } from 'react-hot-toast'
 
 const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
+  const onNextGuard = () => {
+    if (squareMeters <= 0 || squareMeters > 999)
+      toast.error('Zadajte veľkosť obytnej plochy')
+    else {
+      onNext()
+    }
+  }
   return (
     <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -20,7 +28,7 @@ const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
             </span>
           </label>
           <input
-            type='text'
+            type='number'
             value={squareMeters}
             onChange={(e) => setSquareMeters(e.target.value)}
             className='text-[22.5px] lg:text-[25px] absolute top-[24%] lg:top-[24%] right-10 w-[27%] font-bold text-right outline-none'
@@ -39,7 +47,7 @@ const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
           Späť
         </button>
         <button
-          onClick={onNext}
+          onClick={() => onNextGuard()}
           className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej

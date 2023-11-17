@@ -1,6 +1,13 @@
 import React from 'react'
+import { toast } from 'react-hot-toast'
 
-const Component07 = ({ onBack, onNext, handleHasElevator }) => {
+const Component07 = ({ onBack, onNext, hasElevator, handleHasElevator }) => {
+  const onNextGuard = () => {
+    if (hasElevator === '') toast.error('Zvoľte možnosť')
+    else {
+      onNext()
+    }
+  }
   return (
     <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
@@ -54,7 +61,7 @@ const Component07 = ({ onBack, onNext, handleHasElevator }) => {
           Späť
         </button>
         <button
-          onClick={onNext}
+          onClick={() => onNextGuard()}
           className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej

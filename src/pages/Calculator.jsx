@@ -206,6 +206,7 @@ const Calculator = () => {
           <Component07
             onBack={handleBack}
             onNext={handleNext}
+            hasElevator={hasElevator}
             handleHasElevator={handleHasElevator}
           />
         )
@@ -215,6 +216,10 @@ const Calculator = () => {
           <Component08
             onBack={handleBack}
             onNext={handleNext}
+            hasBalcony={hasBalcony}
+            hasLoggia={hasLoggia}
+            hasTerrace={hasTerrace}
+            hasBasement={hasBasement}
             setHasBalcony={setHasBalcony}
             setHasLoggia={setHasLoggia}
             setHasTerrace={setHasTerrace}
@@ -227,6 +232,9 @@ const Calculator = () => {
           <Component09
             onBack={handleBack}
             onNext={handleNext}
+            hasGarage={hasGarage}
+            hasParking={hasParking}
+            hasNoParking={hasNoParking}
             setHasGarage={setHasGarage}
             setHasParking={setHasParking}
             setHasNoParking={setHasNoParking}
@@ -248,6 +256,10 @@ const Calculator = () => {
           <Component11
             onBack={handleBack}
             onNext={handleNext}
+            hasIsolation={hasIsolation}
+            hasNewElevator={hasNewElevator}
+            hasNewWindows={hasNewWindows}
+            hasNewInstallations={hasNewInstallations}
             setHasIsolation={setHasIsolation}
             setHasNewElevator={setHasNewElevator}
             setHasNewWindows={setHasNewWindows}
@@ -260,6 +272,10 @@ const Calculator = () => {
           <Component12
             onBack={handleBack}
             onNext={handleNext}
+            hasThermostat={hasThermostat}
+            hasInternet={hasInternet}
+            hasAlarm={hasAlarm}
+            hasAirCon={hasAirCon}
             setHasThermostat={setHasThermostat}
             setHasInternet={setHasInternet}
             setHasAlarm={setHasAlarm}
@@ -282,6 +298,7 @@ const Calculator = () => {
           <Component14
             onBack={handleBack}
             onNext={handleNext}
+            urbanQuality={urbanQuality}
             handleUrbanQuality={handleUrbanQuality}
           />
         )
