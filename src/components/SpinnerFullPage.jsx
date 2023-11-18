@@ -1,12 +1,15 @@
-import Spinner from "./Spinner";
-import styles from "./SpinnerFullPage.module.css";
+import Spinner from './Spinner'
 
 function SpinnerFullPage() {
   return (
-    <div className={styles.spinnerFullpage}>
+    <div
+      className='
+    h-[100vh]
+    bg-[#737576]'
+    >
       <Spinner />
     </div>
-  );
+  )
 }
 
-export default SpinnerFullPage;
+export default SpinnerFullPage

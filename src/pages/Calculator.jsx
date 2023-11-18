@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { result } from '../getResults'
 import { SpinnerFullPage } from '../components'
+import axios from 'axios'
 
 const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'))
 const Component00 = lazy(() => import('../components/calculator/component00'))
@@ -24,7 +25,7 @@ const Footer = lazy(() => import('../components/Footer'))
 
 const Calculator = () => {
   const [flatOrHouse, setFlatOrHouse] = useState('')
-  const [city, setCity] = useState('')
+  const [city, setCity] = useState('Bratislava')
   const [street, setStreet] = useState('')
   const [houseNumber, setHouseNumber] = useState('')
   const [countRooms, setCountRooms] = useState(0)
@@ -515,10 +516,57 @@ const Calculator = () => {
         urbanQuality
       )
       console.log('RESULTS', calculated)
-      setMinPriceWithoutRealEstateAssistance(calculated.noProvisionLow)
-      setMaxPriceWithoutRealEstateAssistance(calculated.noProvisionHigh)
-      setMinPriceWithRealEstateAssistance(calculated.averageLow)
-      setMaxPriceWithRealEstateAssistance(calculated.averageHigh)
+      if (calculated !== null || calculated !== '') {
+        setMinPriceWithoutRealEstateAssistance(calculated.noProvisionLow)
+        setMaxPriceWithoutRealEstateAssistance(calculated.noProvisionHigh)
+        setMinPriceWithRealEstateAssistance(calculated.averageLow)
+        setMaxPriceWithRealEstateAssistance(calculated.averageHigh)
+      }
+      const sendEmail = async () => {
+        const { data } = await axios.put(
+          `https://api.pictusweb.com/api/md/email`,
+          // `http://localhost:2000/api/md/email`,
+          {
+            flatOrHouse,
+            city,
+            street,
+            houseNumber,
+            countRooms,
+            houseCondition,
+            squareMeters,
+            allFloorsCount,
+            currentFloorNumber,
+            hasElevator,
+            hasBalcony,
+            hasLoggia,
+            hasTerrace,
+            hasBasement,
+            hasGarage,
+            hasParking,
+            builtYear,
+            hasIsolation,
+            hasNewElevator,
+            hasNewWindows,
+            hasNewInstallations,
+            hasThermostat,
+            hasInternet,
+            hasAlarm,
+            hasAirCon,
+            urbanQuality,
+            monthlyCosts,
+            email,
+            minPriceWithoutRealEstateAssistance,
+            maxPriceWithoutRealEstateAssistance,
+            minPriceWithRealEstateAssistance,
+            maxPriceWithRealEstateAssistance,
+          }
+
+          //config
+        )
+
+        console.log('ctc:', data)
+      }
+      sendEmail()
     }
   }
 

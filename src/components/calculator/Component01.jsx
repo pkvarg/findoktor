@@ -40,7 +40,7 @@ const Component01 = ({
         </label>
         <input
           type='text'
-          defaultValue='Bratislava'
+          value={city}
           // onChange={(e) => setCity(e.target.value)}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />

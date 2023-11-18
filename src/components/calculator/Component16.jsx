@@ -33,7 +33,7 @@ const Component16 = ({
             {maxPriceWithRealEstateAssistance}€
           </p>
 
-          <p className='text-[#ff010f] text-[12.5px] absolute -bottom-6 left-2'>
+          <p className='text-[#ff010f] text-[12.5px] leading-[12.5px] absolute top-[112%] left-2'>
             *cena po odrátaní služieb Realitnej kancelárie
           </p>
         </div>

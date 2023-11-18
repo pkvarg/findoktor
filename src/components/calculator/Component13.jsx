@@ -30,7 +30,7 @@ const Component13 = ({ onBack, onNext, monthlyCosts, setMonthlyCosts }) => {
               type='number'
               value={monthlyCosts}
               onChange={(e) => setMonthlyCosts(e.target.value)}
-              className='text-[22.5px] lg:text-[25px] absolute top-[25%] lg:top-[27.5%] w-[50%] right-16 lg:right-12 lg:mr-1 text-right font-bold outline-none z-0'
+              className='text-[22.5px] lg:text-[25px] absolute top-[25%] lg:top-[27.5%] w-[50%] right-16 lg:right-[10%] lg:mr-1 text-right font-bold outline-none z-0'
             />
             <p className='text-[#0076ba] font-bold text-[12.5px] absolute top-[50%] right-3 z-0'>
               €/mes.

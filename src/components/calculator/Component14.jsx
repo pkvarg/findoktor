@@ -10,7 +10,7 @@ const Component14 = ({ onBack, onNext, urbanQuality, handleUrbanQuality }) => {
     }
   }
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-0 -mt-[40%] md:-mt-[20%] lg:-mt-[12%]'>
+    <div className='flex flex-col relative  mx-4 lg:mx-0 -mt-[40%] md:-mt-[20%] lg:-mt-[12%]'>
       {' '}
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
