@@ -57,7 +57,7 @@ const Component01 = ({
           value={street}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
         >
-          <option value=''>Zvoľte ulicu</option>
+          <option className='bg-none'>Zvoľte ulicu</option>
 
           {streetAndDistrict.map((street) => (
             <option key={street.street} value={street.street}>

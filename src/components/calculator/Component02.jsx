@@ -15,7 +15,7 @@ const Component02 = ({
     }
   }
   return (
-    <div className='-mt-[20%] lg:-mt-[12%] w-[100%]'>
+    <div className='-mt-[25%] lg:-mt-[12%] w-[100%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>

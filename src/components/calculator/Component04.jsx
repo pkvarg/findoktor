@@ -34,7 +34,7 @@ const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
             className='text-[22.5px] lg:text-[25px] absolute top-[24%] lg:top-[24%] right-10 w-[27%] font-bold text-right outline-none'
           />
 
-          <p className='text-[#0076ba] font-bold text-[17.5px] absolute top-[41%] right-5'>
+          <p className='text-[#0076ba] font-bold text-[17.5px] absolute top-[37%] lg:top-[41%] right-5'>
             m<span className='text-[12.5px] absolute top-0'>2</span>
           </p>
         </div>
