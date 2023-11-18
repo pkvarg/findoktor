@@ -65,7 +65,7 @@ const Component15 = ({
         </div>
       </div>
 
-      <div className='flex flex-row justify-center gap-[40% md:gap-[70%] lg:gap-[61%] mt-[40%] lg:mt-[20%]'>
+      <div className='flex flex-row justify-center gap-[40%]  md:gap-[70%] lg:gap-[61%] mt-[40%] lg:mt-[20%]'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
