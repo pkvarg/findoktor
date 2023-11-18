@@ -574,7 +574,7 @@ const Calculator = () => {
     <>
       <Suspense fallback={<SpinnerFullPage />}>
         {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
-        <div className='grid grid-rows-3 relative text-black bg-white text-[30px] h-screen'>
+        <div className='grid grid-rows-3 relative text-black bg-white text-[30px] h-[95vh] lg:h-screen'>
           <div className='h-[min-content]'>
             <CalcNavbar />
           </div>

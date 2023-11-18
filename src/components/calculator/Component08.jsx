@@ -82,7 +82,7 @@ const Component08 = ({
             />
 
             <p className='font-bold text-[20px] absolute bottom-0 right-3'>
-              terrace
+              Terasa
             </p>
           </div>
         </div>
