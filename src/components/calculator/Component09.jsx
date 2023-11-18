@@ -17,7 +17,7 @@ const Component09 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[30%] -mt-[15%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -62,16 +62,16 @@ const Component09 = ({
       </div>
       <div className='flex justify-center'>
         <div
-          className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[12.5px] mt-6 lg:mt-6 w-[100%] h-[55px]'
+          className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[12.5px] mt-6 lg:mt-6  h-[55px]'
           id='noParking'
           onClick={() => setHasNoParking((prev) => !prev)}
         >
-          <p className='text-[20px] text-[#0076ba] font-extrabold text-center leading-[20px] pt-[6%]'>
+          <p className='text-[20px] text-[#0076ba] font-extrabold text-center leading-[20px] pt-[6%] px-2 lg:px-2'>
             Bez vlastného parkovania
           </p>
         </div>
       </div>
-      <div className='flex flex-row justify-between pt-[35%] lg:pt-[35%] gap-1'>
+      <div className='flex flex-row justify-center gap-[12%] md:gap-[6%] lg:gap-[9%] mt-[20%]'>
         <button
           onClick={onBack}
           className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'

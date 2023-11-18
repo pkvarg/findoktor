@@ -10,7 +10,8 @@ const Component14 = ({ onBack, onNext, urbanQuality, handleUrbanQuality }) => {
     }
   }
   return (
-    <div className='flex flex-col relative mx-1'>
+    <div className='flex flex-col relative w mx-4 lg:mx-0 -mt-[40%] md:-mt-[20%] lg:-mt-[12%]'>
+      {' '}
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -68,16 +69,16 @@ const Component14 = ({ onBack, onNext, urbanQuality, handleUrbanQuality }) => {
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[35%] lg:gap-[12.5%] pt-[15%] lg:pt-[5%]'>
+      <div className='flex flex-row justify-center gap-[37%] md:gap-[69%] lg:gap-[13.5%] mt-8 lg:mt-4'>
         <button
           onClick={onBack}
-          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej
         </button>

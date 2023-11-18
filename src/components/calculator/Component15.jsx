@@ -10,7 +10,7 @@ const Component15 = ({
   setCheckBox,
 }) => {
   return (
-    <div className='flex flex-col relative w-[98%] lg:w-[100%] mx-1 lg:mx-0 mt-[20%] lg:mt-0'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[30%] -mt-[15%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -18,12 +18,12 @@ const Component15 = ({
         Vaša nehnuteľnosť bola <br /> nacenená
       </h1>
       <img
-        className='flex w-[17.5%] absolute top-[19%] lg:top-[22%] lg:left-[0%]'
+        className='flex w-[17.5%] md:w-[12%] lg:w-[17.5%] absolute top-[19%] md:top-[7%]  lg:top-[7%] lg:left-[0%]'
         src='/firework.webp'
         alt='firework'
       />
       <img
-        className='flex w-[17.5%] absolute top-[19%] lg:top-[22%] right-0 lg:right-[0%]'
+        className='flex w-[17.5%] md:w-[12%] lg:w-[17.5%] absolute top-[19%] md:top-[7%]  lg:top-[7%] right-0 lg:right-[0%]'
         src='/firework.webp'
         alt='firework'
       />
@@ -42,7 +42,7 @@ const Component15 = ({
             className='text-[17.5px] font-bold absolute top-[32%] text-right w-[93%] lg:w-[96%] h-[50%] outline-none'
             required='required'
           />
-          <div className='flex flex-row justify-start items-center mt-[30%] lg:mt-[30%]'>
+          <div className='flex flex-row justify-start items-center mt-[30%] md:mt-[12.5%] lg:mt-[15%] ml-2'>
             <input
               className='h-[15px] w-[15px] mr-2'
               type='checkbox'
@@ -65,7 +65,7 @@ const Component15 = ({
         </div>
       </div>
 
-      <div className='flex flex-row justify-between pt-[70%] lg:pt-[70%] gap-1'>
+      <div className='flex flex-row justify-center gap-[40% md:gap-[70%] lg:gap-[61%] mt-[40%] lg:mt-[20%]'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'

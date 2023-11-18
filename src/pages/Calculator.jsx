@@ -12,7 +12,7 @@ const Component05 = lazy(() => import('../components/calculator/Component05'))
 const Component06 = lazy(() => import('../components/calculator/Component06'))
 const Component07 = lazy(() => import('../components/calculator/Component07'))
 const Component08 = lazy(() => import('../components/calculator/component08'))
-const Component09 = lazy(() => import('../components/calculator/component09'))
+const Component09 = lazy(() => import('../components/calculator/Component09'))
 const Component10 = lazy(() => import('../components/calculator/Component10'))
 const Component11 = lazy(() => import('../components/calculator/Component11'))
 const Component12 = lazy(() => import('../components/calculator/Component12'))
@@ -530,12 +530,12 @@ const Calculator = () => {
           <div className='h-[min-content]'>
             <CalcNavbar />
           </div>
-          <div className='flex-1 h-[100%]'>
+          <div className='flex-1 h-[100%] z-10'>
             <form onSubmit={handleSubmitForm}>
               {renderComponent(currentComponent)}
             </form>
           </div>
-          <div className='h-[min-content]'>
+          <div className='h-[min-content] z-0'>
             <Footer />
           </div>
         </div>
