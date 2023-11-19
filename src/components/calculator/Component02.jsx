@@ -121,7 +121,7 @@ const Component02 = ({
 
           <div className='flex flex-row mt-1'>
             <div className='border-2 lg:border-4 border-[#0076ba] h-[15px] lg:h-[17.5px] w-[15px] lg:w-[17.5px] rounded-[30px] ml-1 lg:ml-[10px] bg-[#0076ba]'></div>
-            <p className='ml-[3px] lg:ml-[6px] -mt-[16%] lg:-mt-[15%] text-[27.5px] lg:text-[27.5px] text-[#0076ba]'>
+            <p className='ml-[3px] lg:ml-[6px] -mt-[16%] lg:-mt-[12%] text-[27.5px] lg:text-[27.5px] text-[#0076ba]'>
               +
             </p>
           </div>

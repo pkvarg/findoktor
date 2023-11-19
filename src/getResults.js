@@ -189,7 +189,10 @@ export const result = (
 
   const getBuiltYearPrice = (builtYear) => {
     const assignYearValue = (builtYear) => {
-      if (builtYear >= 2018 && builtYear <= 2023) return 1
+      const currentYear = new Date().getFullYear()
+      console.log('currentYear is', currentYear)
+      // miesto 2023 dnesny rok
+      if (builtYear >= 2018 && builtYear <= currentYear) return 1
       if (builtYear >= 2010 && builtYear <= 2017) return 0.9
       if (builtYear >= 2000 && builtYear <= 2009) return 0.85
       if (builtYear >= 1989 && builtYear <= 1999) return 0.75

@@ -42,6 +42,38 @@ section {
   border: 4px solid #dc2627;
 }
 
+.hover-phone {
+  display: none;
+}
+
+#phone:hover .hover-phone {
+  display: block;
+}
+
+#phone:hover .hover-span {
+  display: none;
+}
+
+.hover-email {
+  display: none;
+}
+
+#email:hover .hover-email {
+  display: block;
+}
+
+#email:hover .hover-span {
+  display: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.noBorder {
+  border: none !important;
+}
+
 button {
   cursor: pointer;
 }

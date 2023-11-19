@@ -4,7 +4,7 @@ import { SpinnerFullPage } from '../components'
 import axios from 'axios'
 
 const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'))
-const Component00 = lazy(() => import('../components/calculator/component00'))
+const Component00 = lazy(() => import('../components/calculator/Component00'))
 const Component01 = lazy(() => import('../components/calculator/Component01'))
 const Component02 = lazy(() => import('../components/calculator/Component02'))
 const Component03 = lazy(() => import('../components/calculator/Component03'))

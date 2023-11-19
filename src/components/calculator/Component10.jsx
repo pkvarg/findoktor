@@ -3,8 +3,9 @@ import { toast } from 'react-hot-toast'
 
 const Component10 = ({ onBack, onNext, builtYear, setBuiltYear }) => {
   const onNextGuard = () => {
-    if (builtYear < 1900 || builtYear > 2023) {
-      toast.error('Uveďte hodnotu medzi 1900 a 2023')
+    const currentYear = new Date().getFullYear()
+    if (builtYear < 1700 || builtYear >= currentYear) {
+      toast.error(`Uveďte hodnotu medzi 1700 a ${currentYear}`)
     } else {
       onNext()
     }
