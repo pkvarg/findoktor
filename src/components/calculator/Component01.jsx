@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import streetAndDistrict from './../../../Json/streetAndDistrict.json'
 import { toast } from 'react-hot-toast'
 
@@ -12,6 +12,23 @@ const Component01 = ({
   houseNumber,
   setHouseNumber,
 }) => {
+  const [searchTerm, setSearchTerm] = useState('')
+
+  console.log(searchTerm.toLowerCase())
+  // Filter streetAndDistrict based on the search term
+
+  const filteredStreets = streetAndDistrict
+    .filter((option) =>
+      option.street.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .map((option) => option.street)
+  // .filter((street) =>
+  //   street.street.toLowerCase().includes(searchTerm.toLowerCase())
+  // )
+
+  console.log('filtered', filteredStreets)
+  //setStreet(filteredOptions)
+
   const onNextGuard = () => {
     if (street === '') {
       toast.error('Zvoľte ulicu')
@@ -28,7 +45,7 @@ const Component01 = ({
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
+      <h1 className='text-[18px] lg:text-[30px] text-center font-bold py-2 lg:py-2 leading-[30px]'>
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
@@ -52,19 +69,26 @@ const Component01 = ({
         >
           <span className='absolute -top-[0px] left-[10px]'>Ulica</span>
         </label>
-        <select
-          onChange={(e) => setStreet(e.target.value)}
-          value={street}
+        <input
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
-        >
-          <option className='bg-none'>Zvoľte ulicu</option>
+        ></input>
 
-          {streetAndDistrict.map((street) => (
-            <option key={street.street} value={street.street}>
-              {street.street}
-            </option>
-          ))}
-        </select>
+        <div
+          //onChange={(e) => setSearchTerm(e.target.value)}
+          //value={street}
+          className='text-[15px] lg:text-[20px] absolute top-9 lg:top-12 right-2 lg:w-[70%] font-bold text-right outline-none z-30'
+        >
+          {searchTerm !== '' && (
+            <ul className='bg-gray-100 pr-2'>
+              {filteredStreets.map((street, index) => (
+                <li key={index}>{street}</li>
+              ))}
+            </ul>
+          )}
+          {/* <option className='bg-none'>Zvoľte ulicu</option> */}
+        </div>
       </div>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
         <label

@@ -54,25 +54,10 @@ const Calculator = () => {
   const [urbanQuality, setUrbanQuality] = useState('')
   const [email, setEmail] = useState('')
   const [checkBox, setCheckBox] = useState(false)
-  const [
-    minPriceWithoutRealEstateAssistance,
-    setMinPriceWithoutRealEstateAssistance,
-  ] = useState(0)
+  const [withoutRealEstateAssistance, setWithoutRealEstateAssistance] =
+    useState(0)
 
-  const [
-    maxPriceWithoutRealEstateAssistance,
-    setMaxPriceWithoutRealEstateAssistance,
-  ] = useState(0)
-
-  const [
-    minPriceWithRealEstateAssistance,
-    setMinPriceWithRealEstateAssistance,
-  ] = useState(0)
-
-  const [
-    maxPriceWithRealEstateAssistance,
-    setMaxPriceWithRealEstateAssistance,
-  ] = useState(0)
+  const [withRealEstateAssistance, setWithRealEstateAssistance] = useState(0)
 
   console.log(
     flatOrHouse,
@@ -320,14 +305,8 @@ const Calculator = () => {
         return (
           <Component16
             onBack={handleBack}
-            minPriceWithoutRealEstateAssistance={
-              minPriceWithoutRealEstateAssistance
-            }
-            maxPriceWithoutRealEstateAssistance={
-              maxPriceWithoutRealEstateAssistance
-            }
-            minPriceWithRealEstateAssistance={minPriceWithRealEstateAssistance}
-            maxPriceWithRealEstateAssistance={maxPriceWithRealEstateAssistance}
+            withoutRealEstateAssistance={withoutRealEstateAssistance}
+            withRealEstateAssistance={withRealEstateAssistance}
           />
         )
 
@@ -517,10 +496,13 @@ const Calculator = () => {
       )
       console.log('RESULTS', calculated)
       if (calculated !== null || calculated !== '') {
-        setMinPriceWithoutRealEstateAssistance(calculated.noProvisionLow)
-        setMaxPriceWithoutRealEstateAssistance(calculated.noProvisionHigh)
-        setMinPriceWithRealEstateAssistance(calculated.averageLow)
-        setMaxPriceWithRealEstateAssistance(calculated.averageHigh)
+        setWithoutRealEstateAssistance(
+          Math.floor(calculated.noProvision / 1000) * 1000
+        )
+
+        setWithRealEstateAssistance(
+          Math.floor(calculated.withProvision / 1000) * 1000
+        )
       }
       const sendEmail = async () => {
         const { data } = await axios.put(
@@ -555,10 +537,8 @@ const Calculator = () => {
             urbanQuality,
             monthlyCosts,
             email,
-            minPriceWithoutRealEstateAssistance,
-            maxPriceWithoutRealEstateAssistance,
-            minPriceWithRealEstateAssistance,
-            maxPriceWithRealEstateAssistance,
+            withoutRealEstateAssistance,
+            withRealEstateAssistance,
           }
 
           //config

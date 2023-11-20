@@ -346,18 +346,15 @@ export const result = (
   }
   const averageOfAll = calculateAverage(result)
   // Add or subtract 5% to the original value
-  let average = Math.floor(averageOfAll)
-  let averageLow = Math.ceil(averageOfAll * 0.95)
-  let averageHigh = Math.floor(averageOfAll)
-  let noProvisionLow = Math.ceil(averageLow * 1.05)
-  let noProvisionHigh = Math.ceil(averageHigh * 1.05)
+  let withProvision = Math.floor(averageOfAll)
+  let noProvision = Math.ceil(averageOfAll * 0.95)
+  // let averageHigh = Math.floor(averageOfAll)
+  // let noProvisionLow = Math.ceil(averageLow * 1.05)
+  // let noProvisionHigh = Math.ceil(averageHigh * 1.05)
 
   return {
-    average: average,
-    noProvisionLow: noProvisionLow,
-    noProvisionHigh: noProvisionHigh,
-    averageLow: averageLow,
-    averageHigh: averageHigh,
+    noProvision,
+    withProvision,
   }
 }
 

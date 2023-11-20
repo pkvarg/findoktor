@@ -2,10 +2,8 @@ import React from 'react'
 
 const Component16 = ({
   onBack,
-  minPriceWithoutRealEstateAssistance,
-  maxPriceWithoutRealEstateAssistance,
-  minPriceWithRealEstateAssistance,
-  maxPriceWithRealEstateAssistance,
+  withoutRealEstateAssistance,
+  withRealEstateAssistance,
 }) => {
   return (
     <div className='flex flex-col relative w mx-4 md:mx-[20%] lg:mx-[40%] -mt-[30%] md:-mt-[20%] lg:-mt-[10%]'>
@@ -19,8 +17,7 @@ const Component16 = ({
       <div className='flex flex-col justify-center mt-2'>
         <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] flex flex-col relative'>
           <p className='text-[20px] text-[#0076ba] font-bold absolute top-[33%] right-4 text-right'>
-            {minPriceWithoutRealEstateAssistance}€ -{' '}
-            {maxPriceWithoutRealEstateAssistance}€
+            {withoutRealEstateAssistance} €
           </p>
 
           <p className='text-[#ff010f] text-[12.5px] absolute top-14 left-2'>
@@ -29,8 +26,7 @@ const Component16 = ({
         </div>
         <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative mt-8'>
           <p className='text-[20px] text-[#0076ba] font-bold absolute top-[33%] right-4 text-right'>
-            {minPriceWithRealEstateAssistance}€ -{' '}
-            {maxPriceWithRealEstateAssistance}€
+            {withRealEstateAssistance} €
           </p>
 
           <p className='text-[#ff010f] text-[12.5px] leading-[12.5px] absolute top-[112%] left-2'>
