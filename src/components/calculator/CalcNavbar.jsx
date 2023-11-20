@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const CalcNavbar = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
-    <div className='flex flex-row justify-center items-center mt-2 gap-[40%] md:gap-[52.5%] lg:gap-[45%]'>
+    <div className='flex flex-row justify-center items-center mt-2 gap-[45%] md:gap-[52.5%] lg:gap-[45%]'>
       <div className='flex flex-row items-center gap-2 lg:gap-2'>
         {/* <div className='flex flex-col gap-[4px] lg:gap-[4px]'>
           <div className='h-[5px] lg:h-[5px] bg-[#0076ba]  w-[30px] lg:w-[25px]'></div>

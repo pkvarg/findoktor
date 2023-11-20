@@ -41,6 +41,9 @@ export const result = (
   const averageTotalSquareMeterPrice = 3860
   const averageTotalBratislavaSquareMeterPrice = 4073
   let holdValue
+  let districtValueHold
+  let roomValueHold
+  let averageOfDistrictPlusRoom
   const result = []
   result.push(bratislava)
 
@@ -54,6 +57,7 @@ export const result = (
       (dsrct) => dsrct.district === district
     )
     console.log('districtPrice', districtPrice)
+    districtValueHold = districtPrice
     result.push(districtPrice)
     console.log('resArray', result)
   }
@@ -65,24 +69,26 @@ export const result = (
       (rooms) => rooms.rooms == countRooms
     )
     result.push(roomsPrice)
+    roomValueHold = roomsPrice
     console.log(result)
-    // assign holdValue to current roomsPrice
-    holdValue = roomsPrice
   }
 
   getRoomPrice(countRooms)
 
   const getConditionPrice = (houseCondition) => {
     const getConditionCoeficient = (houseCondition) => {
-      if (houseCondition === 1) return 1
-      if (houseCondition === 2) return 0.8
+      if (houseCondition === 1) return 1.7
+      if (houseCondition === 2) return 1.2
       if (houseCondition === 3) return 0.65
       if (houseCondition === 4) return 0.5
     }
 
+    averageOfDistrictPlusRoom = (districtValueHold + roomValueHold) / 2
+    console.log('averageOfDistrictPlusRoom', averageOfDistrictPlusRoom)
+
     const conditionPrice = Math.ceil(
       // hold is current roomsPrice
-      holdValue * getConditionCoeficient(houseCondition)
+      averageOfDistrictPlusRoom * getConditionCoeficient(houseCondition)
     )
     console.log('conditionPrice', conditionPrice)
     result.push(conditionPrice)
@@ -112,6 +118,8 @@ export const result = (
     const { floorCountValue } = floorCountAndValue.find(
       (flrCnt) => flrCnt.floorCount == floorsCounted
     )
+    let newAverage = (averageOfDistrictPlusRoom + result[3] + result[4]) / 3
+    holdValue = newAverage
     const floorCountPrice = Math.ceil(holdValue * floorCountValue)
     console.log('floorCountPrice', floorCountPrice)
     result.push(floorCountPrice)
