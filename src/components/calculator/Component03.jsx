@@ -20,10 +20,10 @@ const Component03 = ({
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] -mt-[15%] lg:-mt-[10%]'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
+      <h1 className='text-[18px] lg:text-[27.5px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
         V akom stave je nehnuteľnosť?
       </h1>
-      <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
+      <div id='mn' className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         <div
           id='1'
           onClick={() => handleHouseCondition(1)}
@@ -110,16 +110,17 @@ const Component03 = ({
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[17%] md:gap-[9%] lg:gap-[8%] xl:gap-[6%] pt-8'>
+      <div id='bt' className='flex flex-row justify-center gap-4 mt-4'>
+        {/* <div className='flex flex-row justify-center gap-[17%] md:gap-[9%] lg:gap-[8%] xl:gap-[6%] pt-8'> */}
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-9 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-9 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2 w-[165px]'
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2 w-[165px]'
         >
           Ďalej
         </button>

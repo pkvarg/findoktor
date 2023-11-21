@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import streetAndDistrict from './../../../Json/streetAndDistrict.json'
 import { toast } from 'react-hot-toast'
 
@@ -13,8 +13,13 @@ const Component01 = ({
   setHouseNumber,
 }) => {
   const [searchTerm, setSearchTerm] = useState('')
+  const dropdownRef = React.createRef()
 
-  console.log(searchTerm.toLowerCase())
+  const setSearchAndStreet = (input) => {
+    setSearchTerm(input)
+    setStreet(input)
+  }
+
   // Filter streetAndDistrict based on the search term
 
   const filteredStreets = streetAndDistrict
@@ -26,8 +31,11 @@ const Component01 = ({
   //   street.street.toLowerCase().includes(searchTerm.toLowerCase())
   // )
 
-  console.log('filtered', filteredStreets)
+  console.log('filtered', filteredStreets[0] === searchTerm)
   //setStreet(filteredOptions)
+  const [hideStreetDropdown, setHideStreetDropdown] = useState(
+    filteredStreets[0] === searchTerm
+  )
 
   const onNextGuard = () => {
     if (street === '') {
@@ -58,7 +66,7 @@ const Component01 = ({
         <input
           type='text'
           value={city}
-          // onChange={(e) => setCity(e.target.value)}
+          onChange={() => {}}
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
         />
       </div>
@@ -75,19 +83,28 @@ const Component01 = ({
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
         ></input>
 
-        <div
-          //onChange={(e) => setSearchTerm(e.target.value)}
-          //value={street}
-          className='text-[15px] lg:text-[20px] absolute top-9 lg:top-12 right-2 lg:w-[70%] font-bold text-right outline-none z-30'
-        >
-          {searchTerm !== '' && (
-            <ul className='bg-gray-100 pr-2'>
+        {searchTerm === '' && (
+          <p className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'>
+            {street}
+          </p>
+        )}
+
+        <div className='text-[15px] lg:text-[20px] absolute top-[100%] lg:top-[15%] -right-1 lg:w-[70%] font-bold text-right outline-none z-30'>
+          {filteredStreets[0] !== searchTerm && searchTerm !== '' && (
+            <ul className='bg-gray-100 pr-2 rounded-xl'>
               {filteredStreets.map((street, index) => (
-                <li key={index}>{street}</li>
+                <li
+                  onClick={() => setSearchAndStreet(street)}
+                  className='hover:bg-gray-200 '
+                  key={index}
+                  ref={dropdownRef}
+                  tabIndex={0}
+                >
+                  {street}
+                </li>
               ))}
             </ul>
           )}
-          {/* <option className='bg-none'>Zvoľte ulicu</option> */}
         </div>
       </div>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>

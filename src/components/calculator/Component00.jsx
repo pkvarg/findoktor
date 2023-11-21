@@ -27,10 +27,10 @@ const Component00 = ({ handleFlatOrHouse }) => {
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[30px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
+      <h1 className='text-[18px] lg:text-[27.5px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
         <span className='text-red-600'>Zvoľte</span> typ Vašej nehnuteľnosti
       </h1>
-      <div className='flex flex-row justify-center gap-6 lg:gap-4 pt-4'>
+      <div className='flex flex-row justify-center gap-6 lg:gap-8 pt-4'>
         <div
           id='flat'
           onClick={() => handleFlatOrHouse('flat')}
@@ -88,7 +88,7 @@ const Component00 = ({ handleFlatOrHouse }) => {
         />
         <p className='text-[25px] lg:text-[35px]'>Zadarmo</p>
       </div> */}
-      <div className='flex flex-row justify-center items-center gap-6 lg:gap-4 mt-4'>
+      <div className='flex flex-row justify-center items-center gap-6 lg:gap-8 mt-4'>
         <p
           id='phone'
           onClick={() => showContact('phone')}
