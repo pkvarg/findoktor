@@ -14,7 +14,7 @@ const Component15 = ({
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
+      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
         Vaša nehnuteľnosť bola <br /> nacenená
       </h1>
       <img
@@ -34,7 +34,7 @@ const Component15 = ({
         >
           <span>Ak chcete pokračovať ďalej, zadajte Váš mail:</span>
         </label>
-        <div className='border border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative'>
+        <div className='border-2 border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative'>
           <input
             type='text'
             value={email}
@@ -65,10 +65,10 @@ const Component15 = ({
         </div>
       </div>
 
-      <div className='flex flex-row justify-center gap-[40%]  md:gap-[70%] lg:gap-[61%] mt-[40%] lg:mt-[20%]'>
+      <div className='flex flex-row justify-between mt-[40%] lg:mt-[20%]'>
         <button
           onClick={onBack}
-          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Späť
         </button>
@@ -76,7 +76,7 @@ const Component15 = ({
           type='submit'
           //disabled={checkBox === false || !isValid}
           //onClick={onNext}
-          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
         >
           Ďalej
         </button>

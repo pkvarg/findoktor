@@ -25,11 +25,11 @@ const Component11 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-[30%] -mt-[20%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[41%] -mt-[20%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
+      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
         Aký je stav bytového domu?
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
@@ -98,13 +98,13 @@ const Component11 = ({
               alt='newInstallations'
             />
 
-            <p className='font-bold text-[15px] absolute bottom-2 right-2'>
+            <p className='font-bold text-[13.5px] absolute bottom-2 right-1'>
               nové stupačky
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[12%]   md:gap-[6%] lg:gap-[8%] pt-4 lg:pt-8'>
+      <div className='flex flex-row justify-between pt-4 lg:pt-8'>
         {' '}
         <button
           onClick={onBack}

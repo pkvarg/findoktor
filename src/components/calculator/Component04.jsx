@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { toast } from 'react-hot-toast'
 
 const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
+  const inputRef = useRef(null)
+
   const onNextGuard = () => {
     if (squareMeters <= 0 || squareMeters > 999)
       toast.error('Zadajte veľkosť obytnej plochy')
@@ -9,12 +11,18 @@ const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
       onNext()
     }
   }
+
+  useEffect(() => {
+    // Focus the input field when the component mounts
+    inputRef.current.focus()
+  }, [])
+
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-[30%] -mt-[15%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[40%] -mt-[15%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
+      <h1 className='text-[18px] lg:text-[27.5px] text-center font-bold py-2 lg:py-2 leading-[27.5px]'>
         Akú obytnú plochu má byt?
       </h1>
       <div className='flex flex-row justify-center mt-4'>
@@ -29,9 +37,10 @@ const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
           </label>
           <input
             type='number'
-            value={squareMeters}
+            value={squareMeters === 0 ? '' : squareMeters}
             onChange={(e) => setSquareMeters(e.target.value)}
             className='text-[22.5px] lg:text-[25px] absolute top-[24%] lg:top-[24%] right-10 w-[27%] font-bold text-right outline-none'
+            ref={inputRef}
           />
 
           <p className='text-[#0076ba] font-bold text-[17.5px] absolute top-[37%] lg:top-[41%] right-5'>
@@ -39,7 +48,7 @@ const Component04 = ({ onBack, onNext, squareMeters, setSquareMeters }) => {
           </p>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[40%] md:gap-[70%] lg:gap-[62%] mt-[20%]'>
+      <div className='flex flex-row justify-between mt-[20%]'>
         <button
           onClick={onBack}
           className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'

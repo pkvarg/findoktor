@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { result } from '../getResults'
 import { SpinnerFullPage } from '../components'
 import axios from 'axios'
@@ -24,6 +24,7 @@ const Component16 = lazy(() => import('../components/calculator/Component16'))
 const Footer = lazy(() => import('../components/Footer'))
 
 const Calculator = () => {
+  const formRef = useRef(null)
   const [flatOrHouse, setFlatOrHouse] = useState('')
   const [city, setCity] = useState('Bratislava')
   const [street, setStreet] = useState('')
@@ -550,6 +551,31 @@ const Calculator = () => {
     }
   }
 
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      // Check if the pressed key is Enter (key code 13)
+      if (event.key === 'Enter') {
+        // Prevent the default behavior of the Enter key
+        event.preventDefault()
+
+        // Check if the focused element is an input field
+        // if (document.activeElement.tagName.toLowerCase() !== 'input') {
+        // Call your function here
+        // yourFunction()
+        // }
+      }
+    }
+
+    // Add event listener to the form
+    const formElement = formRef.current
+    formElement.addEventListener('keydown', handleKeyPress)
+
+    // Cleanup: Remove event listener when the component unmounts
+    return () => {
+      formElement.removeEventListener('keydown', handleKeyPress)
+    }
+  }, []) // Run the effect only once on mount
+
   return (
     <>
       <Suspense fallback={<SpinnerFullPage />}>
@@ -559,7 +585,7 @@ const Calculator = () => {
             <CalcNavbar />
           </div>
           <div className='flex-1 h-[100%] z-10'>
-            <form onSubmit={handleSubmitForm}>
+            <form onSubmit={handleSubmitForm} ref={formRef}>
               {renderComponent(currentComponent)}
             </form>
           </div>

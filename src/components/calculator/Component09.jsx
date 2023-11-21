@@ -17,12 +17,12 @@ const Component09 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-[30%] -mt-[25%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[40%] -mt-[25%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
-        Je v cene bytu aj miesto pre <br /> automobil?
+      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
+        Je v cene bytu aj miesto <br /> pre automobil?
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
@@ -62,7 +62,7 @@ const Component09 = ({
       </div>
       <div className='flex justify-center'>
         <div
-          className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[12.5px] mt-6 lg:mt-6  h-[55px]'
+          className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[12.5px] mt-6 lg:mt-6  h-[55px] w-[100%]'
           id='noParking'
           onClick={() => setHasNoParking((prev) => !prev)}
         >
@@ -71,7 +71,7 @@ const Component09 = ({
           </p>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[12%] md:gap-[6%] lg:gap-[9%] mt-[10%] lg:mt-[20%]'>
+      <div className='flex flex-row justify-between mt-[10%] lg:mt-[20%]'>
         <button
           onClick={onBack}
           className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'

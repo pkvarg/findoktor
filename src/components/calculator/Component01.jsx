@@ -27,12 +27,8 @@ const Component01 = ({
       option.street.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .map((option) => option.street)
-  // .filter((street) =>
-  //   street.street.toLowerCase().includes(searchTerm.toLowerCase())
-  // )
 
   console.log('filtered', filteredStreets[0] === searchTerm)
-  //setStreet(filteredOptions)
   const [hideStreetDropdown, setHideStreetDropdown] = useState(
     filteredStreets[0] === searchTerm
   )
@@ -83,13 +79,15 @@ const Component01 = ({
           className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
         ></input>
 
-        {searchTerm === '' && (
-          <p className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'>
-            {street}
-          </p>
-        )}
+        {/* {searchTerm === '' && (
+          <input
+            className='text-[15px] lg:text-[20px] text-gray-400 absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
+            value={street}
+            onChange={(e) => setSearchAndStreet(e.target.value)}
+          ></input>
+        )} */}
 
-        <div className='text-[15px] lg:text-[20px] absolute top-[100%] lg:top-[15%] -right-1 lg:w-[70%] font-bold text-right outline-none z-30'>
+        <div className='text-[15px] lg:text-[20px] absolute top-[100%] lg:top-[100%] -right-1 lg:w-[70%] font-bold text-right outline-none z-30'>
           {filteredStreets[0] !== searchTerm && searchTerm !== '' && (
             <ul className='bg-gray-100 pr-2 rounded-xl'>
               {filteredStreets.map((street, index) => (

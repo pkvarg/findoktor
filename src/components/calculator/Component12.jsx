@@ -25,12 +25,12 @@ const Component12 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-[30%] -mt-[25%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[35%] -mt-[25%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[20px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
-        Má byt prvky inteligentnej <br /> domácnosti?
+      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[25px] '>
+        Má byt prvky inteligentnej domácnosti?
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
         {' '}
@@ -99,23 +99,23 @@ const Component12 = ({
               alt='aircon'
             />
 
-            <p className='font-bold text-[12px] leading-[14px] absolute bottom-2 right-2 text-right'>
+            <p className='font-bold text-[10px] leading-[15px] absolute bottom-2 right-1 text-right'>
               klimatizácia/ stropné chladenie
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-[13%] md:gap-[6%] lg:gap-[9%] pt-4 lg:pt-8'>
+      <div className='flex flex-row justify-center gap-4 pt-4 lg:pt-8'>
         {' '}
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2 w-[125px]'
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2 w-[125px]'
         >
           Ďalej
         </button>
