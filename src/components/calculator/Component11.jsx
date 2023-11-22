@@ -25,7 +25,7 @@ const Component11 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative mx-[18%] lg:mx-[41%] -mt-[27.5%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative mx-[18%] lg:mx-[41%] -mt-[32.5%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>

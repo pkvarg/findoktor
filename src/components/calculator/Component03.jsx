@@ -17,7 +17,7 @@ const Component03 = ({
   }
   return (
     <div className='flex flex-col'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] -mt-[15%] lg:-mt-[10%]'>
+      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] -mt-[22.5%] lg:-mt-[10%]'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
       <h1 className='text-[22.5px] lg:text-[27.5px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
