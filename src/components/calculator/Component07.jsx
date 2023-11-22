@@ -9,11 +9,11 @@ const Component07 = ({ onBack, onNext, hasElevator, handleHasElevator }) => {
     }
   }
   return (
-    <div className='flex flex-col relative mx-4 lg:mx-[41%] -mt-[20%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative mx-[15%] lg:mx-[41%] -mt-[20%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
+      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
         Nachádza sa <br /> v bytovom dome výťah?{' '}
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
@@ -52,7 +52,7 @@ const Component07 = ({ onBack, onNext, hasElevator, handleHasElevator }) => {
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-between  mt-[20%]'>
+      <div className='flex flex-row justify-between mt-[20%]'>
         {' '}
         <button
           onClick={onBack}

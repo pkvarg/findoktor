@@ -13,7 +13,7 @@ const Component16 = ({
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[25px]'>
+      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[25px]'>
         Odhadovaná cena Vašej <br /> nehnuteľnosti je:
       </h1>
 
@@ -74,9 +74,9 @@ const Component16 = ({
 
       <button
         onClick={onBack}
-        className='border border-[#0076ba] uppercase text-[15px] px-1 py-2 rounded-[35px] font-bold  hover:border-[#03065f] hover:border-2 w-[30%] mt-16 lg:mt-8'
+        className='border border-[#0076ba] uppercase text-[15px] px-1 py-2 rounded-[35px] font-bold  hover:border-[#03065f] hover:border-2 w-[90%] mt-16 lg:mt-8'
       >
-        Späť
+        Späť (pôjde čoskoro preč 😀)
       </button>
     </div>
   )

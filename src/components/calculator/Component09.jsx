@@ -17,12 +17,12 @@ const Component09 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-[40%] -mt-[25%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative w mx-[18%] lg:mx-[40%] -mt-[30%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
-        Je v cene bytu aj miesto <br /> pre automobil?
+      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
+        Je v cene bytu aj miesto pre automobil?
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
         <div
@@ -66,7 +66,7 @@ const Component09 = ({
           id='noParking'
           onClick={() => setHasNoParking((prev) => !prev)}
         >
-          <p className='text-[20px] text-[#0076ba] font-extrabold text-center leading-[20px] pt-[6%] px-2 lg:px-2'>
+          <p className='text-[20px] text-[#0076ba] font-extrabold text-center leading-[20px] pt-1 lg:pt-[6%] px-2 lg:px-2'>
             Bez vlastného parkovania
           </p>
         </div>

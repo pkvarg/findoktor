@@ -45,11 +45,11 @@ const Component01 = ({
   }
 
   return (
-    <div className='flex flex-col relative mx-4 md:mx-[20%] lg:mx-[35%] -mt-[12.5%] lg:-mt-[7.5%]'>
+    <div className='flex flex-col relative mx-4 md:mx-[20%] lg:mx-[35%] -mt-[20%] lg:-mt-[7.5%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[30px] text-center font-bold py-2 lg:py-2 leading-[30px]'>
+      <h1 className='text-[22.5px] lg:text-[30px] text-center font-bold py-2 lg:py-2 leading-[30px]'>
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>
       <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>

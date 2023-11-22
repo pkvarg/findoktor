@@ -25,11 +25,11 @@ const Component12 = ({
     } else onNext()
   }
   return (
-    <div className='flex flex-col relative w mx-4 lg:mx-[35%] -mt-[25%] lg:-mt-[10%]'>
+    <div className='flex flex-col relative w mx-4 lg:mx-[35%] -mt-[30%] lg:-mt-[10%]'>
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[25px] '>
+      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[25px] '>
         Má byt prvky inteligentnej domácnosti?
       </h1>
       <div className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>

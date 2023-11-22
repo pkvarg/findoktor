@@ -27,7 +27,7 @@ const Component06 = ({
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[17.5px] lg:leading-[22px]'>
+      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[22px]'>
         Na ktorom poschodí sa <br /> nachádza byt?
       </h1>
       <div className='flex flex-row justify-center mt-0'>

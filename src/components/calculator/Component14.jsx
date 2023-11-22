@@ -15,7 +15,7 @@ const Component14 = ({ onBack, onNext, urbanQuality, handleUrbanQuality }) => {
       <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[18px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[20px] lg:leading-[27px]'>
+      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
         Aká je občianska vybavenosť <br /> v danej lokalite?
       </h1>
       <div className='flex flex-row justify-center mt-4'>
