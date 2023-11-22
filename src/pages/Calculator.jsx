@@ -287,6 +287,7 @@ const Calculator = () => {
             onNext={handleNext}
             urbanQuality={urbanQuality}
             handleUrbanQuality={handleUrbanQuality}
+            startCalculation={startCalculation}
           />
         )
 
@@ -463,51 +464,94 @@ const Calculator = () => {
     if (aircon !== null && !hasAirCon) aircon.classList.remove('clicked')
   }, [hasThermostat, hasInternet, hasAlarm, hasAirCon])
 
+  const startCalculation = () => {
+    const calculated = result(
+      city,
+      street,
+      houseNumber,
+      countRooms,
+      houseCondition,
+      squareMeters,
+      allFloorsCount,
+      currentFloorNumber,
+      hasElevator,
+      hasBalcony,
+      hasLoggia,
+      hasTerrace,
+      hasBasement,
+      hasGarage,
+      hasParking,
+      builtYear,
+      hasIsolation,
+      hasNewElevator,
+      hasNewWindows,
+      hasNewInstallations,
+      hasThermostat,
+      hasInternet,
+      hasAlarm,
+      hasAirCon,
+      urbanQuality
+    )
+    const assignResultsDelay = () => {
+      console.log('...RESULTS', calculated)
+      if (calculated !== null || calculated !== '') {
+        setWithoutRealEstateAssistance(
+          Math.floor(calculated.noProvision / 1000) * 1000
+        )
+
+        setWithRealEstateAssistance(
+          Math.floor(calculated.withProvision / 1000) * 1000
+        )
+      }
+    }
+    setTimeout(assignResultsDelay, 9000)
+  }
+
   const handleSubmitForm = (e) => {
     e.preventDefault()
     if (email !== '') {
       setIsValid(validateEmail(email))
-      handleNext()
-      const calculated = result(
-        city,
-        street,
-        houseNumber,
-        countRooms,
-        houseCondition,
-        squareMeters,
-        allFloorsCount,
-        currentFloorNumber,
-        hasElevator,
-        hasBalcony,
-        hasLoggia,
-        hasTerrace,
-        hasBasement,
-        hasGarage,
-        hasParking,
-        builtYear,
-        hasIsolation,
-        hasNewElevator,
-        hasNewWindows,
-        hasNewInstallations,
-        hasThermostat,
-        hasInternet,
-        hasAlarm,
-        hasAirCon,
-        urbanQuality
-      )
 
-      const assignResultsWithDelay = () => {
-        console.log('...RESULTS', calculated)
-        if (calculated !== null || calculated !== '') {
-          setWithoutRealEstateAssistance(
-            Math.floor(calculated.noProvision / 1000) * 1000
-          )
+      // const calculated = result(
+      //   city,
+      //   street,
+      //   houseNumber,
+      //   countRooms,
+      //   houseCondition,
+      //   squareMeters,
+      //   allFloorsCount,
+      //   currentFloorNumber,
+      //   hasElevator,
+      //   hasBalcony,
+      //   hasLoggia,
+      //   hasTerrace,
+      //   hasBasement,
+      //   hasGarage,
+      //   hasParking,
+      //   builtYear,
+      //   hasIsolation,
+      //   hasNewElevator,
+      //   hasNewWindows,
+      //   hasNewInstallations,
+      //   hasThermostat,
+      //   hasInternet,
+      //   hasAlarm,
+      //   hasAirCon,
+      //   urbanQuality
+      // )
 
-          setWithRealEstateAssistance(
-            Math.floor(calculated.withProvision / 1000) * 1000
-          )
-        }
-      }
+      // const assignResultsDelay = () => {
+      //   console.log('...RESULTS', calculated)
+      //   if (calculated !== null || calculated !== '') {
+      //     setWithoutRealEstateAssistance(
+      //       Math.floor(calculated.noProvision / 1000) * 1000
+      //     )
+
+      //     setWithRealEstateAssistance(
+      //       Math.floor(calculated.withProvision / 1000) * 1000
+      //     )
+      //   }
+      // }
 
       const sendEmail = async () => {
         console.log('..sending..')
@@ -553,8 +597,9 @@ const Calculator = () => {
         console.log('ctc:', data)
       }
 
-      setTimeout(assignResultsWithDelay, 5000)
-      setTimeout(sendEmail, 9000)
+      // setTimeout(assignResultsDelay, 9000)
+      setTimeout(handleNext, 4000)
+      setTimeout(sendEmail, 6000)
     }
   }
 

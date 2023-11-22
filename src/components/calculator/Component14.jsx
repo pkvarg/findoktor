@@ -1,11 +1,18 @@
 import React from 'react'
 import { toast } from 'react-hot-toast'
 
-const Component14 = ({ onBack, onNext, urbanQuality, handleUrbanQuality }) => {
+const Component14 = ({
+  onBack,
+  onNext,
+  urbanQuality,
+  handleUrbanQuality,
+  startCalculation,
+}) => {
   const onNextGuard = () => {
     if (urbanQuality === '') {
       toast.error('Vyberte možnosť')
     } else {
+      startCalculation()
       onNext()
     }
   }
