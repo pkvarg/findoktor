@@ -495,17 +495,22 @@ const Calculator = () => {
         hasAirCon,
         urbanQuality
       )
-      console.log('RESULTS', calculated)
-      if (calculated !== null || calculated !== '') {
-        setWithoutRealEstateAssistance(
-          Math.floor(calculated.noProvision / 1000) * 1000
-        )
 
-        setWithRealEstateAssistance(
-          Math.floor(calculated.withProvision / 1000) * 1000
-        )
+      const assignResultsWithDelay = () => {
+        console.log('...RESULTS', calculated)
+        if (calculated !== null || calculated !== '') {
+          setWithoutRealEstateAssistance(
+            Math.floor(calculated.noProvision / 1000) * 1000
+          )
+
+          setWithRealEstateAssistance(
+            Math.floor(calculated.withProvision / 1000) * 1000
+          )
+        }
       }
+
       const sendEmail = async () => {
+        console.log('..sending..')
         const { data } = await axios.put(
           `https://api.pictusweb.com/api/md/email`,
           // `http://localhost:2000/api/md/email`,
@@ -547,7 +552,9 @@ const Calculator = () => {
 
         console.log('ctc:', data)
       }
-      sendEmail()
+
+      setTimeout(assignResultsWithDelay, 5000)
+      setTimeout(sendEmail, 9000)
     }
   }
 
