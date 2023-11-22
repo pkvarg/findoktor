@@ -130,12 +130,17 @@ export const result = (
 
   const getCurrentFloorPrice = (currentFloorNumber) => {
     const assignCurrentFloor = (currentFloorNumber) => {
-      if (currentFloorNumber === 0 || currentFloorNumber === 1) return 0
+      if (currentFloorNumber == 0 || currentFloorNumber == 1) return 0
       if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2
       if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13
       if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20
     }
     const currentFloorAssigned = assignCurrentFloor(currentFloorNumber)
+    const flV = floorNumberAndValue.find(
+      (flr) => flr.floorNumber == currentFloorAssigned
+    )
+
+    console.log('flvl', flV)
     const { floorNumberValue } = floorNumberAndValue.find(
       (flr) => flr.floorNumber == currentFloorAssigned
     )

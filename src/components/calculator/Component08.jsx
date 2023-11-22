@@ -21,7 +21,7 @@ const Component08 = ({
       hasBasement === false
     ) {
       toast.success('Zvolili ste bez súčastí')
-      setTimeout(onNext, 3000)
+      setTimeout(onNext, 2000)
     } else onNext()
   }
   return (

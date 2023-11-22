@@ -21,7 +21,7 @@ const Component12 = ({
       hasAirCon === false
     ) {
       toast.success('Zvolili ste bez uvedenia prvkov')
-      setTimeout(onNext, 3000)
+      setTimeout(onNext, 2000)
     } else onNext()
   }
   return (

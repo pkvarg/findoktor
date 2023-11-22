@@ -21,7 +21,7 @@ const Component11 = ({
       hasNewInstallations === false
     ) {
       toast.success('Zvolili ste bez uvedenia stavu')
-      setTimeout(onNext, 3000)
+      setTimeout(onNext, 2000)
     } else onNext()
   }
   return (
