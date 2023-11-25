@@ -10,6 +10,8 @@ import {
   ServicesPage,
   Ebook,
   Meeting,
+  About,
+  Contact,
   //Calculator,
 } from './pages'
 import { SpinnerFullPage } from './components'
@@ -24,6 +26,8 @@ function App() {
         <Suspense fallback={<SpinnerFullPage />}>
           <Routes>
             <Route path='/' element={<Calculator />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
           </Routes>
         </Suspense>
         <Toaster />

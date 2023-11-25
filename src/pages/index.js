@@ -7,6 +7,8 @@ import ServicesPage from './ServicesPage'
 import Ebook from './Ebook'
 import Meeting from './Meeting'
 import Calculator from './Calculator'
+import About from './About'
+import Contact from './Contact'
 
 export {
   Home,
@@ -18,4 +20,6 @@ export {
   Ebook,
   Meeting,
   Calculator,
+  About,
+  Contact,
 }

@@ -620,7 +620,8 @@ const Calculator = () => {
 
     // Add event listener to the form
     const formElement = formRef.current
-    formElement.addEventListener('keydown', handleKeyPress)
+    if (formElement !== null)
+      formElement.addEventListener('keydown', handleKeyPress)
 
     // Cleanup: Remove event listener when the component unmounts
     return () => {
