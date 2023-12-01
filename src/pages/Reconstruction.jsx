@@ -13,8 +13,8 @@ const Reconstruction = () => {
         <CalcNavbar />
       </div>
       <div className="z-10 h-auto flex-1 lg:h-[100%]">
-        <div className="mt-12 text-[30px]  font-extrabold leading-[30px] text-[#050003] lg:-mt-[10%]">
-          <div className="ml-2 flex justify-start lg:ml-[22%]">
+        <div className="mt-12 text-[30px]  font-extrabold leading-[30px] text-[#050003] lg:-mt-[10%] 2xl:-mt-[7%]">
+          <div className="ml-2 flex justify-start lg:ml-[22%] xl:ml-[24%] 2xl:ml-[32%]">
             <p>
               Snívate o tom, že Váš domov bude vyzerať <br />
               <span className="mr-2 text-[#1871aa]">štýlovo</span>a
@@ -58,7 +58,7 @@ const Reconstruction = () => {
             službu poskytujeme výhradne v Bratislave a blízkom okolí, pre viac
             informácií nás kontaktujte{' '}
           </p>
-          <div className="z-9999 relative mt-8 flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-4">
+          <div className="z-9999 relative mt-8 flex flex-col items-center justify-center gap-6 lg:mt-16 lg:flex-row lg:gap-4">
             <p
               id="phone"
               className="hover-call flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[255px] lg:rounded-[30px] lg:text-[25px] lg:leading-[29.5px]

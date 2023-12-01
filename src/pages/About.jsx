@@ -29,7 +29,7 @@ const About = () => {
             <div className="absolute right-2 top-2 mt-4 w-[110px] rounded-full border-[4px] border-[#0376b7] lg:relative lg:w-auto lg:border-[5px]">
               <img
                 className="h-[110px] w-[110px] rounded-full lg:h-[200px] lg:w-[200px]"
-                src="dovala1.webp"
+                src="about.webp"
                 alt="dovala"
               />
             </div>

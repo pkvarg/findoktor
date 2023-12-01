@@ -53,11 +53,11 @@ const CalcNavbar = () => {
           <div className="absolute -right-[2.5px] top-8 z-20 w-[200px]  border-4 border-[#007ad6] bg-white py-2 lg:top-12">
             <div className="menu flex flex-col pr-[5px] text-[22.5px] font-semibold">
               <a href="/about">O nás</a>
-              <a href="/">Aktuálna ponuka</a>
+              <a href="/current-offer">Aktuálna ponuka</a>
               <a href="/">Nacenenie</a>
               <a href="/">Financie</a>
               <a href="/reconstruction">Rekonštrukcia</a>
-              <a href="/">Naše služby</a>
+              <a href="/our-services">Naše služby</a>
 
               <a href="/contact">Kontakt</a>
             </div>

@@ -13,6 +13,8 @@ import {
   About,
   Contact,
   Reconstruction,
+  OurServices,
+  CurrentOffer,
   //Calculator,
 } from './pages';
 import { SpinnerFullPage } from './components';
@@ -30,6 +32,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/reconstruction" element={<Reconstruction />} />
+            <Route path="/our-services" element={<OurServices />} />
+            <Route path="/current-offer" element={<CurrentOffer />} />
           </Routes>
         </Suspense>
         <Toaster />
