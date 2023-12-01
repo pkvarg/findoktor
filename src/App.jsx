@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense } from 'react';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   Home,
   BlogPage,
@@ -12,12 +12,13 @@ import {
   Meeting,
   About,
   Contact,
+  Reconstruction,
   //Calculator,
-} from './pages'
-import { SpinnerFullPage } from './components'
-const Calculator = lazy(() => import('./pages/Calculator'))
-import { Toaster } from 'react-hot-toast'
-import { StateContext } from './context/StateContext'
+} from './pages';
+import { SpinnerFullPage } from './components';
+const Calculator = lazy(() => import('./pages/Calculator'));
+import { Toaster } from 'react-hot-toast';
+import { StateContext } from './context/StateContext';
 
 function App() {
   return (
@@ -25,15 +26,16 @@ function App() {
       <StateContext>
         <Suspense fallback={<SpinnerFullPage />}>
           <Routes>
-            <Route path='/' element={<Calculator />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path="/" element={<Calculator />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/reconstruction" element={<Reconstruction />} />
           </Routes>
         </Suspense>
         <Toaster />
       </StateContext>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

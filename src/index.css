@@ -58,12 +58,18 @@ section {
   display: none;
 }
 
-.hover-email-address {
+.hover-email-address,
+.hover-email-address-reconstruction {
   display: none;
 }
 
 .hover-email-us:hover ~ .hover-email-address {
   display: inline;
+}
+
+.hover-email-us:hover ~ .hover-email-address-reconstruction {
+  display: inline;
+  font-size: 17.5px;
 }
 
 .hover-email-us:hover {

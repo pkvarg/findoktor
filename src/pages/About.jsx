@@ -7,15 +7,15 @@ const Footer = lazy(() => import('./../components/Footer'));
 
 const About = () => {
   return (
-    <div className="relative flex h-[1300px]  grid-rows-3 flex-col  lg:grid lg:h-screen">
+    <div className="relative flex h-[1200px]  grid-rows-3 flex-col  lg:grid lg:h-screen">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
       <div className="z-10 h-auto flex-1 lg:h-[100%]">
-        <div className="relative mt-2 h-[165px] bg-[#eaf3f6] lg:-mt-[13.5%] lg:h-[205px]">
-          <div className="flex flex-col justify-center gap-0 pt-[3%] lg:flex-row lg:gap-[20%]">
+        <div className="relative mt-2 h-[165px] bg-[#eaf3f6] lg:-mt-[13.5%] lg:h-[205px] xl:-mt-[14%] 2xl:-mt-[12%]">
+          <div className="mx-1 flex flex-col justify-center gap-0 pt-[3%] lg:mx-0 lg:flex-row lg:gap-[20%] xl:gap-[20%] 2xl:gap-[28%]">
             <div className="">
-              <div className="ml-1 mt-4 text-[22.5px] font-semibold leading-[22.5px] text-[#1871aa] lg:ml-0 lg:mt-0 lg:text-[30px] lg:leading-[30px]">
+              <div className="ml-1 mt-4 text-[25px] font-semibold leading-[22.5px] text-[#1871aa] lg:ml-0 lg:mt-0 lg:text-[30px] lg:leading-[30px]">
                 <p className="">Nehnuteľnosti</p>
                 <p className="text-[#747170]">Financie</p>
                 <p className="">Rekonštrukcie</p>
@@ -26,7 +26,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute right-1 top-2 mt-4 w-[110px] rounded-full border-[4px] border-[#0376b7] lg:relative lg:w-auto lg:border-[5px]">
+            <div className="absolute right-2 top-2 mt-4 w-[110px] rounded-full border-[4px] border-[#0376b7] lg:relative lg:w-auto lg:border-[5px]">
               <img
                 className="h-[110px] w-[110px] rounded-full lg:h-[200px] lg:w-[200px]"
                 src="dovala1.webp"
@@ -35,7 +35,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="mx-[22%] mt-[45%] hidden gap-12 lg:mt-24 lg:flex lg:flex-row">
+        <div className="mx-[22%] mt-[45%] hidden gap-12 lg:mt-24 lg:flex lg:flex-row 2xl:mx-[24%] 2xl:mt-32">
           <div>
             <p
               id="phone"
@@ -92,7 +92,7 @@ const About = () => {
         {/* mobile only */}
 
         <div className="mx-2 flex flex-col gap-12 lg:hidden">
-          <div className="mt-4 text-justify text-[22.5px] leading-[22.5px] text-[#445862]">
+          <div className="mt-4 text-justify text-[20px] leading-[20px] text-[#445862]">
             <p>
               Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
               rozhodnutí vo Vašom živote. Je to náročný a pomerne zložitý
