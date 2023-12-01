@@ -1,67 +1,60 @@
-import React from 'react'
-import { lazy, Suspense } from 'react'
+import React from 'react';
+import { lazy, Suspense } from 'react';
 
-import CalcNavbar from '../components/calculator/CalcNavbar'
-import { TfiMapAlt } from 'react-icons/tfi'
-import { TfiEmail } from 'react-icons/tfi'
-import { FiPhone } from 'react-icons/fi'
-const Footer = lazy(() => import('./../components/Footer'))
+import CalcNavbar from '../components/calculator/CalcNavbar';
+import { BiSolidPhoneCall } from 'react-icons/bi';
+const Footer = lazy(() => import('./../components/Footer'));
 
 const About = () => {
   return (
-    <>
-      <CalcNavbar />
-      <div className=''>
-        <div className='relative bg-[#eaf3f6] mt-2 h-[350px] lg:h-[300px]'>
-          <div className='mt-8 absolute left-[6.25%] top-12'>
-            <p className='bg-[#0076b7] w-max text-[#ffffff] text-[18px] px-6 py-1'>
-              Moderný maklér
-            </p>
-            <p className='text-[#0376b7] text-[40px] mt-4'>MICHAL DOVALA</p>
-            <p className='text-[#0376b7] text-[20px]'>
-              Realitný sprostredkovateľ
-            </p>
-          </div>
-          <div className='mt-4 w-[65%] lg:w-[25%] absolute right-[30.5%] lg:right-[12.5%] top-[70%] lg:top-12'>
-            <img
-              className='max-w-[155%] h-[225px] lg:h-[300px]'
-              src='dovala1.webp'
-              alt='dovala'
-            />
+    <div className="relative flex h-[1300px]  grid-rows-3 flex-col  lg:grid lg:h-screen">
+      <div className="h-[min-content]">
+        <CalcNavbar />
+      </div>
+      <div className="z-10 h-auto flex-1 lg:h-[100%]">
+        <div className="relative mt-2 h-[165px] bg-[#eaf3f6] lg:-mt-[13.5%] lg:h-[205px]">
+          <div className="flex flex-col justify-center gap-0 pt-[3%] lg:flex-row lg:gap-[20%]">
+            <div className="">
+              <div className="ml-1 mt-4 text-[22.5px] font-semibold leading-[22.5px] text-[#1871aa] lg:ml-0 lg:mt-0 lg:text-[30px] lg:leading-[30px]">
+                <p className="">Nehnuteľnosti</p>
+                <p className="text-[#747170]">Financie</p>
+                <p className="">Rekonštrukcie</p>
+                <div className="my-2 h-[4px] w-[42%] bg-[#1871aa] lg:w-[102%]"></div>
+                <p className="text-[17.5px] leading-[17.5px] text-[#747170]">
+                  Pomôžeme Vám vybudovať Váš <br /> vysnívaný
+                  <span className="ml-1 text-[#1871aa]">domov</span>
+                </p>
+              </div>
+            </div>
+            <div className="absolute right-1 top-2 mt-4 w-[110px] rounded-full border-[4px] border-[#0376b7] lg:relative lg:w-auto lg:border-[5px]">
+              <img
+                className="h-[110px] w-[110px] rounded-full lg:h-[200px] lg:w-[200px]"
+                src="dovala1.webp"
+                alt="dovala"
+              />
+            </div>
           </div>
         </div>
-        <div className='flex flex-col lg:flex-row justify-center gap-12 mt-[45%] lg:mt-24'>
-          <div className='flex flex-col gap-6 border-4 border-[#eaf3f6] pl-6 lg:pl-12 pr-0 lg:pr-24 pt-10 pb-10 h-max ml-4 lg:ml-[6.25%] mr-4 lg:mr-0'>
-            <div>
-              <div className='flex flex-row gap-4 items-center'>
-                <TfiMapAlt className='text-[30px] text-[#0376b7]' />
-                <p className='text-[#232528] text-[20px]'>Lokalita</p>
+        <div className="mx-[22%] mt-[45%] hidden gap-12 lg:mt-24 lg:flex lg:flex-row">
+          <div>
+            <p
+              id="phone"
+              onClick={() => showContact('phone')}
+              className="flex w-max flex-col items-start gap-2 rounded-[30px] border-[3px] border-[#0076ba] px-4 py-4 text-[20px]  font-bold leading-[20px] text-[#0076ba] lg:rounded-[15px] lg:text-[25px] lg:leading-[29.5px]
+          "
+            >
+              <a className="" href="tel:+421944517560">
+                Zavolajte nám:
+              </a>
+              <div className="flex flex-row items-center gap-2">
+                <BiSolidPhoneCall />
+                <a className="text-[20px]" href="tel:+421944517560">
+                  +421 944 517 560
+                </a>
               </div>
-              <p className='text-[#707f87] text-[14px] ml-[14.5%] lg:ml-[22%]'>
-                Bratislava a okolie
-              </p>
-            </div>
-            <div>
-              <div className='flex flex-row gap-4 items-center'>
-                <TfiEmail className='text-[30px] text-[#0376b7]' />
-                <p className='text-[#232528] text-[20px]'>E-mail</p>
-              </div>
-
-              <p className='text-[#707f87] text-[14px] ml-[14.5%] lg:ml-[22%]'>
-                michal.dovala@modernymakler.sk
-              </p>
-            </div>
-            <div>
-              <div className='flex flex-row gap-4 items-center'>
-                <FiPhone className='text-[30px] text-[#0376b7]' />
-                <p className='text-[#232528] text-[20px]'>Telefón</p>
-              </div>
-              <p className='text-[#707f87] text-[14px] ml-[14.5%] lg:ml-[22%]'>
-                +421 944 517 560
-              </p>
-            </div>
+            </p>
           </div>
-          <div className='text-[#445862] text-[16px] -mt-6 lg:mt-6 tracking-wide ml-6 lg:ml-0 mr-6 lg:mr-[6%] text-justify leading-8'>
+          <div className="ml-6 mr-6 text-justify text-[15px] leading-[15px] text-[#445862] lg:ml-0 lg:mr-0">
             <p>
               Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
               rozhodnutí vo Vašom živote. Je to náročný a pomerne zložitý
@@ -69,38 +62,96 @@ const About = () => {
               na svojej strane partnera, na koho sa môžete spoľahnúť za každých
               okolností. Práve toto poskytujem svojim klientom.
             </p>
-            <p className='mt-4'>
+            <p className="mt-2">
               K realitám som mal vždy blízko, mojim hobby je totiž architektúra
               a dizajn. Navyše ma baví práca s ľuďmi a networking.
             </p>
 
-            <p className='mt-4'>
+            <p className="mt-2">
               Realitný maklér je niekto, kto Vás počas celého procesu zastupuje.
               Je to niekto, kto dokonale pozná Vaše potreby a požiadavky a
               pomáha Vám si splniť Váš sen o vysnívanom bývaní. A presne takýto
               Moderný maklér chcem byť pre Vás.
             </p>
-            <p className='mt-4'>
+            <p className="mt-2">
               Klientom poskytujem počas celej doby spolupráce komplexnú
               starostlivosť, profesionalitu, lojalitu a dlhodobú víziu. Každý
               klient dostane exkluzívnu starostlivosť.
             </p>
-            <p className='mt-4'>
+            <p className="mt-2">
               Práca s ľuďmi ma naučila, aké dôležité je budovať priateľstvo a
               férové partnerstvo s klientom. Práve preto sa sústredím na
               budovanie vzájomnej dôvery a poskytujem svojim klientom komplexné
               služby, či už sa jedná o financovanie a poistenie nehnuteľností,
               ich predaj či nákup, rekonštrukcie alebo prenájom. Všetko
-              dostanete na jedno mieste.
+              dostanete na jednom mieste.
             </p>
           </div>
         </div>
-        <div className='relative mt-4 h-[50px]'>
+
+        {/* mobile only */}
+
+        <div className="mx-2 flex flex-col gap-12 lg:hidden">
+          <div className="mt-4 text-justify text-[22.5px] leading-[22.5px] text-[#445862]">
+            <p>
+              Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
+              rozhodnutí vo Vašom živote. Je to náročný a pomerne zložitý
+              proces, v ktorom číha nejedna nástraha. Práve preto je dobré mať
+              na svojej strane partnera, na koho sa môžete spoľahnúť za každých
+              okolností. Práve toto poskytujem svojim klientom.
+            </p>
+            <p className="mt-2">
+              K realitám som mal vždy blízko, mojim hobby je totiž architektúra
+              a dizajn. Navyše ma baví práca s ľuďmi a networking.
+            </p>
+
+            <p className="mt-2">
+              Realitný maklér je niekto, kto Vás počas celého procesu zastupuje.
+              Je to niekto, kto dokonale pozná Vaše potreby a požiadavky a
+              pomáha Vám si splniť Váš sen o vysnívanom bývaní. A presne takýto
+              Moderný maklér chcem byť pre Vás.
+            </p>
+            <p className="mt-2">
+              Klientom poskytujem počas celej doby spolupráce komplexnú
+              starostlivosť, profesionalitu, lojalitu a dlhodobú víziu. Každý
+              klient dostane exkluzívnu starostlivosť.
+            </p>
+            <p className="mt-2">
+              Práca s ľuďmi ma naučila, aké dôležité je budovať priateľstvo a
+              férové partnerstvo s klientom. Práve preto sa sústredím na
+              budovanie vzájomnej dôvery a poskytujem svojim klientom komplexné
+              služby, či už sa jedná o financovanie a poistenie nehnuteľností,
+              ich predaj či nákup, rekonštrukcie alebo prenájom. Všetko
+              dostanete na jednom mieste.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <p
+              id="phone"
+              onClick={() => showContact('phone')}
+              className="flex w-max flex-col items-center gap-2 rounded-[30px] border-[3px] border-[#0076ba] px-16 py-4 text-[20px] font-bold leading-[20px]  text-[#0076ba] 
+          "
+            >
+              <a className="" href="tel:+421944517560">
+                Zavolajte nám:
+              </a>
+              <div className="flex flex-row items-center gap-2">
+                <BiSolidPhoneCall />
+                <a className="text-[20px]" href="tel:+421944517560">
+                  +421 944 517 560
+                </a>
+              </div>
+            </p>
+          </div>
+        </div>
+
+        <div className="z-0 h-[min-content]">
           <Footer />
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default About
+export default About;

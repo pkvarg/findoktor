@@ -1,26 +1,31 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
-  const location = useLocation()
-  const path = location.pathname
+  const location = useLocation();
+  const path = location.pathname;
 
   return (
-    <div className='bg-[#ffffff] absolute bottom-0 md:bottom-2 left-1/2 -translate-x-[50%] w-[100%]'>
+    <div className="absolute bottom-0 left-1/2 w-[100%] -translate-x-[50%] bg-[#ffffff] md:bottom-2">
       <div
+        // className={
+        //   path === '/'
+        //     ? 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%] lg:text-[15px]'
+        //     : 'mx-[5.75%] mt-8 flex flex-row items-center justify-between pb-2 text-[10px] text-[#007ad6] lg:mt-8 lg:text-[15px]'
+        // }
         className={
           path === '/'
-            ? 'text-[#007ad6] mt-8 lg:mt-8 text-[10px] lg:text-[15px] flex flex-row justify-center items-center gap-[15%] md:gap-[35%] lg:gap-[22.5%]'
-            : 'text-[#007ad6] mt-8 lg:mt-8 text-[10px] lg:text-[15px] flex flex-row justify-between items-center mx-[5.75%] pb-2'
+            ? 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%] lg:text-[15px]'
+            : 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%] lg:text-[15px]'
         }
       >
-        <a className='text-center' href='https://pictusweb.sk' target='_blank'>
+        <a className="text-center" href="https://pictusweb.sk" target="_blank">
           &#60;&#47;&#62; PICTUSWEB Development
         </a>
         <p> &copy; {Date().substring(11, 15)} Všetky práva vyhradené</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
