@@ -23,14 +23,16 @@ const OurServices = () => {
               src="Predaj.webp"
               alt="sale"
             />
-            <p className="text-[16.5px] font-semibold">Predaj nehnuteľnosti</p>
-            <div className="hidden text-[15px] leading-[16px] lg:inline">
+            <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+              Predaj nehnuteľnosti
+            </p>
+            <div className="hidden leading-[16px] lg:inline lg:text-[15px]">
               <p className="mt-1">S nami môžete mať istotu,</p>
               <p>že Vaša nehnuteľnosť</p>
               <p>bude predaná za najvýhodnejšiu</p>
               <p>cenu na trhu.</p>
             </div>
-            <div className="inline text-[15px] leading-[16px] lg:hidden">
+            <div className="inline text-[18px]  leading-[19px] lg:hidden ">
               <p className="mt-1">S nami môžete mať istotu,</p>
               <p>že Vaša nehnuteľnosť bude predaná</p>
               <p> za najvýhodnejšiu cenu na trhu.</p>
@@ -42,7 +44,7 @@ const OurServices = () => {
               src="Prenajom.webp"
               alt="sale"
             />
-            <p className="text-[16.5px] font-semibold">
+            <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
               Prenájom nehnuteľnosti
             </p>
 
@@ -52,7 +54,7 @@ const OurServices = () => {
               <p>na krátkodobý</p>
               <p>alebo dlhodobý prenájom.</p>
             </div>
-            <div className="inline text-[15px] leading-[16px] lg:hidden">
+            <div className="inline text-[18px] leading-[19px] lg:hidden">
               <p className="mt-1">Pomôžeme Vám nájsť tých</p>
               <p>správnych nájomcov na krátkodobý</p>
               <p>alebo dlhodobý prenájom.</p>
@@ -130,9 +132,9 @@ const OurServices = () => {
               src="Property.webp"
               alt="sale"
             />
-            <p className="text-[16.5px] font-semibold">Property management</p>
+            <p className="text-[22.5px] font-semibold">Property management</p>
 
-            <div className="text-[15px] leading-[16px]">
+            <div className="text-[18px] leading-[19px]">
               <p className="mt-1">Ušetrite čas pri správe svojho nájmu.</p>
               <p> Riešenie problémov nechajte na nás.</p>
             </div>
@@ -143,9 +145,9 @@ const OurServices = () => {
               src="Agent.webp"
               alt="sale"
             />
-            <p className="text-[16.5px] font-semibold">Agent kupujúceho</p>
+            <p className="text-[22.5px] font-semibold">Agent kupujúceho</p>
 
-            <div className="text-[15px] leading-[16px]">
+            <div className="text-[18px] leading-[19px]">
               <p className="mt-1">Maklér vždy po boku.</p>
               <p>Vyberieme poradíme, prevedieme Vás</p>
               <p>celým procesom až po kúpu.</p>
@@ -157,8 +159,8 @@ const OurServices = () => {
               src="Inziniering.webp"
               alt="sale"
             />
-            <p className="text-[16.5px] font-semibold">Inžiniering</p>
-            <div className="text-[15px] leading-[16px]">
+            <p className="text-[22.5px] font-semibold">Inžiniering</p>
+            <div className="text-[18px] leading-[19px]">
               <p className="mt-1">Všetky povolenia súvisiace</p>
               <p>so stavbou domu vybavíme za Vás.</p>
             </div>
@@ -169,9 +171,9 @@ const OurServices = () => {
               src="Legalizacia.webp"
               alt="sale"
             />
-            <p className="text-[16.5px] font-semibold">Legalizácia stavieb</p>
+            <p className="text-[22.5px] font-semibold">Legalizácia stavieb</p>
 
-            <div className="text-[15px] leading-[16px]">
+            <div className="text-[18px] leading-[19px]">
               <p className="mt-1">Zameriavame sa na pomoc </p>
               <p> pri usporiadaní vlastníctva a zápis</p>
               <p> stavieb do katastra nehnuteľností.</p>

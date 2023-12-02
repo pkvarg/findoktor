@@ -103,7 +103,7 @@ button {
       rgba(5, 97, 131, 0.645),
       rgba(0, 166, 255, 0.829)
     ),
-    url('realsluzby1.webp');
+    url('./../public/realsluzby1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

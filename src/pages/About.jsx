@@ -26,7 +26,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute right-2 top-12 -mt-[70px] w-auto rounded-full border-[4px] border-[#0376b7]  lg:relative lg:w-auto lg:border-[5px]">
+            <div className="absolute right-2 top-7 w-auto rounded-full border-[4px] border-[#0376b7] lg:relative  lg:-mt-[70px] lg:w-auto lg:border-[5px]">
               <img
                 className="h-[110px] w-[110px] rounded-full lg:h-[190px] lg:w-[190px]"
                 src="about.webp"

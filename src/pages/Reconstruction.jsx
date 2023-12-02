@@ -14,14 +14,14 @@ const Reconstruction = () => {
       </div>
       <div className="z-10 h-auto flex-1 lg:h-[100%]">
         <div className="mt-12 text-[30px]  font-extrabold leading-[30px] text-[#050003] lg:-mt-[10%] 2xl:-mt-[7%]">
-          <div className="ml-2 flex justify-start lg:ml-[22%] xl:ml-[24%] 2xl:ml-[32%]">
+          <div className="ml-4 flex justify-start lg:ml-[22%] xl:ml-[24%] 2xl:ml-[32%]">
             <p>
               Snívate o tom, že Váš domov bude vyzerať <br />
               <span className="mr-2 text-[#1871aa]">štýlovo</span>a
               <span className="ml-2 mr-1 text-[#1871aa]">elegatne</span>?
             </p>
           </div>
-          <div className="mt-16 flex flex-col justify-center gap-6 text-[25px] lg:flex-row">
+          <div className="mt-16 flex flex-col justify-center gap-6 text-[22.5px] lg:flex-row lg:text-[25px]">
             <div className="ml-2 flex flex-col items-start gap-4 lg:ml-[22%]">
               <div className="flex flex-row items-center gap-2 lg:gap-6">
                 <MdEuro className="text-[35px]" />
