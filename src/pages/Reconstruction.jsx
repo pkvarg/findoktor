@@ -53,7 +53,7 @@ const Reconstruction = () => {
               />
             </div>
           </div>
-          <p className="mt-8 text-center text-[12.5px] leading-[17.5px]">
+          <p className="mx-4 mt-8 text-center text-[12.5px] leading-[17.5px] lg:mx-0">
             <span className="mr-2 text-red-400">*</span>
             službu poskytujeme výhradne v Bratislave a blízkom okolí, pre viac
             informácií nás kontaktujte{' '}
