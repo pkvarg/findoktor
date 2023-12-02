@@ -1,64 +1,64 @@
-import React, { lazy, Suspense, useEffect, useRef, useState } from 'react'
-import { result } from '../getResults'
-import { SpinnerFullPage } from '../components'
-import axios from 'axios'
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { result } from '../getResults';
+import { SpinnerFullPage } from '../components';
+import axios from 'axios';
 
-const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'))
-const Component00 = lazy(() => import('../components/calculator/Component00'))
-const Component01 = lazy(() => import('../components/calculator/Component01'))
-const Component02 = lazy(() => import('../components/calculator/Component02'))
-const Component03 = lazy(() => import('../components/calculator/Component03'))
-const Component04 = lazy(() => import('../components/calculator/Component04'))
-const Component05 = lazy(() => import('../components/calculator/Component05'))
-const Component06 = lazy(() => import('../components/calculator/Component06'))
-const Component07 = lazy(() => import('../components/calculator/Component07'))
-const Component08 = lazy(() => import('../components/calculator/Component08'))
-const Component09 = lazy(() => import('../components/calculator/Component09'))
-const Component10 = lazy(() => import('../components/calculator/Component10'))
-const Component11 = lazy(() => import('../components/calculator/Component11'))
-const Component12 = lazy(() => import('../components/calculator/Component12'))
-const Component13 = lazy(() => import('../components/calculator/Component13'))
-const Component14 = lazy(() => import('../components/calculator/Component14'))
-const Component15 = lazy(() => import('../components/calculator/Component15'))
-const Component16 = lazy(() => import('../components/calculator/Component16'))
-const Footer = lazy(() => import('../components/Footer'))
+const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'));
+const Component00 = lazy(() => import('../components/calculator/Component00'));
+const Component01 = lazy(() => import('../components/calculator/Component01'));
+const Component02 = lazy(() => import('../components/calculator/Component02'));
+const Component03 = lazy(() => import('../components/calculator/Component03'));
+const Component04 = lazy(() => import('../components/calculator/Component04'));
+const Component05 = lazy(() => import('../components/calculator/Component05'));
+const Component06 = lazy(() => import('../components/calculator/Component06'));
+const Component07 = lazy(() => import('../components/calculator/Component07'));
+const Component08 = lazy(() => import('../components/calculator/Component08'));
+const Component09 = lazy(() => import('../components/calculator/Component09'));
+const Component10 = lazy(() => import('../components/calculator/Component10'));
+const Component11 = lazy(() => import('../components/calculator/Component11'));
+const Component12 = lazy(() => import('../components/calculator/Component12'));
+const Component13 = lazy(() => import('../components/calculator/Component13'));
+const Component14 = lazy(() => import('../components/calculator/Component14'));
+const Component15 = lazy(() => import('../components/calculator/Component15'));
+const Component16 = lazy(() => import('../components/calculator/Component16'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Calculator = () => {
-  const formRef = useRef(null)
-  const [flatOrHouse, setFlatOrHouse] = useState('')
-  const [city, setCity] = useState('Bratislava')
-  const [street, setStreet] = useState('')
-  const [houseNumber, setHouseNumber] = useState('')
-  const [countRooms, setCountRooms] = useState(0)
-  const [houseCondition, setHouseCondition] = useState(0)
-  const [squareMeters, setSquareMeters] = useState(0)
-  const [allFloorsCount, setAllFloorsCount] = useState(0)
-  const [currentFloorNumber, setCurrentFloorNumber] = useState(0)
-  const [hasElevator, setHasElevator] = useState('')
-  const [hasBalcony, setHasBalcony] = useState(false)
-  const [hasLoggia, setHasLoggia] = useState(false)
-  const [hasTerrace, setHasTerrace] = useState(false)
-  const [hasBasement, setHasBasement] = useState(false)
-  const [hasGarage, setHasGarage] = useState(false)
-  const [hasParking, setHasParking] = useState(false)
-  const [hasNoParking, setHasNoParking] = useState(false)
-  const [builtYear, setBuiltYear] = useState(0)
-  const [hasIsolation, setHasIsolation] = useState(false)
-  const [hasNewElevator, setHasNewElevator] = useState(false)
-  const [hasNewWindows, setHasNewWindows] = useState(false)
-  const [hasNewInstallations, setHasNewInstallations] = useState(false)
-  const [hasThermostat, setHasThermostat] = useState(false)
-  const [hasInternet, setHasInternet] = useState(false)
-  const [hasAlarm, setHasAlarm] = useState(false)
-  const [hasAirCon, setHasAircon] = useState(false)
-  const [monthlyCosts, setMonthlyCosts] = useState(0)
-  const [urbanQuality, setUrbanQuality] = useState('')
-  const [email, setEmail] = useState('')
-  const [checkBox, setCheckBox] = useState(false)
+  const formRef = useRef(null);
+  const [flatOrHouse, setFlatOrHouse] = useState('');
+  const [city, setCity] = useState('Bratislava');
+  const [street, setStreet] = useState('');
+  const [houseNumber, setHouseNumber] = useState('');
+  const [countRooms, setCountRooms] = useState(0);
+  const [houseCondition, setHouseCondition] = useState(0);
+  const [squareMeters, setSquareMeters] = useState(0);
+  const [allFloorsCount, setAllFloorsCount] = useState(0);
+  const [currentFloorNumber, setCurrentFloorNumber] = useState(0);
+  const [hasElevator, setHasElevator] = useState('');
+  const [hasBalcony, setHasBalcony] = useState(false);
+  const [hasLoggia, setHasLoggia] = useState(false);
+  const [hasTerrace, setHasTerrace] = useState(false);
+  const [hasBasement, setHasBasement] = useState(false);
+  const [hasGarage, setHasGarage] = useState(false);
+  const [hasParking, setHasParking] = useState(false);
+  const [hasNoParking, setHasNoParking] = useState(false);
+  const [builtYear, setBuiltYear] = useState(0);
+  const [hasIsolation, setHasIsolation] = useState(false);
+  const [hasNewElevator, setHasNewElevator] = useState(false);
+  const [hasNewWindows, setHasNewWindows] = useState(false);
+  const [hasNewInstallations, setHasNewInstallations] = useState(false);
+  const [hasThermostat, setHasThermostat] = useState(false);
+  const [hasInternet, setHasInternet] = useState(false);
+  const [hasAlarm, setHasAlarm] = useState(false);
+  const [hasAirCon, setHasAircon] = useState(false);
+  const [monthlyCosts, setMonthlyCosts] = useState(0);
+  const [urbanQuality, setUrbanQuality] = useState('');
+  const [email, setEmail] = useState('');
+  const [checkBox, setCheckBox] = useState(false);
   const [withoutRealEstateAssistance, setWithoutRealEstateAssistance] =
-    useState(0)
+    useState(0);
 
-  const [withRealEstateAssistance, setWithRealEstateAssistance] = useState(0)
+  const [withRealEstateAssistance, setWithRealEstateAssistance] = useState(0);
 
   console.log(
     flatOrHouse,
@@ -89,37 +89,37 @@ const Calculator = () => {
     monthlyCosts,
     urbanQuality,
     email,
-    checkBox
-  )
+    checkBox,
+  );
 
   const [currentlyClickedRoomCount, setCurrentlyClickedRoomCount] =
-    useState(null)
-  const [currentConditionClicked, setCurrentConditionClicked] = useState(null)
+    useState(null);
+  const [currentConditionClicked, setCurrentConditionClicked] = useState(null);
   const [currentElevatorStatusClicked, setCurrentElevatorStatusClicked] =
-    useState(null)
+    useState(null);
 
   const [currentSmartHomeItemsClicked, setCurrentSmartHomeItemsClicked] =
-    useState(null)
+    useState(null);
 
   const [currentUrbanQualityClicked, setCurrentUrbanQualityClicked] =
-    useState(null)
+    useState(null);
 
   const [currentFlatOrHouseClicked, setCurrentFlatOrHouseClicked] =
-    useState(null)
+    useState(null);
 
-  const [currentComponent, setCurrentComponent] = useState(0)
+  const [currentComponent, setCurrentComponent] = useState(0);
 
   const handleNext = () => {
     if (currentComponent < 16) {
-      setCurrentComponent(currentComponent + 1)
+      setCurrentComponent(currentComponent + 1);
     }
-  }
+  };
 
   const handleBack = () => {
     if (currentComponent > 0) {
-      setCurrentComponent(currentComponent - 1)
+      setCurrentComponent(currentComponent - 1);
     }
-  }
+  };
 
   const renderComponent = (componentNumber) => {
     switch (componentNumber) {
@@ -129,7 +129,7 @@ const Calculator = () => {
             onNext={handleNext}
             handleFlatOrHouse={handleFlatOrHouse}
           />
-        )
+        );
       case 1:
         return (
           <Component01
@@ -142,7 +142,7 @@ const Calculator = () => {
             houseNumber={houseNumber}
             setHouseNumber={setHouseNumber}
           />
-        )
+        );
       case 2:
         return (
           <Component02
@@ -151,7 +151,7 @@ const Calculator = () => {
             currentlyClickedRoomCount={currentlyClickedRoomCount}
             handleCountRoomClick={handleCountRoomClick}
           />
-        )
+        );
       case 3:
         return (
           <Component03
@@ -160,7 +160,7 @@ const Calculator = () => {
             handleHouseCondition={handleHouseCondition}
             currentConditionClicked={currentConditionClicked}
           />
-        )
+        );
       case 4:
         return (
           <Component04
@@ -169,7 +169,7 @@ const Calculator = () => {
             squareMeters={squareMeters}
             setSquareMeters={setSquareMeters}
           />
-        )
+        );
       case 5:
         return (
           <Component05
@@ -178,7 +178,7 @@ const Calculator = () => {
             allFloorsCount={allFloorsCount}
             setAllFloorsCount={setAllFloorsCount}
           />
-        )
+        );
       case 6:
         return (
           <Component06
@@ -187,7 +187,7 @@ const Calculator = () => {
             currentFloorNumber={currentFloorNumber}
             setCurrentFloorNumber={setCurrentFloorNumber}
           />
-        )
+        );
       case 7:
         return (
           <Component07
@@ -196,7 +196,7 @@ const Calculator = () => {
             hasElevator={hasElevator}
             handleHasElevator={handleHasElevator}
           />
-        )
+        );
 
       case 8:
         return (
@@ -212,7 +212,7 @@ const Calculator = () => {
             setHasTerrace={setHasTerrace}
             setHasBasement={setHasBasement}
           />
-        )
+        );
 
       case 9:
         return (
@@ -226,7 +226,7 @@ const Calculator = () => {
             setHasParking={setHasParking}
             setHasNoParking={setHasNoParking}
           />
-        )
+        );
 
       case 10:
         return (
@@ -236,7 +236,7 @@ const Calculator = () => {
             builtYear={builtYear}
             setBuiltYear={setBuiltYear}
           />
-        )
+        );
 
       case 11:
         return (
@@ -252,7 +252,7 @@ const Calculator = () => {
             setHasNewWindows={setHasNewWindows}
             setHasNewInstallations={setHasNewInstallations}
           />
-        )
+        );
 
       case 12:
         return (
@@ -268,7 +268,7 @@ const Calculator = () => {
             setHasAlarm={setHasAlarm}
             setHasAircon={setHasAircon}
           />
-        )
+        );
 
       case 13:
         return (
@@ -278,7 +278,7 @@ const Calculator = () => {
             monthlyCosts={monthlyCosts}
             setMonthlyCosts={setMonthlyCosts}
           />
-        )
+        );
 
       case 14:
         return (
@@ -289,7 +289,7 @@ const Calculator = () => {
             handleUrbanQuality={handleUrbanQuality}
             startCalculation={startCalculation}
           />
-        )
+        );
 
       case 15:
         return (
@@ -302,7 +302,7 @@ const Calculator = () => {
             checkBox={checkBox}
             setCheckBox={setCheckBox}
           />
-        )
+        );
       case 16:
         return (
           <Component16
@@ -310,159 +310,161 @@ const Calculator = () => {
             withoutRealEstateAssistance={withoutRealEstateAssistance}
             withRealEstateAssistance={withRealEstateAssistance}
           />
-        )
+        );
 
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   const handleCountRoomClick = (count) => {
     if (currentlyClickedRoomCount !== null) {
-      const toRemoveFrom = document.getElementById(currentlyClickedRoomCount)
-      toRemoveFrom.classList.remove('clicked')
+      const toRemoveFrom = document.getElementById(currentlyClickedRoomCount);
+      toRemoveFrom.classList.remove('clicked');
     }
-    setCountRooms(count)
-    setCurrentlyClickedRoomCount(count)
-    const element = document.getElementById(count)
-    element.classList.add('clicked')
-  }
+    setCountRooms(count);
+    setCurrentlyClickedRoomCount(count);
+    const element = document.getElementById(count);
+    element.classList.add('clicked');
+  };
 
   const handleHouseCondition = (num) => {
     if (currentConditionClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentConditionClicked)
-      toRemoveFrom.classList.remove('clicked')
+      const toRemoveFrom = document.getElementById(currentConditionClicked);
+      toRemoveFrom.classList.remove('clicked');
     }
-    setHouseCondition(num)
-    setCurrentConditionClicked(num)
-    const element = document.getElementById(num)
-    element.classList.add('clicked')
-  }
+    setHouseCondition(num);
+    setCurrentConditionClicked(num);
+    const element = document.getElementById(num);
+    element.classList.add('clicked');
+  };
 
   const handleHasElevator = (elevator) => {
     if (currentElevatorStatusClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentElevatorStatusClicked)
-      toRemoveFrom.classList.remove('clicked')
+      const toRemoveFrom = document.getElementById(
+        currentElevatorStatusClicked,
+      );
+      toRemoveFrom.classList.remove('clicked');
     }
-    setHasElevator(elevator)
-    setCurrentElevatorStatusClicked(elevator)
-    const element = document.getElementById(elevator)
-    element.classList.add('clicked')
-  }
+    setHasElevator(elevator);
+    setCurrentElevatorStatusClicked(elevator);
+    const element = document.getElementById(elevator);
+    element.classList.add('clicked');
+  };
 
   const handleUrbanQuality = (quality) => {
     if (currentUrbanQualityClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentUrbanQualityClicked)
-      toRemoveFrom.classList.remove('clicked')
+      const toRemoveFrom = document.getElementById(currentUrbanQualityClicked);
+      toRemoveFrom.classList.remove('clicked');
     }
-    setUrbanQuality(quality)
-    setCurrentUrbanQualityClicked(quality)
-    const element = document.getElementById(quality)
-    element.classList.add('clicked')
-  }
+    setUrbanQuality(quality);
+    setCurrentUrbanQualityClicked(quality);
+    const element = document.getElementById(quality);
+    element.classList.add('clicked');
+  };
 
   const handleFlatOrHouse = (building) => {
     if (currentFlatOrHouseClicked !== null) {
-      const toRemoveFrom = document.getElementById(currentFlatOrHouseClicked)
-      toRemoveFrom.classList.remove('clicked')
+      const toRemoveFrom = document.getElementById(currentFlatOrHouseClicked);
+      toRemoveFrom.classList.remove('clicked');
     }
-    setFlatOrHouse(building)
-    setCurrentFlatOrHouseClicked(building)
-    const element = document.getElementById(building)
-    element.classList.add('clicked')
-    setTimeout(handleNext, 1000)
-  }
+    setFlatOrHouse(building);
+    setCurrentFlatOrHouseClicked(building);
+    const element = document.getElementById(building);
+    element.classList.add('clicked');
+    setTimeout(handleNext, 1000);
+  };
 
   const validateEmail = (email) => {
     // Regular expression to validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email)
-  }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
-  const [isValid, setIsValid] = useState(false)
+  const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {
     if (email !== '') {
-      setIsValid(validateEmail(email))
+      setIsValid(validateEmail(email));
     }
-  }, [email])
+  }, [email]);
 
-  const balcony = document.getElementById('balcony')
-  const loggia = document.getElementById('loggia')
-  const terrace = document.getElementById('terrace')
-  const basement = document.getElementById('basement')
-
-  useEffect(() => {
-    if (balcony !== null && hasBalcony) balcony.classList.add('clicked')
-    if (balcony !== null && !hasBalcony) balcony.classList.remove('clicked')
-    if (loggia !== null && hasLoggia) loggia.classList.add('clicked')
-    if (loggia !== null && !hasLoggia) loggia.classList.remove('clicked')
-    if (terrace !== null && hasTerrace) terrace.classList.add('clicked')
-    if (terrace !== null && !hasTerrace) terrace.classList.remove('clicked')
-    if (basement !== null && hasBasement) basement.classList.add('clicked')
-    if (basement !== null && !hasBasement) basement.classList.remove('clicked')
-  }, [hasBalcony, hasLoggia, hasTerrace, hasBasement])
-
-  const garage = document.getElementById('garage')
-  const parking = document.getElementById('parking')
-  const noParking = document.getElementById('noParking')
+  const balcony = document.getElementById('balcony');
+  const loggia = document.getElementById('loggia');
+  const terrace = document.getElementById('terrace');
+  const basement = document.getElementById('basement');
 
   useEffect(() => {
-    if (garage !== null && hasGarage) garage.classList.add('clicked')
-    if (garage !== null && !hasGarage) garage.classList.remove('clicked')
-    if (parking !== null && hasParking) parking.classList.add('clicked')
-    if (parking !== null && !hasParking) parking.classList.remove('clicked')
+    if (balcony !== null && hasBalcony) balcony.classList.add('clicked');
+    if (balcony !== null && !hasBalcony) balcony.classList.remove('clicked');
+    if (loggia !== null && hasLoggia) loggia.classList.add('clicked');
+    if (loggia !== null && !hasLoggia) loggia.classList.remove('clicked');
+    if (terrace !== null && hasTerrace) terrace.classList.add('clicked');
+    if (terrace !== null && !hasTerrace) terrace.classList.remove('clicked');
+    if (basement !== null && hasBasement) basement.classList.add('clicked');
+    if (basement !== null && !hasBasement) basement.classList.remove('clicked');
+  }, [hasBalcony, hasLoggia, hasTerrace, hasBasement]);
+
+  const garage = document.getElementById('garage');
+  const parking = document.getElementById('parking');
+  const noParking = document.getElementById('noParking');
+
+  useEffect(() => {
+    if (garage !== null && hasGarage) garage.classList.add('clicked');
+    if (garage !== null && !hasGarage) garage.classList.remove('clicked');
+    if (parking !== null && hasParking) parking.classList.add('clicked');
+    if (parking !== null && !hasParking) parking.classList.remove('clicked');
     if (noParking !== null && hasNoParking) {
-      setHasParking(false)
-      setHasGarage(false)
-      garage.classList.remove('clicked')
-      parking.classList.remove('clicked')
-      noParking.classList.add('clicked')
+      setHasParking(false);
+      setHasGarage(false);
+      garage.classList.remove('clicked');
+      parking.classList.remove('clicked');
+      noParking.classList.add('clicked');
     }
     if (noParking !== null && !hasNoParking)
-      noParking.classList.remove('clicked')
-  }, [hasGarage, hasParking, hasNoParking])
+      noParking.classList.remove('clicked');
+  }, [hasGarage, hasParking, hasNoParking]);
 
-  const isolation = document.getElementById('isolation')
-  const newElevator = document.getElementById('newElevator')
-  const newWindows = document.getElementById('newWindows')
-  const newInstallations = document.getElementById('newInstallations')
+  const isolation = document.getElementById('isolation');
+  const newElevator = document.getElementById('newElevator');
+  const newWindows = document.getElementById('newWindows');
+  const newInstallations = document.getElementById('newInstallations');
 
   useEffect(() => {
-    if (isolation !== null && hasIsolation) isolation.classList.add('clicked')
+    if (isolation !== null && hasIsolation) isolation.classList.add('clicked');
     if (isolation !== null && !hasIsolation)
-      isolation.classList.remove('clicked')
+      isolation.classList.remove('clicked');
     if (newElevator !== null && hasNewElevator)
-      newElevator.classList.add('clicked')
+      newElevator.classList.add('clicked');
     if (newElevator !== null && !hasNewElevator)
-      newElevator.classList.remove('clicked')
+      newElevator.classList.remove('clicked');
     if (newWindows !== null && hasNewWindows)
-      newWindows.classList.add('clicked')
+      newWindows.classList.add('clicked');
     if (newWindows !== null && !hasNewWindows)
-      newWindows.classList.remove('clicked')
+      newWindows.classList.remove('clicked');
     if (newInstallations !== null && hasNewInstallations)
-      newInstallations.classList.add('clicked')
+      newInstallations.classList.add('clicked');
     if (newInstallations !== null && !hasNewInstallations)
-      newInstallations.classList.remove('clicked')
-  }, [hasIsolation, hasNewElevator, hasNewWindows, hasNewInstallations])
+      newInstallations.classList.remove('clicked');
+  }, [hasIsolation, hasNewElevator, hasNewWindows, hasNewInstallations]);
 
-  const thermostat = document.getElementById('thermostat')
-  const internet = document.getElementById('internet')
-  const alarm = document.getElementById('alarm')
-  const aircon = document.getElementById('aircon')
+  const thermostat = document.getElementById('thermostat');
+  const internet = document.getElementById('internet');
+  const alarm = document.getElementById('alarm');
+  const aircon = document.getElementById('aircon');
 
   useEffect(() => {
     if (thermostat !== null && hasThermostat)
-      thermostat.classList.add('clicked')
+      thermostat.classList.add('clicked');
     if (thermostat !== null && !hasThermostat)
-      thermostat.classList.remove('clicked')
-    if (internet !== null && hasInternet) internet.classList.add('clicked')
-    if (internet !== null && !hasInternet) internet.classList.remove('clicked')
-    if (alarm !== null && hasAlarm) alarm.classList.add('clicked')
-    if (alarm !== null && !hasAlarm) alarm.classList.remove('clicked')
-    if (aircon !== null && hasAirCon) aircon.classList.add('clicked')
-    if (aircon !== null && !hasAirCon) aircon.classList.remove('clicked')
-  }, [hasThermostat, hasInternet, hasAlarm, hasAirCon])
+      thermostat.classList.remove('clicked');
+    if (internet !== null && hasInternet) internet.classList.add('clicked');
+    if (internet !== null && !hasInternet) internet.classList.remove('clicked');
+    if (alarm !== null && hasAlarm) alarm.classList.add('clicked');
+    if (alarm !== null && !hasAlarm) alarm.classList.remove('clicked');
+    if (aircon !== null && hasAirCon) aircon.classList.add('clicked');
+    if (aircon !== null && !hasAirCon) aircon.classList.remove('clicked');
+  }, [hasThermostat, hasInternet, hasAlarm, hasAirCon]);
 
   const startCalculation = () => {
     const calculated = result(
@@ -490,71 +492,30 @@ const Calculator = () => {
       hasInternet,
       hasAlarm,
       hasAirCon,
-      urbanQuality
-    )
+      urbanQuality,
+    );
     const assignResultsDelay = () => {
-      console.log('...RESULTS', calculated)
-      if (calculated !== null || calculated !== '') {
+      console.log('...RESULTS', calculated);
+      if (calculated != null || calculated != '' || calculated != 0) {
         setWithoutRealEstateAssistance(
-          Math.floor(calculated.noProvision / 1000) * 1000
-        )
+          Math.floor(calculated.noProvision / 1000) * 1000,
+        );
 
         setWithRealEstateAssistance(
-          Math.floor(calculated.withProvision / 1000) * 1000
-        )
+          Math.floor(calculated.withProvision / 1000) * 1000,
+        );
       }
-    }
-    setTimeout(assignResultsDelay, 9000)
-  }
+    };
+    setTimeout(assignResultsDelay, 9000);
+  };
 
   const handleSubmitForm = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (email !== '') {
-      setIsValid(validateEmail(email))
-
-      // const calculated = result(
-      //   city,
-      //   street,
-      //   houseNumber,
-      //   countRooms,
-      //   houseCondition,
-      //   squareMeters,
-      //   allFloorsCount,
-      //   currentFloorNumber,
-      //   hasElevator,
-      //   hasBalcony,
-      //   hasLoggia,
-      //   hasTerrace,
-      //   hasBasement,
-      //   hasGarage,
-      //   hasParking,
-      //   builtYear,
-      //   hasIsolation,
-      //   hasNewElevator,
-      //   hasNewWindows,
-      //   hasNewInstallations,
-      //   hasThermostat,
-      //   hasInternet,
-      //   hasAlarm,
-      //   hasAirCon,
-      //   urbanQuality
-      // )
-
-      // const assignResultsDelay = () => {
-      //   console.log('...RESULTS', calculated)
-      //   if (calculated !== null || calculated !== '') {
-      //     setWithoutRealEstateAssistance(
-      //       Math.floor(calculated.noProvision / 1000) * 1000
-      //     )
-
-      //     setWithRealEstateAssistance(
-      //       Math.floor(calculated.withProvision / 1000) * 1000
-      //     )
-      //   }
-      // }
+      setIsValid(validateEmail(email));
 
       const sendEmail = async () => {
-        console.log('..sending..')
+        console.log('..sending..');
         const { data } = await axios.put(
           `https://api.pictusweb.com/api/md/email`,
           // `http://localhost:2000/api/md/email`,
@@ -589,26 +550,26 @@ const Calculator = () => {
             email,
             withoutRealEstateAssistance,
             withRealEstateAssistance,
-          }
+          },
 
           //config
-        )
+        );
 
-        console.log('ctc:', data)
-      }
+        console.log('ctc:', data);
+      };
 
       // setTimeout(assignResultsDelay, 9000)
-      setTimeout(handleNext, 4000)
-      setTimeout(sendEmail, 6000)
+      setTimeout(handleNext, 4000);
+      setTimeout(sendEmail, 9000);
     }
-  }
+  };
 
   useEffect(() => {
     const handleKeyPress = (event) => {
       // Check if the pressed key is Enter (key code 13)
       if (event.key === 'Enter') {
         // Prevent the default behavior of the Enter key
-        event.preventDefault()
+        event.preventDefault();
 
         // Check if the focused element is an input field
         // if (document.activeElement.tagName.toLowerCase() !== 'input') {
@@ -616,39 +577,39 @@ const Calculator = () => {
         // yourFunction()
         // }
       }
-    }
+    };
 
     // Add event listener to the form
-    const formElement = formRef.current
+    const formElement = formRef.current;
     if (formElement !== null)
-      formElement.addEventListener('keydown', handleKeyPress)
+      formElement.addEventListener('keydown', handleKeyPress);
 
     // Cleanup: Remove event listener when the component unmounts
     return () => {
-      formElement.removeEventListener('keydown', handleKeyPress)
-    }
-  }, []) // Run the effect only once on mount
+      formElement.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []); // Run the effect only once on mount
 
   return (
     <>
       <Suspense fallback={<SpinnerFullPage />}>
         {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
-        <div className='grid grid-rows-3 relative text-black bg-white text-[30px] h-[90vh] lg:h-screen'>
-          <div className='h-[min-content]'>
+        <div className="relative grid h-[90vh] grid-rows-3 bg-white text-[30px] text-black lg:h-screen">
+          <div className="h-[min-content]">
             <CalcNavbar />
           </div>
-          <div className='flex-1 h-[100%] z-10'>
+          <div className="z-10 h-[100%] flex-1">
             <form onSubmit={handleSubmitForm} ref={formRef}>
               {renderComponent(currentComponent)}
             </form>
           </div>
-          <div className='h-[min-content] z-0'>
+          <div className="z-0 h-[min-content]">
             <Footer />
           </div>
         </div>
       </Suspense>
     </>
-  )
-}
+  );
+};
 
-export default Calculator
+export default Calculator;
