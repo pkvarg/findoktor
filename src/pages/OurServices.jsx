@@ -9,12 +9,11 @@ const OurServices = () => {
         <CalcNavbar />
       </div>
       <div className="z-10 h-auto flex-1 lg:h-[100%]">
-        <div className="mt-12 flex flex-col items-start justify-center gap-10 lg:-mt-[10%] lg:flex-row lg:items-center 2xl:-mt-[7%]">
-          <div className="bg-blue-900 px-14 py-8 text-[20px] uppercase text-white lg:px-4">
+        <div className="mt-6 flex flex-col items-start justify-center gap-10 lg:-mt-[10%] lg:flex-row lg:items-center 2xl:-mt-[7%]">
+          <div className="realsluzby px-14 py-8 text-[20px] uppercase text-white lg:px-4">
             <p className="font-extrabold">Realitné služby, ktoré </p>
             <p className="font-thin">sa prispôsobia Vašim</p>
             <p className="font-thin">potrebám</p>
-            img
           </div>
           <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
             <img

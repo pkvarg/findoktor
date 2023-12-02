@@ -96,9 +96,24 @@ button {
   cursor: pointer;
 }
 
-/* button:hover {
-  border: 5px solid #03065f;
-} */
+.realsluzby {
+  background-image: linear-gradient(
+      to bottom,
+      #0076babf,
+      rgba(5, 97, 131, 0.645),
+      rgba(0, 166, 255, 0.829)
+    ),
+    url('realsluzby1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
 
-/* separate content to more sections
-and add height to subs like one two... */
+@media screen and (max-width: 768px) {
+  .realsluzby {
+    width: 100vw;
+    height: 225px;
+  }
+}
