@@ -1,5 +1,5 @@
-import React from 'react'
-import { toast } from 'react-hot-toast'
+import React from 'react';
+import { toast } from 'react-hot-toast';
 
 const Component03 = ({
   onBack,
@@ -8,100 +8,101 @@ const Component03 = ({
   currentConditionClicked,
 }) => {
   const onNextGuard = () => {
-    console.log(currentConditionClicked)
+    console.log(currentConditionClicked);
     if (currentConditionClicked === null) {
-      toast.error('Zvoľte stav nehnuteľnosti')
+      toast.error('Zvoľte stav nehnuteľnosti');
     } else {
-      onNext()
+      onNext();
     }
-  }
+  };
   return (
-    <div className='flex flex-col'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] -mt-[22.5%] lg:-mt-[10%]'>
+    <div className="flex flex-col">
+      <p className=" text-center text-[10px] text-[#0076ba]  lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[22.5px] lg:text-[27.5px] text-center font-bold py-2 lg:py-2 leading-[17.5px]'>
+
+      <h1 className="py-2 text-center text-[22.5px] font-bold leading-[17.5px] lg:py-2 lg:text-[27.5px]">
         V akom stave je nehnuteľnosť?
       </h1>
-      <div id='mn' className='flex flex-row justify-center gap-4 lg:gap-4 mt-4'>
+      <div id="mn" className="mt-4 flex flex-row justify-center gap-4 lg:gap-4">
         <div
-          id='1'
+          id="1"
           onClick={() => handleHouseCondition(1)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[145px] lg:w-[165px] h-[140px] lg:h-[160px] flex flex-col relative'
+          className="relative flex h-[140px] w-[145px] flex-col rounded-[35px] border-2 border-[#0076ba] px-2 py-2 lg:h-[160px] lg:w-[165px]"
         >
           <div>
             <img
-              className='w-[100%] mt-[10%] lg:mt-[10%]'
-              src='/cnd01.webp'
-              alt='home01'
+              className="mt-[10%] w-[100%] lg:mt-[10%]"
+              src="/cnd01.webp"
+              alt="home01"
             />
-            <div className='bg-[#000000] h-[2px]'></div>
-            <p className='font-bold text-[15px] lg:text-[17.5px] absolute top-[62.5%] right-4'>
+            <div className="h-[2px] bg-[#000000]"></div>
+            <p className="absolute right-4 top-[62.5%] text-[15px] font-bold lg:text-[17.5px]">
               Novostavba
             </p>
-            <p className='text-right mr-2 text-[#0076ba]  text-[10px] lg:text-[12.5px] leading-[12.5px] absolute top-[77.5%] right-2'>
+            <p className="absolute right-2 top-[77.5%]  mr-2 text-right text-[10px] leading-[12.5px] text-[#0076ba] lg:text-[12.5px]">
               Byt bol postavený iba <br /> nedávno
             </p>
           </div>
         </div>
         <div
-          id='2'
+          id="2"
           onClick={() => handleHouseCondition(2)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[145px] lg:w-[165px] h-[140px] lg:h-[160px] flex flex-col relative'
+          className="relative flex h-[140px] w-[145px] flex-col rounded-[35px] border-2 border-[#0076ba] px-2 py-2 lg:h-[160px] lg:w-[165px]"
         >
           <div>
             <img
-              className='w-[70%] mt-[10%] lg:mt-[8.5%] ml-[5%]'
-              src='/cnd02.webp'
-              alt='home02'
+              className="ml-[5%] mt-[10%] w-[70%] lg:mt-[8.5%]"
+              src="/cnd02.webp"
+              alt="home02"
             />
-            <div className='bg-[#000000] h-[3px]'></div>
-            <p className='font-bold text-[15px] lg:text-[17.5px] absolute top-[62.5%] right-4'>
+            <div className="h-[3px] bg-[#000000]"></div>
+            <p className="absolute right-4 top-[62.5%] text-[15px] font-bold lg:text-[17.5px]">
               Vynikajúci
             </p>
-            <p className='text-right mr-2 text-[#0076ba]  text-[10px] lg:text-[12.5px] leading-[12.5px] absolute top-[77.5%] right-2'>
+            <p className="absolute right-2 top-[77.5%]  mr-2 text-right text-[10px] leading-[12.5px] text-[#0076ba] lg:text-[12.5px]">
               Byt je kompletne zrekonštruovaný
             </p>
           </div>
         </div>
       </div>
-      <div className='mt-4 flex flex-row justify-center gap-4 lg:gap-4'>
+      <div className="mt-4 flex flex-row justify-center gap-4 lg:gap-4">
         <div
-          id='3'
+          id="3"
           onClick={() => handleHouseCondition(3)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[145px] lg:w-[165px] h-[140px] lg:h-[160px] flex flex-col relative'
+          className="relative flex h-[140px] w-[145px] flex-col rounded-[35px] border-2 border-[#0076ba] px-2 py-2 lg:h-[160px] lg:w-[165px]"
         >
           <div>
             <img
-              className='w-[100%] mt-[10%] lg:mt-[8.5%]'
-              src='/cnd03.webp'
-              alt='home03'
+              className="mt-[10%] w-[100%] lg:mt-[8.5%]"
+              src="/cnd03.webp"
+              alt="home03"
             />
-            <div className='bg-[#000000] h-[3px]'></div>
-            <p className='font-bold text-[15px] lg:text-[17.5px] absolute top-[62.5%] right-4'>
+            <div className="h-[3px] bg-[#000000]"></div>
+            <p className="absolute right-4 top-[62.5%] text-[15px] font-bold lg:text-[17.5px]">
               Dobrý
             </p>
-            <p className='text-right mr-2 text-[#0076ba]  text-[10px] lg:text-[12.5px] leading-[12.5px] absolute top-[77.5%] right-2'>
+            <p className="absolute right-2 top-[77.5%]  mr-2 text-right text-[10px] leading-[12.5px] text-[#0076ba] lg:text-[12.5px]">
               Niečo už potrebuje modernizovať
             </p>
           </div>
         </div>
         <div
-          id='4'
+          id="4"
           onClick={() => handleHouseCondition(4)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[35px] w-[145px] lg:w-[165px] h-[140px] lg:h-[160px] flex flex-col relative'
+          className="relative flex h-[140px] w-[145px] flex-col rounded-[35px] border-2 border-[#0076ba] px-2 py-2 lg:h-[160px] lg:w-[165px]"
         >
           <div>
             <img
-              className='w-[75%] mt-[6%] lg:mt-[7%] ml-[7%]'
-              src='/cnd04.webp'
-              alt='home04'
+              className="ml-[7%] mt-[6%] w-[75%] lg:mt-[7%]"
+              src="/cnd04.webp"
+              alt="home04"
             />
-            <div className='bg-[#000000] h-[3px] mt-2'></div>
-            <p className='font-bold text-[15px] lg:text-[17.5px] absolute top-[62.5%] right-4'>
+            <div className="mt-2 h-[3px] bg-[#000000]"></div>
+            <p className="absolute right-4 top-[62.5%] text-[15px] font-bold lg:text-[17.5px]">
               Pôvodný
             </p>
-            <p className='text-right mr-2 text-[#0076ba]  text-[10px] lg:text-[12.5px] leading-[12.5px] absolute top-[77.5%] right-2'>
+            <p className="absolute right-2 top-[77.5%]  mr-2 text-right text-[10px] leading-[12.5px] text-[#0076ba] lg:text-[12.5px]">
               Byt potrebuje celkovú rekonštrukciu
             </p>
             {/* <p className='mt-0 mr-2 text-[#0076ba] text-[18px] text-right'>
@@ -110,23 +111,23 @@ const Component03 = ({
           </div>
         </div>
       </div>
-      <div id='bt' className='flex flex-row justify-center gap-4 mt-4'>
+      <div id="bt" className="mt-4 flex flex-row justify-center gap-4">
         {/* <div className='flex flex-row justify-center gap-[17%] md:gap-[9%] lg:gap-[8%] xl:gap-[6%] pt-8'> */}
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-9 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2 w-[145px] lg:w-[165px]'
+          className="h-10 w-[145px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:w-[165px] lg:px-9 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2 w-[145px] lg:w-[165px]'
+          className="h-10 w-[145px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:w-[165px] lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Ďalej
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Component03
+export default Component03;

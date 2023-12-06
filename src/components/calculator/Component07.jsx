@@ -1,74 +1,74 @@
-import React from 'react'
-import { toast } from 'react-hot-toast'
+import React from 'react';
+import { toast } from 'react-hot-toast';
 
 const Component07 = ({ onBack, onNext, hasElevator, handleHasElevator }) => {
   const onNextGuard = () => {
-    if (hasElevator === '') toast.error('Zvoľte možnosť')
+    if (hasElevator === '') toast.error('Zvoľte možnosť');
     else {
-      onNext()
+      onNext();
     }
-  }
+  };
   return (
-    <div className='flex flex-col relative mx-[15%] lg:mx-[41%] -mt-[25%] lg:-mt-[10%]'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
+    <div className="relative mx-[15%] flex flex-col lg:mx-[1%]">
+      <p className="pt-12 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
+      <h1 className="py-2 text-center text-[22.5px] font-bold leading-[22.5px] lg:py-2 lg:text-[25px] lg:leading-[27px]">
         Nachádza sa <br /> v bytovom dome výťah?{' '}
       </h1>
-      <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
+      <div className="mt-4 flex flex-row justify-center gap-4 lg:gap-6">
         <div
-          id='hasElevator'
+          id="hasElevator"
           onClick={() => handleHasElevator('hasElevator')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[50%] mt-[10%] lg:mt-[10%] ml-[25%]'
-              src='/elevator1.webp'
-              alt='elevator'
+              className="ml-[25%] mt-[10%] w-[50%] lg:mt-[10%]"
+              src="/elevator1.webp"
+              alt="elevator"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               áno
             </p>
           </div>
         </div>
         <div
-          id='noElevator'
+          id="noElevator"
           onClick={() => handleHasElevator('noElevator')}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[60%] mt-[10%] lg:mt-[10%] ml-[19%]'
-              src='/elevator2.webp'
-              alt='stairs'
+              className="ml-[19%] mt-[10%] w-[60%] lg:mt-[10%]"
+              src="/elevator2.webp"
+              alt="stairs"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               nie
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-between mt-[20%]'>
+      <div className="mt-[20%] flex flex-row justify-between">
         {' '}
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
           Ďalej
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Component07
+export default Component07;

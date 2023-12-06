@@ -109,9 +109,12 @@ const Calculator = () => {
 
   const [currentComponent, setCurrentComponent] = useState(0);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleNext = () => {
     if (currentComponent < 16) {
       setCurrentComponent(currentComponent + 1);
+      setIsLoading(false);
     }
   };
 
@@ -301,6 +304,7 @@ const Calculator = () => {
             setEmail={setEmail}
             checkBox={checkBox}
             setCheckBox={setCheckBox}
+            isLoading={isLoading}
           />
         );
       case 16:
@@ -513,6 +517,7 @@ const Calculator = () => {
     e.preventDefault();
     if (email !== '') {
       setIsValid(validateEmail(email));
+      setIsLoading(true);
 
       const sendEmail = async () => {
         console.log('..sending..');
@@ -598,7 +603,7 @@ const Calculator = () => {
           <div className="h-[min-content]">
             <CalcNavbar />
           </div>
-          <div className="z-10 h-[100%] flex-1">
+          <div className="z-10 flex h-[100%] items-center  justify-center">
             <form onSubmit={handleSubmitForm} ref={formRef}>
               {renderComponent(currentComponent)}
             </form>

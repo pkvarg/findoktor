@@ -5,21 +5,23 @@ const Component00 = ({ handleFlatOrHouse }) => {
   const [showEmail, setShowEmail] = useState(false);
   const phone = '+421944517560';
   const email = 'michaldovala.gmail.com';
+  const [isHoveredPhone, setIsHoveredPhone] = useState(false);
+  const [isHoveredEmail, setIsHoveredEmail] = useState(false);
 
-  const showContact = (info) => {
-    if (info === 'phone') {
-      // setShowPhone(phone)
-      setShowPhone(true);
-      const phoneEl = document.getElementById('phone');
-      phoneEl.classList.add('noBorder');
-    }
-    if (info === 'email') {
-      // setShowEmail(email)
-      setShowEmail(true);
-      const emailEl = document.getElementById('email');
+  const handleMouseEnterPhone = () => {
+    setIsHoveredPhone(true);
+  };
 
-      emailEl.classList.add('noBorder');
-    }
+  const handleMouseLeavePhone = () => {
+    setIsHoveredPhone(false);
+  };
+
+  const handleMouseEnterEmail = () => {
+    setIsHoveredEmail(true);
+  };
+
+  const handleMouseLeaveEmail = () => {
+    setIsHoveredEmail(false);
   };
 
   return (
@@ -69,31 +71,39 @@ const Component00 = ({ handleFlatOrHouse }) => {
         <p
           id="phone"
           onClick={() => showContact('phone')}
-          className="hover-call flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[385px] lg:rounded-[35px] lg:text-[25px] lg:leading-[29.5px]
+          className="flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[385px] lg:rounded-[35px] lg:text-[25px] lg:leading-[29.5px]
           "
         >
-          <a className="hover-call-us" href="tel:+421944517560">
-            Zavolajte nám
-          </a>
-          <a className="hover-phone" href="tel:+421944517560">
-            {phone}
-          </a>
+          {isHoveredPhone ? (
+            <a onMouseLeave={handleMouseLeavePhone} href="tel:+421944517560">
+              {phone}
+            </a>
+          ) : (
+            <a onMouseEnter={handleMouseEnterPhone} href="tel:+421944517560">
+              Zavolajte nám
+            </a>
+          )}
         </p>
         <p
           id="email"
           onClick={() => showContact('email')}
-          className="hover-email flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba]  py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[385px] lg:rounded-[35px] lg:text-[25px] lg:leading-[29.5px]"
+          className="flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba]  py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[385px] lg:rounded-[35px] lg:text-[25px] lg:leading-[29.5px]"
         >
-          <a className="hover-email-us" href="mailto:michaldovala@gmail.com">
-            Napíšte nám
-          </a>
-
-          <a
-            className="hover-email-address"
-            href="mailto:michaldovala@gmail.com"
-          >
-            {email}
-          </a>
+          {isHoveredEmail ? (
+            <a
+              onMouseLeave={handleMouseLeaveEmail}
+              href="mailto:michaldovala@gmail.com"
+            >
+              {email}
+            </a>
+          ) : (
+            <a
+              onMouseEnter={handleMouseEnterEmail}
+              href="mailto:michaldovala@gmail.com"
+            >
+              Napíšte nám
+            </a>
+          )}
         </p>
       </div>
     </div>

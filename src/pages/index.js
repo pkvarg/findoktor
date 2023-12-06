@@ -6,6 +6,7 @@ import Contact from './Contact';
 import Reconstruction from './Reconstruction';
 import OurServices from './OurServices';
 import CurrentOffer from './CurrentOffer';
+import Rules from './Rules';
 
 export {
   ServicesPage,
@@ -16,4 +17,5 @@ export {
   Reconstruction,
   OurServices,
   CurrentOffer,
+  Rules,
 };

@@ -8,6 +8,7 @@ import {
   Reconstruction,
   OurServices,
   CurrentOffer,
+  Rules,
 } from './pages';
 import { SpinnerFullPage } from './components';
 const Calculator = lazy(() => import('./pages/Calculator'));
@@ -24,6 +25,7 @@ function App() {
           <Route path="/reconstruction" element={<Reconstruction />} />
           <Route path="/our-services" element={<OurServices />} />
           <Route path="/current-offer" element={<CurrentOffer />} />
+          <Route path="/rules" element={<Rules />} />
         </Routes>
       </Suspense>
       <Toaster />

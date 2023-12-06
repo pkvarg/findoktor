@@ -1,5 +1,5 @@
-import React from 'react'
-import { toast } from 'react-hot-toast'
+import React from 'react';
+import { toast } from 'react-hot-toast';
 
 const Component08 = ({
   onBack,
@@ -20,107 +20,107 @@ const Component08 = ({
       hasTerrace === false &&
       hasBasement === false
     ) {
-      toast.success('Zvolili ste bez súčastí')
-      setTimeout(onNext, 2000)
-    } else onNext()
-  }
+      toast.success('Zvolili ste bez súčastí');
+      setTimeout(onNext, 2000);
+    } else onNext();
+  };
   return (
-    <div className='flex flex-col relative mx-[18%] lg:mx-[41%] -mt-[32.5%] lg:-mt-[10%]'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
+    <div className="relative mx-[18%] flex flex-col lg:mx-[7%]">
+      <p className="pt-12 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
+      <h1 className="py-2 text-center text-[22.5px] font-bold leading-[22.5px] lg:py-2 lg:text-[25px] lg:leading-[27px]">
         Čo ďalšie je súčasťou bytu?{' '}
       </h1>
-      <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
+      <div className="mt-4 flex flex-row justify-center gap-4 lg:gap-6">
         <div
-          id='balcony'
+          id="balcony"
           onClick={() => setHasBalcony((prev) => !prev)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[60%] mt-[5%] ml-[20%]'
-              src='/balcony1.webp'
-              alt='balcony1'
+              className="ml-[20%] mt-[5%] w-[60%]"
+              src="/balcony1.webp"
+              alt="balcony1"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               balkón
             </p>
           </div>
         </div>
         <div
-          id='loggia'
+          id="loggia"
           onClick={() => setHasLoggia((prev) => !prev)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[58%] mt-[7%] ml-[24%]'
-              src='/balcony2.webp'
-              alt='balcony2'
+              className="ml-[24%] mt-[7%] w-[58%]"
+              src="/balcony2.webp"
+              alt="balcony2"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               loggia
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
+      <div className="mt-4 flex flex-row justify-center gap-4 lg:gap-6">
         <div
-          id='terrace'
+          id="terrace"
           onClick={() => setHasTerrace((prev) => !prev)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[62%] lg:w-[57%] mt-[7%] ml-[18%] lg:ml-[22%]'
-              src='/balcony3.webp'
-              alt='balcony3'
+              className="ml-[18%] mt-[7%] w-[62%] lg:ml-[22%] lg:w-[57%]"
+              src="/balcony3.webp"
+              alt="balcony3"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               Terasa
             </p>
           </div>
         </div>
         <div
-          id='basement'
+          id="basement"
           onClick={() => setHasBasement((prev) => !prev)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[62%] lg:w-[55%] mt-[8%] ml-[20%] lg:ml-[24%]'
-              src='/balcony4.webp'
-              alt='balcony3'
+              className="ml-[20%] mt-[8%] w-[62%] lg:ml-[24%] lg:w-[55%]"
+              src="/balcony4.webp"
+              alt="balcony3"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               pivnica
             </p>
           </div>
         </div>
       </div>
-      <div className='flex flex-row justify-between mt-[10%] lg:mt-[20%]'>
+      <div className="mt-[10%] flex flex-row justify-between lg:mt-[20%]">
         {' '}
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
           Ďalej
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Component08
+export default Component08;

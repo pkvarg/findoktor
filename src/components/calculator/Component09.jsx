@@ -1,5 +1,5 @@
-import React from 'react'
-import { toast } from 'react-hot-toast'
+import React from 'react';
+import { toast } from 'react-hot-toast';
 
 const Component09 = ({
   onBack,
@@ -13,80 +13,80 @@ const Component09 = ({
 }) => {
   const onNextGuard = () => {
     if (hasGarage === false && hasParking === false && hasNoParking === false) {
-      toast.error('Zvolťe možnosť')
-    } else onNext()
-  }
+      toast.error('Zvolťe možnosť');
+    } else onNext();
+  };
   return (
-    <div className='flex flex-col relative w mx-[18%] lg:mx-[40%] -mt-[30%] lg:-mt-[10%]'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
+    <div className="relative mx-[18%] flex flex-col lg:mx-[20%]">
+      <p className="pt-12 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
+      <h1 className="py-2 text-center text-[22.5px] font-bold leading-[22.5px] lg:py-2 lg:text-[25px] lg:leading-[27px]">
         Je v cene bytu aj miesto pre automobil?
       </h1>
-      <div className='flex flex-row justify-center gap-4 lg:gap-6 mt-4'>
+      <div className="mt-4 flex flex-row justify-center gap-4 lg:gap-6">
         <div
-          id='garage'
+          id="garage"
           onClick={() => setHasGarage((prev) => !prev)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[80%] mt-[18%] ml-[10%] lg:ml-[12%]'
-              src='/garage1.webp'
-              alt='garage'
+              className="ml-[10%] mt-[18%] w-[80%] lg:ml-[12%]"
+              src="/garage1.webp"
+              alt="garage"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               garáž
             </p>
           </div>
         </div>
         <div
-          id='parking'
+          id="parking"
           onClick={() => setHasParking((prev) => !prev)}
-          className='border-2 border-[#0076ba] px-2 py-2 rounded-[25px] w-[125px] h-[120px] flex flex-col relative'
+          className="relative flex h-[120px] w-[125px] flex-col rounded-[25px] border-2 border-[#0076ba] px-2 py-2"
         >
           <div>
             <img
-              className='w-[40%] lg:w-[37%] mt-[18%] ml-[32%] lg:ml-[34%]'
-              src='/garage2.webp'
-              alt='parking'
+              className="ml-[32%] mt-[18%] w-[40%] lg:ml-[34%] lg:w-[37%]"
+              src="/garage2.webp"
+              alt="parking"
             />
 
-            <p className='font-bold text-[20px] absolute bottom-0 right-3'>
+            <p className="absolute bottom-0 right-3 text-[20px] font-bold">
               státie
             </p>
           </div>
         </div>
       </div>
-      <div className='flex justify-center'>
+      <div className="flex justify-center">
         <div
-          className='border-2 border-[#0076ba] rounded-[20px] lg:rounded-[12.5px] mt-6 lg:mt-6  h-[55px] w-[100%]'
-          id='noParking'
+          className="mt-6 h-[55px] w-[100%] rounded-[20px] border-2 border-[#0076ba]  lg:mt-6 lg:rounded-[12.5px]"
+          id="noParking"
           onClick={() => setHasNoParking((prev) => !prev)}
         >
-          <p className='text-[20px] text-[#0076ba] font-extrabold text-center leading-[20px] pt-1 lg:pt-[6%] px-2 lg:px-2'>
+          <p className="px-2 pt-1 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] lg:px-2 lg:pt-[6%]">
             Bez vlastného parkovania
           </p>
         </div>
       </div>
-      <div className='flex flex-row justify-between mt-[10%] lg:mt-[20%]'>
+      <div className="mt-[10%] flex flex-row justify-between lg:mt-[20%]">
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
           onClick={() => onNextGuard()}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
           Ďalej
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Component09
+export default Component09;

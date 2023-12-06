@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Component15 = ({
   onBack,
@@ -8,55 +8,56 @@ const Component15 = ({
   setEmail,
   checkBox,
   setCheckBox,
+  isLoading,
 }) => {
   return (
-    <div className='flex flex-col relative mx-4 lg:mx-[30%] -mt-[25%] lg:-mt-[10%]'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-6 lg:pt-8'>
+    <div className="relative mx-4 flex flex-col lg:mx-[0%]">
+      <p className="pt-6 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[22.5px] lg:text-[25px] text-center font-bold py-2 lg:py-2 leading-[22.5px] lg:leading-[27px]'>
+      <h1 className="py-2 text-center text-[22.5px] font-bold leading-[22.5px] lg:py-2 lg:text-[25px] lg:leading-[27px]">
         Vaša nehnuteľnosť bola <br /> nacenená
       </h1>
       <img
-        className='flex w-[17.5%] md:w-[12%] lg:w-[17.5%] absolute top-[19%] md:top-[7%]  lg:top-[7%] lg:left-[0%]'
-        src='/firework.webp'
-        alt='firework'
+        className="absolute top-[19%] flex w-[17.5%] md:top-[7%] md:w-[12%] lg:left-[0%]  lg:top-[27%] lg:w-[25%]"
+        src="/firework.webp"
+        alt="firework"
       />
       <img
-        className='flex w-[17.5%] md:w-[12%] lg:w-[17.5%] absolute top-[19%] md:top-[7%]  lg:top-[7%] right-0 lg:right-[0%]'
-        src='/firework.webp'
-        alt='firework'
+        className="absolute right-0 top-[19%] flex w-[17.5%] md:top-[7%] md:w-[12%]  lg:right-[0%] lg:top-[27%] lg:w-[25%]"
+        src="/firework.webp"
+        alt="firework"
       />
-      <div className='flex flex-col justify-center mt-10'>
+      <div className="mt-14 flex flex-col justify-center">
         <label
-          htmlFor='text'
-          className='text-[#0076ba] text-[12.5px] lg:text-[12.5px] ml-1 relative'
+          htmlFor="text"
+          className="relative ml-1 text-[12.5px] text-[#0076ba] lg:text-[12.5px]"
         >
           <span>Ak chcete pokračovať ďalej, zadajte Váš mail:</span>
         </label>
-        <div className='border-2 border-[#0076ba] rounded-lg lg:rounded-xl h-[50px] lg:h-[55px] w-[100%] flex flex-col relative'>
+        <div className="relative flex h-[50px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[55px] lg:rounded-xl">
           <input
-            type='text'
+            type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='text-[17.5px] font-bold absolute top-[32%] text-right w-[93%] lg:w-[96%] h-[50%] outline-none'
-            required='required'
+            className="absolute top-[32%] h-[50%] w-[93%] text-right text-[17.5px] font-bold outline-none lg:w-[96%]"
+            required="required"
           />
-          <div className='flex flex-row justify-start items-center mt-[30%] md:mt-[12.5%] lg:mt-[15%] ml-2'>
+          <div className="ml-2 mt-[30%] flex flex-row items-center justify-start md:mt-[12.5%] lg:mt-[22.5%]">
             <input
-              className='h-[15px] w-[15px] mr-2'
-              type='checkbox'
+              className="mr-2 h-[15px] w-[15px]"
+              type="checkbox"
               defaultChecked={false}
               value={checkBox}
               onChange={() => setCheckBox((prev) => !prev)}
               required
             />
-            <p className='text-[#0076ba] text-[15px]'>
+            <p className="text-[15px] text-[#0076ba]">
               Súhlasím s{' '}
               <a
-                className='underline font-semibold'
-                href='/rules'
-                target='_blank'
+                className="font-semibold underline"
+                href="/rules"
+                target="_blank"
               >
                 podmienkami
               </a>
@@ -65,24 +66,24 @@ const Component15 = ({
         </div>
       </div>
 
-      <div className='flex flex-row justify-between mt-[40%] lg:mt-[20%]'>
+      <div className="mt-[40%] flex flex-row justify-between lg:mt-[20%]">
         <button
           onClick={onBack}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-8 lg:px-8 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          type='submit'
+          type="submit"
           //disabled={checkBox === false || !isValid}
           //onClick={onNext}
-          className='border-2 border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-7 lg:px-7 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border-2 border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
-          Ďalej
+          {isLoading ? 'pracujem...' : 'Ďalej'}
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Component15
+export default Component15;

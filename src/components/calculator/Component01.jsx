@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react'
-import streetAndDistrict from './../../../Json/streetAndDistrict.json'
-import { toast } from 'react-hot-toast'
+import React, { useEffect, useState, useRef } from 'react';
+import streetAndDistrict from './../../../Json/streetAndDistrict.json';
+import { toast } from 'react-hot-toast';
 
 const Component01 = ({
   onNext,
@@ -12,71 +12,71 @@ const Component01 = ({
   houseNumber,
   setHouseNumber,
 }) => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const dropdownRef = React.createRef()
+  const [searchTerm, setSearchTerm] = useState('');
+  const dropdownRef = React.createRef();
 
   const setSearchAndStreet = (input) => {
-    setSearchTerm(input)
-    setStreet(input)
-  }
+    setSearchTerm(input);
+    setStreet(input);
+  };
 
   // Filter streetAndDistrict based on the search term
 
   const filteredStreets = streetAndDistrict
     .filter((option) =>
-      option.street.toLowerCase().includes(searchTerm.toLowerCase())
+      option.street.toLowerCase().includes(searchTerm.toLowerCase()),
     )
-    .map((option) => option.street)
+    .map((option) => option.street);
 
-  console.log('filtered', filteredStreets[0] === searchTerm)
+  console.log('filtered', filteredStreets[0] === searchTerm);
   const [hideStreetDropdown, setHideStreetDropdown] = useState(
-    filteredStreets[0] === searchTerm
-  )
+    filteredStreets[0] === searchTerm,
+  );
 
   const onNextGuard = () => {
     if (street === '') {
-      toast.error('Zvoľte ulicu')
+      toast.error('Zvoľte ulicu');
     }
     if (houseNumber === '') {
-      toast.error('Zadajte číslo')
+      toast.error('Zadajte číslo');
     } else {
-      onNext()
+      onNext();
     }
-  }
+  };
 
   return (
-    <div className='flex flex-col relative mx-4 md:mx-[20%] lg:mx-[35%] -mt-[27.5%] lg:-mt-[7.5%]'>
-      <p className='text-[#0076ba] text-center text-[10px] lg:text-[12.5px] pt-12 lg:pt-8'>
+    <div className="relative mx-4 flex flex-col md:mx-[20%] lg:mx-[10%]">
+      <p className="pt-12 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
-      <h1 className='text-[22.5px] lg:text-[30px] text-center font-bold py-2 lg:py-2 leading-[30px]'>
+      <h1 className="py-2 text-center text-[22.5px] font-bold leading-[30px] lg:py-2 lg:text-[30px]">
         Kde sa nachádza Vaša nehnuteľnosť?
       </h1>
-      <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
+      <div className="relative mt-4 flex h-[50px] flex-col rounded-lg border border-[#0076ba] lg:h-[50px] lg:rounded-xl">
         <label
-          htmlFor='text'
-          className='text-[#0076ba] text-[15px] lg:text-[18px] relative'
+          htmlFor="text"
+          className="relative text-[15px] text-[#0076ba] lg:text-[18px]"
         >
-          <span className='absolute -top-[0px] left-[10px]'>Mesto</span>
+          <span className="absolute -top-[0px] left-[10px]">Mesto</span>
         </label>
         <input
-          type='text'
+          type="text"
           value={city}
           onChange={() => {}}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
+          className="absolute right-3 top-5 text-right text-[15px] font-bold outline-none lg:top-4 lg:w-[70%] lg:text-[20px]"
         />
       </div>
-      <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
+      <div className="relative mt-4 flex h-[50px] flex-col rounded-lg border border-[#0076ba] lg:h-[50px] lg:rounded-xl">
         <label
-          htmlFor='text'
-          className='text-[#0076ba] text-[15px] lg:text-[18px] relative'
+          htmlFor="text"
+          className="relative text-[15px] text-[#0076ba] lg:text-[18px]"
         >
-          <span className='absolute -top-[0px] left-[10px]'>Ulica</span>
+          <span className="absolute -top-[0px] left-[10px]">Ulica</span>
         </label>
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
+          className="absolute right-2 top-5 text-right text-[15px] font-bold outline-none lg:top-4 lg:w-[70%] lg:text-[20px]"
         ></input>
 
         {/* {searchTerm === '' && (
@@ -87,13 +87,13 @@ const Component01 = ({
           ></input>
         )} */}
 
-        <div className='text-[15px] lg:text-[20px] absolute top-[100%] lg:top-[100%] -right-1 lg:w-[70%] font-bold text-right outline-none z-30'>
+        <div className="absolute -right-1 top-[100%] z-30 text-right text-[15px] font-bold outline-none lg:top-[100%] lg:w-[70%] lg:text-[20px]">
           {filteredStreets[0] !== searchTerm && searchTerm !== '' && (
-            <ul className='bg-gray-100 pr-2 rounded-xl'>
+            <ul className="rounded-xl bg-gray-100 pr-2">
               {filteredStreets.map((street, index) => (
                 <li
                   onClick={() => setSearchAndStreet(street)}
-                  className='hover:bg-gray-200 '
+                  className="hover:bg-gray-200 "
                   key={index}
                   ref={dropdownRef}
                   tabIndex={0}
@@ -105,37 +105,37 @@ const Component01 = ({
           )}
         </div>
       </div>
-      <div className='border border-[#0076ba] rounded-lg lg:rounded-xl mt-4 h-[50px] lg:h-[50px] flex flex-col relative'>
+      <div className="relative mt-4 flex h-[50px] flex-col rounded-lg border border-[#0076ba] lg:h-[50px] lg:rounded-xl">
         <label
-          htmlFor='text'
-          className='text-[#0076ba] text-[15px] lg:text-[18px] relative'
+          htmlFor="text"
+          className="relative text-[15px] text-[#0076ba] lg:text-[18px]"
         >
-          <span className='absolute -top-[0px] left-[10px]'>Číslo</span>
+          <span className="absolute -top-[0px] left-[10px]">Číslo</span>
         </label>
         <input
-          type='text'
+          type="text"
           value={houseNumber}
           onChange={(e) => setHouseNumber(e.target.value)}
-          className='text-[15px] lg:text-[20px] absolute top-5 lg:top-4 right-3 lg:w-[70%] font-bold text-right outline-none'
+          className="absolute right-3 top-5 text-right text-[15px] font-bold outline-none lg:top-4 lg:w-[70%] lg:text-[20px]"
         />
       </div>
 
-      <div className='flex flex-row justify-between w-[100%] mb-8 lg:mb-0 mt-[15%]'>
+      <div className="mb-8 mt-[15%] flex w-[100%] flex-row justify-between lg:mb-0">
         <button
           onClick={onBack}
-          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-10 lg:px-10 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border border-[#0076ba] px-10 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-10 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          className='border border-[#0076ba] text-[15px] lg:text-[15px] h-10 lg:h-10 px-9 lg:px-9 py-0 lg:py-2 rounded-[35px] uppercase font-bold hover:border-[#03065f] hover:border-2'
+          className="h-10 rounded-[35px] border border-[#0076ba] px-9 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-9 lg:py-2 lg:text-[15px]"
           onClick={() => onNextGuard()}
         >
           Ďalej
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Component01
+export default Component01;

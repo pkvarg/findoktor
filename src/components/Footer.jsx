@@ -15,14 +15,21 @@ const Footer = () => {
         // }
         className={
           path === '/'
-            ? 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%] lg:text-[15px]'
+            ? 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[25%]  lg:text-[15px]'
             : 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%] lg:text-[15px]'
         }
       >
-        <a className="text-center" href="https://pictusweb.sk" target="_blank">
+        <a
+          className="bg-orange-300  text-center"
+          href="https://pictusweb.sk"
+          target="_blank"
+        >
           &#60;&#47;&#62; PICTUSWEB Development
         </a>
-        <p> &copy; {Date().substring(11, 15)} Všetky práva vyhradené</p>
+        <p className=" bg-orange-300">
+          {' '}
+          &copy; {Date().substring(11, 15)} Všetky práva vyhradené
+        </p>
       </div>
     </div>
   );
