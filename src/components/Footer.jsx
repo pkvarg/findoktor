@@ -20,16 +20,13 @@ const Footer = () => {
         }
       >
         <a
-          className="bg-orange-300  text-center"
+          className="  text-center"
           href="https://pictusweb.sk"
           target="_blank"
         >
           &#60;&#47;&#62; PICTUSWEB Development
         </a>
-        <p className=" bg-orange-300">
-          {' '}
-          &copy; {Date().substring(11, 15)} Všetky práva vyhradené
-        </p>
+        <p> &copy; {Date().substring(11, 15)} Všetky práva vyhradené</p>
       </div>
     </div>
   );

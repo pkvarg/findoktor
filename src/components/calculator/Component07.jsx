@@ -9,7 +9,7 @@ const Component07 = ({ onBack, onNext, hasElevator, handleHasElevator }) => {
     }
   };
   return (
-    <div className="relative mx-[15%] flex flex-col lg:mx-[1%]">
+    <div className="relative mx-2 flex flex-col lg:mx-[1%]">
       <p className="pt-12 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>

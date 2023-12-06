@@ -17,7 +17,7 @@ const Component09 = ({
     } else onNext();
   };
   return (
-    <div className="relative mx-[18%] flex flex-col lg:mx-[20%]">
+    <div className="relative mx-[16%] flex flex-col lg:mx-[20%]">
       <p className="pt-12 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
         OCENENIE NEHNUTEĽNOSTI ONLINE
       </p>
@@ -66,7 +66,7 @@ const Component09 = ({
           id="noParking"
           onClick={() => setHasNoParking((prev) => !prev)}
         >
-          <p className="px-2 pt-1 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] lg:px-2 lg:pt-[6%]">
+          <p className="px-2 pt-1 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] md:pt-[6%] lg:px-2">
             Bez vlastného parkovania
           </p>
         </div>

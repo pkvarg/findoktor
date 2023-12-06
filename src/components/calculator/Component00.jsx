@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 const Component00 = ({ handleFlatOrHouse }) => {
-  const [showPhone, setShowPhone] = useState(false);
-  const [showEmail, setShowEmail] = useState(false);
   const phone = '+421944517560';
   const email = 'michaldovala.gmail.com';
   const [isHoveredPhone, setIsHoveredPhone] = useState(false);

@@ -45,8 +45,8 @@ const Component16 = ({
             *cena bez služieb Realitnej kancelárie
           </p>
         </div> */}
-        <div className="relative mt-8 flex h-[50px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[100px] lg:rounded-xl">
-          <p className="translate-y-[45%] text-center text-[35px] font-bold text-[#ff010f]">
+        <div className="relative mt-8 flex h-[75px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[100px] lg:rounded-xl">
+          <p className="translate-y-[15%] text-center text-[35px] font-bold text-[#ff010f] lg:translate-y-[45%]">
             {withRealEstateAssistance} €
           </p>
 
