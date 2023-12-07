@@ -7,7 +7,7 @@ const Footer = lazy(() => import('./../components/Footer'));
 
 const About = () => {
   return (
-    <div className="relative flex h-[1100px] grid-rows-3 flex-col  lg:grid lg:h-screen">
+    <div className="relative flex h-[1100px] grid-rows-3 flex-col lg:grid lg:h-screen">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
@@ -89,67 +89,9 @@ const About = () => {
             </div>
           </p>
         </div>
-
-        {/* mobile only */}
-
-        {/* <div className="mx-2 flex flex-col gap-12 lg:hidden">
-          <div className="mt-4 text-justify text-[20px] leading-[20px] text-[#445862]">
-            <p>
-              Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
-              rozhodnutí vo Vašom živote. Je to náročný a pomerne zložitý
-              proces, v ktorom číha nejedna nástraha. Práve preto je dobré mať
-              na svojej strane partnera, na koho sa môžete spoľahnúť za každých
-              okolností. Práve toto poskytujem svojim klientom.
-            </p>
-            <p className="mt-2">
-              K realitám som mal vždy blízko, mojim hobby je totiž architektúra
-              a dizajn. Navyše ma baví práca s ľuďmi a networking.
-            </p>
-
-            <p className="mt-2">
-              Realitný maklér je niekto, kto Vás počas celého procesu zastupuje.
-              Je to niekto, kto dokonale pozná Vaše potreby a požiadavky a
-              pomáha Vám si splniť Váš sen o vysnívanom bývaní. A presne takýto
-              Moderný maklér chcem byť pre Vás.
-            </p>
-            <p className="mt-2">
-              Klientom poskytujem počas celej doby spolupráce komplexnú
-              starostlivosť, profesionalitu, lojalitu a dlhodobú víziu. Každý
-              klient dostane exkluzívnu starostlivosť.
-            </p>
-            <p className="mt-2">
-              Práca s ľuďmi ma naučila, aké dôležité je budovať priateľstvo a
-              férové partnerstvo s klientom. Práve preto sa sústredím na
-              budovanie vzájomnej dôvery a poskytujem svojim klientom komplexné
-              služby, či už sa jedná o financovanie a poistenie nehnuteľností,
-              ich predaj či nákup, rekonštrukcie alebo prenájom. Všetko
-              dostanete na jednom mieste.
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <p
-              id="phone"
-              onClick={() => showContact('phone')}
-              className="flex w-max flex-col items-center gap-2 rounded-[30px] border-[3px] border-[#0076ba] px-16 py-4 text-[20px] font-bold leading-[20px]  text-[#0076ba] 
-          "
-            >
-              <a className="" href="tel:+421944517560">
-                Zavolajte nám
-              </a>
-              <div className="flex flex-row items-center gap-2">
-                <BiSolidPhoneCall />
-                <a className="text-[20px]" href="tel:+421944517560">
-                  +421 944 517 560
-                </a>
-              </div>
-            </p>
-          </div>
-        </div> */}
-
-        <div className="z-0 h-[min-content]">
-          <Footer />
-        </div>
+      </div>
+      <div className="z-0 h-[min-content]">
+        <Footer />
       </div>
     </div>
   );

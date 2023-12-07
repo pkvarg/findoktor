@@ -35,7 +35,7 @@ const Reconstruction = () => {
       </div>
       <div className="z-10 flex h-auto flex-col items-center justify-center lg:h-[100%]">
         <div className="flex flex-col justify-center text-[30px] font-extrabold leading-[35px] text-[#050003] lg:leading-[30px]">
-          <div className="mt-16 lg:mt-0">
+          <div className="mx-2 mt-16 lg:mx-0 lg:mt-0">
             <p className="text-center lg:text-left">
               Snívate o tom, že Váš domov bude vyzerať <br />
               <span className="mr-2 text-[#1871aa]">štýlovo</span>a

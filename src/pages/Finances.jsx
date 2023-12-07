@@ -7,7 +7,7 @@ import { BiSolidPhoneCall } from 'react-icons/bi';
 
 const Finances = () => {
   return (
-    <div className="relative grid h-[145vh] grid-rows-3 bg-white text-[30px] text-black lg:h-screen">
+    <div className="relative grid h-[1100px] grid-rows-3 bg-white text-[30px] text-black lg:h-screen">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>

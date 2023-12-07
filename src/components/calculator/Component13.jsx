@@ -38,7 +38,7 @@ const Component13 = ({ onBack, onNext, monthlyCosts, setMonthlyCosts }) => {
               type="number"
               value={monthlyCosts === 0 ? '' : monthlyCosts}
               onChange={(e) => setMonthlyCosts(e.target.value)}
-              className="absolute right-[20%] top-[25%] z-0 w-[50%] text-right text-[22.5px] font-bold outline-none lg:right-[20%] lg:top-[27.5%] lg:mr-1 lg:text-[25px]"
+              className="absolute right-[22.5%] top-[25%] z-0 w-[50%] text-right text-[22.5px] font-bold outline-none lg:right-[20%] lg:top-[27.5%] lg:mr-1 lg:text-[25px]"
               ref={inputRef}
             />
             <p className="absolute right-3 top-[50%] z-0 text-[12.5px] font-bold text-[#0076ba]">

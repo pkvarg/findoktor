@@ -603,7 +603,7 @@ const Calculator = () => {
           <div className="h-[min-content]">
             <CalcNavbar />
           </div>
-          <div className="z-10 flex h-[100%] items-center  justify-center">
+          <div className="z-10 flex h-auto  flex-col items-center justify-center  lg:h-[100%]">
             <form onSubmit={handleSubmitForm} ref={formRef}>
               {renderComponent(currentComponent)}
             </form>

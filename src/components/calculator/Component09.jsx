@@ -60,16 +60,14 @@ const Component09 = ({
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div
-          className="mt-6 h-[55px] w-[100%] rounded-[20px] border-2 border-[#0076ba]  lg:mt-6 lg:rounded-[12.5px]"
-          id="noParking"
-          onClick={() => setHasNoParking((prev) => !prev)}
-        >
-          <p className="px-2 pt-1 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] md:pt-[6%] lg:px-2">
-            Bez vlastného parkovania
-          </p>
-        </div>
+      <div
+        className="mt-6 flex h-[55px] w-[100%] items-center justify-center rounded-[20px] border-2 border-[#0076ba]  lg:mt-6 lg:rounded-[12.5px]"
+        id="noParking"
+        onClick={() => setHasNoParking((prev) => !prev)}
+      >
+        <p className="px-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] lg:px-2">
+          Bez vlastného parkovania
+        </p>
       </div>
       <div className="mt-[10%] flex flex-row justify-between lg:mt-[20%]">
         <button
