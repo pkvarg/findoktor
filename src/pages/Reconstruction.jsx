@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CalcNavbar from '../components/calculator/CalcNavbar';
 import { Footer } from '../components';
 import { MdEuro } from 'react-icons/md';
@@ -7,22 +7,43 @@ import { FaSmile } from 'react-icons/fa';
 import { RiRunLine } from 'react-icons/ri';
 
 const Reconstruction = () => {
+  const phone = '+421944517560';
+  const email = 'info@michaldovala.sk';
+  const [isHoveredPhone, setIsHoveredPhone] = useState(false);
+  const [isHoveredEmail, setIsHoveredEmail] = useState(false);
+
+  const handleMouseEnterPhone = () => {
+    setIsHoveredPhone(true);
+  };
+
+  const handleMouseLeavePhone = () => {
+    setIsHoveredPhone(false);
+  };
+
+  const handleMouseEnterEmail = () => {
+    setIsHoveredEmail(true);
+  };
+
+  const handleMouseLeaveEmail = () => {
+    setIsHoveredEmail(false);
+  };
+
   return (
     <div className="relative flex h-[1050px]  grid-rows-3 flex-col  lg:grid lg:h-screen">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
-      <div className="z-10 h-auto flex-1 lg:h-[100%]">
-        <div className="mt-12 text-[30px]  font-extrabold leading-[30px] text-[#050003] lg:-mt-[10%] 2xl:-mt-[7%]">
-          <div className="ml-4 flex justify-start lg:ml-[22%] xl:ml-[24%] 2xl:ml-[32%]">
-            <p>
+      <div className="z-10 flex h-auto flex-col items-center justify-center lg:h-[100%]">
+        <div className="flex flex-col justify-center text-[30px] font-extrabold leading-[35px] text-[#050003] lg:leading-[30px]">
+          <div className="mt-16 lg:mt-0">
+            <p className="text-center lg:text-left">
               Snívate o tom, že Váš domov bude vyzerať <br />
               <span className="mr-2 text-[#1871aa]">štýlovo</span>a
               <span className="ml-2 mr-1 text-[#1871aa]">elegatne</span>?
             </p>
           </div>
-          <div className="mt-16 flex flex-col justify-center gap-6 text-[22.5px] lg:flex-row lg:text-[25px]">
-            <div className="ml-2 flex flex-col items-start gap-4 lg:ml-[22%]">
+          <div className="mt-16 flex flex-col items-center justify-center gap-6 text-[22.5px] lg:flex-row lg:text-[25px]">
+            <div className="flex flex-col items-start gap-4 lg:ml-2">
               <div className="flex flex-row items-center gap-2 lg:gap-6">
                 <MdEuro className="text-[35px]" />
 
@@ -47,13 +68,13 @@ const Reconstruction = () => {
             </div>
             <div className="mt-4 flex justify-center lg:mt-0 lg:justify-start">
               <img
-                className="w-[75%] lg:w-[50%]"
+                className="w-[350px] lg:w-[350px]"
                 src="reconstruction.webp"
                 alt="kvalitnamontaz.sk"
               />
             </div>
           </div>
-          <p className="mx-4 mt-8 text-center text-[12.5px] leading-[17.5px] lg:mx-0">
+          <p className="mx-4 mt-8 text-center text-[12.5px] font-bold leading-[17.5px] lg:mx-0">
             <span className="mr-2 text-red-400">*</span>
             službu poskytujeme výhradne v Bratislave a blízkom okolí, pre viac
             informácií nás kontaktujte{' '}
@@ -61,30 +82,46 @@ const Reconstruction = () => {
           <div className="z-9999 relative mt-8 flex flex-col items-center justify-center gap-6 lg:mt-16 lg:flex-row lg:gap-4">
             <p
               id="phone"
-              className="hover-call flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[255px] lg:rounded-[30px] lg:text-[25px] lg:leading-[29.5px]
+              onClick={() => showContact('phone')}
+              className="flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[285px] lg:rounded-[35px] lg:text-[22.5px] lg:leading-[29.5px]
           "
             >
-              <a className="hover-call-us" href="tel:+421944517560">
-                Zavolajte nám
-              </a>
-              <a className="hover-phone" href="tel:+421944517560">
-                +421944517560
-              </a>
+              {isHoveredPhone ? (
+                <a
+                  onMouseLeave={handleMouseLeavePhone}
+                  href="tel:+421944517560"
+                >
+                  {phone}
+                </a>
+              ) : (
+                <a
+                  onMouseEnter={handleMouseEnterPhone}
+                  href="tel:+421944517560"
+                >
+                  Zavolajte nám
+                </a>
+              )}
             </p>
             <p
               id="email"
-              className="hover-email flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba]  py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[255px] lg:rounded-[30px] lg:text-[25px] lg:leading-[29.5px]"
+              onClick={() => showContact('email')}
+              className="flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba]  py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[285px] lg:rounded-[35px] lg:text-[22.5px] lg:leading-[29.5px]"
             >
-              <a className="hover-email-us" href="mailto:info@michaldovala.sk">
-                Napíšte nám
-              </a>
-
-              <a
-                className="hover-email-address-reconstruction"
-                href="mailto:info@michaldovala.sk"
-              >
-                info@michaldovala.sk
-              </a>
+              {isHoveredEmail ? (
+                <a
+                  onMouseLeave={handleMouseLeaveEmail}
+                  href="mailto:info@michaldovala.sk"
+                >
+                  {email}
+                </a>
+              ) : (
+                <a
+                  onMouseEnter={handleMouseEnterEmail}
+                  href="mailto:info@michaldovala.sk"
+                >
+                  Napíšte nám
+                </a>
+              )}
             </p>
           </div>
         </div>
