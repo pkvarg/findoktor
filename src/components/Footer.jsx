@@ -16,7 +16,7 @@ const Footer = () => {
         className={
           path === '/'
             ? 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[25%] lg:text-[15px] xl:gap-[26%] 2xl:gap-[30%]'
-            : 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%]  lg:text-[15px] xl:gap-[28%] 2xl:gap-[30%]'
+            : 'mt-8 flex flex-row items-center justify-center gap-[15%] text-[10px] text-[#007ad6] md:gap-[35%] lg:mt-8 lg:gap-[28%]  lg:text-[15px] xl:gap-[26.5%] 2xl:gap-[30%]'
         }
       >
         <a

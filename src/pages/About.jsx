@@ -7,54 +7,38 @@ const Footer = lazy(() => import('./../components/Footer'));
 
 const About = () => {
   return (
-    <div className="relative flex h-[1200px]  grid-rows-3 flex-col  lg:grid lg:h-screen">
+    <div className="relative flex h-[1100px] grid-rows-3 flex-col  lg:grid lg:h-screen">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
-      <div className="z-10 h-auto flex-1 lg:h-[100%]">
-        <div className="relative mt-2 h-[165px] bg-[#eaf3f6] lg:-mt-[13.5%] lg:h-[180px] xl:-mt-[11.5%] 2xl:-mt-[12%]">
-          <div className="mx-1 flex flex-col justify-center gap-0 pt-[3%] lg:mx-0 lg:flex-row lg:gap-[20%] xl:gap-[20%] 2xl:gap-[28%]">
-            <div className="">
-              <div className="ml-1 mt-6 text-[25px] font-semibold leading-[22.5px] text-[#1871aa] lg:-mt-4 lg:ml-0 lg:text-[30px] lg:leading-[30px]">
-                <p className="">Nehnuteľnosti</p>
-                <p className="text-[#747170]">Financie</p>
-                <p className="">Rekonštrukcie</p>
-                <div className="my-2 h-[4px] w-[42%] bg-[#1871aa] lg:w-[102%]"></div>
-                <p className="text-[17.5px] leading-[17.5px] text-[#747170]">
-                  Pomôžeme Vám vybudovať Váš <br /> vysnívaný
-                  <span className="ml-1 text-[#1871aa]">domov</span>
-                </p>
-              </div>
+      <div className="z-10 flex h-auto flex-col">
+        <div className="absolute top-[5%] w-[100%] lg:top-[9%]">
+          <div className="relative h-[165px] bg-[#eaf3f6] lg:h-[180px]">
+            <div className="absolute left-2 pt-8 text-[25px] font-bold leading-[22.5px] text-[#1871aa] lg:left-[25%] lg:text-[40px] lg:leading-[40px]">
+              <p className="">Nehnuteľnosti</p>
+              <p className="text-[#747170]">Financie</p>
+              <p className="">Rekonštrukcie</p>
+              <div className="my-2 h-[4px] w-[52%] bg-[#1871aa] lg:w-[58%]"></div>
             </div>
-            <div className="absolute right-2 top-7 w-auto rounded-full border-[4px] border-[#0376b7] lg:relative  lg:-mt-[70px] lg:w-auto lg:border-[5px]">
+
+            <div className="absolute right-2 top-1 w-auto rounded-full border-[4px] border-[#0376b7] lg:right-[21%] lg:top-4 lg:w-auto lg:border-[5px]">
               <img
-                className="h-[110px] w-[110px] rounded-full lg:h-[190px] lg:w-[190px]"
+                className="h-[150px] w-[150px] rounded-full lg:h-[290px] lg:w-[290px]"
                 src="about.webp"
                 alt="dovala"
               />
             </div>
           </div>
         </div>
-        <div className="mx-[22%] mt-[45%] hidden gap-12 lg:mt-12 lg:flex lg:flex-row 2xl:mx-[24%] 2xl:mt-32">
-          <div>
-            <p
-              id="phone"
-              onClick={() => showContact('phone')}
-              className="flex w-max flex-col items-start gap-2 rounded-[30px] border-[3px] border-[#0076ba] px-4 py-4 text-[20px]  font-bold leading-[20px] text-[#0076ba] lg:rounded-[15px] lg:text-[25px] lg:leading-[29.5px]
-          "
-            >
-              <a className="" href="tel:+421944517560">
-                Zavolajte nám:
-              </a>
-              <div className="flex flex-row items-center gap-2">
-                <BiSolidPhoneCall />
-                <a className="text-[20px]" href="tel:+421944517560">
-                  +421 944 517 560
-                </a>
-              </div>
-            </p>
-          </div>
-          <div className="ml-6 mr-6 text-justify text-[15px] leading-[15px] text-[#445862] lg:ml-0 lg:mr-0">
+        <div className="absolute left-2 top-[22.5%] lg:left-[25%] lg:top-[37.5%]">
+          <p className="text-[17.5px] font-semibold leading-[17.5px] text-[#747170]">
+            Pomôžeme Vám vybudovať Váš <br /> vysnívaný
+            <span className="ml-1 text-[#1871aa]">domov</span>
+          </p>
+        </div>
+
+        <div className="absolute left-2 top-[27.5%] lg:left-[22%] lg:top-[45%] 2xl:left-[23%]">
+          <div className="mr-2 text-justify text-[15px] leading-[18px] text-[#445862] lg:mr-0 lg:w-[45%] lg:text-[12.5px]">
             <p>
               Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
               rozhodnutí vo Vašom živote. Je to náročný a pomerne zložitý
@@ -89,9 +73,26 @@ const About = () => {
           </div>
         </div>
 
+        <div className="absolute right-[23%] top-[80%] lg:top-[60%]">
+          <p
+            id="phone"
+            onClick={() => showContact('phone')}
+            className="flex w-max flex-col items-center gap-2 rounded-[30px] border-[3px] border-[#0076ba] px-4 py-4 text-[20px]  font-bold leading-[20px] text-[#0076ba] lg:rounded-[15px] lg:text-[25px] lg:leading-[29.5px]
+          "
+          >
+            <a href="tel:+421944517560">Zavolajte nám</a>
+            <div className="flex flex-row items-center gap-2">
+              <BiSolidPhoneCall />
+              <a className="text-[20px]" href="tel:+421944517560">
+                +421 944 517 560
+              </a>
+            </div>
+          </p>
+        </div>
+
         {/* mobile only */}
 
-        <div className="mx-2 flex flex-col gap-12 lg:hidden">
+        {/* <div className="mx-2 flex flex-col gap-12 lg:hidden">
           <div className="mt-4 text-justify text-[20px] leading-[20px] text-[#445862]">
             <p>
               Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
@@ -144,7 +145,7 @@ const About = () => {
               </div>
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="z-0 h-[min-content]">
           <Footer />
