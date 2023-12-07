@@ -75,18 +75,15 @@ const Reconstruction = () => {
               id="email"
               className="hover-email flex h-[70px] w-[265px] items-center justify-center rounded-[30px] border-2 border-[#0076ba]  py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]  lg:w-[255px] lg:rounded-[30px] lg:text-[25px] lg:leading-[29.5px]"
             >
-              <a
-                className="hover-email-us"
-                href="mailto:michaldovala@gmail.com"
-              >
+              <a className="hover-email-us" href="mailto:info@michaldovala.sk">
                 Napíšte nám
               </a>
 
               <a
                 className="hover-email-address-reconstruction"
-                href="mailto:michaldovala@gmail.com"
+                href="mailto:info@michaldovala.sk"
               >
-                michaldovala@gmail.com
+                info@michaldovala.sk
               </a>
             </p>
           </div>

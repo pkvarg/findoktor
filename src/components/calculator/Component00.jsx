@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Component00 = ({ handleFlatOrHouse }) => {
   const phone = '+421944517560';
-  const email = 'michaldovala.gmail.com';
+  const email = 'info@michaldovala.sk';
   const [isHoveredPhone, setIsHoveredPhone] = useState(false);
   const [isHoveredEmail, setIsHoveredEmail] = useState(false);
 
@@ -90,14 +90,14 @@ const Component00 = ({ handleFlatOrHouse }) => {
           {isHoveredEmail ? (
             <a
               onMouseLeave={handleMouseLeaveEmail}
-              href="mailto:michaldovala@gmail.com"
+              href="mailto:info@michaldovala.sk"
             >
               {email}
             </a>
           ) : (
             <a
               onMouseEnter={handleMouseEnterEmail}
-              href="mailto:michaldovala@gmail.com"
+              href="mailto:info@michaldovala.sk"
             >
               Napíšte nám
             </a>

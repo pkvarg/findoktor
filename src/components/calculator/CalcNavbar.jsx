@@ -22,7 +22,7 @@ const CalcNavbar = () => {
       className={
         path === '/'
           ? 'mt-4 flex flex-row items-center justify-center gap-[65%] md:gap-[52.5%] lg:gap-[45%]'
-          : 'mt-4 flex flex-row items-center justify-center gap-[65%] md:gap-[52.5%] lg:gap-[45%]'
+          : 'mt-4 flex flex-row items-center justify-center gap-[65%] md:gap-[52.5%] lg:gap-[47%]'
       }
     >
       <div className="flex flex-row items-center gap-2 lg:gap-2">

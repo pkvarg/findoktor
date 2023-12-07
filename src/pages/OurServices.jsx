@@ -4,7 +4,7 @@ import { Footer } from '../components';
 
 const OurServices = () => {
   const phone = '+421944517560';
-  const email = 'michaldovala.gmail.com';
+  const email = 'info@michaldovala.sk';
 
   const [isHoveredPhone, setIsHoveredPhone] = useState(false);
   const [isHoveredEmail, setIsHoveredEmail] = useState(false);
@@ -30,8 +30,208 @@ const OurServices = () => {
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
-      <div className="z-10 h-auto flex-1 lg:h-[100%]">
-        <div className="mt-6 flex flex-col items-start justify-center gap-10 lg:-mt-[10%] lg:flex-row lg:items-center 2xl:-mt-[7%]">
+      <div className="z-10 flex h-auto items-center justify-center lg:h-[100%]">
+        <div className="flex flex-col gap-8 lg:flex-row">
+          <div className="mt-6 flex flex-col lg:mt-0">
+            <div className="realsluzby px-14 pt-10  text-[20px] uppercase text-white md:pt-4 md:text-[15px] lg:px-4 lg:pb-8 lg:pt-8 lg:text-[20px]">
+              <p className="mt-4 font-extrabold lg:mt-0">
+                Realitné služby, ktoré{' '}
+              </p>
+              <p className="font-thin">sa prispôsobia Vašim</p>
+              <p className="font-thin">potrebám</p>
+            </div>
+            <div className="z-9999 relative mt-14 hidden flex-col items-center justify-center gap-6 lg:mt-[50%] lg:flex lg:gap-4">
+              <p
+                id="phone"
+                onClick={() => showContact('phone')}
+                className="flex h-[60px] w-[100%] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]   lg:rounded-[25px] lg:text-[20px] lg:leading-[29.5px]
+          "
+              >
+                {isHoveredPhone ? (
+                  <a
+                    onMouseLeave={handleMouseLeavePhone}
+                    href="tel:+421944517560"
+                  >
+                    {phone}
+                  </a>
+                ) : (
+                  <a
+                    onMouseEnter={handleMouseEnterPhone}
+                    href="tel:+421944517560"
+                  >
+                    Zavolajte nám
+                  </a>
+                )}
+              </p>
+              <p
+                id="email"
+                onClick={() => showContact('email')}
+                className="flex h-[60px] w-[100%] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba]   lg:rounded-[25px] lg:text-[20px] lg:leading-[29.5px]"
+              >
+                {isHoveredEmail ? (
+                  <a
+                    onMouseLeave={handleMouseLeaveEmail}
+                    href="mailto:info@michaldovala.sk"
+                  >
+                    {email}
+                  </a>
+                ) : (
+                  <a
+                    onMouseEnter={handleMouseEnterEmail}
+                    href="mailto:info@michaldovala.sk"
+                  >
+                    Napíšte nám
+                  </a>
+                )}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between gap-8 lg:gap-0">
+            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+              <img
+                className="-ml-[12px] h-[50px] w-[50px]"
+                src="Predaj.webp"
+                alt="sale"
+              />
+              <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+                Predaj nehnuteľnosti
+              </p>
+              <div className="leading-[16px] lg:text-[15px]">
+                <p className="mt-1">S nami môžete mať istotu, že Vaša</p>
+                <p>nehnuteľnosť bude predaná za</p>
+                <p>najvýhodnejšiu cenu na trhu.</p>
+              </div>
+            </div>
+            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+              <img
+                className="-ml-[12px] h-[50px] w-[50px]"
+                src="Property.webp"
+                alt="sale"
+              />
+              <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+                Property management
+              </p>
+
+              <div className="text-[15px] leading-[16px]">
+                <p className="mt-1">Ušetrite čas pri správe svojho</p>
+                <p> nájmu. Riešenie problémov</p>
+                <p>nechajte na nás. </p>
+              </div>
+            </div>
+            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+              <img
+                className="-ml-[12px] h-[50px] w-[50px]"
+                src="Inziniering.webp"
+                alt="sale"
+              />
+              <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+                Inžiniering
+              </p>
+              <div className="text-[15px] leading-[16px]">
+                <p className="mt-1">Všetky povolenia súvisiace so</p>
+                <p>stavbou alebo rekonštrukciou</p>
+                <p>domu vybavíme za Vás.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between gap-8 lg:gap-0">
+            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+              <img
+                className="-ml-[12px] h-[50px] w-[50px]"
+                src="Prenajom.webp"
+                alt="sale"
+              />
+              <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+                Prenájom nehnuteľnosti
+              </p>
+
+              <div className="text-[15px] leading-[16px]">
+                <p className="mt-1">Pomôžeme Vám nájsť tých</p>
+                <p>správnych nájomcov na krátkodobý</p>
+                <p>alebo dlhodobý prenájom.</p>
+              </div>
+            </div>
+            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+              <img
+                className="-ml-[12px] h-[50px] w-[50px]"
+                src="Agent.webp"
+                alt="sale"
+              />
+              <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+                Agent kupujúceho
+              </p>
+
+              <div className="text-[15px] leading-[16px]">
+                <p className="mt-1">Maklér vždy po boku. Vyberieme</p>
+                <p>poradíme, prevedieme Vás celým </p>
+                <p>procesom až po kúpu.</p>
+              </div>
+            </div>
+            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+              <img
+                className="-ml-[12px] h-[50px] w-[50px]"
+                src="Legalizacia.webp"
+                alt="sale"
+              />
+              <p className="text-[22.5px] font-semibold lg:text-[16.5px]">
+                Legalizácia stavieb
+              </p>
+
+              <div className="text-[15px] leading-[16px]">
+                <p className="mt-1">Zameriavame sa na pomoc pri </p>
+                <p> usporiadaní vlastníctva a zápis</p>
+                <p>stavieb do katastra nehnuteľností.</p>
+              </div>
+            </div>
+          </div>
+          <div className="z-9999 relative mt-14  flex flex-col items-center justify-center gap-6  lg:hidden">
+            <p
+              id="phone"
+              onClick={() => showContact('phone')}
+              className="flex h-[60px] w-[85%] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] lg:w-[100%]   lg:rounded-[25px] lg:text-[20px] lg:leading-[29.5px]
+          "
+            >
+              {isHoveredPhone ? (
+                <a
+                  onMouseLeave={handleMouseLeavePhone}
+                  href="tel:+421944517560"
+                >
+                  {phone}
+                </a>
+              ) : (
+                <a
+                  onMouseEnter={handleMouseEnterPhone}
+                  href="tel:+421944517560"
+                >
+                  Zavolajte nám
+                </a>
+              )}
+            </p>
+            <p
+              id="email"
+              onClick={() => showContact('email')}
+              className="flex h-[60px] w-[85%] items-center justify-center rounded-[30px] border-2 border-[#0076ba] py-2 text-center text-[20px] font-extrabold leading-[20px] text-[#0076ba] lg:w-[100%]   lg:rounded-[25px] lg:text-[20px] lg:leading-[29.5px]"
+            >
+              {isHoveredEmail ? (
+                <a
+                  onMouseLeave={handleMouseLeaveEmail}
+                  href="mailto:info@michaldovala.sk"
+                >
+                  {email}
+                </a>
+              ) : (
+                <a
+                  onMouseEnter={handleMouseEnterEmail}
+                  href="mailto:info@michaldovala.sk"
+                >
+                  Napíšte nám
+                </a>
+              )}
+            </p>
+          </div>
+        </div>
+        {/* <div className="mt-6 flex flex-col items-start justify-center gap-10 lg:-mt-[10%] lg:flex-row lg:items-center 2xl:-mt-[7%]">
           <div className="realsluzby px-14 py-8 text-[20px] uppercase text-white lg:px-4">
             <p className="mt-8 font-extrabold lg:mt-6">
               Realitné služby, ktoré{' '}
@@ -82,8 +282,8 @@ const OurServices = () => {
               <p>alebo dlhodobý prenájom.</p>
             </div>
           </div>
-        </div>
-        <div className="mt-12 hidden flex-col items-start justify-center gap-10 lg:flex lg:flex-row lg:items-center lg:gap-14">
+        </div> */}
+        {/* <div className="mt-12 hidden flex-col items-start justify-center gap-10 lg:flex lg:flex-row lg:items-center lg:gap-14">
           <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-4">
             <img
               className="-ml-[12px] h-[50px] w-[50px]"
@@ -143,11 +343,11 @@ const OurServices = () => {
               <p>do katastra nehnuteľností.</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* mobile only */}
 
-        <div className="mt-12 flex flex-col items-start justify-center gap-10 lg:hidden">
+        {/* <div className="mt-12 flex flex-col items-start justify-center gap-10 lg:hidden">
           <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-4">
             <img
               className="-ml-[12px] h-[50px] w-[50px]"
@@ -201,9 +401,9 @@ const OurServices = () => {
               <p> stavieb do katastra nehnuteľností.</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="z-9999 relative mt-14 flex flex-col items-center justify-center gap-6 lg:mt-8 lg:gap-4">
+        {/* <div className="z-9999 relative mt-14 flex flex-col items-center justify-center gap-6 lg:mt-8 lg:gap-4">
           <p
             id="phone"
             onClick={() => showContact('phone')}
@@ -241,7 +441,7 @@ const OurServices = () => {
               </a>
             )}
           </p>
-        </div>
+        </div> */}
       </div>
       <div className="z-0 h-[min-content]">
         <Footer />
