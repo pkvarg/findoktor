@@ -134,7 +134,7 @@ const About = () => {
           "
             >
               <a className="" href="tel:+421944517560">
-                Zavolajte nám:
+                Zavolajte nám
               </a>
               <div className="flex flex-row items-center gap-2">
                 <BiSolidPhoneCall />

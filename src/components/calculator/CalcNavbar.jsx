@@ -55,7 +55,7 @@ const CalcNavbar = () => {
               <a href="/about">O nás</a>
               <a href="/current-offer">Aktuálna ponuka</a>
               <a href="/">Nacenenie</a>
-              <a href="/">Financie</a>
+              <a href="/finances">Financie</a>
               <a href="/reconstruction">Rekonštrukcia</a>
               <a href="/our-services">Naše služby</a>
 

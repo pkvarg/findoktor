@@ -7,6 +7,7 @@ import Reconstruction from './Reconstruction';
 import OurServices from './OurServices';
 import CurrentOffer from './CurrentOffer';
 import Rules from './Rules';
+import Finances from './Finances';
 
 export {
   ServicesPage,
@@ -18,4 +19,5 @@ export {
   OurServices,
   CurrentOffer,
   Rules,
+  Finances,
 };

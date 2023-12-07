@@ -8,7 +8,7 @@ const CurrentOffer = () => {
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
-      <div className="z-10 h-[100%] flex-1">
+      <div className="z-10 flex h-[100%] items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-4 text-[35px] text-[#0076ba]">
           <h1 className="text-center">
             Prejsť na
