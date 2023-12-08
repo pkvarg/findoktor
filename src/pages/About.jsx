@@ -37,7 +37,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="absolute left-2 top-[27.5%] lg:left-[22%] lg:top-[45%] 2xl:left-[23%]">
+        <div className="absolute left-2 top-[27.5%] z-10 lg:left-[22%] lg:top-[45%] 2xl:left-[23%]">
           <div className="mr-2 text-justify text-[15px] leading-[18px] text-[#445862] lg:mr-0 lg:w-[45%] lg:text-[12.5px]">
             <p>
               Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších

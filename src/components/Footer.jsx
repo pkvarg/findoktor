@@ -6,7 +6,7 @@ const Footer = () => {
   const path = location.pathname;
 
   return (
-    <div className="absolute bottom-0 left-1/2 w-[100%] -translate-x-[50%] bg-[#ffffff] md:bottom-2">
+    <div className="absolute bottom-0 left-1/2 z-0 w-[100%] -translate-x-[50%] bg-[#ffffff] md:bottom-2">
       <div
         // className={
         //   path === '/'
