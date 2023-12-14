@@ -7,12 +7,12 @@ const Footer = lazy(() => import('./../components/Footer'));
 
 const About = () => {
   return (
-    <div className="relative flex h-[1100px] grid-rows-3 flex-col lg:grid lg:h-screen">
+    <div className="relative flex h-[800px] grid-rows-3 flex-col lg:grid lg:h-screen">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
       <div className="z-10 flex h-auto flex-col">
-        <div className="absolute top-[5%] w-[100%] lg:top-[9%]">
+        <div className="absolute top-[7%] w-[100%] lg:top-[9%]">
           <div className="relative h-[165px] bg-[#eaf3f6] lg:h-[180px]">
             <div className="absolute left-2 pt-8 text-[25px] font-bold leading-[22.5px] text-[#1871aa] lg:left-[25%] lg:text-[40px] lg:leading-[40px]">
               <p className="">Nehnuteľnosti</p>
@@ -21,7 +21,7 @@ const About = () => {
               <div className="my-2 h-[4px] w-[52%] bg-[#1871aa] lg:w-[58%]"></div>
             </div>
 
-            <div className="absolute right-2 top-1 w-auto rounded-full border-[4px] border-[#0376b7] lg:right-[21%] lg:top-4 lg:w-auto lg:border-[5px]">
+            <div className="absolute right-2 top-1 w-auto rounded-full border-[4px] border-[#0376b7] lg:right-[21%] lg:top-4 lg:w-auto lg:border-[5px] xl:right-[22%] 2xl:right-[23%]">
               <img
                 className="h-[150px] w-[150px] rounded-full lg:h-[290px] lg:w-[290px]"
                 src="about.webp"
@@ -30,45 +30,33 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="absolute left-2 top-[22.5%] lg:left-[25%] lg:top-[37.5%]">
+        <div className="absolute left-6 top-[30%] lg:left-[25%] lg:top-[37.5%]">
           <p className="text-[17.5px] font-semibold leading-[17.5px] text-[#747170]">
             Pomôžeme Vám vybudovať Váš <br /> vysnívaný
             <span className="ml-1 text-[#1871aa]">domov</span>
           </p>
         </div>
 
-        <div className="absolute left-2 top-[27.5%] z-10 lg:left-[22%] lg:top-[45%] 2xl:left-[23%]">
-          <div className="mr-2 text-justify text-[15px] leading-[18px] text-[#445862] lg:mr-0 lg:w-[45%] lg:text-[12.5px]">
-            <p>
-              Kúpa alebo predaj nehnuteľnosti je jedno z najdôležitejších
-              rozhodnutí vo Vašom živote. Je to náročný a pomerne zložitý
-              proces, v ktorom číha nejedna nástraha. Práve preto je dobré mať
-              na svojej strane partnera, na koho sa môžete spoľahnúť za každých
-              okolností. Práve toto poskytujem svojim klientom.
+        <div className="absolute left-2 top-[35%] z-10 mx-4 lg:left-[22%] lg:top-[45%] lg:mx-0 2xl:left-[25%]">
+          <div className="mr-2 text-justify text-[15px] leading-[18px] text-[#445862] lg:mr-0 lg:w-[45%] lg:text-[12.5px] 2xl:w-[40%]">
+            <p className="mt-[7.5%] 2xl:mt-[9%]">
+              Vitaj - ak hľadáš vysnívaný domov, alebo ťa láka finančná istota,
+              som tvoj človek! Som Odborník na sieťovanie v oblasti
+              nehnuteľností a financií a na pomoc pri správe a rekonštrukcii
+              nehnuteľností.
             </p>
             <p className="mt-2">
-              K realitám som mal vždy blízko, mojim hobby je totiž architektúra
-              a dizajn. Navyše ma baví práca s ľuďmi a networking.
+              Môj cieľ? Urobiť tvoj život jednoduchším. Či je to
+              predaj/kúpa/rekonštrukcia/správa nehnuteľnosti alebo financie, som
+              tu, aby som ti to uľahčil. Jednoducho a bez stresu - to je moje
+              heslo. Teším sa na to, ako ti pomôžem dosiahnuť to, po čom túžiš!
             </p>
 
             <p className="mt-2">
-              Realitný maklér je niekto, kto Vás počas celého procesu zastupuje.
-              Je to niekto, kto dokonale pozná Vaše potreby a požiadavky a
-              pomáha Vám si splniť Váš sen o vysnívanom bývaní. A presne takýto
-              Moderný maklér chcem byť pre Vás.
-            </p>
-            <p className="mt-2">
-              Klientom poskytujem počas celej doby spolupráce komplexnú
-              starostlivosť, profesionalitu, lojalitu a dlhodobú víziu. Každý
-              klient dostane exkluzívnu starostlivosť.
-            </p>
-            <p className="mt-2">
-              Práca s ľuďmi ma naučila, aké dôležité je budovať priateľstvo a
-              férové partnerstvo s klientom. Práve preto sa sústredím na
-              budovanie vzájomnej dôvery a poskytujem svojim klientom komplexné
-              služby, či už sa jedná o financovanie a poistenie nehnuteľností,
-              ich predaj či nákup, rekonštrukcie alebo prenájom. Všetko
-              dostanete na jednom mieste.
+              Ako? Nie som na to sám. Mám skvelý tím odborníkov ktorí ti pomôžu
+              dosiahnuť tvoje ciele nech už sú akékoľvek. Či potrebuješ
+              predajcu, právnika, architekta, alebo stolára - všetko nájdeš u
+              mňa!
             </p>
           </div>
         </div>

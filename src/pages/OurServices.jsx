@@ -87,7 +87,7 @@ const OurServices = () => {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-8 lg:gap-0">
-            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+            <div className="ml-8 flex flex-col items-start justify-center font-light lg:ml-0">
               <img
                 className="-ml-[12px] h-[50px] w-[50px]"
                 src="Predaj.webp"
@@ -102,7 +102,7 @@ const OurServices = () => {
                 <p>najvýhodnejšiu cenu na trhu.</p>
               </div>
             </div>
-            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+            <div className="ml-8 flex flex-col items-start justify-center font-light lg:ml-0">
               <img
                 className="-ml-[12px] h-[50px] w-[50px]"
                 src="Property.webp"
@@ -118,7 +118,7 @@ const OurServices = () => {
                 <p>nechajte na nás. </p>
               </div>
             </div>
-            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+            <div className="ml-8 flex flex-col items-start justify-center font-light lg:ml-0">
               <img
                 className="-ml-[12px] h-[50px] w-[50px]"
                 src="Inziniering.webp"
@@ -136,7 +136,7 @@ const OurServices = () => {
           </div>
 
           <div className="flex flex-col justify-between gap-8 lg:gap-0">
-            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+            <div className="ml-8 flex flex-col items-start justify-center font-light lg:ml-0">
               <img
                 className="-ml-[12px] h-[50px] w-[50px]"
                 src="Prenajom.webp"
@@ -152,7 +152,7 @@ const OurServices = () => {
                 <p>alebo dlhodobý prenájom.</p>
               </div>
             </div>
-            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+            <div className="ml-8 flex flex-col items-start justify-center font-light lg:ml-0">
               <img
                 className="-ml-[12px] h-[50px] w-[50px]"
                 src="Agent.webp"
@@ -168,7 +168,7 @@ const OurServices = () => {
                 <p>procesom až po kúpu.</p>
               </div>
             </div>
-            <div className="ml-4 flex flex-col items-start justify-center font-light lg:ml-0">
+            <div className="ml-8 flex flex-col items-start justify-center font-light lg:ml-0">
               <img
                 className="-ml-[12px] h-[50px] w-[50px]"
                 src="Legalizacia.webp"

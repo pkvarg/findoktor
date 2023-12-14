@@ -8,6 +8,7 @@ import OurServices from './OurServices';
 import CurrentOffer from './CurrentOffer';
 import Rules from './Rules';
 import Finances from './Finances';
+import Ebook from './Ebook';
 
 export {
   ServicesPage,
@@ -20,4 +21,5 @@ export {
   CurrentOffer,
   Rules,
   Finances,
+  Ebook,
 };

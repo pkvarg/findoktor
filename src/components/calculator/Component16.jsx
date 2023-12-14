@@ -47,7 +47,7 @@ const Component16 = ({
         </div> */}
         <div className="relative mt-8 flex h-[75px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[100px] lg:rounded-xl">
           <p className="translate-y-[15%] text-center text-[35px] font-bold text-[#ff010f] lg:translate-y-[45%]">
-            {withRealEstateAssistance} €
+            {withRealEstateAssistance.toLocaleString()} €
           </p>
 
           {/* <p className="absolute left-2 top-[125%] text-[12.5px] leading-[12.5px] text-[#0076ba] lg:top-[112%]">
@@ -95,12 +95,12 @@ const Component16 = ({
         </div>
       </div>
 
-      <button
+      {/* <button
         onClick={onBack}
         className="mt-16 w-[90%] rounded-[35px] border border-[#0076ba] px-1 py-2 text-[15px]  font-bold uppercase hover:border-2 hover:border-[#03065f] lg:mt-8"
       >
         Späť (pôjde čoskoro preč 😀)
-      </button>
+      </button> */}
     </div>
   );
 };
