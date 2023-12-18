@@ -9,6 +9,7 @@ import CurrentOffer from './CurrentOffer';
 import Rules from './Rules';
 import Finances from './Finances';
 import Ebook from './Ebook';
+import Admin from './Admin';
 
 export {
   ServicesPage,
@@ -22,4 +23,5 @@ export {
   Rules,
   Finances,
   Ebook,
+  Admin,
 };

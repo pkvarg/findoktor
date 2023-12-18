@@ -11,6 +11,7 @@ import {
   Rules,
   Finances,
   Ebook,
+  Admin,
 } from './pages';
 import { SpinnerFullPage } from './components';
 const Calculator = lazy(() => import('./pages/Calculator'));
@@ -30,6 +31,7 @@ function App() {
           <Route path="/rules" element={<Rules />} />
           <Route path="/finances" element={<Finances />} />
           <Route path="/e-book" element={<Ebook />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </Suspense>
       <Toaster />
