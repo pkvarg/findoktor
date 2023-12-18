@@ -12,6 +12,7 @@ const Admin = () => {
   const [emails, setEmails] = useState(0);
   const [adminEmail, setAdminEmail] = useState('');
   const [showContent, setShowContent] = useState(false);
+  const [emailsInDb, setEmailsInDb] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,6 +56,17 @@ const Admin = () => {
     }
   };
 
+  // api/md/emails
+
+  const getEmails = async () => {
+    try {
+      const res = await axios.get('http://localhost:2000/api/md/emails');
+      if (res) setEmailsInDb(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="relative flex h-[800px] grid-rows-3 flex-col lg:grid lg:h-screen">
       <div className="h-[min-content]">
@@ -63,17 +75,33 @@ const Admin = () => {
       <div className="z-10 flex h-auto flex-col">
         {showContent && (
           <div className="ml-[22.5%] flex">
-            <div className="mt-16 flex flex-col items-start gap-2">
-              <button className="cursor-pointer" onClick={() => getVisitors()}>
+            <div className="mt-0 flex flex-col items-start gap-2">
+              <button
+                className="cursor-pointer bg-[#0076ba] px-2 text-white"
+                onClick={() => getVisitors()}
+              >
                 Počet návštev: {visitors}
               </button>
               <button
-                className="cursor-pointer"
+                className="cursor-pointer bg-[#0076ba] px-2 text-white"
                 onClick={() => getSentEmailsCount()}
               >
                 Odoslaných mailov: {emails}
               </button>
-              {/* <button className="cursor-pointer" onClick={() => incVisitors()}>
+              <button
+                className="cursor-pointer bg-[#0076ba] px-2 text-white"
+                onClick={() => getEmails()}
+              >
+                Emaily:{' '}
+              </button>
+              <div className="flex flex-row gap-2">
+                {emailsInDb &&
+                  emailsInDb.map((email) => (
+                    <div key={email._id}>{email.downloads}</div>
+                  ))}
+              </div>
+              {/* <button className="cursor-pointer bg-[#0076ba] px-2 text-white"
+ onClick={() => incVisitors()}>
           ++
         </button> */}
             </div>

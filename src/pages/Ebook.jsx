@@ -5,8 +5,8 @@ import { Footer } from '../components';
 import { toast } from 'react-hot-toast';
 
 const Ebook = () => {
-  const [showPage, setShowPage] = useState(false);
-  const [showEmailInput, setShowEmailInput] = useState(true);
+  const [showPage, setShowPage] = useState(true);
+  const [showEmailInput, setShowEmailInput] = useState(false);
   const [showDownload, setShowDownload] = useState(false);
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(false);
@@ -23,16 +23,40 @@ const Ebook = () => {
     }
   }, [email]);
 
+  const handleClick = () => {
+    setShowPage(false);
+    setShowEmailInput(true);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isValid) return toast.error('Skontrolujte email');
-    const res = await axios.put(
-      'http://localhost:2000/api/md/downloadsEmails',
-      {
+    try {
+      await axios.put('http://localhost:2000/api/md/downloadsEmails', {
         email,
-      },
-    );
-    console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    setShowEmailInput(false);
+    setShowPage(true);
+    const downloadFile = () => {
+      const fileName = 'ebook.pdf';
+      fetch(`${fileName}`).then((response) => {
+        response.blob().then((blob) => {
+          // Creating new object of PDF file
+          const fileURL = window.URL.createObjectURL(blob);
+          // Setting various property values
+          let alink = document.createElement('a');
+          alink.href = fileURL;
+          alink.download = `${fileName}`;
+          alink.click();
+        });
+      });
+    };
+    downloadFile();
+
+    // const data = await axios.get('http://localhost:2000/api/md/ebook');
   };
   return (
     <div className="relative flex h-[1250px] grid-rows-3 flex-col lg:grid lg:h-screen">
@@ -64,14 +88,20 @@ const Ebook = () => {
             </div>
             <div className="flex flex-col lg:w-[40%]">
               <img src="ebook_cover.webp" alt="ebook_cover" />
-              <button className="m-4 rounded-[25px] bg-[#0076ba] text-[30px] text-[#ffffff]">
+              <button
+                onClick={handleClick}
+                className="m-4 rounded-[25px] bg-[#0076ba] text-[30px] text-[#ffffff]"
+              >
                 kliknite SEM
               </button>
             </div>
           </div>
         )}
         {showEmailInput && (
-          <form onSubmit={handleSubmit} className="flex flex-col">
+          <form
+            onSubmit={handleSubmit}
+            className="mx-4 mt-16 flex flex-col lg:mx-0 lg:mt-0"
+          >
             <input
               type="text"
               placeholder="Váš email"
