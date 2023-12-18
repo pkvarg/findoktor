@@ -32,9 +32,13 @@ const Ebook = () => {
     e.preventDefault();
     if (!isValid) return toast.error('Skontrolujte email');
     try {
-      await axios.put('http://localhost:2000/api/md/downloadsEmails', {
-        email,
-      });
+      await axios.put(
+        `https://api.pictusweb.com/api/md/downloadsEmails`,
+        // 'http://localhost:2000/api/md/downloadsEmails'
+        {
+          email,
+        },
+      );
     } catch (error) {
       console.log(error);
     }
@@ -55,8 +59,6 @@ const Ebook = () => {
       });
     };
     downloadFile();
-
-    // const data = await axios.get('http://localhost:2000/api/md/ebook');
   };
   return (
     <div className="relative flex h-[1250px] grid-rows-3 flex-col lg:grid lg:h-screen">

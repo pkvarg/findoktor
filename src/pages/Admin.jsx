@@ -24,7 +24,8 @@ const Admin = () => {
   const getVisitors = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:2000/api/visitors/md/counter',
+        `https://api.pictusweb.com/api/visitors/md/counter`,
+        //'http://localhost:2000/api/visitors/md/counter',
       );
       if (res) setVisitors(res.data);
     } catch (error) {
@@ -35,7 +36,8 @@ const Admin = () => {
   const incVisitors = async () => {
     try {
       const res = await axios.put(
-        'http://localhost:2000/api/visitors/md/increase',
+        `https://api.pictusweb.com/api/visitors/md/increase`,
+        // 'http://localhost:2000/api/visitors/md/increase',
       );
       if (res) setVisitors(res.data.visitorsMd);
     } catch (error) {
@@ -48,7 +50,8 @@ const Admin = () => {
   const getSentEmailsCount = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:2000/api/md/sentEmailsCount',
+        `https://api.pictusweb.com/api/md/sentEmailsCount`,
+        // 'http://localhost:2000/api/md/sentEmailsCount',
       );
       if (res) setEmails(res.data);
     } catch (error) {
@@ -60,7 +63,11 @@ const Admin = () => {
 
   const getEmails = async () => {
     try {
-      const res = await axios.get('http://localhost:2000/api/md/emails');
+      const res = await axios.get(
+        `https://api.pictusweb.com/api/md/emails`,
+
+        // 'http://localhost:2000/api/md/emails'
+      );
       if (res) setEmailsInDb(res.data);
     } catch (error) {
       console.log(error);
@@ -100,10 +107,12 @@ const Admin = () => {
                     <div key={email._id}>{email.downloads}</div>
                   ))}
               </div>
-              {/* <button className="cursor-pointer bg-[#0076ba] px-2 text-white"
- onClick={() => incVisitors()}>
-          ++
-        </button> */}
+              {/* <button
+                className="cursor-pointer bg-[#0076ba] px-2 text-white"
+                onClick={() => incVisitors()}
+              >
+                ++
+              </button> */}
             </div>
           </div>
         )}

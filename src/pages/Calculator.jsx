@@ -522,8 +522,8 @@ const Calculator = () => {
       const sendEmail = async () => {
         console.log('..sending..');
         const { data } = await axios.put(
-          // `https://api.pictusweb.com/api/md/email`,
-          `http://localhost:2000/api/md/email`,
+          `https://api.pictusweb.com/api/md/email`,
+          // `http://localhost:2000/api/md/email`,
           {
             flatOrHouse,
             city,
