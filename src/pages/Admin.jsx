@@ -75,14 +75,14 @@ const Admin = () => {
   };
 
   return (
-    <div className="relative flex h-[800px] grid-rows-3 flex-col lg:grid lg:h-screen">
+    <div className="relative flex h-screen grid-rows-3 flex-col lg:grid">
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
       <div className="z-10 flex h-auto flex-col">
         {showContent && (
-          <div className="ml-[22.5%] flex">
-            <div className="mt-0 flex flex-col items-start gap-2">
+          <div className="ml-4 flex lg:ml-[22.5%]">
+            <div className="mt-16 flex flex-col items-start gap-2 lg:mt-0">
               <button
                 className="cursor-pointer bg-[#0076ba] px-2 text-white"
                 onClick={() => getVisitors()}
@@ -101,7 +101,7 @@ const Admin = () => {
               >
                 Emaily:{' '}
               </button>
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-col gap-2 lg:flex-row">
                 {emailsInDb &&
                   emailsInDb.map((email) => (
                     <div key={email._id}>{email.downloads}</div>
@@ -119,18 +119,18 @@ const Admin = () => {
         {!showContent && (
           <form
             onSubmit={handleSubmit}
-            className="mx-[20%] flex flex-col items-center justify-center text-gray-800"
+            className="mx-4 mt-16 flex flex-col items-center justify-center text-gray-800 lg:mx-[20%] lg:mt-0"
           >
             <input
               type="text"
               placeholder="who am I?"
               value={adminEmail}
               onChange={(e) => setAdminEmail(e.target.value)}
-              className="w-[40%] border border-gray-400 pl-2"
+              className="w-[100%] border border-gray-400 pl-2 lg:w-[40%]"
             />
             <button
               type="submit"
-              className="my-4 w-[40%] rounded-[5px] bg-[#0076ba] text-[20px] text-[#ffffff]"
+              className="my-4 w-[100%] rounded-[5px] bg-[#0076ba] text-[20px] text-[#ffffff] lg:w-[40%]"
             >
               OK
             </button>
