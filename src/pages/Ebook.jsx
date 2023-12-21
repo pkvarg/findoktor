@@ -141,7 +141,7 @@ const Ebook = () => {
               />
               <div className="mt-4 flex flex-row items-center gap-4 lg:gap-2">
                 <input type="checkbox" required="required" />
-                <p className="text-[15px] leading-[15px] text-gray-600">
+                <p className="text-[15px] leading-[15px] text-gray-800">
                   Pred odoslaním musíte súhlasiť so spracovaním osobných údajov
                 </p>
               </div>

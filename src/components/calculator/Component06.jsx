@@ -10,9 +10,14 @@ const Component06 = ({
   const inputRef = useRef(null);
 
   const onNextGuard = () => {
-    if (currentFloorNumber < 0 || currentFloorNumber > 99)
+    if (
+      currentFloorNumber <= 0 ||
+      currentFloorNumber > 99 ||
+      currentFloorNumber === undefined
+    ) {
       toast.error('Zadajte poschodie');
-    else {
+      return;
+    } else {
       onNext();
     }
   };

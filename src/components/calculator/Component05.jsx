@@ -5,9 +5,14 @@ const Component05 = ({ onBack, onNext, allFloorsCount, setAllFloorsCount }) => {
   const inputRef = useRef(null);
 
   const onNextGuard = () => {
-    if (allFloorsCount < 0 || allFloorsCount > 99)
+    if (
+      allFloorsCount <= 0 ||
+      allFloorsCount > 99 ||
+      allFloorsCount === undefined
+    ) {
       toast.error('Zadajte počet poschodí');
-    else {
+      return;
+    } else {
       onNext();
     }
   };
