@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         <div className="absolute left-2 top-[35%] z-10 mx-4 lg:left-[22%] lg:top-[45%] lg:mx-0 2xl:left-[25%]">
-          <div className="mr-2 text-justify text-[15px] leading-[18px] text-[#445862] lg:mr-0 lg:w-[45%] lg:text-[12.5px] 2xl:w-[40%]">
+          <div className="mr-2 text-justify text-[15px] leading-[18px] lg:mr-0 lg:w-[45%] lg:text-[12.5px] 2xl:w-[40%]">
             <p className="mt-[7.5%] 2xl:mt-[9%]">
               Vitaj - ak hľadáš vysnívaný domov, alebo ťa láka finančná istota,
               som tvoj človek! Som Odborník na sieťovanie v oblasti

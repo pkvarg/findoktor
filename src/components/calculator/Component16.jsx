@@ -95,12 +95,12 @@ const Component16 = ({
         </div>
       </div>
 
-      <button
+      {/* <button
         onClick={onBack}
         className="mt-16 w-[90%] rounded-[35px] border border-[#0076ba] px-1 py-2 text-[15px]  font-bold uppercase hover:border-2 hover:border-[#03065f] lg:mt-8"
       >
         Späť (pôjde čoskoro preč 😀)
-      </button>
+      </button> */}
     </div>
   );
 };

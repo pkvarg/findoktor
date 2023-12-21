@@ -34,11 +34,13 @@ const Component01 = ({
   );
 
   const onNextGuard = () => {
-    if (street === '') {
+    if (street === '' || street === undefined) {
       toast.error('Zvoľte ulicu');
+      return;
     }
     if (houseNumber === '') {
       toast.error('Zadajte číslo');
+      return;
     } else {
       onNext();
     }

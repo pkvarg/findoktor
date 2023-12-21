@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'CustomFont';
+  src:
+    local('CustomFont'),
+    url('./fonts/trebuc.ttf') format('truetype');
+}
+
 #root {
   overflow-x: hidden !important;
 }
 
 body {
   overflow-x: hidden !important;
+  font-family: 'CustomFont', sans-serif;
+  color: #a09a9e !important;
 }
 
 .form-control {
