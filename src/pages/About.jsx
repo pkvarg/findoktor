@@ -37,7 +37,7 @@ const About = () => {
               <span className="ml-1 text-[#1871aa]">domov</span>
             </p>
             <div className="z-10 mx-0">
-              <div className="mr-2 text-justify text-[15px] leading-[18px] lg:mr-0 lg:text-[12.5px]">
+              <div className="mr-2 text-justify text-[15px] leading-[18px] lg:mr-0 lg:text-[14px]">
                 <p className="mt-[7.5%] 2xl:mt-[9%]">
                   Vitaj - ak hľadáš vysnívaný domov, alebo ťa láka finančná
                   istota, som tvoj človek! Som Odborník na sieťovanie v oblasti

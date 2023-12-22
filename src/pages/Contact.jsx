@@ -52,7 +52,7 @@ const Contact = () => {
       <div className="h-[min-content]">
         <CalcNavbar />
       </div>
-      <div className="z-10 h-[100%] flex-1">
+      <div className="z-10 h-[100%] flex-1 text-[14px]">
         <h1 className="-mt-[40%] text-center text-[30px] font-bold text-[#0376b7] lg:-mt-[12.5%] 2xl:-mt-[8%]">
           Kontaktujte ma
         </h1>

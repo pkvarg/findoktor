@@ -82,8 +82,8 @@ const Ebook = () => {
               : 'mx-4 flex flex-col gap-8 blur-md lg:mx-[22.5%] lg:flex-row lg:blur-lg 2xl:mx-[25%]'
           }
         >
-          <div className="flex flex-col text-[22.5px] text-[#928a8f] lg:w-[60%]">
-            <h1 className="mt-6 text-[30px] font-bold leading-[30px] text-[#0076ba] 2xl:mt-[15%]">
+          <div className="flex flex-col text-[14px] text-[#928a8f] lg:w-[60%]">
+            <h1 className="mt-6 text-[30px] font-bold leading-[30px] text-[#0076ba] md:mt-16 2xl:mt-[17.5%]">
               Zaujímaš sa o svoju budúcnosť?
             </h1>
             <p className="mt-4 text-justify lg:mt-4">
