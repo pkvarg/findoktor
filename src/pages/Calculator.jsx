@@ -55,10 +55,8 @@ const Calculator = () => {
   const [urbanQuality, setUrbanQuality] = useState('');
   const [email, setEmail] = useState('');
   const [checkBox, setCheckBox] = useState(false);
-  const [withoutRealEstateAssistance, setWithoutRealEstateAssistance] =
-    useState(0);
 
-  const [withRealEstateAssistance, setWithRealEstateAssistance] = useState(0);
+  const [price, setPrice] = useState(0);
 
   console.log(
     flatOrHouse,
@@ -308,13 +306,7 @@ const Calculator = () => {
           />
         );
       case 16:
-        return (
-          <Component16
-            onBack={handleBack}
-            withoutRealEstateAssistance={withoutRealEstateAssistance}
-            withRealEstateAssistance={withRealEstateAssistance}
-          />
-        );
+        return <Component16 onBack={handleBack} price={price} />;
 
       default:
         return null;
@@ -498,19 +490,58 @@ const Calculator = () => {
       hasAirCon,
       urbanQuality,
     );
-    const assignResultsDelay = () => {
-      console.log('...RESULTS', calculated);
-      if (calculated != null || calculated != '' || calculated != 0) {
-        setWithoutRealEstateAssistance(
-          Math.floor(calculated.noProvision / 1000) * 1000,
-        );
+    // const assignResultsDelay = () => {
 
-        setWithRealEstateAssistance(
-          Math.floor(calculated.withProvision / 1000) * 1000,
-        );
-      }
-    };
-    setTimeout(assignResultsDelay, 9000);
+    // }
+    if (calculated !== null && calculated !== '' && calculated !== 0) {
+      setPrice(calculated.price);
+      console.log('...RESULTS', calculated);
+      return calculated;
+    }
+    //setTimeout(assignResultsDelay, 9000);
+  };
+
+  const sendEmail = async () => {
+    console.log('..sending..');
+    const { data } = await axios.put(
+      `https://api.pictusweb.com/api/md/email`,
+      // `http://localhost:2000/api/md/email`,
+      {
+        flatOrHouse,
+        city,
+        street,
+        houseNumber,
+        countRooms,
+        houseCondition,
+        squareMeters,
+        allFloorsCount,
+        currentFloorNumber,
+        hasElevator,
+        hasBalcony,
+        hasLoggia,
+        hasTerrace,
+        hasBasement,
+        hasGarage,
+        hasParking,
+        builtYear,
+        hasIsolation,
+        hasNewElevator,
+        hasNewWindows,
+        hasNewInstallations,
+        hasThermostat,
+        hasInternet,
+        hasAlarm,
+        hasAirCon,
+        urbanQuality,
+        monthlyCosts,
+        email,
+        price,
+      },
+
+      //config
+    );
+
+    console.log('ctc:', data);
   };
 
   const handleSubmitForm = (e) => {
@@ -519,53 +550,59 @@ const Calculator = () => {
       setIsValid(validateEmail(email));
       setIsLoading(true);
 
-      const sendEmail = async () => {
-        console.log('..sending..');
-        const { data } = await axios.put(
-          `https://api.pictusweb.com/api/md/email`,
-          // `http://localhost:2000/api/md/email`,
-          {
-            flatOrHouse,
-            city,
-            street,
-            houseNumber,
-            countRooms,
-            houseCondition,
-            squareMeters,
-            allFloorsCount,
-            currentFloorNumber,
-            hasElevator,
-            hasBalcony,
-            hasLoggia,
-            hasTerrace,
-            hasBasement,
-            hasGarage,
-            hasParking,
-            builtYear,
-            hasIsolation,
-            hasNewElevator,
-            hasNewWindows,
-            hasNewInstallations,
-            hasThermostat,
-            hasInternet,
-            hasAlarm,
-            hasAirCon,
-            urbanQuality,
-            monthlyCosts,
-            email,
-            withoutRealEstateAssistance,
-            withRealEstateAssistance,
-          },
+      const res = startCalculation();
+      console.log('res of calc', res);
+      if (res) {
+        sendEmail();
+      }
 
-          //config
-        );
+      // const sendEmail = async () => {
+      //   console.log('..sending..');
+      //   const { data } = await axios.put(
+      //     // `https://api.pictusweb.com/api/md/email`,
+      //     `http://localhost:2000/api/md/email`,
+      //     {
+      //       flatOrHouse,
+      //       city,
+      //       street,
+      //       houseNumber,
+      //       countRooms,
+      //       houseCondition,
+      //       squareMeters,
+      //       allFloorsCount,
+      //       currentFloorNumber,
+      //       hasElevator,
+      //       hasBalcony,
+      //       hasLoggia,
+      //       hasTerrace,
+      //       hasBasement,
+      //       hasGarage,
+      //       hasParking,
+      //       builtYear,
+      //       hasIsolation,
+      //       hasNewElevator,
+      //       hasNewWindows,
+      //       hasNewInstallations,
+      //       hasThermostat,
+      //       hasInternet,
+      //       hasAlarm,
+      //       hasAirCon,
+      //       urbanQuality,
+      //       monthlyCosts,
+      //       email,
+      //       price,
+      //     },
 
-        console.log('ctc:', data);
-      };
+      //     //config
+      //   );
+
+      //   console.log('ctc:', data);
+      // };
 
       // setTimeout(assignResultsDelay, 9000)
       setTimeout(handleNext, 4000);
-      setTimeout(sendEmail, 9000);
+
+      //setTimeout(sendEmail, 9000);
     }
   };
 

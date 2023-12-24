@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 
-const Component16 = ({
-  onBack,
-  withoutRealEstateAssistance,
-  withRealEstateAssistance,
-}) => {
+const Component16 = ({ onBack, price }) => {
   const phone = '+421944517560';
   const email = 'info@michaldovala.sk';
   const [isHoveredPhone, setIsHoveredPhone] = useState(false);
@@ -47,7 +43,7 @@ const Component16 = ({
         </div> */}
         <div className="relative mt-8 flex h-[75px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[100px] lg:rounded-xl">
           <p className="translate-y-[15%] text-center text-[35px] font-bold text-[#ff010f] lg:translate-y-[45%]">
-            {withRealEstateAssistance.toLocaleString()} €
+            {price.toLocaleString()} €
           </p>
 
           {/* <p className="absolute left-2 top-[125%] text-[12.5px] leading-[12.5px] text-[#0076ba] lg:top-[112%]">
