@@ -62,20 +62,20 @@ const About = () => {
             </div>
           </div>
           <div className="-mt-4 flex justify-center md:mt-[17.5%] md:inline lg:mr-8 lg:mt-[21.5%] xl:mt-[18%] 2xl:mt-[15.5%]">
-            <p
+            <div
               id="phone"
               onClick={() => showContact('phone')}
               className="flex w-max flex-col items-center gap-2 rounded-[30px] border-[3px] border-[#0076ba] px-4 py-4 text-[20px]  font-bold leading-[20px] text-[#0076ba] lg:rounded-[15px] lg:text-[25px] lg:leading-[29.5px]
           "
             >
               <a href="tel:+421944517560">Zavolajte nám</a>
-              <div className="flex flex-row items-center gap-2">
+              <p className="flex flex-row items-center gap-2">
                 <BiSolidPhoneCall />
                 <a className="text-[20px]" href="tel:+421944517560">
                   +421 944 517 560
                 </a>
-              </div>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
       </div>

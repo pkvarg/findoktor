@@ -1,4 +1,5 @@
 import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { result } from '../getResults';
 import { SpinnerFullPage } from '../components';
 import axios from 'axios';
@@ -24,6 +25,7 @@ const Component16 = lazy(() => import('../components/calculator/Component16'));
 const Footer = lazy(() => import('../components/Footer'));
 
 const Calculator = () => {
+  const navigate = useNavigate();
   const formRef = useRef(null);
   const [flatOrHouse, setFlatOrHouse] = useState('');
   const [city, setCity] = useState('Bratislava');
@@ -368,7 +370,11 @@ const Calculator = () => {
     setCurrentFlatOrHouseClicked(building);
     const element = document.getElementById(building);
     element.classList.add('clicked');
-    setTimeout(handleNext, 1000);
+    if (building === 'flat') {
+      setTimeout(handleNext, 1000);
+    } else {
+      navigate('/calculator-house');
+    }
   };
 
   const validateEmail = (email) => {
@@ -623,19 +629,19 @@ const Calculator = () => {
 
     // Add event listener to the form
     const formElement = formRef.current;
+
     if (formElement !== null)
       formElement.addEventListener('keydown', handleKeyPress);
 
     // Cleanup: Remove event listener when the component unmounts
-    return () => {
-      formElement.removeEventListener('keydown', handleKeyPress);
-    };
+    // return () => {
+    //   formElement.removeEventListener('keydown', handleKeyPress);
+    // };
   }, []); // Run the effect only once on mount
 
   return (
     <>
       <Suspense fallback={<SpinnerFullPage />}>
-        {/* <Component00 onNext={handleNext} handleFlatOrHouse={handleFlatOrHouse} /> */}
         <div className="relative grid h-[97.5vh] grid-rows-3 bg-white text-[30px] lg:h-screen">
           <div className="h-[min-content]">
             <CalcNavbar />

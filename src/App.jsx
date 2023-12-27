@@ -15,6 +15,8 @@ import {
 } from './pages';
 import { SpinnerFullPage } from './components';
 const Calculator = lazy(() => import('./pages/Calculator'));
+const CalculatorHouse = lazy(() => import('./pages/CalculatorHouse'));
+
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/calculator-house" element={<CalculatorHouse />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/reconstruction" element={<Reconstruction />} />
           <Route path="/our-services" element={<OurServices />} />

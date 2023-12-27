@@ -10,6 +10,7 @@ import Rules from './Rules';
 import Finances from './Finances';
 import Ebook from './Ebook';
 import Admin from './Admin';
+import CalculatorHouse from './CalculatorHouse';
 
 export {
   ServicesPage,
@@ -24,4 +25,5 @@ export {
   Finances,
   Ebook,
   Admin,
+  CalculatorHouse,
 };
