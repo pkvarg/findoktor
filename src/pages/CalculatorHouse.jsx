@@ -25,6 +25,16 @@ const HouseComponent06 = lazy(
 const HouseComponent07 = lazy(
   () => import('../components/calculator/house/HouseComponent07'),
 );
+const HouseComponent08 = lazy(
+  () => import('../components/calculator/house/HouseComponent08'),
+);
+const HouseComponent09 = lazy(
+  () => import('../components/calculator/house/HouseComponent09'),
+);
+
+const HouseComponent10 = lazy(
+  () => import('../components/calculator/house/HouseComponent10'),
+);
 
 const Footer = lazy(() => import('../components/Footer'));
 
@@ -55,6 +65,38 @@ const CalculatorHouse = () => {
   const [hasSauna, setHasSauna] = useState(false);
   const [hasGardenShed, setHasGardenShed] = useState(false);
 
+  const garage = document.getElementById('garage');
+  const basement = document.getElementById('basement');
+  const terrace = document.getElementById('terrace');
+  const pool = document.getElementById('pool');
+  const sauna = document.getElementById('sauna');
+  const gardenshed = document.getElementById('gardenshed');
+
+  useEffect(() => {
+    if (garage !== null && hasGarage) garage.classList.add('clicked');
+    if (garage !== null && !hasGarage) garage.classList.remove('clicked');
+    if (basement !== null && hasBasement) basement.classList.add('clicked');
+    if (basement !== null && !hasBasement) basement.classList.remove('clicked');
+    if (terrace !== null && hasTerrace) terrace.classList.add('clicked');
+    if (terrace !== null && !hasTerrace) terrace.classList.remove('clicked');
+    if (pool !== null && hasPool) pool.classList.add('clicked');
+    if (pool !== null && !hasPool) pool.classList.remove('clicked');
+
+    if (sauna !== null && hasSauna) sauna.classList.add('clicked');
+    if (sauna !== null && !hasSauna) sauna.classList.remove('clicked');
+
+    if (gardenshed !== null && hasGardenShed)
+      gardenshed.classList.add('clicked');
+    if (gardenshed !== null && !hasGardenShed)
+      gardenshed.classList.remove('clicked');
+  }, [hasGarage, hasBasement, hasTerrace, hasPool, hasSauna, hasGardenShed]);
+
+  const [landType, setLandType] = useState(0);
+  const [currentLandTypeClicked, setCurrentLandTypeClicked] = useState(null);
+  const [landSquareMeters, setLandSquareMeters] = useState(0);
+
+  const [builtYear, setBuiltYear] = useState(0);
+
   console.log(
     'HOUSE',
     flatOrHouse,
@@ -72,6 +114,9 @@ const CalculatorHouse = () => {
     hasPool,
     hasSauna,
     hasGardenShed,
+    landType,
+    landSquareMeters,
+    builtYear,
   );
 
   const handleNext = () => {
@@ -129,6 +174,17 @@ const CalculatorHouse = () => {
     }
     setHouseType(num);
     setCurrentHouseTypeClicked(num);
+    const element = document.getElementById(num);
+    element.classList.add('clicked');
+  };
+
+  const handleLandType = (num) => {
+    if (currentLandTypeClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentLandTypeClicked);
+      toRemoveFrom.classList.remove('clicked');
+    }
+    setLandType(num);
+    setCurrentLandTypeClicked(num);
     const element = document.getElementById(num);
     element.classList.add('clicked');
   };
@@ -213,39 +269,36 @@ const CalculatorHouse = () => {
             setHasGardenShed={setHasGardenShed}
           />
         );
-      // case 5:
-      //   return (
-      //     <Component05
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       allFloorsCount={allFloorsCount}
-      //       setAllFloorsCount={setAllFloorsCount}
-      //     />
-      //   );
 
-      // case 9:
-      //   return (
-      //     <Component09
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       hasGarage={hasGarage}
-      //       hasParking={hasParking}
-      //       hasNoParking={hasNoParking}
-      //       setHasGarage={setHasGarage}
-      //       setHasParking={setHasParking}
-      //       setHasNoParking={setHasNoParking}
-      //     />
-      //   );
+      case 8:
+        return (
+          <HouseComponent08
+            onBack={handleBack}
+            onNext={handleNext}
+            handleLandType={handleLandType}
+            currentLandTypeClicked={currentLandTypeClicked}
+          />
+        );
 
-      // case 10:
-      //   return (
-      //     <Component10
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       builtYear={builtYear}
-      //       setBuiltYear={setBuiltYear}
-      //     />
-      //   );
+      case 9:
+        return (
+          <HouseComponent09
+            onBack={handleBack}
+            onNext={handleNext}
+            landSquareMeters={landSquareMeters}
+            setLandSquareMeters={setLandSquareMeters}
+          />
+        );
+
+      case 10:
+        return (
+          <HouseComponent10
+            onBack={handleBack}
+            onNext={handleNext}
+            builtYear={builtYear}
+            setBuiltYear={setBuiltYear}
+          />
+        );
 
       // case 11:
       //   return (
