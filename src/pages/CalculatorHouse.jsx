@@ -7,6 +7,25 @@ const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'));
 const HouseComponent01 = lazy(
   () => import('../components/calculator/house/HouseComponent01'),
 );
+const HouseComponent02 = lazy(
+  () => import('../components/calculator/house/HouseComponent02'),
+);
+const HouseComponent03 = lazy(
+  () => import('../components/calculator/house/HouseComponent03'),
+);
+const HouseComponent04 = lazy(
+  () => import('../components/calculator/house/HouseComponent04'),
+);
+const HouseComponent05 = lazy(
+  () => import('../components/calculator/house/HouseComponent05'),
+);
+const HouseComponent06 = lazy(
+  () => import('../components/calculator/house/HouseComponent06'),
+);
+const HouseComponent07 = lazy(
+  () => import('../components/calculator/house/HouseComponent07'),
+);
+
 const Footer = lazy(() => import('../components/Footer'));
 
 const CalculatorHouse = () => {
@@ -16,12 +35,44 @@ const CalculatorHouse = () => {
   const [city, setCity] = useState('Bratislava');
   const [street, setStreet] = useState('');
   const [houseNumber, setHouseNumber] = useState('');
-
+  const [countRooms, setCountRooms] = useState(0);
+  const [countBathrooms, setCountBathrooms] = useState(0);
   const [currentComponent, setCurrentComponent] = useState(1);
-
   const [isLoading, setIsLoading] = useState(false);
+  const [currentlyClickedRoomCount, setCurrentlyClickedRoomCount] =
+    useState(null);
+  const [currentlyClickedBathroomCount, setCurrentlyClickedBathroomCount] =
+    useState(null);
+  const [houseCondition, setHouseCondition] = useState(0);
+  const [currentConditionClicked, setCurrentConditionClicked] = useState(null);
+  const [squareMeters, setSquareMeters] = useState(0);
+  const [houseType, setHouseType] = useState(0);
+  const [currentHouseTypeClicked, setCurrentHouseTypeClicked] = useState(null);
+  const [hasGarage, setHasGarage] = useState(false);
+  const [hasBasement, setHasBasement] = useState(false);
+  const [hasTerrace, setHasTerrace] = useState(false);
+  const [hasPool, setHasPool] = useState(false);
+  const [hasSauna, setHasSauna] = useState(false);
+  const [hasGardenShed, setHasGardenShed] = useState(false);
 
-  console.log(flatOrHouse, city);
+  console.log(
+    'HOUSE',
+    flatOrHouse,
+    city,
+    street,
+    houseNumber,
+    countRooms,
+    countBathrooms,
+    houseCondition,
+    squareMeters,
+    houseType,
+    hasGarage,
+    hasBasement,
+    hasTerrace,
+    hasPool,
+    hasSauna,
+    hasGardenShed,
+  );
 
   const handleNext = () => {
     if (currentComponent < 16) {
@@ -34,6 +85,52 @@ const CalculatorHouse = () => {
     if (currentComponent > 0) {
       setCurrentComponent(currentComponent - 1);
     }
+  };
+
+  const handleCountRoomClick = (count) => {
+    if (currentlyClickedRoomCount !== null) {
+      const toRemoveFrom = document.getElementById(currentlyClickedRoomCount);
+      toRemoveFrom.classList.remove('clicked');
+    }
+    setCountRooms(count);
+    setCurrentlyClickedRoomCount(count);
+    const element = document.getElementById(count);
+    element.classList.add('clicked');
+  };
+
+  const handleCountBathroomClick = (count) => {
+    if (currentlyClickedBathroomCount !== null) {
+      const toRemoveFrom = document.getElementById(
+        currentlyClickedBathroomCount,
+      );
+      toRemoveFrom.classList.remove('clicked');
+    }
+    setCountBathrooms(count);
+    setCurrentlyClickedBathroomCount(count);
+    const element = document.getElementById(count);
+    element.classList.add('clicked');
+  };
+
+  const handleHouseCondition = (num) => {
+    if (currentConditionClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentConditionClicked);
+      toRemoveFrom.classList.remove('clicked');
+    }
+    setHouseCondition(num);
+    setCurrentConditionClicked(num);
+    const element = document.getElementById(num);
+    element.classList.add('clicked');
+  };
+
+  const handleHouseType = (num) => {
+    if (currentHouseTypeClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentHouseTypeClicked);
+      toRemoveFrom.classList.remove('clicked');
+    }
+    setHouseType(num);
+    setCurrentHouseTypeClicked(num);
+    const element = document.getElementById(num);
+    element.classList.add('clicked');
   };
 
   const renderComponent = (componentNumber) => {
@@ -51,46 +148,71 @@ const CalculatorHouse = () => {
             setHouseNumber={setHouseNumber}
           />
         );
-      // case 2:
-      //   return (
-      //     <Component01
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       city={city}
-      //       setCity={setCity}
-      //       street={street}
-      //       setStreet={setStreet}
-      //       houseNumber={houseNumber}
-      //       setHouseNumber={setHouseNumber}
-      //     />
-      //   );
-      // case 2:
-      //   return (
-      //     <Component02
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       currentlyClickedRoomCount={currentlyClickedRoomCount}
-      //       handleCountRoomClick={handleCountRoomClick}
-      //     />
-      //   );
-      // case 3:
-      //   return (
-      //     <Component03
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       handleHouseCondition={handleHouseCondition}
-      //       currentConditionClicked={currentConditionClicked}
-      //     />
-      //   );
-      // case 4:
-      //   return (
-      //     <Component04
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       squareMeters={squareMeters}
-      //       setSquareMeters={setSquareMeters}
-      //     />
-      //   );
+
+      case 2:
+        return (
+          <HouseComponent02
+            onBack={handleBack}
+            onNext={handleNext}
+            currentlyClickedRoomCount={currentlyClickedRoomCount}
+            handleCountRoomClick={handleCountRoomClick}
+          />
+        );
+      case 3:
+        return (
+          <HouseComponent03
+            onBack={handleBack}
+            onNext={handleNext}
+            currentlyClickedBathroomCount={currentlyClickedBathroomCount}
+            handleCountBathroomClick={handleCountBathroomClick}
+          />
+        );
+      case 4:
+        return (
+          <HouseComponent04
+            onBack={handleBack}
+            onNext={handleNext}
+            handleHouseCondition={handleHouseCondition}
+            currentConditionClicked={currentConditionClicked}
+          />
+        );
+      case 5:
+        return (
+          <HouseComponent05
+            onBack={handleBack}
+            onNext={handleNext}
+            squareMeters={squareMeters}
+            setSquareMeters={setSquareMeters}
+          />
+        );
+      case 6:
+        return (
+          <HouseComponent06
+            onBack={handleBack}
+            onNext={handleNext}
+            handleHouseType={handleHouseType}
+            currentHouseTypeClicked={currentHouseTypeClicked}
+          />
+        );
+      case 7:
+        return (
+          <HouseComponent07
+            onBack={handleBack}
+            onNext={handleNext}
+            hasGarage={hasGarage}
+            hasBasement={hasBasement}
+            hasTerrace={hasTerrace}
+            hasPool={hasPool}
+            hasSauna={hasSauna}
+            hasGardenShed={hasGardenShed}
+            setHasGarage={setHasGarage}
+            setHasBasement={setHasBasement}
+            setHasTerrace={setHasTerrace}
+            setHasPool={setHasPool}
+            setHasSauna={setHasSauna}
+            setHasGardenShed={setHasGardenShed}
+          />
+        );
       // case 5:
       //   return (
       //     <Component05
@@ -98,40 +220,6 @@ const CalculatorHouse = () => {
       //       onNext={handleNext}
       //       allFloorsCount={allFloorsCount}
       //       setAllFloorsCount={setAllFloorsCount}
-      //     />
-      //   );
-      // case 6:
-      //   return (
-      //     <Component06
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       currentFloorNumber={currentFloorNumber}
-      //       setCurrentFloorNumber={setCurrentFloorNumber}
-      //     />
-      //   );
-      // case 7:
-      //   return (
-      //     <Component07
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       hasElevator={hasElevator}
-      //       handleHasElevator={handleHasElevator}
-      //     />
-      //   );
-
-      // case 8:
-      //   return (
-      //     <Component08
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       hasBalcony={hasBalcony}
-      //       hasLoggia={hasLoggia}
-      //       hasTerrace={hasTerrace}
-      //       hasBasement={hasBasement}
-      //       setHasBalcony={setHasBalcony}
-      //       setHasLoggia={setHasLoggia}
-      //       setHasTerrace={setHasTerrace}
-      //       setHasBasement={setHasBasement}
       //     />
       //   );
 

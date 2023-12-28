@@ -28,7 +28,7 @@ const HouseComponent01 = ({
     )
     .map((option) => option.street);
 
-  console.log('filtered', filteredStreets[0] === searchTerm);
+ // console.log('filtered', filteredStreets[0] === searchTerm);
   const [hideStreetDropdown, setHideStreetDropdown] = useState(
     filteredStreets[0] === searchTerm,
   );
