@@ -36,6 +36,22 @@ const HouseComponent10 = lazy(
   () => import('../components/calculator/house/HouseComponent10'),
 );
 
+const HouseComponent11 = lazy(
+  () => import('../components/calculator/house/HouseComponent11'),
+);
+
+const HouseComponent12 = lazy(
+  () => import('../components/calculator/house/HouseComponent12'),
+);
+
+const HouseComponent13 = lazy(
+  () => import('../components/calculator/house/HouseComponent13'),
+);
+
+const HouseComponent14 = lazy(
+  () => import('../components/calculator/house/HouseComponent14'),
+);
+
 const Footer = lazy(() => import('../components/Footer'));
 
 const CalculatorHouse = () => {
@@ -47,7 +63,6 @@ const CalculatorHouse = () => {
   const [houseNumber, setHouseNumber] = useState('');
   const [countRooms, setCountRooms] = useState(0);
   const [countBathrooms, setCountBathrooms] = useState(0);
-  const [currentComponent, setCurrentComponent] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [currentlyClickedRoomCount, setCurrentlyClickedRoomCount] =
     useState(null);
@@ -97,6 +112,186 @@ const CalculatorHouse = () => {
 
   const [builtYear, setBuiltYear] = useState(0);
 
+  const [hasThermostat, setHasThermostat] = useState(false);
+
+  const [hasAlarm, setHasAlarm] = useState(false);
+  const [hasFireAlarm, setHasFireAlarm] = useState(false);
+  const [hasSolarCollectors, setHasSolarCollectors] = useState(false);
+  const [hasCameraSystem, setHasCameraSystem] = useState(false);
+  const [hasInternet, setHasInternet] = useState(false);
+
+  const thermostat = document.getElementById('thermostat');
+  const alarm = document.getElementById('alarm');
+  const firealarm = document.getElementById('firealarm');
+  const solarcollectors = document.getElementById('solarcollectors');
+  const camerasystem = document.getElementById('camerasystem');
+  const internet = document.getElementById('internet');
+
+  useEffect(() => {
+    if (thermostat !== null && hasThermostat)
+      thermostat.classList.add('clicked');
+    if (thermostat !== null && !hasThermostat)
+      thermostat.classList.remove('clicked');
+    if (alarm !== null && hasAlarm) alarm.classList.add('clicked');
+    if (alarm !== null && !hasAlarm) alarm.classList.remove('clicked');
+    if (firealarm !== null && hasFireAlarm) firealarm.classList.add('clicked');
+    if (firealarm !== null && !hasFireAlarm)
+      firealarm.classList.remove('clicked');
+    if (solarcollectors !== null && hasSolarCollectors)
+      solarcollectors.classList.add('clicked');
+    if (solarcollectors !== null && !hasSolarCollectors)
+      solarcollectors.classList.remove('clicked');
+    if (camerasystem !== null && hasCameraSystem)
+      camerasystem.classList.add('clicked');
+    if (camerasystem !== null && !hasCameraSystem)
+      camerasystem.classList.remove('clicked');
+    if (internet !== null && hasInternet) internet.classList.add('clicked');
+    if (internet !== null && !hasInternet) internet.classList.remove('clicked');
+  }, [
+    hasThermostat,
+    hasAlarm,
+    hasFireAlarm,
+    hasSolarCollectors,
+    hasCameraSystem,
+    hasInternet,
+  ]);
+
+  const [hasWell, setHasWell] = useState(false);
+  const [hasCityWater, setHasCityWater] = useState(false);
+
+  const [hasCitySewerage, setHasCitySewerage] = useState(false);
+
+  const [hasSeptic, setHasSeptic] = useState(false);
+  const [hasElectricity, setHasElectricity] = useState(false);
+  const [hasGas, setHasGas] = useState(false);
+
+  const well = document.getElementById('well');
+  const citywater = document.getElementById('citywater');
+  const citysewerage = document.getElementById('citysewerage');
+  const septic = document.getElementById('septic');
+  const electricity = document.getElementById('electricity');
+  const gas = document.getElementById('gas');
+
+  useEffect(() => {
+    if (well !== null && hasWell) well.classList.add('clicked');
+    if (well !== null && !hasWell) well.classList.remove('clicked');
+    if (citywater !== null && hasCityWater) citywater.classList.add('clicked');
+    if (citywater !== null && !hasCityWater)
+      citywater.classList.remove('clicked');
+    if (citysewerage !== null && hasCitySewerage)
+      citysewerage.classList.add('clicked');
+    if (citysewerage !== null && !hasCitySewerage)
+      citysewerage.classList.remove('clicked');
+    if (septic !== null && hasSeptic) septic.classList.add('clicked');
+    if (septic !== null && !hasSeptic) septic.classList.remove('clicked');
+    if (electricity !== null && hasElectricity)
+      electricity.classList.add('clicked');
+    if (electricity !== null && !hasElectricity)
+      electricity.classList.remove('clicked');
+    if (gas !== null && hasGas) gas.classList.add('clicked');
+    if (gas !== null && !hasGas) gas.classList.remove('clicked');
+  }, [
+    hasWell,
+    hasCityWater,
+    hasCitySewerage,
+    hasSeptic,
+    hasElectricity,
+    hasGas,
+  ]);
+
+  const [urbanQuality, setUrbanQuality] = useState('');
+
+  const [currentUrbanQualityClicked, setCurrentUrbanQualityClicked] =
+    useState(null);
+
+  const handleUrbanQuality = (quality) => {
+    if (currentUrbanQualityClicked !== null) {
+      const toRemoveFrom = document.getElementById(currentUrbanQualityClicked);
+      toRemoveFrom.classList.remove('clicked');
+    }
+    setUrbanQuality(quality);
+    setCurrentUrbanQualityClicked(quality);
+    const element = document.getElementById(quality);
+    element.classList.add('clicked');
+  };
+
+  const [hasElectricRadiators, setHasElectricRadiators] = useState(false);
+  const [hasHeatPump, setHasHeatPump] = useState(false);
+  const [hasSolidFuel, setHasSolidFuel] = useState(false);
+  const [hasGasBoiler, setHasGasBoiler] = useState(false);
+  const [hasUnderfloorHeating, setHasUnderfloorHeating] = useState(false);
+  const [hasOther, setHasOther] = useState(false);
+
+  const electricradiators = document.getElementById('electricradiators');
+  const heatpump = document.getElementById('heatpump');
+  const solidfuel = document.getElementById('solidfuel');
+  const gasboiler = document.getElementById('gasboiler');
+  const underfloorheating = document.getElementById('underfloorheating');
+  const other = document.getElementById('other');
+
+  useEffect(() => {
+    if (electricradiators !== null && hasElectricRadiators)
+      electricradiators.classList.add('clicked');
+    if (electricradiators !== null && !hasElectricRadiators)
+      electricradiators.classList.remove('clicked');
+    if (heatpump !== null && hasHeatPump) heatpump.classList.add('clicked');
+    if (heatpump !== null && !hasHeatPump) heatpump.classList.remove('clicked');
+    if (solidfuel !== null && hasSolidFuel) solidfuel.classList.add('clicked');
+    if (solidfuel !== null && !hasSolidFuel)
+      solidfuel.classList.remove('clicked');
+    if (gasboiler !== null && hasGasBoiler) gasboiler.classList.add('clicked');
+    if (gasboiler !== null && !hasGasBoiler)
+      gasboiler.classList.remove('clicked');
+    if (underfloorheating !== null && hasUnderfloorHeating)
+      underfloorheating.classList.add('clicked');
+    if (underfloorheating !== null && !hasUnderfloorHeating)
+      underfloorheating.classList.remove('clicked');
+    if (other !== null && hasOther) other.classList.add('clicked');
+    if (other !== null && !hasOther) other.classList.remove('clicked');
+  }, [
+    hasElectricRadiators,
+    hasHeatPump,
+    hasSolidFuel,
+    hasGasBoiler,
+    hasUnderfloorHeating,
+    hasOther,
+  ]);
+
+  const startCalculation = () => {
+    // const calculated = result(
+    //   city,
+    //   street,
+    //   houseNumber,
+    //   countRooms,
+    //   houseCondition,
+    //   squareMeters,
+    //   allFloorsCount,
+    //   currentFloorNumber,
+    //   hasElevator,
+    //   hasBalcony,
+    //   hasLoggia,
+    //   hasTerrace,
+    //   hasBasement,
+    //   hasGarage,
+    //   hasParking,
+    //   builtYear,
+    //   hasIsolation,
+    //   hasNewElevator,
+    //   hasNewWindows,
+    //   hasNewInstallations,
+    //   hasThermostat,
+    //   hasInternet,
+    //   hasAlarm,
+    //   hasAirCon,
+    //   urbanQuality,
+    // );
+    // if (calculated !== null && calculated !== '' && calculated !== 0) {
+    //   setPrice(calculated.price);
+    //   console.log('...RESULTS', calculated);
+    //   return calculated;
+    // }
+  };
+
   console.log(
     'HOUSE',
     flatOrHouse,
@@ -117,6 +312,25 @@ const CalculatorHouse = () => {
     landType,
     landSquareMeters,
     builtYear,
+    hasThermostat,
+    hasAlarm,
+    hasFireAlarm,
+    hasSolarCollectors,
+    hasCameraSystem,
+    hasInternet,
+    hasWell,
+    hasCityWater,
+    hasCitySewerage,
+    hasSeptic,
+    hasElectricity,
+    hasGas,
+    urbanQuality,
+    hasElectricRadiators,
+    hasHeatPump,
+    hasSolidFuel,
+    hasGasBoiler,
+    hasUnderfloorHeating,
+    hasOther,
   );
 
   const handleNext = () => {
@@ -188,6 +402,8 @@ const CalculatorHouse = () => {
     const element = document.getElementById(num);
     element.classList.add('clicked');
   };
+
+  const [currentComponent, setCurrentComponent] = useState(13);
 
   const renderComponent = (componentNumber) => {
     switch (componentNumber) {
@@ -269,7 +485,6 @@ const CalculatorHouse = () => {
             setHasGardenShed={setHasGardenShed}
           />
         );
-
       case 8:
         return (
           <HouseComponent08
@@ -279,7 +494,6 @@ const CalculatorHouse = () => {
             currentLandTypeClicked={currentLandTypeClicked}
           />
         );
-
       case 9:
         return (
           <HouseComponent09
@@ -289,7 +503,6 @@ const CalculatorHouse = () => {
             setLandSquareMeters={setLandSquareMeters}
           />
         );
-
       case 10:
         return (
           <HouseComponent10
@@ -299,60 +512,74 @@ const CalculatorHouse = () => {
             setBuiltYear={setBuiltYear}
           />
         );
+      case 11:
+        return (
+          <HouseComponent11
+            onBack={handleBack}
+            onNext={handleNext}
+            hasThermostat={hasThermostat}
+            hasAlarm={hasAlarm}
+            hasFireAlarm={hasFireAlarm}
+            hasSolarCollectors={hasSolarCollectors}
+            hasCameraSystem={hasCameraSystem}
+            hasInternet={hasInternet}
+            setHasThermostat={setHasThermostat}
+            setHasAlarm={setHasAlarm}
+            setHasFireAlarm={setHasFireAlarm}
+            setHasSolarCollectors={setHasSolarCollectors}
+            setHasCameraSystem={setHasCameraSystem}
+            setHasInternet={setHasInternet}
+          />
+        );
+      case 12:
+        return (
+          <HouseComponent12
+            onBack={handleBack}
+            onNext={handleNext}
+            hasWell={hasWell}
+            hasCityWater={hasCityWater}
+            hasCitySewerage={hasCitySewerage}
+            hasSeptic={hasSeptic}
+            hasElectricity={hasElectricity}
+            hasGas={hasGas}
+            setHasWell={setHasWell}
+            setHasCityWater={setHasCityWater}
+            setHasCitySewerage={setHasCitySewerage}
+            setHasSeptic={setHasSeptic}
+            setHasElectricity={setHasElectricity}
+            setHasGas={setHasGas}
+          />
+        );
+      case 13:
+        return (
+          <HouseComponent13
+            onBack={handleBack}
+            onNext={handleNext}
+            urbanQuality={urbanQuality}
+            handleUrbanQuality={handleUrbanQuality}
+            startCalculation={startCalculation}
+          />
+        );
 
-      // case 11:
-      //   return (
-      //     <Component11
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       hasIsolation={hasIsolation}
-      //       hasNewElevator={hasNewElevator}
-      //       hasNewWindows={hasNewWindows}
-      //       hasNewInstallations={hasNewInstallations}
-      //       setHasIsolation={setHasIsolation}
-      //       setHasNewElevator={setHasNewElevator}
-      //       setHasNewWindows={setHasNewWindows}
-      //       setHasNewInstallations={setHasNewInstallations}
-      //     />
-      //   );
-
-      // case 12:
-      //   return (
-      //     <Component12
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       hasThermostat={hasThermostat}
-      //       hasInternet={hasInternet}
-      //       hasAlarm={hasAlarm}
-      //       hasAirCon={hasAirCon}
-      //       setHasThermostat={setHasThermostat}
-      //       setHasInternet={setHasInternet}
-      //       setHasAlarm={setHasAlarm}
-      //       setHasAircon={setHasAircon}
-      //     />
-      //   );
-
-      // case 13:
-      //   return (
-      //     <Component13
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       monthlyCosts={monthlyCosts}
-      //       setMonthlyCosts={setMonthlyCosts}
-      //     />
-      //   );
-
-      // case 14:
-      //   return (
-      //     <Component14
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       urbanQuality={urbanQuality}
-      //       handleUrbanQuality={handleUrbanQuality}
-      //       startCalculation={startCalculation}
-      //     />
-      //   );
-
+      case 14:
+        return (
+          <HouseComponent14
+            onBack={handleBack}
+            onNext={handleNext}
+            hasElectricRadiators={hasElectricRadiators}
+            hasHeatPump={setHasHeatPump}
+            hasSolidFuel={hasSolidFuel}
+            hasGasBoiler={hasGasBoiler}
+            hasUnderfloorHeating={hasUnderfloorHeating}
+            hasOther={hasOther}
+            setHasElectricRadiators={setHasElectricRadiators}
+            setHasHeatPump={setHasHeatPump}
+            setHasSolidFuel={setHasSolidFuel}
+            setHasGasBoiler={setHasGasBoiler}
+            setHasUnderfloorHeating={setHasUnderfloorHeating}
+            setHasOther={setHasOther}
+          />
+        );
       // case 15:
       //   return (
       //     <Component15

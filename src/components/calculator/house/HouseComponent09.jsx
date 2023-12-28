@@ -10,8 +10,7 @@ const HouseComponent09 = ({
   const inputRef = useRef(null);
 
   const onNextGuard = () => {
-    if (landSquareMeters <= 0 || landSquareMeters > 999)
-      toast.error('Zadajte veľkosť plochy pozemku');
+    if (landSquareMeters <= 0) toast.error('Zadajte veľkosť plochy pozemku');
     else {
       onNext();
     }
