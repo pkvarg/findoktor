@@ -81,13 +81,7 @@ const HouseComponent01 = ({
           className="absolute right-2 top-5 text-right text-[15px] font-bold outline-none lg:top-4 lg:w-[70%] lg:text-[20px]"
         ></input>
 
-        {/* {searchTerm === '' && (
-          <input
-            className='text-[15px] lg:text-[20px] text-gray-400 absolute top-5 lg:top-4 right-2 lg:w-[70%] font-bold text-right outline-none'
-            value={street}
-            onChange={(e) => setSearchAndStreet(e.target.value)}
-          ></input>
-        )} */}
+     
 
         <div className="absolute -right-1 top-[100%] z-30 text-right text-[15px] font-bold outline-none lg:top-[100%] lg:w-[70%] lg:text-[20px]">
           {filteredStreets[0] !== searchTerm && searchTerm !== '' && (

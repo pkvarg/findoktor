@@ -46,8 +46,8 @@ const HouseComponent07 = ({
         >
           <div>
             <img
-              className="ml-[20%] mt-[5%] w-[60%]"
-              src="/balcony1.webp"
+              className="ml-[20%] mt-[20%] w-[60%]"
+              src="/garage1.webp"
               alt="garage"
             />
 
@@ -64,7 +64,7 @@ const HouseComponent07 = ({
           <div>
             <img
               className="ml-[24%] mt-[7%] w-[58%]"
-              src="/balcony2.webp"
+              src="/balcony4.webp"
               alt="basement"
             />
 
@@ -99,8 +99,8 @@ const HouseComponent07 = ({
         >
           <div>
             <img
-              className="ml-[20%] mt-[8%] w-[62%] lg:ml-[24%] lg:w-[55%]"
-              src="/balcony4.webp"
+              className="ml-[20%] mt-[22.5%] w-[62%] lg:ml-[24%] lg:w-[55%]"
+              src="/bazen.webp"
               alt="pool"
             />
 
@@ -118,8 +118,8 @@ const HouseComponent07 = ({
         >
           <div>
             <img
-              className="ml-[18%] mt-[7%] w-[62%] lg:ml-[22%] lg:w-[57%]"
-              src="/balcony3.webp"
+              className="ml-[18%] mt-[15%] w-[62%] lg:ml-[25%] lg:w-[57%]"
+              src="/sauna.webp"
               alt="sauna"
             />
 
@@ -135,12 +135,12 @@ const HouseComponent07 = ({
         >
           <div>
             <img
-              className="ml-[20%] mt-[8%] w-[62%] lg:ml-[24%] lg:w-[55%]"
-              src="/balcony4.webp"
+              className="ml-[20%] mt-[15%] w-[62%] lg:ml-[24%] lg:w-[55%]"
+              src="/domcek.webp"
               alt="gardenshed"
             />
 
-            <p className="absolute bottom-0 left-12 text-[16px] font-bold leading-[16px]">
+            <p className="absolute bottom-1 left-12 text-[16px] font-bold leading-[16px]">
               Záhradný domček
             </p>
           </div>

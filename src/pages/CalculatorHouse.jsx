@@ -403,7 +403,7 @@ const CalculatorHouse = () => {
     element.classList.add('clicked');
   };
 
-  const [currentComponent, setCurrentComponent] = useState(13);
+  const [currentComponent, setCurrentComponent] = useState(6);
 
   const renderComponent = (componentNumber) => {
     switch (componentNumber) {
