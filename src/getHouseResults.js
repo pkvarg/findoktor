@@ -1,6 +1,7 @@
 import streetAndDistrict from './../Json/streetAndDistrict.json' assert { type: 'json' };
 import districtAndPrice from './../Json/districtAndPrice.json' assert { type: 'json' };
 import roomsAndPrice from './../Json/roomsAndPrice.json' assert { type: 'json' };
+//import bathrooms from './../Json/bathRooms.json' assert { type: 'json' };
 import floorCountAndValue from './../Json/floorCountAndValue.json' assert { type: 'json' };
 import floorNumberAndValue from './../Json/floorNumberAndValue.json' assert { type: 'json' };
 import buildingCondition from './../Json/buildingCondition.json' assert { type: 'json' };
@@ -9,88 +10,18 @@ import smartHome from './../Json/smartHome.json' assert { type: 'json' };
 // TODO all comps select something if must
 // comp 10 limit years !!!
 
-export const houseResult = (
-  calcValues,
-  // street,
-  // countRooms,
-  // countBathrooms,
-  // houseCondition,
-  // squareMeters,
-  // houseType,
-  // hasPool,
-  // hasSauna,
-  // hasGardenShed,
-  // hasGarage,
-  // hasBasement,
-  // hasTerrace,
-  // landType,
-  // landSquareMeters,
-  // builtYear,
-  // hasThermostat,
-  // hasAlarm,
-  // hasFireAlarm,
-  // hasSolarCollectors,
-  // hasCameraSystem,
-  // hasInternet,
-  // hasWell,
-  // hasCityWater,
-  // hasCitySewerage,
-  // hasSeptic,
-  // hasElectricity,
-  // hasGas,
-  // urbanQuality,
-  // hasElectricRadiators,
-  // hasHeatPump,
-  // hasOther,
-  // hasSolidFuel,
-  // hasGasBoiler,
-  // hasUnderfloorHeating,
-) => {
-  console.log(
-    'HouseRes',
-    calcValues,
-    // street,
-    // countRooms,
-    // countBathrooms,
-    // houseCondition,
-    // squareMeters,
-    // houseType,
-    // hasPool,
-    // hasSauna,
-    // hasGardenShed,
-    // hasGarage,
-    // hasBasement,
-    // hasTerrace,
-    // landType,
-    // landSquareMeters,
-    // builtYear,
-    // hasThermostat,
-    // hasAlarm,
-    // hasFireAlarm,
-    // hasSolarCollectors,
-    // hasCameraSystem,
-    // hasInternet,
-    // hasWell,
-    // hasCityWater,
-    // hasCitySewerage,
-    // hasSeptic,
-    // hasElectricity,
-    // hasGas,
-    // urbanQuality,
-    // hasElectricRadiators,
-    // hasHeatPump,
-    // hasOther,
-    // hasSolidFuel,
-    // hasGasBoiler,
-    // hasUnderfloorHeating,
-  );
+export const houseResult = (calcValues) => {
+  console.log('HouseRes', calcValues);
   const bratislava = 252524;
   const averageTotalSquareMeterPrice = 3860;
   const averageTotalBratislavaSquareMeterPrice = 4073;
   let holdValue;
   let districtValueHold;
   let roomValueHold;
+  let bathroomValueHold;
   let averageOfDistrictPlusRoom;
+  let averageOfRoomPlusBathroom;
+
   const result = [];
   result.push(bratislava);
 
@@ -110,48 +41,70 @@ export const houseResult = (
 
   getDistrictPrice(calcValues.street);
 
-  // const getRoomPrice = (countRooms) => {
-  //   const { roomsPrice } = roomsAndPrice.find(
-  //     (rooms) => rooms.rooms == countRooms,
-  //   );
-  //   result.push(roomsPrice);
-  //   roomValueHold = roomsPrice;
-  //   console.log(result);
-  // };
+  const getRoomPrice = (countRooms) => {
+    const { roomsPrice } = roomsAndPrice.find(
+      (rooms) => rooms.rooms == countRooms,
+    );
+    result.push(roomsPrice);
+    roomValueHold = roomsPrice;
+    console.log(result);
+  };
 
-  // getRoomPrice(countRooms);
+  getRoomPrice(calcValues.countRooms);
 
-  // const getConditionPrice = (houseCondition) => {
-  //   const getConditionCoeficient = (houseCondition) => {
-  //     if (houseCondition === 1) return 1.7;
-  //     if (houseCondition === 2) return 1.2;
-  //     if (houseCondition === 3) return 0.65;
-  //     if (houseCondition === 4) return 0.5;
-  //   };
+  const getBathRoomPrice = (countBathrooms) => {
+    const getBathroomCoeficient = (countBathrooms) => {
+      if (countBathrooms === 1) return 0.9;
+      if (countBathrooms === 2) return 1;
+      if (countBathrooms === 3) return 1.5;
+      if (countBathrooms === 4) return 2;
+    };
 
-  //   averageOfDistrictPlusRoom = (districtValueHold + roomValueHold) / 2;
-  //   console.log('averageOfDistrictPlusRoom', averageOfDistrictPlusRoom);
+    averageOfDistrictPlusRoom = (districtValueHold + roomValueHold) / 2;
 
-  //   const conditionPrice = Math.ceil(
-  //     // hold is current roomsPrice
-  //     averageOfDistrictPlusRoom * getConditionCoeficient(houseCondition),
-  //   );
-  //   console.log('conditionPrice', conditionPrice);
-  //   result.push(conditionPrice);
-  // };
+    console.log('averageOfDistrictPlusRoom', averageOfDistrictPlusRoom);
 
-  // getConditionPrice(houseCondition);
+    const bathroomPrice = Math.ceil(
+      averageOfDistrictPlusRoom * getBathroomCoeficient(countBathrooms),
+    );
+    bathroomValueHold = bathroomPrice;
 
-  // const getSquareMetersPrice = (squareMeters) => {
-  //   const squareMetersPrice =
-  //     (squareMeters * averageTotalSquareMeterPrice) / 2 +
-  //     (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2;
-  //   console.log('squareMeterPrice', squareMetersPrice);
-  //   result.push(squareMetersPrice);
-  //   console.log('resArray', result);
-  // };
+    console.log('bathroomPrice', bathroomPrice);
+    result.push(bathroomPrice);
+  };
 
-  // getSquareMetersPrice(squareMeters);
+  getBathRoomPrice(calcValues.countBathrooms);
+
+  const getConditionPrice = (houseCondition) => {
+    const getConditionCoeficient = (houseCondition) => {
+      if (houseCondition === 1) return 1.7;
+      if (houseCondition === 2) return 1.2;
+      if (houseCondition === 3) return 0.65;
+      if (houseCondition === 4) return 0.5;
+    };
+
+    averageOfRoomPlusBathroom = (roomValueHold + bathroomValueHold) / 2;
+    console.log('averageOfRoomPlusBathroom', averageOfRoomPlusBathroom);
+
+    const conditionPrice = Math.ceil(
+      averageOfRoomPlusBathroom * getConditionCoeficient(houseCondition),
+    );
+    console.log('conditionPrice', conditionPrice);
+    result.push(conditionPrice);
+  };
+
+  getConditionPrice(calcValues.houseCondition);
+
+  const getSquareMetersPrice = (squareMeters) => {
+    const squareMetersPrice =
+      (squareMeters * averageTotalSquareMeterPrice) / 2 +
+      (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2;
+    console.log('squareMeterPrice', squareMetersPrice);
+    result.push(squareMetersPrice);
+    console.log('resArray', result);
+  };
+
+  getSquareMetersPrice(calcValues.squareMeters);
 
   // const getFloorCountPrice = (allFloorsCount) => {
   //   const assignFloors = (allFloorsCount) => {
@@ -406,44 +359,39 @@ export const houseResult = (
 
 const testValues = {
   street: 'Galvaniho ulica',
-  countRooms: 2,
-  countBathrooms: 2,
-  houseCondition: 2,
-  squareMeters: '222',
-  builtYear: '2022',
-  countBathrooms: 2,
-  countRooms: 2,
-  hasAlarm: true,
-  hasBasement: true,
-  hasCameraSystem: false,
-  hasCitySewerage: false,
-  hasCityWater: true,
-  hasElectricRadiators: false,
-  hasElectricity: false,
-  hasFireAlarm: false,
-  hasGarage: false,
-  hasGardenShed: false,
-  hasGas: false,
-  hasGasBoiler: false,
-  hasHeatPump: true,
-  hasInternet: false,
-  hasOther: false,
+  countRooms: 5,
+  countBathrooms: 1,
+  houseCondition: 1,
+  squareMeters: '123',
+  houseType: 2,
   hasPool: false,
   hasSauna: false,
-  hasSeptic: false,
-  hasSolarCollectors: false,
-  hasSolidFuel: false,
+  hasGardenShed: false,
+  hasGarage: false,
+  hasBasement: true,
   hasTerrace: false,
+  landType: 1,
+  landSquareMeters: '500',
+  builtYear: '2018',
   hasThermostat: false,
-  hasUnderfloorHeating: false,
-  hasWell: false,
-  houseCondition: 2,
-  houseType: 2,
-  landSquareMeters: '2222',
-  landType: 2,
-  squareMeters: '222',
-  street: '2. ulica',
-  urbanQuality: 'average',
+  hasAlarm: false,
+  hasFireAlarm: false,
+  hasSolarCollectors: false,
+  hasCameraSystem: false,
+  hasInternet: true,
+  hasWell: true,
+  hasCityWater: true,
+  hasCitySewerage: true,
+  hasSeptic: true,
+  hasElectricity: true,
+  hasGas: true,
+  urbanQuality: 'poor',
+  hasElectricRadiators: false,
+  hasHeatPump: false,
+  hasOther: false,
+  hasSolidFuel: true,
+  hasGasBoiler: true,
+  hasUnderfloorHeating: true,
 };
 
 houseResult(testValues);
