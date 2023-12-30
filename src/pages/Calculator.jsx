@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { result } from '../getResults';
 import { SpinnerFullPage } from '../components';
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'));
 const Component00 = lazy(() => import('../components/calculator/Component00'));
@@ -106,7 +107,7 @@ const Calculator = () => {
 
   const [currentFlatOrHouseClicked, setCurrentFlatOrHouseClicked] =
     useState(null);
-
+  // XXXXXxXxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXX
   const [currentComponent, setCurrentComponent] = useState(0);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -553,7 +554,8 @@ const Calculator = () => {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     if (email !== '') {
-      setIsValid(validateEmail(email));
+      console.log('is submitting FLAT');
+      if (!isValid) return toast.error('Zadajte správny email');
       setIsLoading(true);
 
       const res = startCalculation();

@@ -9,7 +9,9 @@ const HouseComponent09 = ({
 }) => {
   const inputRef = useRef(null);
 
-  const onNextGuard = () => {
+  const onNextGuard = (e) => {
+    e.preventDefault();
+
     if (landSquareMeters <= 0) toast.error('Zadajte veľkosť plochy pozemku');
     else {
       onNext();
@@ -54,13 +56,13 @@ const HouseComponent09 = ({
       </div>
       <div className="mt-[20%] flex flex-row justify-between">
         <button
-          onClick={onBack}
+          onClick={(e) => onBack(e)}
           className="h-10 rounded-[35px] border border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          onClick={() => onNextGuard()}
+          onClick={(e) => onNextGuard(e)}
           className="h-10 rounded-[35px] border border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
           Ďalej

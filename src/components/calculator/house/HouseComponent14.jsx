@@ -17,7 +17,9 @@ const HouseComponent14 = ({
   setHasUnderfloorHeating,
   setHasOther,
 }) => {
-  const onNextGuard = () => {
+  const onNextGuard = (e) => {
+    e.preventDefault();
+
     if (
       hasElectricRadiators === false &&
       hasHeatPump === false &&
@@ -152,13 +154,13 @@ const HouseComponent14 = ({
       <div className="flex flex-row justify-center gap-4 pt-4 lg:pt-8">
         {' '}
         <button
-          onClick={onBack}
+          onClick={(e) => onBack(e)}
           className="h-10 w-[125px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          onClick={() => onNextGuard()}
+          onClick={(e) => onNextGuard(e)}
           className="h-10 w-[125px] rounded-[35px] border-2 border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
           Ďalej

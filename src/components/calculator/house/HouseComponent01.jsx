@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import streetAndDistrict from './../../../../Json/streetAndDistrict.json';
 import { toast } from 'react-hot-toast';
 
@@ -12,6 +13,7 @@ const HouseComponent01 = ({
   houseNumber,
   setHouseNumber,
 }) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const dropdownRef = React.createRef();
 
@@ -28,12 +30,14 @@ const HouseComponent01 = ({
     )
     .map((option) => option.street);
 
- // console.log('filtered', filteredStreets[0] === searchTerm);
+  // console.log('filtered', filteredStreets[0] === searchTerm);
   const [hideStreetDropdown, setHideStreetDropdown] = useState(
     filteredStreets[0] === searchTerm,
   );
 
-  const onNextGuard = () => {
+  const onNextGuard = (e) => {
+    e.preventDefault();
+
     if (street === '' || street === undefined) {
       toast.error('Zvoľte ulicu');
       return;
@@ -81,8 +85,6 @@ const HouseComponent01 = ({
           className="absolute right-2 top-5 text-right text-[15px] font-bold outline-none lg:top-4 lg:w-[70%] lg:text-[20px]"
         ></input>
 
-     
-
         <div className="absolute -right-1 top-[100%] z-30 text-right text-[15px] font-bold outline-none lg:top-[100%] lg:w-[70%] lg:text-[20px]">
           {filteredStreets[0] !== searchTerm && searchTerm !== '' && (
             <ul className="rounded-xl bg-gray-100 pr-2">
@@ -118,14 +120,14 @@ const HouseComponent01 = ({
 
       <div className="mb-8 mt-[15%] flex w-[100%] flex-row justify-between lg:mb-0">
         <button
-          onClick={onBack}
+          onClick={() => navigate('/calculator')}
           className="h-10 rounded-[35px] border border-[#0076ba] px-10 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-10 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
           className="h-10 rounded-[35px] border border-[#0076ba] px-9 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-9 lg:py-2 lg:text-[15px]"
-          onClick={() => onNextGuard()}
+          onClick={(e) => onNextGuard(e)}
         >
           Ďalej
         </button>

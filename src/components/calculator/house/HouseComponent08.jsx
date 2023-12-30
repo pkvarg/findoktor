@@ -7,7 +7,9 @@ const HouseComponent08 = ({
   handleLandType,
   currentLandTypeClicked,
 }) => {
-  const onNextGuard = () => {
+  const onNextGuard = (e) => {
+    e.preventDefault();
+
     console.log(currentLandTypeClicked);
     if (currentLandTypeClicked === null) {
       toast.error('Zvoľte typ pozemku');
@@ -101,13 +103,13 @@ const HouseComponent08 = ({
       </div>
       <div id="bt" className="mt-4 flex flex-row justify-center gap-4">
         <button
-          onClick={onBack}
+          onClick={(e) => onBack(e)}
           className="h-10 w-[145px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:w-[165px] lg:px-9 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          onClick={() => onNextGuard()}
+          onClick={(e) => onNextGuard(e)}
           className="h-10 w-[145px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:w-[165px] lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Ďalej

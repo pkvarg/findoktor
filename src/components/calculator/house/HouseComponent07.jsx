@@ -17,7 +17,9 @@ const HouseComponent07 = ({
   setHasSauna,
   setHasGardenShed,
 }) => {
-  const onNextGuard = () => {
+  const onNextGuard = (e) => {
+    e.preventDefault();
+
     if (
       hasGarage === false &&
       hasBasement === false &&
@@ -150,13 +152,13 @@ const HouseComponent07 = ({
       <div className="mt-[10%] flex flex-row justify-between lg:mt-[20%]">
         {' '}
         <button
-          onClick={onBack}
+          onClick={(e) => onBack(e)}
           className="h-10 rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          onClick={() => onNextGuard()}
+          onClick={(e) => onNextGuard(e)}
           className="h-10 rounded-[35px] border-2 border-[#0076ba] px-7 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:px-7 lg:py-2 lg:text-[15px]"
         >
           Ďalej

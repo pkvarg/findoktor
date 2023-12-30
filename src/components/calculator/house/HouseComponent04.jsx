@@ -7,7 +7,9 @@ const HouseComponent04 = ({
   handleHouseCondition,
   currentConditionClicked,
 }) => {
-  const onNextGuard = () => {
+  const onNextGuard = (e) => {
+    e.preventDefault();
+
     console.log(currentConditionClicked);
     if (currentConditionClicked === null) {
       toast.error('Zvoľte stav nehnuteľnosti');
@@ -111,13 +113,13 @@ const HouseComponent04 = ({
       <div id="bt" className="mt-4 flex flex-row justify-center gap-4">
         {/* <div className='flex flex-row justify-center gap-[17%] md:gap-[9%] lg:gap-[8%] xl:gap-[6%] pt-8'> */}
         <button
-          onClick={onBack}
+          onClick={(e) => onBack(e)}
           className="h-10 w-[145px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:w-[165px] lg:px-9 lg:py-2 lg:text-[15px]"
         >
           Späť
         </button>
         <button
-          onClick={() => onNextGuard()}
+          onClick={(e) => onNextGuard(e)}
           className="h-10 w-[145px] rounded-[35px] border-2 border-[#0076ba] px-8 py-0 text-[15px] font-bold uppercase hover:border-2 hover:border-[#03065f] lg:h-10 lg:w-[165px] lg:px-8 lg:py-2 lg:text-[15px]"
         >
           Ďalej

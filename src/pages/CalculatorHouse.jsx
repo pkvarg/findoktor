@@ -1,7 +1,8 @@
 import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
-//import { result } from '../getResults';
+import { houseResult } from '../getHouseResults';
 import { SpinnerFullPage } from '../components';
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 const CalcNavbar = lazy(() => import('../components/calculator/CalcNavbar'));
 const HouseComponent01 = lazy(
@@ -51,12 +52,17 @@ const HouseComponent13 = lazy(
 const HouseComponent14 = lazy(
   () => import('../components/calculator/house/HouseComponent14'),
 );
+const HouseComponent15 = lazy(
+  () => import('../components/calculator/house/HouseComponent15'),
+);
+const HouseComponent16 = lazy(
+  () => import('../components/calculator/house/HouseComponent16'),
+);
 
 const Footer = lazy(() => import('../components/Footer'));
 
 const CalculatorHouse = () => {
   const formRef = useRef(null);
-
   const [flatOrHouse, setFlatOrHouse] = useState('house');
   const [city, setCity] = useState('Bratislava');
   const [street, setStreet] = useState('');
@@ -109,17 +115,13 @@ const CalculatorHouse = () => {
   const [landType, setLandType] = useState(0);
   const [currentLandTypeClicked, setCurrentLandTypeClicked] = useState(null);
   const [landSquareMeters, setLandSquareMeters] = useState(0);
-
   const [builtYear, setBuiltYear] = useState(0);
-
   const [hasThermostat, setHasThermostat] = useState(false);
-
   const [hasAlarm, setHasAlarm] = useState(false);
   const [hasFireAlarm, setHasFireAlarm] = useState(false);
   const [hasSolarCollectors, setHasSolarCollectors] = useState(false);
   const [hasCameraSystem, setHasCameraSystem] = useState(false);
   const [hasInternet, setHasInternet] = useState(false);
-
   const thermostat = document.getElementById('thermostat');
   const alarm = document.getElementById('alarm');
   const firealarm = document.getElementById('firealarm');
@@ -200,7 +202,6 @@ const CalculatorHouse = () => {
   ]);
 
   const [urbanQuality, setUrbanQuality] = useState('');
-
   const [currentUrbanQualityClicked, setCurrentUrbanQualityClicked] =
     useState(null);
 
@@ -258,39 +259,99 @@ const CalculatorHouse = () => {
   ]);
 
   const startCalculation = () => {
-    // const calculated = result(
-    //   city,
-    //   street,
-    //   houseNumber,
-    //   countRooms,
-    //   houseCondition,
-    //   squareMeters,
-    //   allFloorsCount,
-    //   currentFloorNumber,
-    //   hasElevator,
-    //   hasBalcony,
-    //   hasLoggia,
-    //   hasTerrace,
-    //   hasBasement,
-    //   hasGarage,
-    //   hasParking,
-    //   builtYear,
-    //   hasIsolation,
-    //   hasNewElevator,
-    //   hasNewWindows,
-    //   hasNewInstallations,
-    //   hasThermostat,
-    //   hasInternet,
-    //   hasAlarm,
-    //   hasAirCon,
-    //   urbanQuality,
-    // );
-    // if (calculated !== null && calculated !== '' && calculated !== 0) {
-    //   setPrice(calculated.price);
-    //   console.log('...RESULTS', calculated);
-    //   return calculated;
-    // }
+    const calcValues = {
+      street: street,
+      countRooms: countRooms,
+      countBathrooms: countBathrooms,
+      houseCondition: houseCondition,
+      squareMeters: squareMeters,
+      houseType: houseType,
+      hasPool: hasPool,
+
+      hasSauna: hasSauna,
+      hasGardenShed: hasGardenShed,
+      hasGarage: hasGarage,
+      hasBasement: hasBasement,
+      hasTerrace: hasTerrace,
+      landType: landType,
+      landSquareMeters: landSquareMeters,
+      builtYear: builtYear,
+      hasThermostat: hasThermostat,
+      hasAlarm: hasAlarm,
+      hasFireAlarm: hasFireAlarm,
+      hasSolarCollectors: hasSolarCollectors,
+      hasCameraSystem: hasCameraSystem,
+      hasInternet: hasInternet,
+      hasWell: hasWell,
+      hasCityWater: hasCityWater,
+      hasCitySewerage: hasCitySewerage,
+      hasSeptic: hasSeptic,
+      hasElectricity: hasElectricity,
+      hasGas: hasGas,
+      urbanQuality: urbanQuality,
+      hasElectricRadiators: hasElectricRadiators,
+      hasHeatPump: hasHeatPump,
+      hasOther: hasOther,
+      hasSolidFuel: hasSolidFuel,
+      hasGasBoiler: hasGasBoiler,
+      hasUnderfloorHeating: hasUnderfloorHeating,
+    };
+    const calculated = houseResult(
+      calcValues,
+      // street,
+      // countRooms,
+      // countBathrooms,
+      // houseCondition,
+      // squareMeters,
+      // houseType,
+      // hasPool,
+      // hasSauna,
+      // hasGardenShed,
+      // hasGarage,
+      // hasBasement,
+      // hasTerrace,
+      // landType,
+      // landSquareMeters,
+      // builtYear,
+      // hasThermostat,
+      // hasAlarm,
+      // hasFireAlarm,
+      // hasSolarCollectors,
+      // hasCameraSystem,
+      // hasInternet,
+      // hasWell,
+      // hasCityWater,
+      // hasCitySewerage,
+      // hasSeptic,
+      // hasElectricity,
+      // hasGas,
+      // urbanQuality,
+      // hasElectricRadiators,
+      // hasHeatPump,
+      // hasOther,
+      // hasSolidFuel,
+      // hasGasBoiler,
+      // hasUnderfloorHeating,
+    );
+    if (calculated !== null && calculated !== '' && calculated !== 0) {
+      setPrice(calculated.price);
+      console.log('...HOUSE-RESULTS', calculated);
+      return calculated;
+    }
   };
+
+  const [email, setEmail] = useState('');
+  const [checkBox, setCheckBox] = useState(false);
+
+  const validateEmail = (email) => {
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const [isValid, setIsValid] = useState(false);
+
+  const [price, setPrice] = useState(0);
 
   console.log(
     'HOUSE',
@@ -331,6 +392,8 @@ const CalculatorHouse = () => {
     hasGasBoiler,
     hasUnderfloorHeating,
     hasOther,
+    email,
+    isValid,
   );
 
   const handleNext = () => {
@@ -340,7 +403,8 @@ const CalculatorHouse = () => {
     }
   };
 
-  const handleBack = () => {
+  const handleBack = (e) => {
+    e.preventDefault();
     if (currentComponent > 0) {
       setCurrentComponent(currentComponent - 1);
     }
@@ -403,7 +467,7 @@ const CalculatorHouse = () => {
     element.classList.add('clicked');
   };
 
-  const [currentComponent, setCurrentComponent] = useState(6);
+  const [currentComponent, setCurrentComponent] = useState(1);
 
   const renderComponent = (componentNumber) => {
     switch (componentNumber) {
@@ -420,7 +484,6 @@ const CalculatorHouse = () => {
             setHouseNumber={setHouseNumber}
           />
         );
-
       case 2:
         return (
           <HouseComponent02
@@ -557,10 +620,8 @@ const CalculatorHouse = () => {
             onNext={handleNext}
             urbanQuality={urbanQuality}
             handleUrbanQuality={handleUrbanQuality}
-            startCalculation={startCalculation}
           />
         );
-
       case 14:
         return (
           <HouseComponent14
@@ -580,43 +641,66 @@ const CalculatorHouse = () => {
             setHasOther={setHasOther}
           />
         );
-      // case 15:
-      //   return (
-      //     <Component15
-      //       onBack={handleBack}
-      //       onNext={handleNext}
-      //       isValid={isValid}
-      //       email={email}
-      //       setEmail={setEmail}
-      //       checkBox={checkBox}
-      //       setCheckBox={setCheckBox}
-      //       isLoading={isLoading}
-      //     />
-      //   );
-      // case 16:
-      //   return <Component16 onBack={handleBack} price={price} />;
+      case 15:
+        return (
+          <HouseComponent15
+            onBack={handleBack}
+            onNext={handleNext}
+            isValid={isValid}
+            email={email}
+            setEmail={setEmail}
+            checkBox={checkBox}
+            setCheckBox={setCheckBox}
+            isLoading={isLoading}
+            handleSubmitForm={handleSubmitForm}
+          />
+        );
+      case 16:
+        return <HouseComponent16 onBack={handleBack} price={price} />;
 
       default:
         return null;
     }
   };
 
+  useEffect(() => {
+    if (email !== '') {
+      setIsValid(validateEmail(email));
+    }
+  }, [email]);
+
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    // if (email !== '') {
-    //   setIsValid(validateEmail(email));
-    //   setIsLoading(true);
 
-    //   const res = startCalculation();
-    //   console.log('res of calc', res);
-    //   if (res) {
-    //     sendEmail();
-    //   }
+    console.log('submitting house');
+    if (email !== '') {
+      if (!isValid) return toast.error('Zadajte správny email');
+      setIsLoading(true);
 
-    //   setTimeout(handleNext, 4000);
+      const res = startCalculation();
+      console.log('res of calc', res);
+      if (res) {
+        setPrice(res.price);
 
-    // }
+        // sendEmail();
+      }
+
+      setTimeout(handleNext, 4000);
+    }
   };
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+      }
+    };
+
+    const formElement = formRef.current;
+
+    if (formElement !== null)
+      formElement.addEventListener('keydown', handleKeyPress);
+  }, []);
 
   return (
     <>
@@ -626,9 +710,7 @@ const CalculatorHouse = () => {
             <CalcNavbar />
           </div>
           <div className="z-10 flex h-auto  flex-col items-center justify-center  lg:h-[100%]">
-            <form onSubmit={handleSubmitForm} ref={formRef}>
-              {renderComponent(currentComponent)}
-            </form>
+            <form ref={formRef}>{renderComponent(currentComponent)}</form>
           </div>
           <div className="z-0 h-[min-content]">
             <Footer />
