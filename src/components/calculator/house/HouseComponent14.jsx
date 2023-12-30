@@ -47,8 +47,8 @@ const HouseComponent14 = ({
         >
           <div>
             <img
-              className="ml-[19%] mt-[10%] w-[70%]"
-              src="/smart1.webp"
+              className="ml-[19%] mt-[10%] w-[60%]"
+              src="/radiatory.webp"
               alt="ElectricRadiators"
             />
 
@@ -64,12 +64,12 @@ const HouseComponent14 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[22.5%] mt-[10.5%] w-[60%]"
+              src="/tepelne.webp"
               alt="HeatPump"
             />
 
-            <p className="absolute bottom-2 right-3 text-right text-[12.5px] font-bold leading-[12.5px]">
+            <p className="absolute bottom-3 right-3 text-right text-[12.5px] font-bold leading-[12.5px]">
               Tepelné čerpadlo
             </p>
           </div>
@@ -83,8 +83,8 @@ const HouseComponent14 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[20%] mt-[10.5%] w-[60%]"
+              src="/tuhe.webp"
               alt="SolidFuel"
             />
 
@@ -101,8 +101,8 @@ const HouseComponent14 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[22.5%] mt-[10.5%] w-[60%]"
+              src="/plynovy.webp"
               alt="GasBoiler"
             />
 
@@ -120,8 +120,8 @@ const HouseComponent14 = ({
         >
           <div>
             <img
-              className="ml-[15%] mt-[10%] w-[50%]"
-              src="/smart4.webp"
+              className="ml-[25%] mt-[15%] w-[50%]"
+              src="/podlahove.webp"
               alt="UnderfloorHeating"
             />
 
@@ -138,12 +138,12 @@ const HouseComponent14 = ({
         >
           <div>
             <img
-              className="ml-[25%] mt-[10%] w-[53%]"
-              src="/smart2.webp"
+              className="ml-[25%] mt-[17.5%] w-[53%]"
+              src="/other.webp"
               alt="other"
             />
 
-            <p className="absolute bottom-2 right-3 text-right text-[12.5px] font-bold leading-[12.5px]">
+            <p className="absolute bottom-2 right-4 text-right text-[12.5px] font-bold leading-[12.5px]">
               Iné
             </p>
           </div>

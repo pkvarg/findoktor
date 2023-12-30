@@ -64,8 +64,8 @@ const HouseComponent11 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[20%] mt-[10.5%] w-[60%]"
+              src="/alarm.webp"
               alt="security"
             />
 
@@ -84,8 +84,8 @@ const HouseComponent11 = ({
           <div>
             <img
               className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
-              alt="security"
+              src="/"
+              alt="firealarm"
             />
 
             <p className="absolute bottom-2 right-3 text-right text-[12.5px] font-bold leading-[12.5px]">
@@ -101,8 +101,8 @@ const HouseComponent11 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[20%] mt-[10.5%] w-[50%]"
+              src="/solarne.webp"
               alt="security"
             />
 
@@ -120,9 +120,9 @@ const HouseComponent11 = ({
         >
           <div>
             <img
-              className="ml-[15%] mt-[10%] w-[50%]"
-              src="/smart4.webp"
-              alt="aircon"
+              className="ml-[27.5%] mt-[10%] w-[45%]"
+              src="/smart3.webp"
+              alt="camerasystem"
             />
 
             <p className="absolute bottom-2 right-2 text-right text-[12.5px] font-bold leading-[12.5px]">
@@ -138,7 +138,7 @@ const HouseComponent11 = ({
         >
           <div>
             <img
-              className="ml-[25%] mt-[10%] w-[53%]"
+              className="ml-[25%] mt-[12.5%] w-[53%]"
               src="/smart2.webp"
               alt="internet"
             />
