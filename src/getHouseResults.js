@@ -19,8 +19,13 @@ export const houseResult = (calcValues) => {
   let districtValueHold;
   let roomValueHold;
   let bathroomValueHold;
+  let conditionPriceHold;
+  let squareMetersPriceHold;
   let averageOfDistrictPlusRoom;
   let averageOfRoomPlusBathroom;
+  let averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice;
+  // no holds
+  let houseTypePrice;
 
   const result = [];
   result.push(bratislava);
@@ -89,6 +94,7 @@ export const houseResult = (calcValues) => {
     const conditionPrice = Math.ceil(
       averageOfRoomPlusBathroom * getConditionCoeficient(houseCondition),
     );
+    conditionPriceHold = conditionPrice;
     console.log('conditionPrice', conditionPrice);
     result.push(conditionPrice);
   };
@@ -100,91 +106,88 @@ export const houseResult = (calcValues) => {
       (squareMeters * averageTotalSquareMeterPrice) / 2 +
       (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2;
     console.log('squareMeterPrice', squareMetersPrice);
+    squareMetersPriceHold = squareMetersPrice;
     result.push(squareMetersPrice);
     console.log('resArray', result);
   };
 
   getSquareMetersPrice(calcValues.squareMeters);
 
-  // const getFloorCountPrice = (allFloorsCount) => {
-  //   const assignFloors = (allFloorsCount) => {
-  //     if (allFloorsCount > 0 && allFloorsCount <= 4) return 4;
-  //     if (allFloorsCount > 4 && allFloorsCount <= 12) return 12;
-  //     if (allFloorsCount > 12 && allFloorsCount <= 19) return 19;
-  //     if (allFloorsCount > 19 && allFloorsCount <= 100) return 20;
-  //   };
-  //   const floorsCounted = assignFloors(allFloorsCount);
-  //   const { floorCountValue } = floorCountAndValue.find(
-  //     (flrCnt) => flrCnt.floorCount == floorsCounted,
-  //   );
-  //   let newAverage = (averageOfDistrictPlusRoom + result[3] + result[4]) / 3;
-  //   holdValue = newAverage;
-  //   const floorCountPrice = Math.ceil(holdValue * floorCountValue);
-  //   console.log('floorCountPrice', floorCountPrice);
-  //   result.push(floorCountPrice);
-  //   console.log('resArray', result);
-  // };
+  const getHouseTypePrice = (houseType) => {
+    const getHouseTypePriceCoeficient = (houseType) => {
+      if (houseType === 1) return 1;
+      if (houseType === 2) return 1;
+      if (houseType === 3) return 1.2;
+      if (houseType === 4) return 2;
+    };
 
-  // getFloorCountPrice(allFloorsCount);
+    averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice =
+      (averageOfRoomPlusBathroom + conditionPriceHold + squareMetersPriceHold) /
+      3;
 
-  // const getCurrentFloorPrice = (currentFloorNumber) => {
-  //   const assignCurrentFloor = (currentFloorNumber) => {
-  //     if (currentFloorNumber == 0 || currentFloorNumber == 1) return 0;
-  //     if (currentFloorNumber > 1 && currentFloorNumber <= 12) return 2;
-  //     if (currentFloorNumber > 12 && currentFloorNumber <= 19) return 13;
-  //     if (currentFloorNumber > 19 && currentFloorNumber <= 100) return 20;
-  //   };
-  //   const currentFloorAssigned = assignCurrentFloor(currentFloorNumber);
-  //   const flV = floorNumberAndValue.find(
-  //     (flr) => flr.floorNumber == currentFloorAssigned,
-  //   );
+    houseTypePrice =
+      averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice *
+      getHouseTypePriceCoeficient(houseType);
 
-  //   console.log('flvl', flV);
-  //   const { floorNumberValue } = floorNumberAndValue.find(
-  //     (flr) => flr.floorNumber == currentFloorAssigned,
-  //   );
-  //   //const valueOfFindFloorAssign = floorNumberValue
-  //   const currentFloorPrice = Math.ceil(holdValue * floorNumberValue);
-  //   console.log('currentfloorPrice', currentFloorPrice);
-  //   result.push(currentFloorPrice);
-  //   console.log('resArray', result);
-  // };
+    console.log('houseTypePrice', houseTypePrice);
 
-  // getCurrentFloorPrice(currentFloorNumber);
+    result.push(houseTypePrice);
+    console.log('resArray', result);
+  };
 
-  // const getElevatorPrice = (hasElevator) => {
-  //   let hasElevatorPrice;
-  //   if (hasElevator === 'hasElevator') {
-  //     hasElevatorPrice = holdValue;
-  //   }
-  //   if (hasElevator === 'noElevator') {
-  //     hasElevatorPrice = holdValue - 10000;
-  //   }
-  //   console.log('hasElevatorPrice', hasElevatorPrice);
-  //   result.push(hasElevatorPrice);
-  //   console.log('resArray', result);
-  // };
+  getHouseTypePrice(calcValues.houseType);
 
-  // getElevatorPrice(hasElevator);
+  const getExtrasPrice = (
+    hasPool,
+    hasSauna,
+    hasGardenShed,
+    hasGarage,
+    hasBasement,
+    hasTerrace,
+  ) => {
+    // ternary
+    const garage = !hasGarage
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
-  // const getBalconyPrice = (hasBalcony, hasLoggia, hasTerrace, hasBasement) => {
-  //   let balcony = Math.ceil(0.8 * holdValue);
-  //   let loggia = Math.ceil(0.8 * holdValue);
-  //   let terrace = Math.ceil(0.8 * holdValue);
-  //   let basement = Math.ceil(0.8 * holdValue);
-  //   if (hasBalcony) balcony = holdValue;
-  //   if (hasLoggia) loggia = holdValue;
-  //   if (hasTerrace) terrace = holdValue;
-  //   if (hasBasement) basement = holdValue;
-  //   console.log('balcony', balcony, loggia, terrace, basement);
-  //   result.push(balcony);
-  //   result.push(loggia);
-  //   result.push(terrace);
-  //   result.push(basement);
-  //   console.log('resArray', result);
-  // };
+    const basement = !hasBasement
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
-  // getBalconyPrice(hasBalcony, hasLoggia, hasTerrace, hasBasement);
+    const terrace = !hasTerrace
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    const pool = !hasPool
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    const sauna = !hasSauna
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    const gardenShed = !hasGardenShed
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    console.log('extras', garage, basement, terrace, pool, sauna, gardenShed);
+    result.push(garage);
+    result.push(basement);
+    result.push(terrace);
+    result.push(pool);
+    result.push(sauna);
+    result.push(gardenShed);
+    console.log('resArray', result);
+  };
+
+  getExtrasPrice(
+    calcValues.hasPool,
+    calcValues.hasSauna,
+    calcValues.hasGardenShed,
+    calcValues.hasGarage,
+    calcValues.hasBasement,
+    calcValues.hasTerrace,
+  );
 
   // const getParkingPrice = (hasGarage, hasParking) => {
   //   let garage = Math.ceil(0.8 * holdValue);
