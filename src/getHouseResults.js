@@ -26,6 +26,7 @@ export const houseResult = (calcValues) => {
   let averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice;
   // no holds
   let houseTypePrice;
+  let landTypePrice;
 
   const result = [];
   result.push(bratislava);
@@ -65,7 +66,9 @@ export const houseResult = (calcValues) => {
       if (countBathrooms === 4) return 2;
     };
 
-    averageOfDistrictPlusRoom = (districtValueHold + roomValueHold) / 2;
+    averageOfDistrictPlusRoom = Math.floor(
+      (districtValueHold + roomValueHold) / 2,
+    );
 
     console.log('averageOfDistrictPlusRoom', averageOfDistrictPlusRoom);
 
@@ -102,9 +105,10 @@ export const houseResult = (calcValues) => {
   getConditionPrice(calcValues.houseCondition);
 
   const getSquareMetersPrice = (squareMeters) => {
-    const squareMetersPrice =
+    const squareMetersPrice = Math.floor(
       (squareMeters * averageTotalSquareMeterPrice) / 2 +
-      (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2;
+        (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2,
+    );
     console.log('squareMeterPrice', squareMetersPrice);
     squareMetersPriceHold = squareMetersPrice;
     result.push(squareMetersPrice);
@@ -125,9 +129,10 @@ export const houseResult = (calcValues) => {
       (averageOfRoomPlusBathroom + conditionPriceHold + squareMetersPriceHold) /
       3;
 
-    houseTypePrice =
+    houseTypePrice = Math.floor(
       averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice *
-      getHouseTypePriceCoeficient(houseType);
+        getHouseTypePriceCoeficient(houseType),
+    );
 
     console.log('houseTypePrice', houseTypePrice);
 
@@ -146,18 +151,6 @@ export const houseResult = (calcValues) => {
     hasTerrace,
   ) => {
     // ternary
-    const garage = !hasGarage
-      ? Math.floor(0.8 * houseTypePrice)
-      : Math.floor(1 * houseTypePrice);
-
-    const basement = !hasBasement
-      ? Math.floor(0.8 * houseTypePrice)
-      : Math.floor(1 * houseTypePrice);
-
-    const terrace = !hasTerrace
-      ? Math.floor(0.8 * houseTypePrice)
-      : Math.floor(1 * houseTypePrice);
-
     const pool = !hasPool
       ? Math.floor(0.8 * houseTypePrice)
       : Math.floor(1 * houseTypePrice);
@@ -170,13 +163,25 @@ export const houseResult = (calcValues) => {
       ? Math.floor(0.8 * houseTypePrice)
       : Math.floor(1 * houseTypePrice);
 
-    console.log('extras', garage, basement, terrace, pool, sauna, gardenShed);
-    result.push(garage);
-    result.push(basement);
-    result.push(terrace);
+    const garage = !hasGarage
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    const basement = !hasBasement
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    const terrace = !hasTerrace
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
+
+    console.log('extras', pool, sauna, gardenShed, garage, basement, terrace);
     result.push(pool);
     result.push(sauna);
     result.push(gardenShed);
+    result.push(garage);
+    result.push(basement);
+    result.push(terrace);
     console.log('resArray', result);
   };
 
@@ -188,6 +193,26 @@ export const houseResult = (calcValues) => {
     calcValues.hasBasement,
     calcValues.hasTerrace,
   );
+
+  const getLandTypePrice = (landType) => {
+    const getLandTypePriceCoeficient = (landType) => {
+      if (landType === 1) return 1;
+      if (landType === 2) return 0.8;
+      if (landType === 3) return 0.6;
+      if (landType === 4) return 0.6;
+    };
+
+    landTypePrice = Math.floor(
+      houseTypePrice * getLandTypePriceCoeficient(landType),
+    );
+
+    console.log('landTypePrice', landTypePrice);
+
+    result.push(landTypePrice);
+    console.log('resArray', result);
+  };
+
+  getLandTypePrice(calcValues.landType);
 
   // const getParkingPrice = (hasGarage, hasParking) => {
   //   let garage = Math.ceil(0.8 * holdValue);
@@ -370,9 +395,9 @@ const testValues = {
   hasPool: false,
   hasSauna: false,
   hasGardenShed: false,
-  hasGarage: false,
+  hasGarage: true,
   hasBasement: true,
-  hasTerrace: false,
+  hasTerrace: true,
   landType: 1,
   landSquareMeters: '500',
   builtYear: '2018',
