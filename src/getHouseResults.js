@@ -27,6 +27,8 @@ export const houseResult = (calcValues) => {
   // no holds
   let houseTypePrice;
   let landTypePrice;
+  let landSquareMetersPrice;
+  let builtYearPrice;
 
   const result = [];
   result.push(bratislava);
@@ -214,157 +216,175 @@ export const houseResult = (calcValues) => {
 
   getLandTypePrice(calcValues.landType);
 
-  // const getParkingPrice = (hasGarage, hasParking) => {
-  //   let garage = Math.ceil(0.8 * holdValue);
-  //   let parking = Math.ceil(0.8 * holdValue);
-  //   if (hasGarage) garage = holdValue;
-  //   if (hasParking) parking = holdValue;
-  //   console.log('parking', garage, parking);
-  //   result.push(garage);
-  //   result.push(parking);
-  //   console.log('resArray', result);
-  // };
+  const getLandSquareMetersPrice = (landSquareMeters) => {
+    landSquareMeters = parseInt(landSquareMeters);
+    landSquareMetersPrice = Math.floor(
+      (landSquareMeters * averageTotalSquareMeterPrice) / 2 / 10 +
+        (landSquareMeters * averageTotalBratislavaSquareMeterPrice) / 2 / 10,
+    );
+    console.log('landSquareMeterPrice', landSquareMetersPrice);
+    result.push(landSquareMetersPrice);
+    console.log('resArray', result);
+  };
 
-  // getParkingPrice(hasGarage, hasParking);
+  getLandSquareMetersPrice(calcValues.landSquareMeters);
 
-  // const getBuiltYearPrice = (builtYear) => {
-  //   const assignYearValue = (builtYear) => {
-  //     const currentYear = new Date().getFullYear();
-  //     console.log('currentYear is', currentYear);
-  //     // miesto 2023 dnesny rok
-  //     if (builtYear >= 2018 && builtYear <= currentYear) return 1;
-  //     if (builtYear >= 2010 && builtYear <= 2017) return 0.9;
-  //     if (builtYear >= 2000 && builtYear <= 2009) return 0.85;
-  //     if (builtYear >= 1989 && builtYear <= 1999) return 0.75;
-  //     if (builtYear >= 1950 && builtYear <= 1988) return 0.5;
-  //     if (builtYear < 1950) return 1;
-  //   };
+  const getBuiltYearPrice = (builtYear) => {
+    const assignYearValue = (builtYear) => {
+      const currentYear = new Date().getFullYear();
+      console.log('currentYear is', currentYear);
+      if (builtYear >= 2018 && builtYear <= currentYear) return 1;
+      if (builtYear >= 2010 && builtYear <= 2017) return 0.9;
+      if (builtYear >= 2000 && builtYear <= 2009) return 0.85;
+      if (builtYear >= 1989 && builtYear <= 1999) return 0.75;
+      if (builtYear >= 1950 && builtYear <= 1988) return 0.5;
+      if (builtYear < 1950) return 1;
+    };
 
-  //   const builtYearPrice = Math.ceil(assignYearValue(builtYear) * holdValue);
-  //   console.log('builtYearPrice', builtYearPrice);
-  //   result.push(builtYearPrice);
-  //   console.log('resArray', result);
-  // };
+    builtYearPrice = Math.ceil(assignYearValue(builtYear) * houseTypePrice);
+    console.log('builtYearPrice', builtYearPrice);
+    result.push(builtYearPrice);
+    console.log('resArray', result);
+  };
 
-  // getBuiltYearPrice(builtYear);
+  getBuiltYearPrice(calcValues.builtYear);
 
-  // const getBuildingConditionPrice = (
-  //   hasIsolation,
-  //   hasNewElevator,
-  //   hasNewWindows,
-  //   hasNewInstallations,
-  // ) => {
-  //   let isolation;
-  //   let elevator;
-  //   let windows;
-  //   let installations;
-  //   if (hasIsolation) isolation = 'hasIsolation';
-  //   if (!hasIsolation) isolation = 'noIsolation';
-  //   if (hasNewElevator) elevator = 'hasNewElevator';
-  //   if (!hasNewElevator) elevator = 'noNewElevator';
-  //   if (hasNewWindows) windows = 'hasNewWindows';
-  //   if (!hasNewWindows) windows = 'noNewWindows';
-  //   if (hasNewInstallations) installations = 'hasNewInstallations';
-  //   if (!hasNewInstallations) installations = 'noNewInstallations';
+  const getSmartsPrice = (
+    hasThermostat,
+    hasAlarm,
+    hasFireAlarm,
+    hasSolarCollectors,
+    hasCameraSystem,
+    hasInternet,
+  ) => {
+    // ternary
+    const thermostat = !hasThermostat
+      ? Math.floor(0.8 * builtYearPrice)
+      : Math.floor(1.1 * builtYearPrice);
 
-  //   const getCondition = (aspect) =>
-  //     buildingCondition.find((cnd) => cnd.condition == aspect);
+    const alarm = !hasAlarm
+      ? Math.floor(0.8 * builtYearPrice)
+      : Math.floor(1.1 * builtYearPrice);
 
-  //   const isolationResult = Math.ceil(
-  //     getCondition(isolation).condValue * holdValue,
-  //   );
-  //   const elevatorResult = Math.ceil(
-  //     getCondition(elevator).condValue * holdValue,
-  //   );
-  //   const windowsResult = Math.ceil(
-  //     getCondition(windows).condValue * holdValue,
-  //   );
-  //   const installationsResult = Math.ceil(
-  //     getCondition(installations).condValue * holdValue,
-  //   );
-  //   console.log(
-  //     'buildingCondResults',
-  //     isolationResult,
-  //     elevatorResult,
-  //     windowsResult,
-  //     installationsResult,
-  //   );
-  //   result.push(isolationResult);
-  //   result.push(elevatorResult);
-  //   result.push(windowsResult);
-  //   result.push(installationsResult);
-  //   console.log('resArray', result);
-  // };
+    const firealarm = !hasFireAlarm
+      ? Math.floor(0.8 * builtYearPrice)
+      : Math.floor(1.1 * builtYearPrice);
 
-  // getBuildingConditionPrice(
-  //   hasIsolation,
-  //   hasNewElevator,
-  //   hasNewWindows,
-  //   hasNewInstallations,
-  // );
+    const solarcollectors = !hasSolarCollectors
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.1 * houseTypePrice);
 
-  // const getSmartHomePrice = (
-  //   hasThermostat,
-  //   hasInternet,
-  //   hasAlarm,
-  //   hasAirCon,
-  // ) => {
-  //   let thermostat;
-  //   let internet;
-  //   let alarm;
-  //   let aircon;
-  //   if (hasThermostat) thermostat = 'hasThermostat';
-  //   if (!hasThermostat) thermostat = 'noThermostat';
-  //   if (hasInternet) internet = 'hasInternet';
-  //   if (!hasInternet) internet = 'noInternet';
-  //   if (hasAlarm) alarm = 'hasAlarm';
-  //   if (!hasAlarm) alarm = 'noAlarm';
-  //   if (hasAirCon) aircon = 'hasAirCon';
-  //   if (!hasAirCon) aircon = 'noAirCon';
+    const camerasystem = !hasCameraSystem
+      ? Math.floor(0.8 * builtYearPrice)
+      : Math.floor(1.1 * builtYearPrice);
 
-  //   const getCondition = (aspect) =>
-  //     smartHome.find((cnd) => cnd.smartHome == aspect);
+    const internet = !hasInternet
+      ? Math.floor(0.8 * builtYearPrice)
+      : Math.floor(1.1 * builtYearPrice);
 
-  //   const thermostatResult = Math.ceil(
-  //     getCondition(thermostat).smartValue * holdValue,
-  //   );
-  //   const internetResult = Math.ceil(
-  //     getCondition(internet).smartValue * holdValue,
-  //   );
-  //   const alarmResult = Math.ceil(getCondition(alarm).smartValue * holdValue);
-  //   const airconResult = Math.ceil(getCondition(aircon).smartValue * holdValue);
+    console.log(
+      'smarts',
+      thermostat,
+      alarm,
+      firealarm,
+      solarcollectors,
+      camerasystem,
+      internet,
+    );
+    result.push(thermostat);
+    result.push(alarm);
+    result.push(firealarm);
+    result.push(solarcollectors);
+    result.push(camerasystem);
+    result.push(internet);
+    console.log('resArray', result);
+  };
 
-  //   console.log(
-  //     'smartResults',
-  //     thermostatResult,
-  //     internetResult,
-  //     alarmResult,
-  //     airconResult,
-  //   );
-  //   result.push(thermostatResult);
-  //   result.push(internetResult);
-  //   result.push(alarmResult);
-  //   result.push(airconResult);
-  //   console.log('resArray', result);
-  // };
+  getSmartsPrice(
+    calcValues.hasThermostat,
+    calcValues.hasAlarm,
+    calcValues.hasFireAlarm,
+    calcValues.hasSolarCollectors,
+    calcValues.hasCameraSystem,
+    calcValues.hasInternet,
+  );
 
-  // getSmartHomePrice(hasThermostat, hasInternet, hasAlarm, hasAirCon);
+  const getEngineeringPrice = (
+    hasWell,
+    hasCityWater,
+    hasCitySewerage,
+    hasSeptic,
+    hasElectricity,
+    hasGas,
+  ) => {
+    // ternary
+    const well = !hasWell
+      ? Math.floor(0.7 * builtYearPrice)
+      : Math.floor(1 * builtYearPrice);
 
-  // const getUrbanQualityPrice = (urbanQuality) => {
-  //   console.log('uV', urbanQuality, holdValue);
-  //   const getUrbanQualityCoeficient = (urbanQuality) => {
-  //     if (urbanQuality === 'excellent') return 1;
-  //     if (urbanQuality === 'average') return 0.9;
-  //     if (urbanQuality === 'poor') return 0.75;
-  //   };
-  //   const urbanQualityPrice =
-  //     getUrbanQualityCoeficient(urbanQuality) * holdValue;
-  //   console.log('urbanQualityPrice', urbanQualityPrice);
-  //   result.push(urbanQualityPrice);
-  //   console.log('resArray', result);
-  // };
+    const citywater = !hasCityWater
+      ? Math.floor(0.7 * builtYearPrice)
+      : Math.floor(1 * builtYearPrice);
 
-  //getUrbanQualityPrice(urbanQuality);
+    const citysewerage = !hasCitySewerage
+      ? Math.floor(0.7 * builtYearPrice)
+      : Math.floor(1 * builtYearPrice);
+
+    const septic = !hasSeptic
+      ? Math.floor(0.7 * builtYearPrice)
+      : Math.floor(1 * builtYearPrice);
+
+    const electricity = !hasElectricity
+      ? Math.floor(0.7 * builtYearPrice)
+      : Math.floor(1 * builtYearPrice);
+
+    const gas = !hasGas
+      ? Math.floor(0.7 * builtYearPrice)
+      : Math.floor(1 * builtYearPrice);
+
+    console.log(
+      'engineering',
+      well,
+      citywater,
+      citysewerage,
+      septic,
+      electricity,
+      gas,
+    );
+    result.push(well);
+    result.push(citywater);
+    result.push(citysewerage);
+    result.push(septic);
+    result.push(electricity);
+    result.push(gas);
+    console.log('resArray', result);
+  };
+
+  getEngineeringPrice(
+    calcValues.hasWell,
+    calcValues.hasCityWater,
+    calcValues.hasCitySewerage,
+    calcValues.hasSeptic,
+    calcValues.hasElectricity,
+    calcValues.hasGas,
+  );
+
+  const getUrbanQualityPrice = (urbanQuality) => {
+    console.log('uV', urbanQuality);
+    const getUrbanQualityCoeficient = (urbanQuality) => {
+      if (urbanQuality === 'excellent') return 1;
+      if (urbanQuality === 'average') return 0.9;
+      if (urbanQuality === 'poor') return 0.75;
+    };
+    const urbanQualityPrice = Math.floor(
+      getUrbanQualityCoeficient(urbanQuality) * builtYearPrice,
+    );
+    console.log('urbanQualityPrice', urbanQualityPrice);
+    result.push(urbanQualityPrice);
+    console.log('resArray', result);
+  };
+
+  getUrbanQualityPrice(calcValues.urbanQuality);
 
   // const calculateAverage = (array) => {
   //   if (array.length === 0) {
@@ -407,7 +427,7 @@ const testValues = {
   hasSolarCollectors: false,
   hasCameraSystem: false,
   hasInternet: true,
-  hasWell: true,
+  hasWell: false,
   hasCityWater: true,
   hasCitySewerage: true,
   hasSeptic: true,
