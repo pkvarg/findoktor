@@ -108,8 +108,10 @@ const Ebook = () => {
               kliknite SEM
             </button>
           </div>
-          <div className="flex flex-col lg:w-[40%]">
-            <img src="ebook_cover.webp" alt="ebook_cover" />
+          <div className="flex flex-col shadow-2xl lg:w-[40%]">
+            <img className="shadow-2xl" src="ebook.webp" alt="ebook_cover" />
+
+            {/* <img src="ebook_cover.webp" alt="ebook_cover" /> */}
             {/* <button
                 onClick={handleClick}
                 className="m-4 rounded-[25px] bg-[#0076ba] text-[30px] text-[#ffffff]"

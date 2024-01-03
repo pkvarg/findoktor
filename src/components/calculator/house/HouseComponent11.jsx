@@ -85,8 +85,8 @@ const HouseComponent11 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/"
+              className="ml-[20%] mt-[10.5%] w-[60%]"
+              src="/firealarm.webp"
               alt="firealarm"
             />
 

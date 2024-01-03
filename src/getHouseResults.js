@@ -498,4 +498,14 @@ const testValues = {
   hasUnderfloorHeating: true,
 };
 
-//houseResult(testValues);
+// houseTypePrice constant...
+
+// round price to 1000
+
+// Súhlasím so spracovaním poskytnutých údajov
+// na účely výpočtu aktuálnej ceny nehnuteľnosti.
+// Poskytnuté údaje nebudú zdieľané tretím stranám.
+
+// .. kontakt: 1. a 3., ebook to isté
+
+houseResult(testValues);

@@ -267,7 +267,6 @@ const CalculatorHouse = () => {
       squareMeters: squareMeters,
       houseType: houseType,
       hasPool: hasPool,
-
       hasSauna: hasSauna,
       hasGardenShed: hasGardenShed,
       hasGarage: hasGarage,
@@ -633,6 +632,61 @@ const CalculatorHouse = () => {
     }
   }, [email]);
 
+  const sendEmail = async () => {
+    const calcValues = {
+      city: city,
+      houseNumber: houseNumber,
+      street: street,
+      countRooms: countRooms,
+      countBathrooms: countBathrooms,
+      houseCondition: houseCondition,
+      squareMeters: squareMeters,
+      houseType: houseType,
+      hasPool: hasPool,
+      hasSauna: hasSauna,
+      hasGardenShed: hasGardenShed,
+      hasGarage: hasGarage,
+      hasBasement: hasBasement,
+      hasTerrace: hasTerrace,
+      landType: landType,
+      landSquareMeters: landSquareMeters,
+      builtYear: builtYear,
+      hasThermostat: hasThermostat,
+      hasAlarm: hasAlarm,
+      hasFireAlarm: hasFireAlarm,
+      hasSolarCollectors: hasSolarCollectors,
+      hasCameraSystem: hasCameraSystem,
+      hasInternet: hasInternet,
+      hasWell: hasWell,
+      hasCityWater: hasCityWater,
+      hasCitySewerage: hasCitySewerage,
+      hasSeptic: hasSeptic,
+      hasElectricity: hasElectricity,
+      hasGas: hasGas,
+      urbanQuality: urbanQuality,
+      hasElectricRadiators: hasElectricRadiators,
+      hasHeatPump: hasHeatPump,
+      hasOther: hasOther,
+      hasSolidFuel: hasSolidFuel,
+      hasGasBoiler: hasGasBoiler,
+      hasUnderfloorHeating: hasUnderfloorHeating,
+      email: email,
+      price: price,
+    };
+    console.log('..sending..');
+    const { data } = await axios.put(
+      //`https://api.pictusweb.com/api/md/email-house`,
+      `http://localhost:2000/api/md/email-house`,
+      {
+        calcValues,
+      },
+
+      //config
+    );
+
+    console.log('ctc:', data);
+  };
+
   const handleSubmitForm = (e) => {
     e.preventDefault();
 
@@ -646,7 +700,7 @@ const CalculatorHouse = () => {
       if (res) {
         setPrice(res.price);
 
-        // sendEmail();
+        sendEmail();
       }
 
       setTimeout(handleNext, 4000);

@@ -3,6 +3,7 @@ import CalcNavbar from '../components/calculator/CalcNavbar';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { Footer } from '../components';
+import { FollowUs } from '../components';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -135,6 +136,7 @@ const Contact = () => {
             >
               Odoslať
             </button>
+            <FollowUs />
           </form>
         </div>
       </div>

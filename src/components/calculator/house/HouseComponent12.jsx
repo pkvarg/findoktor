@@ -50,7 +50,7 @@ const HouseComponent12 = ({
           <div>
             <img
               className="ml-[19%] mt-[10%] w-[70%]"
-              src="/smart1.webp"
+              src="/well.webp"
               alt="well"
             />
 
@@ -66,8 +66,8 @@ const HouseComponent12 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[20%] mt-[10.5%] w-[60%]"
+              src="/citywater.webp"
               alt="citywater"
             />
 
@@ -85,9 +85,9 @@ const HouseComponent12 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
-              alt="security"
+              className="ml-[20%] mt-[10.5%] w-[60%]"
+              src="/citysewerage.webp"
+              alt="sewerage"
             />
 
             <p className="absolute bottom-2 right-3 text-right text-[12.5px] font-bold leading-[12.5px]">
@@ -103,8 +103,8 @@ const HouseComponent12 = ({
         >
           <div>
             <img
-              className="ml-[12%] mt-[10.5%] w-[40%]"
-              src="/smart3.webp"
+              className="ml-[20%] mt-[10.5%] w-[60%]"
+              src="/septic.webp"
               alt="septic"
             />
 
@@ -122,8 +122,8 @@ const HouseComponent12 = ({
         >
           <div>
             <img
-              className="ml-[15%] mt-[10%] w-[50%]"
-              src="/smart4.webp"
+              className="ml-[20%] mt-[10%] w-[60%]"
+              src="/electricity.webp"
               alt="electricity"
             />
 
@@ -140,8 +140,8 @@ const HouseComponent12 = ({
         >
           <div>
             <img
-              className="ml-[25%] mt-[10%] w-[53%]"
-              src="/smart2.webp"
+              className="ml-[15%] mt-[8%] w-[75%]"
+              src="/gas.webp"
               alt="gas"
             />
 
