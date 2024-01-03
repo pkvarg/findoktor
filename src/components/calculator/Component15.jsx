@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Component15 = ({
   onBack,
@@ -10,6 +10,8 @@ const Component15 = ({
   setCheckBox,
   isLoading,
 }) => {
+  const [showAgree, setShowAgree] = useState(false);
+
   return (
     <div className="relative mx-4 flex flex-col lg:mx-[0%]">
       <p className="pt-6 text-center text-[10px] text-[#0076ba] lg:pt-8 lg:text-[12.5px]">
@@ -35,7 +37,13 @@ const Component15 = ({
         >
           <span>Ak chcete pokračovať ďalej, zadajte Váš mail:</span>
         </label>
-        <div className="relative flex h-[50px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[55px] lg:rounded-xl">
+        <div
+          className={
+            showAgree
+              ? 'relative flex h-[50px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] blur-md lg:h-[55px] lg:rounded-xl'
+              : 'relative flex h-[50px] w-[100%] flex-col rounded-lg border-2 border-[#0076ba] lg:h-[55px] lg:rounded-xl'
+          }
+        >
           <input
             type="text"
             value={email}
@@ -54,16 +62,29 @@ const Component15 = ({
             />
             <p className="text-[15px] text-[#0076ba]">
               Súhlasím s{' '}
-              <a
-                className="font-semibold underline"
-                href="/rules"
-                target="_blank"
+              <span
+                onClick={() => setShowAgree((prev) => !prev)}
+                className="cursor-pointer font-semibold underline"
               >
-                podmienkami
-              </a>
+                spracovaním osobných údajov
+              </span>
             </p>
           </div>
         </div>
+        {showAgree && (
+          <>
+            <p
+              onClick={() => setShowAgree(false)}
+              className="absolute right-0 top-[52%] mr-2 cursor-pointer text-[20px] text-red-500"
+            >
+              X
+            </p>
+            <span className="absolute left-0 top-[60%] w-[300px] text-justify text-[17.5px] leading-[17.5px] text-[#13191c]">
+              Poskytnuté údaje budú spracované za účelom výpočtu aktuálnej ceny
+              nehnuteľnosti a nebudú zdieľané tretím stranám.
+            </span>
+          </>
+        )}
       </div>
 
       <div className="mt-[40%] flex flex-row justify-between lg:mt-[20%]">

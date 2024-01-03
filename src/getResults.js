@@ -355,7 +355,7 @@ export const result = (
   // Add or subtract 5% to the original value
   let withProvision = Math.floor(averageOfAll);
   let noProvision = Math.ceil(averageOfAll * 0.95);
-  let price = (withProvision / 1000) * 1000;
+  let price = Math.round(withProvision / 1000) * 1000;
   // let averageHigh = Math.floor(averageOfAll)
   // let noProvisionLow = Math.ceil(averageLow * 1.05)
   // let noProvisionHigh = Math.ceil(averageHigh * 1.05)

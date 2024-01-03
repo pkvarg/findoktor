@@ -10,6 +10,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+  const [showAgree, setShowAgree] = useState(false);
 
   const x = import.meta.env.VITE_EMAIL_EXTRA_ONE;
   const y = import.meta.env.VITE_EMAIL_EXTRA_TWO;
@@ -113,8 +114,19 @@ const Contact = () => {
             <div className="mt-4 flex flex-row items-center gap-4 lg:gap-2">
               <input type="checkbox" required="required" />
               <p className="text-[15px] leading-[15px]">
-                Pred odoslaním musíte súhlasiť so spracovaním osobných údajov
+                Pred odoslaním musíte súhlasiť so
+                <span
+                  onClick={() => setShowAgree((prev) => !prev)}
+                  className="ml-1 cursor-pointer underline"
+                >
+                  spracovaním osobných údajov
+                </span>
               </p>
+              {showAgree && (
+                <p className="text-[17.5px] leading-[17.5px] text-[#0376b7]">
+                  Poskytnuté údaje nebudú zdieľané tretím stranám.
+                </p>
+              )}
             </div>
 
             <input
@@ -130,13 +142,15 @@ const Contact = () => {
               onChange={(e) => setPasswordGroupTwo(e.target.value)}
             />
 
-            <button
-              type="submit"
-              className="mt-4 w-[100%] bg-[#0376b7] py-3 text-white hover:border hover:border-[#0376b7] hover:bg-white hover:text-[#0376b7] lg:mt-4 lg:w-[30%]"
-            >
-              Odoslať
-            </button>
-            <FollowUs />
+            <div className="flex flex-row justify-between">
+              <button
+                type="submit"
+                className="mt-4 w-[50%] rounded-[25px] border-2 border-[#0376b7] py-2 text-[#0376b7]  hover:bg-white hover:text-white lg:mt-4 lg:w-[25%]"
+              >
+                Odoslať
+              </button>
+              <FollowUs />
+            </div>
           </form>
         </div>
       </div>

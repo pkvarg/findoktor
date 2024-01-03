@@ -1,11 +1,6 @@
 import streetAndDistrict from './../Json/streetAndDistrict.json' assert { type: 'json' };
 import districtAndPrice from './../Json/districtAndPrice.json' assert { type: 'json' };
 import roomsAndPrice from './../Json/roomsAndPrice.json' assert { type: 'json' };
-//import bathrooms from './../Json/bathRooms.json' assert { type: 'json' };
-import floorCountAndValue from './../Json/floorCountAndValue.json' assert { type: 'json' };
-import floorNumberAndValue from './../Json/floorNumberAndValue.json' assert { type: 'json' };
-import buildingCondition from './../Json/buildingCondition.json' assert { type: 'json' };
-import smartHome from './../Json/smartHome.json' assert { type: 'json' };
 
 // TODO all comps select something if must
 // comp 10 limit years !!!
@@ -314,28 +309,28 @@ export const houseResult = (calcValues) => {
   ) => {
     // ternary
     const well = !hasWell
-      ? Math.floor(0.7 * builtYearPrice)
-      : Math.floor(1 * builtYearPrice);
+      ? Math.floor(0.7 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
     const citywater = !hasCityWater
-      ? Math.floor(0.7 * builtYearPrice)
-      : Math.floor(1 * builtYearPrice);
+      ? Math.floor(0.7 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
     const citysewerage = !hasCitySewerage
-      ? Math.floor(0.7 * builtYearPrice)
-      : Math.floor(1 * builtYearPrice);
+      ? Math.floor(0.7 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
     const septic = !hasSeptic
-      ? Math.floor(0.7 * builtYearPrice)
-      : Math.floor(1 * builtYearPrice);
+      ? Math.floor(0.7 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
     const electricity = !hasElectricity
-      ? Math.floor(0.7 * builtYearPrice)
-      : Math.floor(1 * builtYearPrice);
+      ? Math.floor(0.7 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
     const gas = !hasGas
-      ? Math.floor(0.7 * builtYearPrice)
-      : Math.floor(1 * builtYearPrice);
+      ? Math.floor(0.7 * houseTypePrice)
+      : Math.floor(1 * houseTypePrice);
 
     console.log(
       'engineering',
@@ -372,7 +367,7 @@ export const houseResult = (calcValues) => {
       if (urbanQuality === 'poor') return 0.75;
     };
     urbanQualityPrice = Math.floor(
-      getUrbanQualityCoeficient(urbanQuality) * builtYearPrice,
+      getUrbanQualityCoeficient(urbanQuality) * houseTypePrice,
     );
     console.log('urbanQualityPrice', urbanQualityPrice);
     result.push(urbanQualityPrice);
@@ -452,9 +447,10 @@ export const houseResult = (calcValues) => {
   };
   const averageOfAll = calculateAverage(result);
   let withProvision = Math.floor(averageOfAll);
-  //let noProvision = Math.ceil(averageOfAll * 0.95);
-  let price = (withProvision / 1000) * 1000;
-  console.log('price', price);
+  //let price = Math.round((withProvision / 1000) * 1000);
+  let noroundprice = withProvision;
+  let price = Math.round(withProvision / 1000) * 1000;
+  console.log('price', price, noroundprice);
 
   return {
     price,
@@ -497,10 +493,6 @@ const testValues = {
   hasGasBoiler: true,
   hasUnderfloorHeating: true,
 };
-
-// houseTypePrice constant...
-
-// round price to 1000
 
 // Súhlasím so spracovaním poskytnutých údajov
 // na účely výpočtu aktuálnej ceny nehnuteľnosti.

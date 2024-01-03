@@ -10,6 +10,7 @@ const Ebook = () => {
   const [showDownload, setShowDownload] = useState(false);
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(false);
+  const [showAgree, setShowAgree] = useState(false);
 
   const validateEmail = (email) => {
     // Regular expression to validate email format
@@ -110,14 +111,6 @@ const Ebook = () => {
           </div>
           <div className="flex flex-col shadow-2xl lg:w-[40%]">
             <img className="shadow-2xl" src="ebook.webp" alt="ebook_cover" />
-
-            {/* <img src="ebook_cover.webp" alt="ebook_cover" /> */}
-            {/* <button
-                onClick={handleClick}
-                className="m-4 rounded-[25px] bg-[#0076ba] text-[30px] text-[#ffffff]"
-              >
-                kliknite SEM
-              </button> */}
           </div>
         </div>
 
@@ -144,8 +137,19 @@ const Ebook = () => {
               <div className="mt-4 flex flex-row items-center gap-4 lg:gap-2">
                 <input type="checkbox" required="required" />
                 <p className="text-[15px] leading-[15px] text-gray-800">
-                  Pred odoslaním musíte súhlasiť so spracovaním osobných údajov
+                  Pred odoslaním musíte súhlasiť so
+                  <span
+                    onClick={() => setShowAgree((prev) => !prev)}
+                    className="ml-1 cursor-pointer underline"
+                  >
+                    spracovaním osobných údajov
+                  </span>
                 </p>
+                {showAgree && (
+                  <p className="text-[17.5px] leading-[17.5px] text-[#13191c]">
+                    Poskytnuté údaje nebudú zdieľané tretím stranám.
+                  </p>
+                )}
               </div>
               <button
                 type="submit"
