@@ -15,7 +15,6 @@ export const houseResult = (calcValues) => {
   const bratislava = 252524;
   const averageTotalSquareMeterPrice = 3860;
   const averageTotalBratislavaSquareMeterPrice = 4073;
-  let holdValue;
   let districtValueHold;
   let roomValueHold;
   let bathroomValueHold;
@@ -29,6 +28,7 @@ export const houseResult = (calcValues) => {
   let landTypePrice;
   let landSquareMetersPrice;
   let builtYearPrice;
+  let urbanQualityPrice;
 
   const result = [];
   result.push(bratislava);
@@ -376,7 +376,7 @@ export const houseResult = (calcValues) => {
       if (urbanQuality === 'average') return 0.9;
       if (urbanQuality === 'poor') return 0.75;
     };
-    const urbanQualityPrice = Math.floor(
+    urbanQualityPrice = Math.floor(
       getUrbanQualityCoeficient(urbanQuality) * builtYearPrice,
     );
     console.log('urbanQualityPrice', urbanQualityPrice);
@@ -386,19 +386,80 @@ export const houseResult = (calcValues) => {
 
   getUrbanQualityPrice(calcValues.urbanQuality);
 
-  // const calculateAverage = (array) => {
-  //   if (array.length === 0) {
-  //     return 0;
-  //   }
-  //   const sum = array.reduce((acc, value) => acc + value, 0);
-  //   const average = sum / array.length;
-  //   return average;
-  // };
-  // const averageOfAll = calculateAverage(result);
-  // let withProvision = Math.floor(averageOfAll);
-  // let noProvision = Math.ceil(averageOfAll * 0.95);
-  // let price = (withProvision / 1000) * 1000;
-  let price = 1111;
+  const getHeatingTypePrice = (
+    hasElectricRadiators,
+    hasHeatPump,
+    hasOther,
+    hasSolidFuel,
+    hasGasBoiler,
+    hasUnderfloorHeating,
+  ) => {
+    // ternary
+
+    const electricradiators = !hasElectricRadiators
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.2 * houseTypePrice);
+
+    const heatpump = !hasHeatPump
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.2 * houseTypePrice);
+
+    const other = !hasOther
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.2 * houseTypePrice);
+
+    const solidfuel = !hasSolidFuel
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.2 * houseTypePrice);
+
+    const gasboiler = !hasGasBoiler
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.2 * houseTypePrice);
+
+    const underfloorheating = !hasUnderfloorHeating
+      ? Math.floor(0.8 * houseTypePrice)
+      : Math.floor(1.2 * houseTypePrice);
+
+    console.log(
+      'heatingTypes',
+      electricradiators,
+      heatpump,
+      other,
+      solidfuel,
+      gasboiler,
+      underfloorheating,
+    );
+    result.push(electricradiators);
+    result.push(heatpump);
+    result.push(other);
+    result.push(solidfuel);
+    result.push(gasboiler);
+    result.push(underfloorheating);
+    console.log('resArray', result);
+  };
+
+  getHeatingTypePrice(
+    calcValues.hasElectricRadiators,
+    calcValues.hasHeatPump,
+    calcValues.hasOther,
+    calcValues.hasSolidFuel,
+    calcValues.hasGasBoiler,
+    calcValues.hasUnderfloorHeating,
+  );
+
+  const calculateAverage = (array) => {
+    if (array.length === 0) {
+      return 0;
+    }
+    const sum = array.reduce((acc, value) => acc + value, 0);
+    const average = sum / array.length;
+    return average;
+  };
+  const averageOfAll = calculateAverage(result);
+  let withProvision = Math.floor(averageOfAll);
+  //let noProvision = Math.ceil(averageOfAll * 0.95);
+  let price = (withProvision / 1000) * 1000;
+  console.log('price', price);
 
   return {
     price,
