@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 
 import CalcNavbar from '../components/calculator/CalcNavbar';
 import { BiSolidPhoneCall } from 'react-icons/bi';
+import { FollowUs } from '../components';
 const Footer = lazy(() => import('./../components/Footer'));
 
 const About = () => {
@@ -76,6 +77,7 @@ const About = () => {
                 </a>
               </p>
             </div>
+            <FollowUs />
           </div>
         </div>
       </div>

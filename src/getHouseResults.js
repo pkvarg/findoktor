@@ -17,13 +17,12 @@ export const houseResult = (calcValues) => {
   const averageTotalBratislavaSquareMeterPrice = 4073;
   let districtValueHold;
   let roomValueHold;
-  let bathroomValueHold;
-  let conditionPriceHold;
-  let squareMetersPriceHold;
+  let bathroomPrice;
+  let conditionPrice;
+  let squareMetersPrice;
   let averageOfDistrictPlusRoom;
   let averageOfRoomPlusBathroom;
   let averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice;
-  // no holds
   let houseTypePrice;
   let landTypePrice;
   let landSquareMetersPrice;
@@ -74,10 +73,9 @@ export const houseResult = (calcValues) => {
 
     console.log('averageOfDistrictPlusRoom', averageOfDistrictPlusRoom);
 
-    const bathroomPrice = Math.ceil(
+    bathroomPrice = Math.ceil(
       averageOfDistrictPlusRoom * getBathroomCoeficient(countBathrooms),
     );
-    bathroomValueHold = bathroomPrice;
 
     console.log('bathroomPrice', bathroomPrice);
     result.push(bathroomPrice);
@@ -93,13 +91,12 @@ export const houseResult = (calcValues) => {
       if (houseCondition === 4) return 0.5;
     };
 
-    averageOfRoomPlusBathroom = (roomValueHold + bathroomValueHold) / 2;
+    averageOfRoomPlusBathroom = (roomValueHold + bathroomPrice) / 2;
     console.log('averageOfRoomPlusBathroom', averageOfRoomPlusBathroom);
 
-    const conditionPrice = Math.ceil(
+    conditionPrice = Math.ceil(
       averageOfRoomPlusBathroom * getConditionCoeficient(houseCondition),
     );
-    conditionPriceHold = conditionPrice;
     console.log('conditionPrice', conditionPrice);
     result.push(conditionPrice);
   };
@@ -107,12 +104,11 @@ export const houseResult = (calcValues) => {
   getConditionPrice(calcValues.houseCondition);
 
   const getSquareMetersPrice = (squareMeters) => {
-    const squareMetersPrice = Math.floor(
+    squareMetersPrice = Math.floor(
       (squareMeters * averageTotalSquareMeterPrice) / 2 +
         (squareMeters * averageTotalBratislavaSquareMeterPrice) / 2,
     );
     console.log('squareMeterPrice', squareMetersPrice);
-    squareMetersPriceHold = squareMetersPrice;
     result.push(squareMetersPrice);
     console.log('resArray', result);
   };
@@ -128,8 +124,7 @@ export const houseResult = (calcValues) => {
     };
 
     averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice =
-      (averageOfRoomPlusBathroom + conditionPriceHold + squareMetersPriceHold) /
-      3;
+      (averageOfRoomPlusBathroom + conditionPrice + squareMetersPrice) / 3;
 
     houseTypePrice = Math.floor(
       averageOfRoomPlusBathroomConditionAndPriceSquareMetersPrice *
@@ -503,4 +498,4 @@ const testValues = {
   hasUnderfloorHeating: true,
 };
 
-houseResult(testValues);
+//houseResult(testValues);
