@@ -145,7 +145,7 @@ const Contact = () => {
             <div className="flex flex-row justify-between">
               <button
                 type="submit"
-                className="mt-4 w-[50%] rounded-[25px] border-2 border-[#0376b7] py-2 text-[#0376b7]  hover:bg-white hover:text-white lg:mt-4 lg:w-[25%]"
+                className="mt-4 w-[50%] rounded-[25px] border-2 border-[#0376b7] py-2 text-[#0376b7]  hover:bg-[#0376b7] hover:text-white lg:mt-4 lg:w-[25%]"
               >
                 Odoslať
               </button>

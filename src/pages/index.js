@@ -11,6 +11,7 @@ import Finances from './Finances';
 import Ebook from './Ebook';
 import Admin from './Admin';
 import CalculatorHouse from './CalculatorHouse';
+import Tip from './Tip';
 
 export {
   ServicesPage,
@@ -26,4 +27,5 @@ export {
   Ebook,
   Admin,
   CalculatorHouse,
+  Tip,
 };

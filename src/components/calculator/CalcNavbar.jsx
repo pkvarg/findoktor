@@ -60,6 +60,7 @@ const CalcNavbar = () => {
               <a href="/our-services">Naše služby</a>
               <a href="/e-book">E-Book</a>
               <a href="/contact">Kontakt</a>
+              <a href="/tip">Odmena za tip</a>
             </div>
           </div>
         )}
