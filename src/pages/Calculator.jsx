@@ -201,7 +201,6 @@ const Calculator = () => {
             handleHasElevator={handleHasElevator}
           />
         );
-
       case 8:
         return (
           <Component08
@@ -217,7 +216,6 @@ const Calculator = () => {
             setHasBasement={setHasBasement}
           />
         );
-
       case 9:
         return (
           <Component09
@@ -231,7 +229,6 @@ const Calculator = () => {
             setHasNoParking={setHasNoParking}
           />
         );
-
       case 10:
         return (
           <Component10
@@ -241,7 +238,6 @@ const Calculator = () => {
             setBuiltYear={setBuiltYear}
           />
         );
-
       case 11:
         return (
           <Component11
@@ -257,7 +253,6 @@ const Calculator = () => {
             setHasNewInstallations={setHasNewInstallations}
           />
         );
-
       case 12:
         return (
           <Component12
@@ -273,7 +268,6 @@ const Calculator = () => {
             setHasAircon={setHasAircon}
           />
         );
-
       case 13:
         return (
           <Component13
@@ -283,7 +277,6 @@ const Calculator = () => {
             setMonthlyCosts={setMonthlyCosts}
           />
         );
-
       case 14:
         return (
           <Component14
@@ -291,10 +284,8 @@ const Calculator = () => {
             onNext={handleNext}
             urbanQuality={urbanQuality}
             handleUrbanQuality={handleUrbanQuality}
-            startCalculation={startCalculation}
           />
         );
-
       case 15:
         return (
           <Component15
@@ -469,8 +460,8 @@ const Calculator = () => {
     if (aircon !== null && !hasAirCon) aircon.classList.remove('clicked');
   }, [hasThermostat, hasInternet, hasAlarm, hasAirCon]);
 
-  const startCalculation = () => {
-    const calculated = result(
+  const startCalculation = async () => {
+    const calcValues = {
       city,
       street,
       houseNumber,
@@ -496,136 +487,84 @@ const Calculator = () => {
       hasAlarm,
       hasAirCon,
       urbanQuality,
-    );
-    // const assignResultsDelay = () => {
-
-    // }
+    };
+    const calculated = result(calcValues);
     if (calculated !== null && calculated !== '' && calculated !== 0) {
       setPrice(calculated.price);
       console.log('...RESULTS', calculated);
-      return calculated;
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(calculated);
+        }, 2000); // Simulating a 2-second calculation
+      });
     }
-    //setTimeout(assignResultsDelay, 9000);
   };
 
-  const sendEmail = async () => {
+  const sendEmail = async (resprice) => {
+    const calcValues = {
+      flatOrHouse,
+      city,
+      street,
+      houseNumber,
+      countRooms,
+      houseCondition,
+      squareMeters,
+      allFloorsCount,
+      currentFloorNumber,
+      hasElevator,
+      hasBalcony,
+      hasLoggia,
+      hasTerrace,
+      hasBasement,
+      hasGarage,
+      hasParking,
+      builtYear,
+      hasIsolation,
+      hasNewElevator,
+      hasNewWindows,
+      hasNewInstallations,
+      hasThermostat,
+      hasInternet,
+      hasAlarm,
+      hasAirCon,
+      urbanQuality,
+      monthlyCosts,
+      email,
+      price: resprice,
+    };
     console.log('..sending..');
     const { data } = await axios.put(
-      `https://api.pictusweb.com/api/md/email`,
-      // `http://localhost:2000/api/md/email`,
+      //`https://api.pictusweb.com/api/md/email`,
+      `http://localhost:2000/api/md/email`,
       {
-        flatOrHouse,
-        city,
-        street,
-        houseNumber,
-        countRooms,
-        houseCondition,
-        squareMeters,
-        allFloorsCount,
-        currentFloorNumber,
-        hasElevator,
-        hasBalcony,
-        hasLoggia,
-        hasTerrace,
-        hasBasement,
-        hasGarage,
-        hasParking,
-        builtYear,
-        hasIsolation,
-        hasNewElevator,
-        hasNewWindows,
-        hasNewInstallations,
-        hasThermostat,
-        hasInternet,
-        hasAlarm,
-        hasAirCon,
-        urbanQuality,
-        monthlyCosts,
-        email,
-        price,
+        calcValues,
       },
-
-      //config
     );
 
     console.log('ctc:', data);
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
     if (email !== '') {
       console.log('is submitting FLAT');
       if (!isValid) return toast.error('Zadajte správny email');
       setIsLoading(true);
 
-      const res = startCalculation();
-      console.log('res of calc', res);
+      const res = await startCalculation();
+      console.log('resawait flat', res);
       if (res) {
-        sendEmail();
+        sendEmail(res.price);
       }
 
-      // const sendEmail = async () => {
-      //   console.log('..sending..');
-      //   const { data } = await axios.put(
-      //     // `https://api.pictusweb.com/api/md/email`,
-      //     `http://localhost:2000/api/md/email`,
-      //     {
-      //       flatOrHouse,
-      //       city,
-      //       street,
-      //       houseNumber,
-      //       countRooms,
-      //       houseCondition,
-      //       squareMeters,
-      //       allFloorsCount,
-      //       currentFloorNumber,
-      //       hasElevator,
-      //       hasBalcony,
-      //       hasLoggia,
-      //       hasTerrace,
-      //       hasBasement,
-      //       hasGarage,
-      //       hasParking,
-      //       builtYear,
-      //       hasIsolation,
-      //       hasNewElevator,
-      //       hasNewWindows,
-      //       hasNewInstallations,
-      //       hasThermostat,
-      //       hasInternet,
-      //       hasAlarm,
-      //       hasAirCon,
-      //       urbanQuality,
-      //       monthlyCosts,
-      //       email,
-      //       price,
-      //     },
-
-      //     //config
-      //   );
-
-      //   console.log('ctc:', data);
-      // };
-
-      // setTimeout(assignResultsDelay, 9000)
       setTimeout(handleNext, 4000);
-
-      //setTimeout(sendEmail, 9000);
     }
   };
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      // Check if the pressed key is Enter (key code 13)
       if (event.key === 'Enter') {
-        // Prevent the default behavior of the Enter key
         event.preventDefault();
-
-        // Check if the focused element is an input field
-        // if (document.activeElement.tagName.toLowerCase() !== 'input') {
-        // Call your function here
-        // yourFunction()
-        // }
       }
     };
 

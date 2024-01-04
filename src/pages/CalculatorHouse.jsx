@@ -258,7 +258,7 @@ const CalculatorHouse = () => {
     hasOther,
   ]);
 
-  const startCalculation = () => {
+  const startCalculation = async () => {
     const calcValues = {
       street: street,
       countRooms: countRooms,
@@ -299,7 +299,11 @@ const CalculatorHouse = () => {
     if (calculated !== null && calculated !== '' && calculated !== 0) {
       setPrice(calculated.price);
       console.log('...HOUSE-RESULTS', calculated);
-      return calculated;
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(calculated);
+        }, 2000); // Simulating a 2-second calculation
+      });
     }
   };
 
@@ -632,7 +636,7 @@ const CalculatorHouse = () => {
     }
   }, [email]);
 
-  const sendEmail = async () => {
+  const sendEmail = async (resprice) => {
     const calcValues = {
       city: city,
       houseNumber: houseNumber,
@@ -671,7 +675,7 @@ const CalculatorHouse = () => {
       hasGasBoiler: hasGasBoiler,
       hasUnderfloorHeating: hasUnderfloorHeating,
       email: email,
-      price: price,
+      price: resprice,
     };
     console.log('..sending..');
     const { data } = await axios.put(
@@ -680,14 +684,12 @@ const CalculatorHouse = () => {
       {
         calcValues,
       },
-
-      //config
     );
 
     console.log('ctc:', data);
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
 
     console.log('submitting house');
@@ -695,12 +697,10 @@ const CalculatorHouse = () => {
       if (!isValid) return toast.error('Zadajte správny email');
       setIsLoading(true);
 
-      const res = startCalculation();
-      console.log('res of calc', res);
+      const res = await startCalculation();
       if (res) {
-        setPrice(res.price);
-
-        sendEmail();
+        console.log('resawait house', res);
+        sendEmail(res.price);
       }
 
       setTimeout(handleNext, 4000);
