@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import CalcNavbar from '../components/calculator/CalcNavbar';
 import axios from 'axios';
 import { FollowUs } from '../components';
-import { Footer } from '../components';
+import { toast } from 'react-hot-toast';
 
 const Tip = () => {
+  const x = import.meta.env.VITE_EMAIL_EXTRA_ONE;
+  const y = import.meta.env.VITE_EMAIL_EXTRA_TWO;
+  const [passwordGroupOne, setPasswordGroupOne] = useState(x);
+  const [passwordGroupTwo, setPasswordGroupTwo] = useState(y);
+
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
   const [selectedType, setSelectedType] = useState(null);
-  //const [type, setType] = useState('Byt');
   const [city, setCity] = useState('');
   const [text, setText] = useState('');
   const [other, setOther] = useState('');
@@ -18,8 +22,7 @@ const Tip = () => {
     setSelectedType(type);
   };
 
-  console.log('type:', selectedType);
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const values = {
       email,
@@ -31,7 +34,32 @@ const Tip = () => {
       text,
     };
 
-    console.log('submitting', values);
+    console.log('submitting tip email', values);
+    if (passwordGroupOne !== x || passwordGroupTwo !== y) {
+      toast.error('Nastala chyba.');
+    }
+    try {
+      console.log('..tip email is sending..');
+      const { data } = await axios.put(
+        `https://api.pictusweb.com/api/md/tip`,
+        //`http://localhost:2000/api/md/tip`,
+        {
+          values,
+        },
+      );
+
+      if (data.status === 'Success') toast.success('Správa úspešne odoslaná');
+      setEmail('');
+      setName('');
+      setContact('');
+      setSelectedType('');
+      setOther('');
+      setCity('');
+      setText('');
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
   };
 
   return (
@@ -137,7 +165,7 @@ const Tip = () => {
           spracovávať za účelom zasielania obchodných oznámení.
         </p>
         <form onSubmit={handleSubmit} className="my-8 flex flex-col gap-2">
-          <label>Email</label>
+          <label>Tvoj Email</label>
           <input
             type="text"
             value={email}
@@ -164,7 +192,8 @@ const Tip = () => {
             required="required"
           />
 
-          <div className="my-2 flex flex-row items-center gap-2">
+          <div className="my-2 flex flex-col items-start gap-3 lg:flex-row lg:items-center">
+            <p>O akú nehnuteľnosť ide? </p>
             <label>
               <input
                 type="checkbox"
@@ -195,8 +224,8 @@ const Tip = () => {
             <label>
               <input
                 type="checkbox"
-                checked={selectedType === 'Ine'}
-                onChange={() => handleCheckboxChange('Ine')}
+                checked={selectedType === 'Iné'}
+                onChange={() => handleCheckboxChange('Iné')}
               />{' '}
               Iné
               <input
@@ -220,7 +249,7 @@ const Tip = () => {
             required="required"
           />
           <label>
-            Tvoj bližší popis(poznáš majiteľa osobne, hovorili ste už spolu o
+            Tvoj bližší popis (poznáš majiteľa osobne, hovorili ste už spolu o
             predaji jeho nehnuteľnosti, ako reagoval, atď.)
           </label>
 
@@ -229,6 +258,18 @@ const Tip = () => {
             onChange={(e) => setText(e.target.value)}
             className="h-[160px] border border-gray-300 pl-[5px]"
             required="required"
+          />
+          <input
+            className="form-control"
+            type="text"
+            defaultValue={passwordGroupOne}
+            onChange={(e) => setPasswordGroupOne(e.target.value)}
+          />
+          <input
+            className="form-control"
+            type="text"
+            defaultValue={passwordGroupTwo}
+            onChange={(e) => setPasswordGroupTwo(e.target.value)}
           />
           <div className="flex flex-row justify-between">
             <button
@@ -241,7 +282,6 @@ const Tip = () => {
           </div>
         </form>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
